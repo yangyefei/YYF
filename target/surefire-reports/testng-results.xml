@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="787" started-at="2017-02-15T07:38:08Z" finished-at="2017-02-15T07:38:08Z">
+    <groups>
+    </groups>
+    <test name="TestCommon" duration-ms="787" started-at="2017-02-15T07:38:08Z" finished-at="2017-02-15T07:38:08Z">
+      <class name="com.web.test.Common">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Common@26a7b76d]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="472" started-at="2017-02-15T15:38:08Z" finished-at="2017-02-15T15:38:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@26a7b76d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-02-15T15:38:08Z" finished-at="2017-02-15T15:38:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Common.inita() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="inita()[pri:0, instance:com.web.test.Common@26a7b76d]" name="inita" duration-ms="302" started-at="2017-02-15T15:38:08Z" finished-at="2017-02-15T15:38:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inita -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@26a7b76d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-02-15T15:38:08Z" finished-at="2017-02-15T15:38:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Common.inita() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+      </class> <!-- com.web.test.Common -->
+    </test> <!-- TestCommon -->
+  </suite> <!-- Suite -->
+</testng-results>
