@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.007">
+           time="0.002">
   <properties />
   
   
-            <testcase name="testCollcetion" time="0.007" classname="com.web.test.Common" />
+            <testcase name="testCollcetion" time="0.002" classname="com.web.test.Common" />
       
 </testsuite>

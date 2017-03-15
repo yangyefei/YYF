@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="529" started-at="2017-03-03T06:14:46Z" finished-at="2017-03-03T06:14:47Z">
+  <suite name="Default suite" duration-ms="534" started-at="2017-03-15T08:52:36Z" finished-at="2017-03-15T08:52:36Z">
     <groups>
     </groups>
-    <test name="TestCommon" duration-ms="529" started-at="2017-03-03T06:14:46Z" finished-at="2017-03-03T06:14:47Z">
+    <test name="Default test" duration-ms="534" started-at="2017-03-15T08:52:36Z" finished-at="2017-03-15T08:52:36Z">
       <class name="com.web.test.Linster1Test">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Linster1Test@61ca2dfa]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="5" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="500" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.web.test.Linster1Test@61ca2dfa]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@61ca2dfa]" name="test1" duration-ms="1" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="test1" duration-ms="7" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.ArithmeticException: / by zero
-	at com.web.test.Linster1Test.test1(Linster1Test.java:28)
+	at com.web.test.Linster1Test.test1(Linster1Test.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,7 +71,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@61ca2dfa]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
           <params>
             <param index="0">
               <value>
@@ -71,54 +97,138 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.web.test.Linster1Test@61ca2dfa]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="test1" duration-ms="2" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+	at com.web.test.Linster1Test.test1(Linster1Test.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="test1" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+	at com.web.test.Linster1Test.test1(Linster1Test.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@61ca2dfa]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
       </class> <!-- com.web.test.Linster1Test -->
-      <class name="com.web.test.Common">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Common@80169cf]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="495" started-at="2017-03-03T14:14:46Z" finished-at="2017-03-03T14:14:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@80169cf]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.web.test.Common.testCollcetion() throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="testCollcetion()[pri:0, instance:com.web.test.Common@80169cf]" name="testCollcetion" duration-ms="7" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCollcetion -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@80169cf]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-03-03T14:14:47Z" finished-at="2017-03-03T14:14:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.web.test.Common.testCollcetion() throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-      </class> <!-- com.web.test.Common -->
-    </test> <!-- TestCommon -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

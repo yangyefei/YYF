@@ -4,26 +4,20 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.web.utils.RetryListener"/>
   </listeners>
   <test name="TestCommon(failed)">
     <classes>
       <class name="com.web.test.Linster1Test">
         <methods>
-          <include name="BeforeClass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="BeforeMethod"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="afterClass"/>
           <include name="test1"/>
         </methods>
       </class> <!-- com.web.test.Linster1Test -->
-      <class name="com.web.test.Common">
-        <methods>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextAfterTestMethod"/>
-        </methods>
-      </class> <!-- com.web.test.Common -->
     </classes>
   </test> <!-- TestCommon(failed) -->
 </suite> <!-- Failed suite [Suite] -->

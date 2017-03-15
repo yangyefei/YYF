@@ -1,18 +1,10 @@
 package com.web.test;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
 
 @ContextConfiguration(locations = { "classpath*:ApplicationContext.xml" })
 

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="TestCommon">
     <classes>
-      <class name="com.web.test.Common"/>
+    
     <class name="com.web.test.Linster1Test"/>
     </classes>
    </test> 
@@ -11,7 +11,9 @@
    <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter" />
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-    </listeners>
-    <usedefaultlisteners name="false" />
+        
+      <listener class-name="com.web.utils.RetryListener" />
+    </listeners> 
+
  
 </suite> <!-- Suite -->
