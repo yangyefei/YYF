@@ -36,5 +36,6 @@ public class Linster1Test extends SpringBase {
 	@AfterClass
 	public void afterClass() {
 		System.out.println("@afterClass");
+		//yyf
 	}
 }
