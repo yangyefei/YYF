@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="534" started-at="2017-03-15T08:52:36Z" finished-at="2017-03-15T08:52:36Z">
+  <suite name="Suite" duration-ms="542" started-at="2017-03-21T02:10:07Z" finished-at="2017-03-21T02:10:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="534" started-at="2017-03-15T08:52:36Z" finished-at="2017-03-15T08:52:36Z">
+    <test name="TestCommon" duration-ms="542" started-at="2017-03-21T02:10:07Z" finished-at="2017-03-21T02:10:07Z">
       <class name="com.web.test.Linster1Test">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="500" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="514" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="BeforeMethod" is-config="true" duration-ms="1" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <params>
             <param index="0">
               <value>
@@ -22,11 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="test1" duration-ms="7" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="test1" duration-ms="6" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <params>
             <param index="0">
               <value>
@@ -82,11 +82,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <params>
             <param index="0">
               <value>
@@ -97,7 +93,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="test1" duration-ms="2" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="test1" duration-ms="1" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -142,7 +138,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <params>
             <param index="0">
               <value>
@@ -153,18 +153,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="test1" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="test1" duration-ms="1" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -209,11 +198,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <params>
             <param index="0">
               <value>
@@ -224,11 +224,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.web.test.Linster1Test@7a9273a8]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-03-15T16:52:36Z" finished-at="2017-03-15T16:52:36Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.web.test.Linster1Test@5a4041cc]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-03-21T10:10:07Z" finished-at="2017-03-21T10:10:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.web.test.Linster1Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TestCommon -->
+  </suite> <!-- Suite -->
 </testng-results>

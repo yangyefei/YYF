@@ -33,8 +33,11 @@ public class Common extends SpringBase {
 
 	@Test
 	public void testCollcetion() {
-
+   int[] b = new  int[1];
+   b[0]++;
+   System.out.println(b[0]);
+ 
 		}
-
+	
 }
 
