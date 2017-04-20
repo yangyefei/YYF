@@ -10,7 +10,9 @@
     <classes>
       <class name="com.web.test.Linster1Test">
         <methods>
+          <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="BeforeMethod"/>
           <include name="springTestContextAfterTestMethod"/>

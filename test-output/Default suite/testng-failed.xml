@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.web.test.Linster1Test">
+      <class name="com.web.test.MailSenderUtil">
         <methods>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="BeforeMethod"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="afterClass"/>
-          <include name="test1"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.web.test.Linster1Test -->
+      </class> <!-- com.web.test.MailSenderUtil -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

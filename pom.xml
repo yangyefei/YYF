@@ -1,5 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.app.test</groupId>
@@ -14,9 +16,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring.version>2.5.6</spring.version>
-		<mysql.jdbc.version>5.1.21</mysql.jdbc.version>  
-        <hibernate.version>4.3.1.Final</hibernate.version>  
+		<spring.version>3.2.6.RELEASE</spring.version>
+		<mysql.jdbc.version>5.1.21</mysql.jdbc.version>
+		<hibernate.version>4.3.1.Final</hibernate.version>
 
 		<!-- 仓库 -->
 	</properties>
@@ -28,39 +30,39 @@
 			<version>6.8</version>
 			<scope>test</scope>
 		</dependency>
-		
-	    <dependency>
-		    <groupId>io.appium </groupId>
-		    <artifactId>java-client</artifactId>
-		    <version>4.1.2</version>
-    
-	    </dependency>
 
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
-			<version>${spring.version}</version>
+			<groupId>io.appium </groupId>
+			<artifactId>java-client</artifactId>
+			<version>4.1.2</version>
+
 		</dependency>
 
-<!-- 	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-beans</artifactId>
-		<version>${spring.version}</version>
-		
+
+
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-beans</artifactId> 
+			<version>${spring.version}</version> </dependency> -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
-	 -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
-
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>org</groupId>
+			<artifactId>steel</artifactId>
+			<version>4.6.4</version>
+		</dependency>
+		
+		
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -110,22 +112,22 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
 
-        
+
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org</groupId>
 			<artifactId>steel</artifactId>
 			<version>4.6.4</version>
-		
+
 		</dependency>
-		
 		<dependency>
 			<groupId>org.apache.ant</groupId>
 			<artifactId>ant</artifactId>
@@ -137,102 +139,112 @@
 			<artifactId>jxl</artifactId>
 			<version>2.6.12</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
-			<version>1.4.1</version>
+			<version>1.4.7</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.2</version>
 		</dependency>
-		
-		<dependency>  
-            <groupId>log4j</groupId>  
-            <artifactId>log4j</artifactId>  
-            <version>1.2.17</version>  
-        </dependency>
-        
-            <!-- mysql的依赖 -->  
-        <dependency>  
-            <groupId>mysql</groupId>  
-            <artifactId>mysql-connector-java</artifactId>  
-            <version>${mysql.jdbc.version}</version>  
-        </dependency>  
-  
-  
-        <!-- mybatis部分 -->  
+
 		<dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis-spring</artifactId>
-		    <version>1.2.5</version>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
-  
-		  <dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis</artifactId>
-		    <version>3.1.1</version>
+
+		<!-- mysql的依赖 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.jdbc.version}</version>
 		</dependency>
-        <!-- c3p0 -->  
-        <dependency>  
-            <groupId>c3p0</groupId>  
-            <artifactId>c3p0</artifactId>  
-            <version>0.9.1.2</version>  
-        </dependency>  
-        <dependency>
-        
-        
-        <!--ReportNg美化   -->
-    <groupId>org.uncommons</groupId>
-    <artifactId>reportng</artifactId>
-    <version>1.1.4</version>
-    <scope>test</scope>
-    <exclusions>
-        <exclusion>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
 
-<dependency>
-    <groupId>com.google.inject</groupId>
-    <artifactId>guice</artifactId>
-    <version>3.0</version>
-    <scope>test</scope>
-</dependency>
 
-<!--ReportNg美化  结束  -->
+		<!-- mybatis部分 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+		<!-- c3p0 -->
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+		
+		      <!-- 邮件start -->
+      <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.4</version>
+      </dependency>
+		
+		
+		
+		<dependency>
+			<!--ReportNg美化 -->
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!--ReportNg美化 结束 -->
 
 	</dependencies>
- <build>  
-    <plugins>  
-        <plugin>  
-            <groupId>org.apache.maven.plugins</groupId>  
-            <artifactId>maven-compiler-plugin</artifactId>  
-            <configuration>  
-                <encoding>UTF-8</encoding>  
-            </configuration>  
-        </plugin>  
-        
-        <!-- Maven执行testng.xml -->
-        <plugin>  
-            <groupId>org.apache.maven.plugins</groupId>  
-            <artifactId>maven-surefire-plugin</artifactId>  
-            <version>2.7.1</version>  
-            <configuration>   
-                <!--<testFailureIgnore>true</testFailureIgnore>-->  
-                <suiteXmlFiles>  
-                    <suiteXmlFile>testng.xml</suiteXmlFile>  
-                </suiteXmlFiles>  
-                
-            </configuration>  
-        </plugin>  
-    </plugins>  
-</build> 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- Maven执行testng.xml -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.7.1</version>
+				<configuration>
+					<!--<testFailureIgnore>true</testFailureIgnore> -->
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
 
 

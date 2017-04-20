@@ -18,7 +18,7 @@ public class Linster1Test extends SpringBase {
 		// TODO Auto-generated constructor stub
 	}
 
-	int i = 0;
+	int i = 1;
 	
 	@BeforeMethod
 	public void BeforeMethod() {

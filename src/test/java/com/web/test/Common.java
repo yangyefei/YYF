@@ -1,19 +1,19 @@
 package com.web.test;
 
-import org.junit.experimental.max.MaxCore;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 import com.web.utils.TestLinster;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.Arrays;
 @Listeners({TestLinster.class})
 public class Common extends SpringBase {
    
@@ -27,18 +27,24 @@ public class Common extends SpringBase {
 	@Autowired
 	private MySqlDao mySqlDao;
 	private WebDriver driver;
-	File file = new File("d:\\demo.txt");
+
 
 	// @Test
 
 	@Test
-	public void testCollcetion() {
-   int[] b = new  int[1];
-   b[0]++;
-   System.out.println(b[0]);
-   //yyfeditaa
+	public void testCollcetion() throws IOException {
+		File file =new File("./test-output/html/apple.html");
+		
+ FileInputStream  iStream= new FileInputStream(file);
+ 
+
+ 
+ while (iStream.read()!=-1) {
+	 char c=(char) iStream.read();
+  System.out.print(c);
+}
+
 		}
 	
 }
-
 

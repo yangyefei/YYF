@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="TestCommon">
+    <classes>
+    
+    <class name="com.web.test.Linster1Test"/>
+    </classes>
+   </test> 
+ 
+   <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        
+      <listener class-name="com.web.utils.RetryListener" />
+    </listeners> 
+
+ 
+</suite> <!-- Suite -->
