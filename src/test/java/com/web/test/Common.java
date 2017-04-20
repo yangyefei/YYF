@@ -31,7 +31,6 @@ public class Common extends SpringBase {
 
 	// @Test
 
-	@Test
 	public void testCollcetion() throws IOException {
 		File file =new File("./test-output/html/apple.html");
 		
