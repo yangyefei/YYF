@@ -1,97 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="2" started-at="2017-04-18T10:24:29Z" finished-at="2017-04-18T10:24:29Z">
+  <suite name="Default suite" duration-ms="5762" started-at="2017-04-28T06:59:06Z" finished-at="2017-04-28T06:59:11Z">
     <groups>
     </groups>
-    <test name="TestCommon" duration-ms="2" started-at="2017-04-18T10:24:29Z" finished-at="2017-04-18T10:24:29Z">
-      <class name="com.web.test.Linster1Test">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="5" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
+    <test name="Default test" duration-ms="5762" started-at="2017-04-28T06:59:06Z" finished-at="2017-04-28T06:59:11Z">
+      <class name="com.web.test.Common">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2017-04-28T14:59:06Z" finished-at="2017-04-28T14:59:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="589" started-at="2017-04-18T18:24:29Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-04-18T18:24:29Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="554" started-at="2017-04-28T14:59:06Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-04-28T14:59:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-28T14:59:06Z" finished-at="2017-04-28T14:59:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+                <![CDATA[public void com.web.test.Common.testCollcetion() throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="test1" duration-ms="1" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
+        <test-method status="PASS" signature="testCollcetion()[pri:0, instance:com.web.test.Common@cb0ed20]" name="testCollcetion" duration-ms="5187" started-at="2017-04-28T14:59:06Z" finished-at="2017-04-28T14:59:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
+        </test-method> <!-- testCollcetion -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-28T14:59:11Z" finished-at="2017-04-28T14:59:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
+                <![CDATA[public void com.web.test.Common.testCollcetion() throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-04-28T14:59:11Z" finished-at="2017-04-28T14:59:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="test1" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.web.test.Linster1Test.test1()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.web.test.Linster1Test@76f2b07d]" name="BeforeMethod" is-config="true" duration-ms="0" started-at="2017-04-18T18:24:29Z" finished-at="2017-04-18T18:24:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-      </class> <!-- com.web.test.Linster1Test -->
-    </test> <!-- TestCommon -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.web.test.Common -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

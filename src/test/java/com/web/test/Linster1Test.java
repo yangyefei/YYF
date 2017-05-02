@@ -25,12 +25,12 @@ public class Linster1Test extends SpringBase {
 		System.out.println("@BeforemMethod");
 	}
 
-	@Test // 单个测试用例重跑方法(retryAnalyzer = Retry.class)
+	@Test //(retryAnalyzer = Retry.class)
 
 	public void test1() {
 		System.out.println(i);
 		System.out.println("test1" + 1 / i);
-		
+	
 	}
 
 	@AfterClass

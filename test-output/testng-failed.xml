@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="com.web.utils.RetryListener"/>
-  </listeners>
-  <test name="TestCommon(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.web.test.Linster1Test">
+      <class name="com.web.test.Common">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
+          <include name="testCollcetion"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
-          <include name="BeforeMethod"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="afterClass"/>
-          <include name="test1"/>
         </methods>
-      </class> <!-- com.web.test.Linster1Test -->
+      </class> <!-- com.web.test.Common -->
     </classes>
-  </test> <!-- TestCommon(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

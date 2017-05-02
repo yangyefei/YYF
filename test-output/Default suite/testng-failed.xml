@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.web.test.MailSenderUtil">
+      <class name="com.web.test.Common">
         <methods>
-          <include name="test"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="testCollcetion"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- com.web.test.MailSenderUtil -->
+      </class> <!-- com.web.test.Common -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

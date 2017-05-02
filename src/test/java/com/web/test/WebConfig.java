@@ -37,3 +37,17 @@ public class WebConfig {
 	}
 	
 }
+
+/**
+ * 本地启动浏览器
+ */
+
+//public static WebDriver initChrome(WebDriver dr) {
+//String key = "webdriver.chrome.driver";
+//String value = "./other/chromedriver.exe";
+//System.setProperty(key， value);
+//dr = new ChromeDriver();
+//dr.manage().window().maximize();
+//dr.manage().timeouts().implicitlyWait(10， TimeUnit.SECONDS);
+//return dr;
+//}
