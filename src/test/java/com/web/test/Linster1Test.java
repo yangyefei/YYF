@@ -11,7 +11,7 @@ import org.testng.util.RetryAnalyzerCount;
 
 import com.web.utils.*;
 
-@Listeners({TestLinster.class,RetryListener.class})
+//@Listeners({TestLinster.class,RetryListener.class})
 public class Linster1Test extends SpringBase {
 	public Linster1Test() throws MalformedURLException {
 		super();

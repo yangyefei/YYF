@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5762" started-at="2017-04-28T06:59:06Z" finished-at="2017-04-28T06:59:11Z">
+  <suite name="Default suite" duration-ms="1248" started-at="2017-06-20T02:16:16Z" finished-at="2017-06-20T02:16:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5762" started-at="2017-04-28T06:59:06Z" finished-at="2017-04-28T06:59:11Z">
-      <class name="com.web.test.Common">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2017-04-28T14:59:06Z" finished-at="2017-04-28T14:59:06Z">
+    <test name="Default test" duration-ms="1248" started-at="2017-06-20T02:16:16Z" finished-at="2017-06-20T02:16:17Z">
+      <class name="com.web.test.MySqlDao">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.web.test.MySqlDao@6950e31]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="9" started-at="2017-06-20T10:16:16Z" finished-at="2017-06-20T10:16:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="554" started-at="2017-04-28T14:59:06Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-04-28T14:59:06Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.web.test.MySqlDao@6950e31]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="873" started-at="2017-06-20T10:16:16Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-06-20T10:16:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-28T14:59:06Z" finished-at="2017-04-28T14:59:06Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.MySqlDao@6950e31]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-06-20T10:16:17Z" finished-at="2017-06-20T10:16:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.web.test.Common.testCollcetion() throws java.io.IOException]]>
+                <![CDATA[public void com.web.test.MySqlDao.find()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="testCollcetion()[pri:0, instance:com.web.test.Common@cb0ed20]" name="testCollcetion" duration-ms="5187" started-at="2017-04-28T14:59:06Z" finished-at="2017-04-28T14:59:11Z">
+        <test-method status="PASS" signature="find()[pri:0, instance:com.web.test.MySqlDao@6950e31]" name="find" duration-ms="351" started-at="2017-06-20T10:16:17Z" finished-at="2017-06-20T10:16:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCollcetion -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-28T14:59:11Z" finished-at="2017-04-28T14:59:11Z">
+        </test-method> <!-- find -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.web.test.MySqlDao@6950e31]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-06-20T10:16:17Z" finished-at="2017-06-20T10:16:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.web.test.Common.testCollcetion() throws java.io.IOException]]>
+                <![CDATA[public void com.web.test.MySqlDao.find()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.web.test.Common@cb0ed20]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-04-28T14:59:11Z" finished-at="2017-04-28T14:59:11Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.web.test.MySqlDao@6950e31]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-06-20T10:16:17Z" finished-at="2017-06-20T10:16:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- com.web.test.Common -->
+      </class> <!-- com.web.test.MySqlDao -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

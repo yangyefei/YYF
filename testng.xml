@@ -13,6 +13,7 @@
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
         
       <listener class-name="com.web.utils.RetryListener" />
+      <listener class-name="com.web.utils.TestLinster"></listener>
     </listeners> 
 
  

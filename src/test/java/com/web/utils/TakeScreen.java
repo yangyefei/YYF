@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.apache.bcel.classfile.SourceFile;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -25,6 +26,7 @@ public class TakeScreen {
 
 		System.out.println(currentPath);
 		File scrFile = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE);
+		scrFile.getParentFile();
 
 		try {
 			System.out.println("save snapshot path is:" + currentPath + "/" + filename+date+".jpg");

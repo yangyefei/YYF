@@ -21,28 +21,22 @@ import org.testng.annotations.Test;
  * @author yyf
  *
  */
-public class MySqlDao {
+public class MySqlDao extends SpringBase{
+
+	public MySqlDao() throws MalformedURLException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Autowired
 	private JdbcTemplate JdbcTemplate;
 
 	@Test
 	public void find() {
-		String sql = "SELECT project_name FROM interview WHERE project_name LIKE 'Ricardo Liu' ORDER BY id DESC LIMIT 1";
+		String sql = "SELECT project_name FROM interview WHERE project_name LIKE 'Ricardo%' ORDER BY id DESC LIMIT 1";
 		String result = (String) JdbcTemplate.queryForObject(sql, String.class);
 		System.out.println(result);
-		// ApplicationContext ctx=new
-		// ClassPathXmlApplicationContext("classpath*:ApplicationContext.xml");
-		// Cat cat=(Cat) ctx.getBean("cat");
-		// throw new RuntimeException("yichang");
-		// animal.anmialeat();
-		// Set<String> set = new HashSet<String>();
-		// set.add("a");
-		// set.add("ba");
-		// set.add("c");
-		// set.add("d");
-		// for (String string : set) {
-		// System.out.println(string);
+
 	}
 
 }
