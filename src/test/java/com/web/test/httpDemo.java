@@ -40,18 +40,21 @@ public class httpDemo {
 		// .build();
 
 		/**
-		 * get
+		 * get & post方法
 		 */
 		Request request = new Request.Builder().url("http://172.16.11.133:8097/yrb/sysTag/isExistFwTag/1").build();
 		Response response = client.newCall(request).execute();
-		Headers responseHeaders = response.headers();
-		for (int i = 0; i < responseHeaders.size(); i++) {
-			System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
-		}
+//		Headers responseHeaders = response.headers();
+//		for (int i = 0; i < responseHeaders.size(); i++) {
+//			System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
+//		}
 		String Str = response.body().string();
 		// String[] str2=Str.split(",");
 		// List<String> list=Arrays.asList(str2);
-
+		
+       /*
+        * 创建jason字符串，String;list;object转json
+        */
 		JSONObject jsonObject = JSONObject.fromObject(Str);
 
 		// JSONArray jsonArray = JSONArray.fromObject(list);
