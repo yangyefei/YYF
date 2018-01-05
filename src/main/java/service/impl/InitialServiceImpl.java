@@ -14,24 +14,19 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import service.InitialService;
 
-@Component
+
 public class InitialServiceImpl implements InitialService {
-	@Value("${AppPackage}")
-	private String AppPackage;
-	
-	@Value("${AppActivity}")
+
+	private String AppPackage="zzz";
+
 	private String AppActivity;
-	
-	@Value("${platformVersion}")
+
 	private String platformVersion;
-	
-	@Value("${appRunMachineIp}")
+
 	private String appRunMachineIp;
-	
-	@Value("${webRunMachineIp}")
+
 	private String webRunMachineIp;
-	
-	@Value("${appiumPort}")
+
 	private String appiumPort;
 
 	@Override

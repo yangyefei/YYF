@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.hotel.test">
+      <class name="orm.MySqlDao">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="testa"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
+          <include name="addData"/>
+          <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- test.apptest.hotel.test -->
+      </class> <!-- orm.MySqlDao -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

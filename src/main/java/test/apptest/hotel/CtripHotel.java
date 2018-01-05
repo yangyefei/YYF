@@ -5,6 +5,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import service.AppCommonService;
 import service.InitialService;
+import service.impl.AppCommonServiceImpl;
+import service.impl.InitialServiceImpl;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,10 +31,10 @@ import org.testng.annotations.AfterClass;
 
 public class CtripHotel extends BaseTest {
 
-	@Autowired
-	private InitialService Initial;
-	@Autowired
-	private AppCommonService appCommonService;
+	
+	private InitialService Initial = new InitialServiceImpl();
+
+	private AppCommonService appCommonService=new AppCommonServiceImpl();
 	// @Autowired
 	// private WebCommonService webCommonService;
 

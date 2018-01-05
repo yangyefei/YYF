@@ -3,16 +3,16 @@
 <suite name="Suite">
   <test name="Testsingle">
     <classes>
-    
-    <class name="test.myjava.com.web.test.Single"/>
+   
+    <class name="test.apptest.hotel.test"/>
+  
     </classes>
    </test> 
  
    <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter" />
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-   
-      <listener class-name="test.myjava.com.web.utils.TestLinster"></listener>
+      <listener class-name="com.web.utils.TestLinster"></listener>
     </listeners> 
  
 </suite> <!-- Suite -->

@@ -1,95 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="182" started-at="2018-01-05T09:58:48Z" finished-at="2018-01-05T09:58:48Z">
+  <suite name="Default suite" duration-ms="1389" started-at="2018-01-05T17:33:35Z" finished-at="2018-01-05T17:33:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="182" started-at="2018-01-05T09:58:48Z" finished-at="2018-01-05T09:58:48Z">
-      <class name="test.apptest.hotel.test">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.test@2de8284b]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="6" started-at="2018-01-05T17:58:48Z" finished-at="2018-01-05T17:58:48Z">
+    <test name="Default test" duration-ms="1389" started-at="2018-01-05T17:33:35Z" finished-at="2018-01-05T17:33:36Z">
+      <class name="orm.MySqlDao">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:orm.MySqlDao@32a068d1]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="12" started-at="2018-01-06T01:33:35Z" finished-at="2018-01-06T01:33:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="FAIL" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.test@2de8284b]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-01-05T17:58:48Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-05T17:58:48Z">
-          <exception class="org.springframework.beans.factory.BeanCreationException">
-            <message>
-              <![CDATA[Error creating bean with name 'test.apptest.hotel.test': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: public common.frame.test.ExcelProviderByTest common.frame.test.BaseTest.excelProviderByTest; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [common.frame.test.ExcelProviderByTest] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'test.apptest.hotel.test': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: public common.frame.test.ExcelProviderByTest common.frame.test.BaseTest.excelProviderByTest; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [common.frame.test.ExcelProviderByTest] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextPrepareTestInstance(AbstractTestNGSpringContextTests.java:145)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: public common.frame.test.ExcelProviderByTest common.frame.test.BaseTest.excelProviderByTest; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [common.frame.test.ExcelProviderByTest] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
-	... 30 more
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [common.frame.test.ExcelProviderByTest] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1301)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1047)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
-	... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.springframework.beans.factory.BeanCreationException -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:orm.MySqlDao@32a068d1]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="820" started-at="2018-01-06T01:33:35Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-06T01:33:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@2de8284b]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-01-05T17:58:48Z" finished-at="2018-01-05T17:58:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="SKIP" signature="testa()[pri:0, instance:test.apptest.hotel.test@2de8284b]" name="testa" duration-ms="1" started-at="2018-01-05T17:58:48Z" finished-at="2018-01-05T17:58:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testa -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@2de8284b]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-01-05T17:58:48Z" finished-at="2018-01-05T17:58:48Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:orm.MySqlDao@32a068d1]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="480" started-at="2018-01-06T01:33:35Z" finished-at="2018-01-06T01:33:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.hotel.test.testa()]]>
+                <![CDATA[public void orm.MySqlDao.addData()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="addData()[pri:0, instance:orm.MySqlDao@32a068d1]" name="addData" duration-ms="38" started-at="2018-01-06T01:33:36Z" finished-at="2018-01-06T01:33:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addData -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:orm.MySqlDao@32a068d1]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="17" started-at="2018-01-06T01:33:36Z" finished-at="2018-01-06T01:33:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void orm.MySqlDao.addData()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.test@2de8284b]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-01-05T17:58:48Z" finished-at="2018-01-05T17:58:48Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:orm.MySqlDao@32a068d1]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-06T01:33:36Z" finished-at="2018-01-06T01:33:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:orm.MySqlDao@32a068d1]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-01-06T01:33:36Z" finished-at="2018-01-06T01:33:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- test.apptest.hotel.test -->
+      </class> <!-- orm.MySqlDao -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
