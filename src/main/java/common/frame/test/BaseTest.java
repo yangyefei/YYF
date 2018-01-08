@@ -7,11 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
+import org.testng.annotations.Listeners;
+
+import com.web.utils.TestLinster;
 
 import common.frame.data.ExcelProviderByTest;
 
 @ContextConfiguration(locations = { "classpath*:ApplicationContext.xml" })
 //AbstractTransactionalTestNGSpringContextTests
+@Listeners(TestLinster.class)
 public class BaseTest extends  AbstractTestNGSpringContextTests {
 
 	ExcelProviderByTest excelProviderByTest = new ExcelProviderByTest();

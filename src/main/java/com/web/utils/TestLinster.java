@@ -14,7 +14,7 @@ public class TestLinster implements ITestListener {
 	}
 
 	public void onStart(ITestContext it) {
-		
+		 logger.info("监听器onstart");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
@@ -36,7 +36,7 @@ public class TestLinster implements ITestListener {
 
 	public void onTestStart(ITestResult it) {
 		// TODO Auto-generated method stub
-		System.out.println("onTestStart:"+it.getName());
+		System.out.println("监听器onTestStart:"+it.getName());
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
