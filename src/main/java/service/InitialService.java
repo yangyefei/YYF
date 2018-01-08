@@ -15,24 +15,9 @@ public interface InitialService {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	public AndroidDriver appiumAndroidCtripSetUp(AndroidDriver driver, String apkPath) throws MalformedURLException;
+	public AndroidDriver appiumAndroidCtripSetUp(AndroidDriver driver) throws MalformedURLException;
 	
-	/**
-	 * Android 创业者app初始化
-	 * @param driver
-	 * @param apkName
-	 * @return
-	 * @throws MalformedURLException
-	 */
-	public AndroidDriver appiumAndroidChuangyeSetUp(AndroidDriver driver, String apkPath) throws MalformedURLException;
-	
-		
-	/**
-	 * 启动远程ie浏览器
-	 * @param driver
-	 * @return
-	 * @throws Exception
-	 */
+
 	public WebDriver browserOfInternetSetUp(WebDriver driver) throws Exception;
 	
 	/**

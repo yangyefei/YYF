@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-public class WebConfig {
+public class WebDriverConfig {
 	private String webRunMachineIp;
 
 	public void setWebRunMachineIp(String webRunMachineIp) {

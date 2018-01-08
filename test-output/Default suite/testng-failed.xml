@@ -6,6 +6,7 @@
       <class name="orm.MySqlDao">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
+          <include name="teardown"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="addData"/>

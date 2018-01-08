@@ -121,7 +121,7 @@ private  By nameput;
 			System.out.println(integer);
 		}
 
-		// Collections.sort(arrayList);
+		Collections.sort(arrayList);//object需要实现compareable接口才能排序
 		arrayList.sort(null);
 		Collections.reverse(arrayList); // 反向排序
 		System.out.println(arrayList);
