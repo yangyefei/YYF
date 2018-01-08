@@ -24,7 +24,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class CtripHotel extends BaseTest {
-	private InitialService Initial = new InitialServiceImpl();
+	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
 	private AndroidDriver driver;
 
@@ -35,10 +35,10 @@ public class CtripHotel extends BaseTest {
 
 	// 测试用例 执行 ，数据提供testData, 超时30000s,读取一次数据
 	@Test(dataProvider = "testData", description = "hotelByYyf", groups = {"base"},timeOut=30000)
-	public void HotelLogin(Map<String, String> datadriven) throws Exception {
+	public void hotelLogin(Map<String, String> datadriven) throws Exception {
 		
 		logger.info("APP " + datadriven.get("version") + "---启动携程app---");
-		driver = Initial.appiumAndroidCtripSetUp(driver);
+		driver = initial.appiumAndroidCtripSetUp(driver);
 
 		
 		logger.info("初始化成功，准备登陆");
