@@ -1,17 +1,14 @@
 package orm;
 
+import java.net.MalformedURLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import common.frame.test.BaseTest;
-
-import java.net.MalformedURLException;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.jdbc.core.JdbcTemplate;
-
-import org.springframework.test.annotation.Rollback;
 
 
 
@@ -40,9 +37,9 @@ public class MySqlDao extends BaseTest {
 	 */
 
 	@Test
-	@Rollback(false) // 不回滚事物
+	@Rollback(true) // 不回滚事物
 	public void addData() {
-		String sql = "update ctrip set room='yangyefei999' where hotelid='1'";
+		String sql = "update ctrip set room='yefeiyang' where hotelid='1'";
 		JdbcTemplate.update(sql);
 		String sql1 = "SELECT room FROM ctrip WHERE hotelid='1'";
 		String result = (String) JdbcTemplate.queryForObject(sql1, String.class);

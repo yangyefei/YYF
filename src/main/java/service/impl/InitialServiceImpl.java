@@ -17,7 +17,7 @@ import service.InitialService;
 
 public class InitialServiceImpl implements InitialService {
 
-	private String AppPackage="ctrip.english.debug";
+	private String AppPackage="ctrip.english";
 
 	private String AppActivity="ctrip.english.LoadingActivity";
 
@@ -37,30 +37,23 @@ public class InitialServiceImpl implements InitialService {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("deviceName", "Android Emulator");
-
 		// capabilities.setCapability(Mobi, "7.1");
 		// capabilities.setCapability("deviceName", "emulator-5554");
 		// capabilities.setCapability("deviceName","device");
 		// capabilities.setCapability("automationName","Appium");
 		capabilities.setCapability("newCommandTimeout", "10");
 		capabilities.setCapability("unicodeKeyboard", "True");
-
 		capabilities.setCapability("resetKeyboard", "True");
-		capabilities.setCapability("autoAcceptAlerts", "True");
-		
+		capabilities.setCapability("autoAcceptAlerts", "True");	
 		capabilities.setCapability("noReset", true);
-
 		capabilities.setCapability("platformVersion", platformVersion);
 		// capabilities.setCapability("udid",
 		// "emulator-5554");//如果要远程调用模拟器，这个参数必须要有
-
 		// capabilities.setCapability("app", app.getAbsolutePath());
 //		capabilities.setCapability("app", apkPath);
 		capabilities.setCapability("appPackage", AppPackage);
 		capabilities.setCapability("appActivity", AppActivity);
-
 		capabilities.setCapability("noSign", "True");
-
 		driver = new AndroidDriver(new URL("http://" + appRunMachineIp + ":" + appiumPort + "/wd/hub"), capabilities);
 
 		return driver;

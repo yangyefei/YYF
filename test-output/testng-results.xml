@@ -2,20 +2,23 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="734" started-at="2018-01-08T07:22:48Z" finished-at="2018-01-08T07:22:49Z">
+  <suite name="Default suite" duration-ms="1020" started-at="2018-01-12T05:31:24Z" finished-at="2018-01-12T05:31:25Z">
     <groups>
+      <group name="base">
+        <method signature="test.testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="testa" class="test.apptest.hotel.test"/>
+      </group> <!-- base -->
     </groups>
-    <test name="Default test" duration-ms="734" started-at="2018-01-08T07:22:48Z" finished-at="2018-01-08T07:22:49Z">
+    <test name="Default test" duration-ms="1020" started-at="2018-01-12T05:31:24Z" finished-at="2018-01-12T05:31:25Z">
       <class name="test.apptest.hotel.test">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2018-01-08T15:22:48Z" finished-at="2018-01-08T15:22:48Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="6" started-at="2018-01-12T13:31:24Z" finished-at="2018-01-12T13:31:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="548" started-at="2018-01-08T15:22:48Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="565" started-at="2018-01-12T13:31:24Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-12T13:31:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="232" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -26,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="testa" duration-ms="4" started-at="2018-01-08T15:22:49Z" description="携程测试hotel" data-provider="testData" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="testa" duration-ms="4" started-at="2018-01-12T13:31:25Z" description="携程测试hotel" data-provider="testData" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -37,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testa -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -48,7 +51,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="testa" duration-ms="1" started-at="2018-01-08T15:22:49Z" description="携程测试hotel" data-provider="testData" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.test.testa(java.util.Map)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="testa" duration-ms="1" started-at="2018-01-12T13:31:25Z" description="携程测试hotel" data-provider="testData" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -59,18 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testa -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.test.testa(java.util.Map)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -81,7 +84,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -92,7 +95,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="testa" duration-ms="0" started-at="2018-01-08T15:22:49Z" description="携程测试hotel" data-provider="testData" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="testa" duration-ms="1" started-at="2018-01-12T13:31:25Z" description="携程测试hotel" data-provider="testData" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -103,7 +106,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testa -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -114,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.test@1ad282e0]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-01-08T15:22:49Z" finished-at="2018-01-08T15:22:49Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.test@32a068d1]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-01-12T13:31:25Z" finished-at="2018-01-12T13:31:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->

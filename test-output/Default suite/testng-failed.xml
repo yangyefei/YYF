@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="orm.MySqlDao">
+      <class name="com.web.test.WebTestDemo">
         <methods>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="teardown"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="addData"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextAfterTestMethod"/>
+          <include name="OpenUrl"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- orm.MySqlDao -->
+      </class> <!-- com.web.test.WebTestDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
