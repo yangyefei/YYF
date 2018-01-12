@@ -16,8 +16,7 @@ public class test extends BaseTest {
 	@Test(dataProvider = "testData", description = "携程测试hotel",groups={"base"})
 	public void testa(Map<String, String> datadriven) {
 		System.out.println(datadriven.get("version"));
-//assertEquals(datadriven.get("version"), actual);
-		
+
 		logger.info("testtest");
 	}
 
