@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60386" started-at="2018-01-15T08:25:35Z" finished-at="2018-01-15T08:26:35Z">
+  <suite name="Default suite" duration-ms="58906" started-at="2018-01-18T02:36:05Z" finished-at="2018-01-18T02:37:04Z">
     <groups>
-      <group name="base">
-        <method signature="FavoriteHotels.menuHome()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="menuHome" class="test.apptest.hotel.FavoriteHotels"/>
-      </group> <!-- base -->
+      <group name="Base">
+        <method signature="SelectFavoriteCity.selectFavoriteCity()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="selectFavoriteCity" class="test.apptest.hotel.SelectFavoriteCity"/>
+      </group> <!-- Base -->
     </groups>
-    <test name="Default test" duration-ms="60386" started-at="2018-01-15T08:25:35Z" finished-at="2018-01-15T08:26:35Z">
-      <class name="test.apptest.hotel.FavoriteHotels">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2018-01-15T16:25:35Z" finished-at="2018-01-15T16:25:35Z">
+    <test name="Default test" duration-ms="58906" started-at="2018-01-18T02:36:05Z" finished-at="2018-01-18T02:37:04Z">
+      <class name="test.apptest.hotel.SelectFavoriteCity">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="6" started-at="2018-01-18T10:36:05Z" finished-at="2018-01-18T10:36:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="596" started-at="2018-01-15T16:25:35Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-15T16:25:35Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="662" started-at="2018-01-18T10:36:05Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-18T10:36:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-01-15T16:25:35Z" finished-at="2018-01-15T16:25:35Z">
+        <test-method status="PASS" signature="beforeclass()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="beforeclass" is-config="true" duration-ms="28647" started-at="2018-01-18T10:36:05Z" finished-at="2018-01-18T10:36:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="268" started-at="2018-01-15T16:25:35Z" finished-at="2018-01-15T16:25:35Z">
+        </test-method> <!-- beforeclass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="300" started-at="2018-01-18T10:36:34Z" finished-at="2018-01-18T10:36:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.hotel.FavoriteHotels.menuHome() throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.hotel.SelectFavoriteCity.selectFavoriteCity() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="menuHome()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="menuHome" duration-ms="54396" started-at="2018-01-15T16:25:35Z" description="hotelBySxm" finished-at="2018-01-15T16:26:30Z">
+        <test-method status="PASS" signature="selectFavoriteCity()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="selectFavoriteCity" duration-ms="24250" started-at="2018-01-18T10:36:34Z" description="hotelBySxm" finished-at="2018-01-18T10:36:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- menuHome -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="7" started-at="2018-01-15T16:26:30Z" finished-at="2018-01-15T16:26:30Z">
+        </test-method> <!-- selectFavoriteCity -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="6" started-at="2018-01-18T10:36:59Z" finished-at="2018-01-18T10:36:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.hotel.FavoriteHotels.menuHome() throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.hotel.SelectFavoriteCity.selectFavoriteCity() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="afterClass" is-config="true" duration-ms="5100" started-at="2018-01-15T16:26:30Z" finished-at="2018-01-15T16:26:35Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="afterClass" is-config="true" duration-ms="5025" started-at="2018-01-18T10:36:59Z" finished-at="2018-01-18T10:37:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.FavoriteHotels@5a4aa2f2]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-01-15T16:26:35Z" finished-at="2018-01-15T16:26:35Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.SelectFavoriteCity@5a4aa2f2]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-01-18T10:37:04Z" finished-at="2018-01-18T10:37:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- test.apptest.hotel.FavoriteHotels -->
+      </class> <!-- test.apptest.hotel.SelectFavoriteCity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
