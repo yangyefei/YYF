@@ -5,6 +5,8 @@
     <classes>
    
     <class name="test.apptest.hotel.test"/>
+   <class name="test.apptest.hotel.SelectFavoriteCity"/>
+
   
     </classes>
    </test> 

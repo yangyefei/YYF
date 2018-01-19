@@ -4,20 +4,29 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="test.myjava.com.web.utils.TestLinster"/>
+    <listener class-name="com.web.utils.TestLinster"/>
   </listeners>
   <test name="Testsingle(failed)">
     <classes>
-      <class name="test.myjava.com.web.test.Single">
+      <class name="test.apptest.hotel.SelectFavoriteCity">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="selectFavoriteCity"/>
+          <include name="beforeclass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- test.apptest.hotel.SelectFavoriteCity -->
+      <class name="test.apptest.hotel.test">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="yyf"/>
         </methods>
-      </class> <!-- test.myjava.com.web.test.Single -->
+      </class> <!-- test.apptest.hotel.test -->
     </classes>
   </test> <!-- Testsingle(failed) -->
 </suite> <!-- Failed suite [Suite] -->

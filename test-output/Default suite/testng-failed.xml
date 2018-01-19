@@ -3,18 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.hotel.SelectFavoriteCity">
+      <class name="test.apptest.hotel.BookGuaranteeHotel">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="selectFavoriteCity"/>
-          <include name="afterClass"/>
           <include name="beforeclass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextBeforeTestMethod"/>
+          <include name="bookGuaranteeHotel"/>
           <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- test.apptest.hotel.SelectFavoriteCity -->
+      </class> <!-- test.apptest.hotel.BookGuaranteeHotel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

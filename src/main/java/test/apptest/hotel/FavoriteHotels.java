@@ -39,6 +39,7 @@ public class FavoriteHotels extends BaseTest{
 		//logger.info("APP " + datadriven.get("version") + "---启动携程app---");
 		driver = initial.appiumAndroidCtripSetUp(driver);
 
+		
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08");
 		driver.findElement(By.id("myctrip_hotel_icon")).click();
