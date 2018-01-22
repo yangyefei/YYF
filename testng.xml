@@ -4,8 +4,9 @@
   <test name="Testsingle">
     <classes>
    
+    <class name="test.apptest.hotel.test2"/>
     <class name="test.apptest.hotel.test"/>
-  
+    
     </classes>
    </test> 
  

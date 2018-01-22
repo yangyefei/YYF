@@ -19,16 +19,16 @@ public class AppCommonServiceImpl implements AppCommonService {
 	public AppiumDriver loginForApp(AppiumDriver driver, String userName, String userPassWord) {
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.id("iv_account"))).click();
-
+		System.out.println("--------------iv_account---------");
 		try {
 
-			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).isDisplayed();
-		
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_email")))
+					.isDisplayed();
 
 		} catch (Exception e) {
 
 			System.out.println("进入catch");
-			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tvSignIn"))).click();	
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tvSignIn"))).click();
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("login_btn"))).click();
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("account_input")))
 					.clear();
@@ -37,8 +37,9 @@ public class AppCommonServiceImpl implements AppCommonService {
 			driver.findElement(By.id("login_btn")).click();
 
 		} finally {
-			
+
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("iv_home"))).click();
+			System.out.println("--------------iv_home---------");
 			return driver;
 		}
 	}

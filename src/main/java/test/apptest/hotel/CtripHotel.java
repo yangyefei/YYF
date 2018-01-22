@@ -52,7 +52,10 @@ public class CtripHotel extends BaseTest {
 				.until(ExpectedConditions.elementToBeClickable(By.id("tvTitle")));
 		logger.info("-------------" + tvTitle.getText());
 		logger.info("--------------" + datadriven.get("result"));
+	
 		assertEquals(tvTitle.getText(), datadriven.get("result"));
+
+		
 		driver.pressKeyCode(4);
 		Thread.sleep(1000);
 		
