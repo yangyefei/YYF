@@ -21,7 +21,7 @@ public class test extends BaseTest {
 	@Test(priority=2,dataProvider = "testData", description = "携程测试hotel", groups = { "base" })
 	public void testa(Map<String, String> datadriven) {
 		System.out.println(datadriven.get("version"));
-		logger.info("testtest");
+		logger.info("testtester");
 	}
 
 	@DataProvider(name = "testData")
