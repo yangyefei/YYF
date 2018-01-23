@@ -3,29 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="test.apptest.hotel.test2">
+      <class name="test.apptest.hotel.CtripHotel">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="testa"/>
-=======
-      <class name="test.apptest.hotel.SelectFavoriteCity">
-        <methods>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="selectFavoriteCity"/>
-          <include name="afterClass"/>
-          <include name="beforeclass"/>
->>>>>>> 43c8f39dda80a2ece2c57248b9bda1b048038a2c
+          <include name="hotelLogin"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeClass"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- test.apptest.hotel.test2 -->
-=======
-      </class> <!-- test.apptest.hotel.SelectFavoriteCity -->
->>>>>>> 43c8f39dda80a2ece2c57248b9bda1b048038a2c
+      </class> <!-- test.apptest.hotel.CtripHotel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

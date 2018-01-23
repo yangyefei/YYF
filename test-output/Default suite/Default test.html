@@ -55,17 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/8</td>
 </tr><tr>
-<<<<<<< HEAD
-<td>Started on:</td><td>Fri Jan 19 10:34:55 CST 2018</td>
+<td>Started on:</td><td>Mon Jan 22 20:53:59 CST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1138 ms)</td>
-=======
-<td>Started on:</td><td>Thu Jan 18 10:36:05 CST 2018</td>
-</tr>
-<tr><td>Total time:</td><td>58 seconds (58906 ms)</td>
->>>>>>> 43c8f39dda80a2ece2c57248b9bda1b048038a2c
+<tr><td>Total time:</td><td>17 seconds (17622 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -73,35 +67,216 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='test.apptest.hotel.test.testa()'><b>testa</b><br>Test class: test.apptest.hotel.test<br>Test method: 携程测试hotel<br>Parameters: {version=v2.3}</td>
-<td></td>
+<td title='test.apptest.hotel.CtripHotel.beforeClass()'><b>beforeClass</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: Permission to start activity denied. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.64 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DST65976&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at service.impl.InitialServiceImpl.appiumAndroidCtripSetUp(InitialServiceImpl.java:57)
+	at test.apptest.hotel.CtripHotel.beforeClass(CtripHotel.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1108706191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1108706191'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: Permission to start activity denied. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.64 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DST65976&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
+	at service.impl.InitialServiceImpl.appiumAndroidCtripSetUp(InitialServiceImpl.java:57)
+	at test.apptest.hotel.CtripHotel.beforeClass(CtripHotel.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div></td>
 <td>0</td>
-<td>test.apptest.hotel.test@33cb5951</td></tr>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='test.apptest.hotel.test.testa()'><b>testa</b><br>Test class: test.apptest.hotel.test<br>Test method: 携程测试hotel<br>Parameters: {version=v2.4}</td>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
 <td></td>
 <td>0</td>
-<td>test.apptest.hotel.test@33cb5951</td></tr>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
 <tr>
-<td title='test.apptest.hotel.test.testa()'><b>testa</b><br>Test class: test.apptest.hotel.test<br>Test method: 携程测试hotel<br>Parameters: {version=v2.5}</td>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
 <td></td>
 <td>0</td>
-<td>test.apptest.hotel.test@33cb5951</td></tr>
-=======
-<td title='test.apptest.hotel.SelectFavoriteCity.selectFavoriteCity()'><b>selectFavoriteCity</b><br>Test class: test.apptest.hotel.SelectFavoriteCity<br>Test method: hotelBySxm</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
 <td></td>
-<td>24</td>
-<td>test.apptest.hotel.SelectFavoriteCity@5a4aa2f2</td></tr>
->>>>>>> 43c8f39dda80a2ece2c57248b9bda1b048038a2c
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.springTestContextBeforeTestMethod()'><b>springTestContextBeforeTestMethod</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.afterClass()'><b>afterClass</b><br>Test class: test.apptest.hotel.CtripHotel</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=上海, searchKeyWord=上海}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=北京, searchKeyWord=北京}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=上海, searchKeyWord=上海}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=北京, searchKeyWord=北京}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=上海, searchKeyWord=上海}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=北京, searchKeyWord=北京}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=上海, searchKeyWord=上海}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
+<tr>
+<td title='test.apptest.hotel.CtripHotel.hotelLogin()'><b>hotelLogin</b><br>Test class: test.apptest.hotel.CtripHotel<br>Test method: hotelByYyf<br>Parameters: {result=北京, searchKeyWord=北京}</td>
+<td></td>
+<td>0</td>
+<td>test.apptest.hotel.CtripHotel@429bd883</td></tr>
 </table><p>
 </body>
 </html>

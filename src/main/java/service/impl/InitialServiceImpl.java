@@ -19,7 +19,7 @@ public class InitialServiceImpl implements InitialService {
 
 	private String AppPackage="ctrip.english";
 
-	private String AppActivity="ctrip.english.LoadingActivity";
+	private String AppActivity="com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity";
 
 	private String platformVersion;
 
