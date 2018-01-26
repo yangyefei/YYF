@@ -20,7 +20,7 @@ public class test extends BaseTest {
 
 	@Test(priority=2,dataProvider = "testData", description = "携程测试hotel", groups = { "base" })
 	public void testa(Map<String, String> datadriven) {
-		System.out.println(datadriven.get("version"));
+		System.out.println(datadriven.get("city"));
 		logger.info("testtester");
 	}
 

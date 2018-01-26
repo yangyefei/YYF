@@ -29,16 +29,14 @@ public class CtripHotel extends BaseTest {
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver);
+		logger.info("初始化成功，准备登陆");
+		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 	}
 
 	// 测试用例 执行 ，数据提供testData, 超时30000s,读取一次数据
-	@Test(dataProvider = "testData", description = "hotelByYyf", groups = { "Base" },timeOut=30000,invocationCount=4)
+	@Test(dataProvider = "testData", description = "hotelByYyf", groups = { "Base" })
 	public void hotelLogin(Map<String, String> datadriven) throws Exception {
-
-		logger.info("APP " + datadriven.get("version") + "---启动携程app---");
-
-		logger.info("初始化成功，准备登陆");
-		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
+		
 		driver.findElement(By.id("myctrip_hotel_icon")).click(); // 进入酒店首页
 		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_stay_in")))
 				.click();
@@ -47,18 +45,13 @@ public class CtripHotel extends BaseTest {
 		e.clear();
 		e.sendKeys(datadriven.get("searchKeyWord"));
 		logger.info(datadriven.get("searchKeyWord"));
-
 		WebElement tvTitle = new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("tvTitle")));
-		logger.info("-------------" + tvTitle.getText());
-		logger.info("--------------" + datadriven.get("result"));
-	
 		assertEquals(tvTitle.getText(), datadriven.get("result"));
 
-		
 		driver.pressKeyCode(4);
 		Thread.sleep(1000);
-		
+
 	}
 
 	@DataProvider(name = "testData")
