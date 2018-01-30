@@ -19,8 +19,8 @@ public class TakeScreen {
 	public static void snapshot(WebDriver webdriver, String filename) {
         Calendar  calendar =Calendar.getInstance();
         SimpleDateFormat  sFormat= new SimpleDateFormat("YYYY-MM-dd");
-       String  date= sFormat.format(calendar.getTime());
-       System.out.println(date);
+        String  date= sFormat.format(calendar.getTime());
+        System.out.println(date);
         
 		String currentPath = System.getProperty("user.dir");
 

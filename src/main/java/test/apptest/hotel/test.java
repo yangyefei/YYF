@@ -1,14 +1,15 @@
 package test.apptest.hotel;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.testng.AssertJUnit.assertEquals;
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+
 
 import common.frame.test.BaseTest;
 
@@ -22,6 +23,7 @@ public class test extends BaseTest {
 	public void testa(Map<String, String> datadriven) {
 		System.out.println(datadriven.get("city"));
 		logger.info("testtester");
+		Assert.assertEquals(1, 2);
 	}
 
 	//test
