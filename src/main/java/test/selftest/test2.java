@@ -1,4 +1,4 @@
-package test.apptest.hotel;
+package test.selftest;
 
 import static org.junit.Assert.assertEquals;
 
@@ -48,6 +48,30 @@ public class test2 extends BaseTest {
 		    }   
 		        
 		  }   
+	
+	@Test
+	public void read() throws IOException{
+		
+		String[][] str =new String[6][6];
+		str[0][1]="*";
+		str[0][3]="*";
+		str[2][0]="*";
+		str[2][4]="*";
+		str[3][1]="*";
+		str[3][2]="*";
+		str[3][3]="*";
+		int heigh=str.length;
+		int length=str[0].length;
+		System.out.println(heigh+"-------"+length);
+		for(int i=0;i<heigh;i++){
+			for (int j=0;j<length;j++){
+				if(j%6==0){
+					System.out.println("");
+				}
+				System.out.print(str[i][j]);
+			}
+		}
+	}
 	}
 
 

@@ -1,4 +1,4 @@
-package test.apptest.hotel;
+package test.selftest;
 
 import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.Test;

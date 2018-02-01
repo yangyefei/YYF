@@ -17,8 +17,12 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Scanner;
+
 import org.testng.annotations.DataProvider;
 import common.frame.test.BaseTest;
+
+import org.eclipse.jetty.util.ReadLineInputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,7 +37,7 @@ public class HotelSearchEngine extends BaseTest {
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver);
-		TestLinster.webDriver = driver; // androiddriver 传递给testlinster
+		//TestLinster.webDriver = driver; // androiddriver 传递给testlinster
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 
@@ -42,7 +46,8 @@ public class HotelSearchEngine extends BaseTest {
 	// 测试用例 执行 ，数据提供testData
 	@Test(dataProvider = "testData", description = "yefei.yang", groups = { "Base" })
 	public void hotelSearch(Map<String, String> datadriven) throws Exception {
-        logger.info(datadriven.get("id")+"---StartTest");
+        logger.info("---"+datadriven.get("id")+"---==>StartTest");
+
 		driver.findElement(By.id("myctrip_hotel_icon")).click(); // 进入酒店首页
 		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_stay_in")))
 				.click();

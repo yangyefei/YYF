@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HotelApp]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.web.utils.TestLinster"/>
+  </listeners>
+  <test name="HomePage(failed)">
+    <classes>
+      <class name="test.apptest.hotel.FavoriteHotels">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="menuHome"/>
+          <include name="beforeClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- test.apptest.hotel.FavoriteHotels -->
+      <class name="test.apptest.hotel.HotelSearchEngine">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="afterClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="beforeClass"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- test.apptest.hotel.HotelSearchEngine -->
+    </classes>
+  </test> <!-- HomePage(failed) -->
+</suite> <!-- Failed suite [HotelApp] -->

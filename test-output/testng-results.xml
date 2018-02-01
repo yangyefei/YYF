@@ -1,102 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58059" started-at="2018-01-30T01:41:03Z" finished-at="2018-01-30T01:42:01Z">
+  <suite name="Suite" duration-ms="52689" started-at="2018-02-01T07:17:40Z" finished-at="2018-02-01T07:18:33Z">
     <groups>
-      <group name="Base">
-        <method signature="CtripHotel.hotelLogin(java.util.Map)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="hotelLogin" class="test.apptest.hotel.CtripHotel"/>
-      </group> <!-- Base -->
+      <group name="base">
+        <method signature="FavoriteHotels.menuHome()[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="menuHome" class="test.apptest.hotel.FavoriteHotels"/>
+        <method signature="test.testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="testa" class="test.apptest.hotel.test"/>
+      </group> <!-- base -->
     </groups>
-    <test name="Default test" duration-ms="58059" started-at="2018-01-30T01:41:03Z" finished-at="2018-01-30T01:42:01Z">
-      <class name="test.apptest.hotel.CtripHotel">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="6" started-at="2018-01-30T09:41:03Z" finished-at="2018-01-30T09:41:03Z">
+    <test name="HotelApp" duration-ms="52689" started-at="2018-02-01T07:17:40Z" finished-at="2018-02-01T07:18:33Z">
+      <class name="test.apptest.hotel.FavoriteHotels">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="5" started-at="2018-02-01T15:17:40Z" finished-at="2018-02-01T15:17:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="538" started-at="2018-01-30T09:41:03Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-01-30T09:41:04Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="550" started-at="2018-02-01T15:17:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-01T15:17:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="beforeClass" is-config="true" duration-ms="22259" started-at="2018-01-30T09:41:04Z" finished-at="2018-01-30T09:41:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="271" started-at="2018-01-30T09:41:26Z" finished-at="2018-01-30T09:41:26Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="242" started-at="2018-02-01T15:17:41Z" finished-at="2018-02-01T15:17:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.hotel.CtripHotel.hotelLogin(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.hotel.FavoriteHotels.menuHome() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="hotelLogin(java.util.Map)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="hotelLogin" duration-ms="16164" started-at="2018-01-30T09:41:26Z" description="hotelByYyf" data-provider="testData" finished-at="2018-01-30T09:41:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{result=上海, version=6.2, searchKeyWord=上海}]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="menuHome()[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="menuHome" duration-ms="51648" started-at="2018-02-01T15:17:41Z" description="hotelBySxm" finished-at="2018-02-01T15:18:32Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.62 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62001, platform=LINUX, deviceUDID=127.0.0.1:62001, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=4.4.2, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=samsung, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=SM-G955N, autoAcceptAlerts=True}]
+Session ID: 9d7f82bc-0810-4ff0-b3be-3f0e41431ef6
+*** Element info: {Using=id, value=tv_my_hotel_title}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.62 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62001, platform=LINUX, deviceUDID=127.0.0.1:62001, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=4.4.2, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=samsung, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=SM-G955N, autoAcceptAlerts=True}]
+Session ID: 9d7f82bc-0810-4ff0-b3be-3f0e41431ef6
+*** Element info: {Using=id, value=tv_my_hotel_title}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at test.apptest.hotel.FavoriteHotels.menuHome(FavoriteHotels.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hotelLogin -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="4" started-at="2018-01-30T09:41:43Z" finished-at="2018-01-30T09:41:43Z">
+        </test-method> <!-- menuHome -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="4" started-at="2018-02-01T15:18:32Z" finished-at="2018-02-01T15:18:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.hotel.CtripHotel.hotelLogin(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.hotel.FavoriteHotels.menuHome() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-01-30T09:41:43Z" finished-at="2018-01-30T09:41:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.CtripHotel.hotelLogin(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="hotelLogin(java.util.Map)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="hotelLogin" duration-ms="15851" started-at="2018-01-30T09:41:43Z" description="hotelByYyf" data-provider="testData" finished-at="2018-01-30T09:41:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{result=北京, version=6.2, searchKeyWord=北京}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hotelLogin -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-01-30T09:41:59Z" finished-at="2018-01-30T09:41:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.CtripHotel.hotelLogin(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="afterClass" is-config="true" duration-ms="2661" started-at="2018-01-30T09:41:59Z" finished-at="2018-01-30T09:42:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.CtripHotel@f0f2775]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-01-30T09:42:01Z" finished-at="2018-01-30T09:42:01Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.FavoriteHotels@4c15e7fd]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-02-01T15:18:32Z" finished-at="2018-02-01T15:18:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- test.apptest.hotel.CtripHotel -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- test.apptest.hotel.FavoriteHotels -->
+      <class name="test.apptest.hotel.test">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="3" started-at="2018-02-01T15:18:32Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-01T15:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-01T15:18:32Z" finished-at="2018-02-01T15:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="FAIL" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="testa" duration-ms="217" started-at="2018-02-01T15:18:32Z" description="携程测试hotel" data-provider="testData" finished-at="2018-02-01T15:18:33Z">
+          <exception class="java.lang.ArrayIndexOutOfBoundsException">
+            <message>
+              <![CDATA[1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 1
+	at common.frame.data.ExcelProvider.next(ExcelProvider.java:73)
+	at common.frame.data.ExcelProvider.next(ExcelProvider.java:1)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1225)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testa -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-01T15:18:33Z" finished-at="2018-02-01T15:18:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.test.testa(java.util.Map)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="testa(java.util.Map)[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="testa" duration-ms="5" started-at="2018-02-01T15:18:33Z" description="携程测试hotel" data-provider="testData" finished-at="2018-02-01T15:18:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{city=上海, version=v2.3}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [2] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at test.apptest.hotel.test.testa(test.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testa -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-01T15:18:33Z" finished-at="2018-02-01T15:18:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.test.testa(java.util.Map)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.test@184cf7cf]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-01T15:18:33Z" finished-at="2018-02-01T15:18:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.test -->
+    </test> <!-- HotelApp -->
+  </suite> <!-- Suite -->
 </testng-results>

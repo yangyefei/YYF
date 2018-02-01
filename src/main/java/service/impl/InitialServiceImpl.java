@@ -17,7 +17,7 @@ import service.InitialService;
 
 public class InitialServiceImpl implements InitialService {
 
-	private String AppPackage="ctrip.english.debug";
+	private String AppPackage="ctrip.english";
 
 	private String AppActivity="com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity";
 
