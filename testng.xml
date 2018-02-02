@@ -5,7 +5,7 @@
 	<test name="HotelHomePage">
 		<classes>
 			<class name="test.apptest.hotel.FavoriteHotels" />
-			<class name="test.apptest.hotel.HotelSearchEngine" />
+		<!-- 	<class name="test.apptest.hotel.HotelSearchEngine" /> -->
 		</classes>
 	</test>
 

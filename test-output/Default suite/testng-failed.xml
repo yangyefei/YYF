@@ -3,18 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.hotel.HotelSearchEngine">
+      <class name="com.web.test.MailTest">
         <methods>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="afterClass"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="hotelSearch"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="beforeClass"/>
-          <include name="springTestContextAfterTestMethod"/>
+          <include name="mailSend"/>
         </methods>
-      </class> <!-- test.apptest.hotel.HotelSearchEngine -->
+      </class> <!-- com.web.test.MailTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

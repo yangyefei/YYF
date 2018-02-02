@@ -16,12 +16,10 @@ import org.testng.annotations.Test;
 
 public class TakeScreen {
 
-	public static void snapshot(WebDriver webdriver, String filename) {
+	public static void snapshot(WebDriver webdriver) {
         Calendar  calendar =Calendar.getInstance();
         SimpleDateFormat  sFormat= new SimpleDateFormat("YYYY-MM-dd");
         String  date= sFormat.format(calendar.getTime());
-        System.out.println(date);
-        
 		String currentPath = System.getProperty("user.dir");
 
 		System.out.println(currentPath);
@@ -29,8 +27,8 @@ public class TakeScreen {
 		scrFile.getParentFile();
 
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/" + filename+date+".jpg");
-			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename+date+".jpg"));
+			System.out.println("save snapshot path is:" + currentPath + "/"+date+".jpg");
+			FileUtils.copyFile(scrFile, new File(currentPath + "\\"+date+".jpg"));
 		} catch (IOException e) {
 
 			System.out.println("Can't save screenshot");
@@ -44,9 +42,9 @@ public class TakeScreen {
 
 	@Test
 	public void test() {
-		System.setProperty("webdriver.chrome.driver", "D:\\autoWeb\\browserDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\browsedriver\\chromedriver.exe");
 		WebDriver webDriver = new ChromeDriver();
 		webDriver.get("file:///D:/github/maven/test-output/html/apple.html");
-		snapshot(webDriver, "yyf");
+		snapshot(webDriver);
 	}
 }

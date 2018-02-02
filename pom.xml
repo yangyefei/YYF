@@ -17,7 +17,7 @@
 		<spring.version>4.2.6.RELEASE</spring.version>
 		<mysql.jdbc.version>5.1.21</mysql.jdbc.version>
 		<hibernate.version>4.3.1.Final</hibernate.version>
-
+		<argLine>-Dfile.encoding=UTF-8</argLine>
 		<!-- 仓库 -->
 	</properties>
 
@@ -253,7 +253,7 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
-
+	
 				</configuration>
 			</plugin>
 		</plugins>
