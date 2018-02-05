@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
@@ -56,3 +57,16 @@
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6" started-at="2018-02-01T10:43:36Z" finished-at="2018-02-01T10:43:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6" started-at="2018-02-01T10:43:36Z" finished-at="2018-02-01T10:43:36Z">
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
+>>>>>>> ccb61e5e449444ba2e1298444e87cf4c8f386712

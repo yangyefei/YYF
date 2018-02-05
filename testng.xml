@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Suite">
   <test name="Testsingle">
     <classes>
    
     <class name="test.apptest.hotel.test"/>
    <class name="test.apptest.hotel.SelectFavoriteCity"/>
+=======
+<suite name="HotelApp">
+	<!-- 1. Hotel_App_AutoTestCase 酒店首页 -->
+	<test name="HotelHomePage">
+		<classes>
+			<class name="test.apptest.hotel.FavoriteHotels" />
+		<!-- 	<class name="test.apptest.hotel.HotelSearchEngine" /> -->
+		</classes>
+	</test>
+>>>>>>> ccb61e5e449444ba2e1298444e87cf4c8f386712
 
   
     </classes>

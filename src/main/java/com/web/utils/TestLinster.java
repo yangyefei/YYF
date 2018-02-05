@@ -38,7 +38,6 @@ public class TestLinster implements ITestListener {
 
 	public void onTestStart(ITestResult it) {
 		// TODO Auto-generated method stub
-		System.out.println("onTestStart:"+it.getName()+"开始测试");
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
