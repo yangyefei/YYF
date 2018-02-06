@@ -28,6 +28,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * @author yefeiyang
+ * 
+ * C1309602 目的地搜索国内城市名
+ * C1309608 根据国内火车站搜索酒店
+ * C1309615 当前城市搜索酒店
+ * 
+ */
 public class HotelSearchEngine extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
@@ -37,14 +45,14 @@ public class HotelSearchEngine extends BaseTest {
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver);
-		//TestLinster.webDriver = driver; // androiddriver 传递给testlinster
+//		TestLinster.webDriver = driver; // androiddriver 传递给testlinster
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 
 	}
 
 	// 测试用例 执行 ，数据提供testData
-	@Test(dataProvider = "testData", description = "yefei.yang", groups = { "Base" })
+	@Test(dataProvider = "testData", description = "yefei.yang", groups = { "yyf" })
 	public void hotelSearch(Map<String, String> datadriven) throws Exception {
         logger.info("---"+datadriven.get("id")+"---==>StartTest");
 

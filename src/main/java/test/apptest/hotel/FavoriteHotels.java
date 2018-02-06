@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.web.utils.Retry;
+import com.web.utils.TestLinster;
+
 import common.frame.test.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.apache.tools.ant.taskdefs.Sleep;
@@ -38,7 +40,6 @@ public class FavoriteHotels extends BaseTest{
 		
 		//logger.info("APP " + datadriven.get("version") + "---启动携程app---");
 		driver = initial.appiumAndroidCtripSetUp(driver);
-
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08");
 		driver.findElement(By.id("myctrip_hotel_icon")).click();

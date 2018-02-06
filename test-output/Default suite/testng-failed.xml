@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.web.test.MailTest">
+      <class name="com.web.utils.TakeScreen">
         <methods>
-          <include name="mailSend"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.web.test.MailTest -->
+      </class> <!-- com.web.utils.TakeScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
