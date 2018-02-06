@@ -1,6 +1,6 @@
 package test.apptest.hotel;
 
-import static org.junit.Assert.assertTrue;
+import static org.testng.AssertJUnit.assertTrue; 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class SelectFavoriteCity extends BaseTest{
     public void selectFavoriteCity() throws Exception{
     	
     	logger.info("---启动APP---");
-    	
+
     	logger.info("初始化成功，准备登陆");
     	appCommonService.loginForApp(driver, "wwwwww", "good08");
     	logger.info("---进入酒店首页---");
