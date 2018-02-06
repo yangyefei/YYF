@@ -3,11 +3,18 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.web.utils.TakeScreen">
+      <class name="test.apptest.hotel.HomeKeySearch">
         <methods>
-          <include name="test"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="afterClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="beforeClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="recentSearches"/>
+          <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- com.web.utils.TakeScreen -->
+      </class> <!-- test.apptest.hotel.HomeKeySearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
