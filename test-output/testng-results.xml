@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="58069" started-at="2018-02-07T03:10:59Z" finished-at="2018-02-07T03:11:57Z">
+    <groups>
+      <group name="yyf">
+        <method signature="HomeKeySearch.recentSearches()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="recentSearches" class="test.apptest.hotel.HomeKeySearch"/>
+      </group> <!-- yyf -->
+    </groups>
+    <test name="Default test" duration-ms="58069" started-at="2018-02-07T03:10:59Z" finished-at="2018-02-07T03:11:57Z">
+      <class name="test.apptest.hotel.HomeKeySearch">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="23" started-at="2018-02-07T11:10:59Z" finished-at="2018-02-07T11:10:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1087" started-at="2018-02-07T11:10:59Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-07T11:11:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="beforeClass" is-config="true" duration-ms="41396" started-at="2018-02-07T11:11:00Z" finished-at="2018-02-07T11:11:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="362" started-at="2018-02-07T11:11:41Z" finished-at="2018-02-07T11:11:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.recentSearches()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="recentSearches()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="recentSearches" duration-ms="8803" started-at="2018-02-07T11:11:42Z" description="yefei.yang" finished-at="2018-02-07T11:11:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recentSearches -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="5" started-at="2018-02-07T11:11:51Z" finished-at="2018-02-07T11:11:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.recentSearches()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="afterClass" is-config="true" duration-ms="6381" started-at="2018-02-07T11:11:51Z" finished-at="2018-02-07T11:11:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@5a4aa2f2]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-02-07T11:11:57Z" finished-at="2018-02-07T11:11:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.HomeKeySearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
