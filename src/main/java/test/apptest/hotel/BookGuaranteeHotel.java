@@ -74,4 +74,10 @@ public class BookGuaranteeHotel extends BaseTest{
     	String totalamount = driver.findElement(By.id("tvTotal")).getText();
     	assertEquals(paymentamount,totalamount);
     }
+    
+    @AfterClass
+	public void afterClass() {
+		logger.info("I am here afterclass");
+		driver.quit();
+	}
 }
