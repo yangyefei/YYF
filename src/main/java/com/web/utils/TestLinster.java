@@ -10,11 +10,11 @@ import org.testng.ITestResult;
 import org.testng.log4testng.Logger;
 
 public class TestLinster implements ITestListener {
-   // public static WebDriver webDriver;
+//    public static WebDriver webDriver;
 	public static Logger logger = Logger.getLogger(TestLinster.class); 
-	public void onFinish(ITestContext arg0) {
+	public void onFinish(ITestContext it) {
 		// TODO Auto-generated method stub
-		
+//		TakeScreen.snapshot(webDriver);
 	}
 
 	public void onStart(ITestContext it) {

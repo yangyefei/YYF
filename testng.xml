@@ -3,9 +3,11 @@
 <suite name="HotelApp">
 	<!-- 1. Hotel_App_AutoTestCase 酒店首页 -->
 	<test name="HotelHomePage">
+
 		<classes>
 			<class name="test.apptest.hotel.FavoriteHotels" />
-		<!-- 	<class name="test.apptest.hotel.HotelSearchEngine" /> -->
+			<class name="test.selftest.test"></class>
+			<!-- <class name="test.apptest.hotel.HotelSearchEngine" /> -->
 		</classes>
 	</test>
 
@@ -18,12 +20,14 @@
 	<test name="HotelDetailPage">
 
 	</test>
-	
+
 	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
 	<test name="HotelOrderPage">
 
-	</test>
 
+		
+	</test>
+  
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
@@ -31,3 +35,4 @@
 	</listeners>
 
 </suite> 
+
