@@ -185,15 +185,6 @@
 			<version>0.9.1.2</version>
 		</dependency>
 
-		<!-- 邮件start -->
-		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>mail</artifactId>
-			<version>1.4.4</version>
-		</dependency>
-
-
-
 		<dependency>
 			<!--ReportNg美化 -->
 			<groupId>org.uncommons</groupId>
