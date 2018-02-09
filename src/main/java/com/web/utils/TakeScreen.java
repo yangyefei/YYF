@@ -50,7 +50,7 @@ public class TakeScreen {
 		DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer(); 
 		ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true); 
 		WebDriver webdriver = new InternetExplorerDriver();
-		webdriver.get("file:///D:/gitlab/maven/maven/test-output/html/index.html");
+		webdriver.get("D:/gitlab/maven/maven/target/surefire-reports/html/index.html");
 		snapshot(webdriver);
 	}
 }

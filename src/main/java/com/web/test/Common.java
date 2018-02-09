@@ -25,7 +25,7 @@ import com.web.utils.TestLinster;
 @Listeners({ TestLinster.class })
 public class Common {
 	int a = 57;
-	int b = 6;
+	int b = 9;
 private  By nameput;
 	public Common() throws MalformedURLException {
 		super();
