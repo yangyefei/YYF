@@ -2,16 +2,57 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16" started-at="2018-02-07T09:52:28Z" finished-at="2018-02-07T09:52:28Z">
+  <suite name="Default suite" duration-ms="30189" started-at="2018-02-09T04:19:32Z" finished-at="2018-02-09T04:20:02Z">
     <groups>
+      <group name="base">
+        <method signature="test.testa()[pri:0, instance:test.selftest.test@6591f517]" name="testa" class="test.selftest.test"/>
+      </group> <!-- base -->
     </groups>
-    <test name="Default test" duration-ms="16" started-at="2018-02-07T09:52:28Z" finished-at="2018-02-07T09:52:28Z">
-      <class name="com.web.test.Common">
-        <test-method status="PASS" signature="testtest()[pri:0, instance:com.web.test.Common@490ab905]" name="testtest" duration-ms="7" started-at="2018-02-07T17:52:28Z" finished-at="2018-02-07T17:52:28Z">
+    <test name="Default test" duration-ms="30189" started-at="2018-02-09T04:19:32Z" finished-at="2018-02-09T04:20:02Z">
+      <class name="test.selftest.test">
+        <test-method status="PASS" signature="beforeSuites()[pri:0, instance:test.selftest.test@6591f517]" name="beforeSuites" is-config="true" duration-ms="7" started-at="2018-02-09T12:19:32Z" finished-at="2018-02-09T12:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testtest -->
-      </class> <!-- com.web.test.Common -->
+        </test-method> <!-- beforeSuites -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.selftest.test@6591f517]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="1" started-at="2018-02-09T12:19:32Z" finished-at="2018-02-09T12:19:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.selftest.test@6591f517]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="613" started-at="2018-02-09T12:19:32Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-09T12:19:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.selftest.test@6591f517]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="328" started-at="2018-02-09T12:19:32Z" finished-at="2018-02-09T12:19:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.selftest.test.testa() throws java.net.MalformedURLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testa()[pri:0, instance:test.selftest.test@6591f517]" name="testa" duration-ms="29233" started-at="2018-02-09T12:19:33Z" description="携程测试hotel" finished-at="2018-02-09T12:20:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testa -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.selftest.test@6591f517]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="5" started-at="2018-02-09T12:20:02Z" finished-at="2018-02-09T12:20:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.selftest.test.testa() throws java.net.MalformedURLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.selftest.test@6591f517]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-09T12:20:02Z" finished-at="2018-02-09T12:20:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.selftest.test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

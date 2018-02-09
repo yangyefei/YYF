@@ -15,7 +15,7 @@ public interface InitialService {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	public AndroidDriver appiumAndroidCtripSetUp(AndroidDriver driver) throws MalformedURLException;
+	public AndroidDriver appiumAndroidCtripSetUp(AndroidDriver driver,String AppPackage) throws MalformedURLException;
 	
 
 	public WebDriver browserOfInternetSetUp(WebDriver driver) throws Exception;
