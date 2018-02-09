@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test name="Testsingle">
-    <classes>
-   
-    <class name="test.apptest.hotel.test"/>
+<suite name="HotelApp">
+	<!-- 1. Hotel_App_AutoTestCase 酒店首页 -->
+	<test name="HotelHomePage">
+
+		<classes>
+			<class name="test.apptest.hotel.FavoriteHotels" />
+			<class name="test.selftest.test"></class>
+			<!-- <class name="test.apptest.hotel.HotelSearchEngine" /> -->
+		</classes>
+	</test>
+
+	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
+	<test name="HotelListPage">
+
+	</test>
+
+	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
+	<test name="HotelDetailPage">
+
+	</test>
+
+	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
+	<test name="HotelOrderPage">
+
+
+		
+	</test>
   
     </classes>
    </test> 
@@ -14,5 +36,4 @@
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
       <listener class-name="com.web.utils.TestLinster"></listener>
     </listeners> 
- 
 </suite> <!-- Suite -->

@@ -37,7 +37,7 @@ public class StarSearch extends BaseTest {
 	
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver);
+		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 	}
 	@Test(description = "by lnn: 星级为3星或者4星或者5星搜索C1309631", groups = { "Base" })
 	public void starSearch() throws Exception {

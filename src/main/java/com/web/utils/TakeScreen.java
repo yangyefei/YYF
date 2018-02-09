@@ -12,16 +12,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 public class TakeScreen {
 
-	public static void snapshot(WebDriver webdriver, String filename) {
+	public static void snapshot(WebDriver webdriver) {
         Calendar  calendar =Calendar.getInstance();
         SimpleDateFormat  sFormat= new SimpleDateFormat("YYYY-MM-dd");
-       String  date= sFormat.format(calendar.getTime());
-       System.out.println(date);
-        
+        String  date= sFormat.format(calendar.getTime());
 		String currentPath = System.getProperty("user.dir");
 
 		System.out.println(currentPath);
@@ -29,8 +29,8 @@ public class TakeScreen {
 		scrFile.getParentFile();
 
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/" + filename+date+".jpg");
-			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename+date+".jpg"));
+			System.out.println("save snapshot path is:" + currentPath +"\\"+"target"+"\\"+date+".jpg");
+			FileUtils.copyFile(scrFile, new File(currentPath +"\\"+"target"+"\\"+date+".jpg"));
 		} catch (IOException e) {
 
 			System.out.println("Can't save screenshot");
@@ -43,10 +43,14 @@ public class TakeScreen {
 	}
 
 	@Test
-	public void test() {
-		System.setProperty("webdriver.chrome.driver", "D:\\autoWeb\\browserDriver\\chromedriver.exe");
-		WebDriver webDriver = new ChromeDriver();
-		webDriver.get("file:///D:/github/maven/test-output/html/apple.html");
-		snapshot(webDriver, "yyf");
+	public static void picture() {
+		
+		System.setProperty("webdriver.ie.driver", "./driver/IEDriverServer.exe");
+//		webdriver = new RemoteWebDriver(new URL("http://"+"127.0.0.1"+":4444/wd/hub"), DesiredCapabilities.internetExplorer());
+		DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer(); 
+		ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true); 
+		WebDriver webdriver = new InternetExplorerDriver();
+		webdriver.get("D:/gitlab/maven/maven/target/surefire-reports/html/index.html");
+		snapshot(webdriver);
 	}
 }

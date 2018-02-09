@@ -33,7 +33,7 @@ public class FullRoomRate extends BaseTest {
 
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver);
+		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 	}
 	
 	@Test(description = "by lnn: 测试区域满房度C1306883/C1315188", groups = { "Base" })

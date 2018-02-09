@@ -18,48 +18,39 @@ public class AppCommonServiceImpl implements AppCommonService {
 	@Override
 	public AppiumDriver loginForApp(AppiumDriver driver, String userName, String userPassWord) {
 
-		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.id("iv_account"))).click();
-
+		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.id("rl_account"))).click();
 		try {
 
-			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).isDisplayed();
-		
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("tv_email")))
+					.isDisplayed();
 
 		} catch (Exception e) {
 
-			System.out.println("进入catch");
-			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tvSignIn"))).click();	
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tvSignIn"))).click();
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("login_btn"))).click();
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("account_input")))
 					.clear();
 			driver.findElement(By.id("account_input")).sendKeys(userName);
 			driver.findElement(By.id("password_input")).sendKeys(userPassWord);
 			driver.findElement(By.id("login_btn")).click();
+			driver.findElement(By.id("tv_ok")).click();
 
 		} finally {
-			
-			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("iv_home"))).click();
+
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
+		
 			return driver;
 		}
 	}
 
 	@Override
 	public AppiumDriver logoutForApp(AppiumDriver driver) {
-		// TODO Auto-generated method stub
-		// 点击我的
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		// 点击设置按钮
-
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
-		// 退出登录 edit by yyf
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("退出登录"))).click();
-		// driver.findElement(By.name("退出登录")).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
-		// 退出登录 add by yyf
-		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请点击登录/注册")));
-
+		
+		// 点击账户
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_account"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
 		return driver;
 	}
 

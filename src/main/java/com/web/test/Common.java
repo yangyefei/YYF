@@ -18,13 +18,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import com.web.utils.TestLinster;
 
 @Listeners({ TestLinster.class })
 public class Common {
 	int a = 57;
-	int b = 6;
+	int b = 9;
 private  By nameput;
 	public Common() throws MalformedURLException {
 		super();
@@ -60,11 +61,12 @@ private  By nameput;
 	/**
 	 * Map
 	 */
+	@Test
 	public void testtest() {
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("name", "阳阳");
 		map.put("贱男", "禁勃然");
-		System.out.println(map.entrySet());
+		System.out.println("----------------"+map.entrySet());
 		Set<String> keys = map.keySet();
 		for (String string : keys) {
 			System.out.println(string + "  :  " + map.get(string));
