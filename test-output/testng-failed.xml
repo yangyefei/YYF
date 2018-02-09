@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.web.test.WebTestDemo">
+      <class name="test.apptest.hotel.StarSearch">
         <methods>
-          <include name="OpenUrl"/>
-          <include name="afterClass"/>
+          <include name="starSearch"/>
           <include name="beforeClass"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.web.test.WebTestDemo -->
+      </class> <!-- test.apptest.hotel.StarSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,6 +1,8 @@
 package test.apptest.hotel;
 
 import static org.testng.AssertJUnit.assertEquals;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -11,6 +13,7 @@ import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import org.testng.annotations.DataProvider;
@@ -19,12 +22,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.log4j.Logger;
 
 public class CtripHotel extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
+	Logger logger = Logger.getLogger("districtFullRoomRate.class");
 
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
@@ -57,7 +62,7 @@ public class CtripHotel extends BaseTest {
 		Thread.sleep(1000);
 		
 	}
-
+	
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
