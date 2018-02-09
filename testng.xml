@@ -10,6 +10,7 @@
 			<class name="test.apptest.hotel.SearchForDomesticAttractions"></class>
 			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
 			<class name="test.apptest.hotel.StarSearch"></class>
+
 			<!-- <class name="test.apptest.hotel.HotelSearchEngine" /> -->
 		</classes>
 	</test>
