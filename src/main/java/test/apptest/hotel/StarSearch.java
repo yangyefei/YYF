@@ -11,6 +11,7 @@ import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
+import service.impl.HotelHomePageInitialImpl;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -31,6 +32,7 @@ import org.openqa.selenium.OutputType;
 public class StarSearch extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
+	private HotelHomePageInitialImpl hotelHomePageInitialImpl = new HotelHomePageInitialImpl();
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
 	private Logger logger = Logger.getLogger("StarSearch.class");
@@ -48,6 +50,10 @@ public class StarSearch extends BaseTest {
 	                      .sendKeys("上海"); 
 	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
 	     destinationlist.get(0).click(); 
+	     
+		 //清除酒店首页的成人儿童筛选
+	     hotelHomePageInitialImpl.HotelPageAdultsChildFilter(driver);
+	     
 	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("rl_star_price"))).click();
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_no_limit"))).click();
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_3"))).click();
