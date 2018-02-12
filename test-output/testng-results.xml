@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="105001" started-at="2018-02-12T06:01:05Z" finished-at="2018-02-12T06:02:50Z">
+    <groups>
+      <group name="Base">
+        <method signature="StarSearch.twostarSearch()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="twostarSearch" class="test.apptest.hotel.StarSearch"/>
+      </group> <!-- Base -->
+    </groups>
+    <test name="Default test" duration-ms="105001" started-at="2018-02-12T06:01:05Z" finished-at="2018-02-12T06:02:50Z">
+      <class name="test.apptest.hotel.StarSearch">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="8" started-at="2018-02-12T14:01:05Z" finished-at="2018-02-12T14:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="659" started-at="2018-02-12T14:01:05Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-12T14:01:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="beforeClass" is-config="true" duration-ms="41248" started-at="2018-02-12T14:01:06Z" finished-at="2018-02-12T14:01:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="404" started-at="2018-02-12T14:01:47Z" finished-at="2018-02-12T14:01:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.twostarSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="twostarSearch()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="twostarSearch" duration-ms="54530" started-at="2018-02-12T14:01:47Z" description="by sxm: C1309630星级分别为&lt;=2星搜索" finished-at="2018-02-12T14:02:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- twostarSearch -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="4" started-at="2018-02-12T14:02:42Z" finished-at="2018-02-12T14:02:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.twostarSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="afterClass" is-config="true" duration-ms="8136" started-at="2018-02-12T14:02:42Z" finished-at="2018-02-12T14:02:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.StarSearch@345965f2]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-02-12T14:02:50Z" finished-at="2018-02-12T14:02:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.StarSearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
