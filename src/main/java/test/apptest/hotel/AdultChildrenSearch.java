@@ -1,5 +1,6 @@
 package test.apptest.hotel;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 import static org.testng.AssertJUnit.assertEquals;
 
 import org.testng.Assert;
@@ -17,11 +18,13 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import org.testng.annotations.DataProvider;
 import common.frame.test.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
@@ -86,10 +89,125 @@ public class AdultChildrenSearch extends BaseTest {
 	    }
 	}
 	
+	@Test(description = "by sxm: C1309644 2成人1儿童（1岁），搜索酒店", groups = { "Base" })
+	public void twoadultOneChildrenSearch() throws Exception {
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys("新加坡"); 
+	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	     destinationlist.get(0).click(); 
+	     
+	     //清除首页的星级筛选
+	     hotelHomePageInitialImpl.HotelPageStarsFilter(driver);
+	     
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_adult"))).click();
+	     //获取刚进入首页时，显示的成人数
+    	 List<WebElement> number=driver.findElements(By.id("plus_minus_number_view_number"));
+    	 int adult = Integer.parseInt(number.get(0).getText());
+    	 int child = Integer.parseInt(number.get(1).getText());
+    	 
+    	 List<WebElement> numberPlus = driver.findElements(By.id("plus_minus_number_view_plus"));
+    	 List<WebElement> numberMinus = driver.findElements(By.id("plus_minus_number_view_minus"));
+    	 
+    	 if (adult == 2 ) 
+    	 {
+			logger.info("---成人数是2---");
+			}
+    	 else if (adult < 2) 
+    	 {
+			for( ; adult < 2; adult++)
+			{
+				numberPlus.get(0).click();
+				logger.info("--点击增加成人数目--");
+				Thread.sleep(1000);
+				}
+			}
+    	 else 
+    	 {
+ 				for( ; adult>2 ;adult--)
+ 				{
+ 					numberMinus.get(0).click();
+ 					logger.info("--点击减少成人数目--");
+ 					Thread.sleep(1000);
+ 				}
+		}
+    	 
+    	 if(child == 1 )
+    	 {
+    		 logger.info("---儿童数量是1---");
+
+    	 }
+    	 else if (child < 1) 
+    	 {
+    		 for( ; child<1 ; child++)
+    		 {
+    			 logger.info("---增加儿童数目---");
+    			 numberPlus.get(1).click();
+    			 Thread.sleep(1000);
+    		 }
+    	 }
+    	 else 
+    	 {
+    		 if(child > 1)
+    		 {
+    			 for( ; child>1 ; child--)
+    			 {
+    				 logger.info("---减少儿童数目---");
+    				 numberMinus.get(1).click();
+    				 Thread.sleep(1000);
+    			 }
+    		 }
+    	 }
+    	 
+    	 new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_child_item"))).click();
+         List<WebElement> childAges = driver.findElements(By.id("view_select_age_item"));
+         for (WebElement childage : childAges) 
+         {
+        	 String childAge = childage.findElement(By.id("tv_age_index")).getText();
+        	 if(childAge.equals("1 歲"))
+        	 {
+        		Actions actions = new Actions(driver);
+ 				actions.moveToElement(childage);
+ 				logger.info("---选择儿童年龄"+childAge+"---");
+ 				childage.click();
+ 				break;
+        	 }
+		}
+        logger.info("---点击入住人数确认按钮---");
+        new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("tv_apply"))).click();
+        logger.info("---点击搜索按钮---");
+        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
+        List<WebElement> hotelNames = driver.findElements(By.id("tv_hotel_name"));
+        logger.info("---点击第一家酒店---");
+        hotelNames.get(0).click();
+        try{
+        	 logger.info("---点击酒店详情页成人儿童---");
+             new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotel_view_hotel_rooms_date_people_container"))).click();
+             List<WebElement> numbers = driver.findElements(By.id("plus_minus_number_view_number"));
+             String adultNum = number.get(0).getText();
+             Assert.assertEquals("2",adultNum);
+             String childNum = number.get(1).getText();
+             Assert.assertEquals("1",childNum);
+             if(driver.findElement(By.id("view_child_item")).isDisplayed())
+             {
+             	String childagerange = driver.findElement(By.id("tv_age_range")).getText();
+             	
+             	Assert.assertEquals("1 歲",childagerange);
+             }
+             logger.info("---C1309644 2成人1儿童（1岁），搜索酒店验证通过---");
+        }
+        catch(Exception exception){
+        	exception.printStackTrace();
+        	logger.info("---C1309644 2成人1儿童（1岁），搜索酒店验证失败---");
+        }
+	}
+
+	
  	@AfterClass
 	public void afterClass() {
 		logger.info("I here afterclass");
 		driver.quit();
-		
 	}
 }
