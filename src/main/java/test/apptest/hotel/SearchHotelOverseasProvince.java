@@ -56,22 +56,22 @@ public class SearchHotelOverseasProvince extends BaseTest{
 		     logger.info(attractionText);
 		     Thread.sleep(3000);
 	    	 Assert.assertEquals("紐約州",attractionText);
-	         logger.info("C1309610:成功找到紐約州酒店");
+	         logger.info("C1309610:成功找到紐約州");
 	     } catch (Exception e) 
 	    {
-	    	logger.info("C1309610:没有找到紐約州酒店");
+	    	logger.info("C1309610:没有找到紐約州");
 	    }
 	     
 	     try {
 	    	 attractionText=destinationlist.get(3).getText();
 		     logger.info(attractionText);
 		     Thread.sleep(3000);
-
-	    	 //("酒店",attractionText);
-	         logger.info("C1309610:成功找到紐約州酒店");
+		     Assert.assertTrue(attractionText.contains("酒店"));
+		     Assert.assertTrue(attractionText.contains("紐約州"));
+	         logger.info("C1309610:成功找到紐約州酒店- "+attractionText);
 	     } catch (Exception e) 
 	    {
-	    	logger.info("C1309610:没有找到紐約州酒店");
+	    	logger.info("C1309610:没有找到紐約州酒店 - "+attractionText);
 	    }
 	     
 	     try {
