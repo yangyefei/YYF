@@ -62,3 +62,4 @@ public class FavoriteHotels extends BaseTest{
 		driver.quit();
 	}
 }
+
