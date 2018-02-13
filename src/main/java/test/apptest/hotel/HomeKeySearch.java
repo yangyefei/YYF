@@ -28,15 +28,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * @author yefeiyang
- * 
- *          C1309602 目的地搜索国内城市名
- *          C1309608 根据国内火车站搜索酒店 
- *          C1309615 当前城市搜索酒店
- *          C1309622 最近搜索酒店再次点击搜索功能
- * 
- */
+
 public class HomeKeySearch extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
@@ -45,13 +37,20 @@ public class HomeKeySearch extends BaseTest {
 
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver);
+		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 		// TestLinster.webDriver = driver; // androiddriver 传递给testlinster
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 
 	}
-
+	/**
+	 * @author yefeiyang
+	 * 
+	 *          C1309602 目的地搜索国内城市名
+	 *          C1309608 根据国内火车站搜索酒店 
+	 *          C1309615 当前城市搜索酒店
+	 * 
+	 */
 	// 测试用例 执行 ，数据提供testData
 	@Test(enabled=false,dataProvider = "testData", description = "yefei.yang", groups = { "yyf" })
 	public void hotelSearch(Map<String, String> datadriven) throws Exception {
@@ -74,6 +73,11 @@ public class HomeKeySearch extends BaseTest {
 		logger.info("---" + datadriven.get("id") + "---==>PASS");
 	}
 
+	
+	/**
+	 * @author yefeiyang
+	 *  C1309622 最近搜索酒店再次点击搜索功能
+	 */
 	@Test(description = "yefei.yang", groups = { "yyf" })
 	public void recentSearches() {
 		logger.info("---C1309622  最近搜索酒店再次点击搜索功能---==>StartTest");

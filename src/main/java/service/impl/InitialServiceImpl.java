@@ -31,7 +31,7 @@ public class InitialServiceImpl implements InitialService {
 
 	
 	@Override
-	public AndroidDriver appiumAndroidCtripSetUp(AndroidDriver driver) throws MalformedURLException {
+	public AndroidDriver appiumAndroidCtripSetUp(AndroidDriver driver,String AppPackage) throws MalformedURLException {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");

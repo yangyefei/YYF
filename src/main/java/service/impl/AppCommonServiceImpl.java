@@ -45,21 +45,12 @@ public class AppCommonServiceImpl implements AppCommonService {
 
 	@Override
 	public AppiumDriver logoutForApp(AppiumDriver driver) {
-		// TODO Auto-generated method stub
-		// 点击我的
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		// 点击设置按钮
-
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
-		// 退出登录 edit by yyf
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("退出登录"))).click();
-		// driver.findElement(By.name("退出登录")).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
-		// 退出登录 add by yyf
-		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请点击登录/注册")));
-
+		
+		// 点击账户
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_account"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
 		return driver;
 	}
 

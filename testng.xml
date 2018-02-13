@@ -5,8 +5,12 @@
 	<test name="HotelHomePage">
 
 		<classes>
-			<class name="test.apptest.hotel.FavoriteHotels" />
-			<class name="test.selftest.test"></class>
+			<class name="test.apptest.hotel.FullRoomRate"></class>
+			<class name="test.apptest.hotel.SearchForDomesticAttractions"></class>
+			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
+			<class name="test.apptest.hotel.StarSearch"></class>
+			<class name="test.apptest.hotel.AdultChildrenSearch"></class>
+
 			<!-- <class name="test.apptest.hotel.HotelSearchEngine" /> -->
 		</classes>
 	</test>
@@ -28,6 +32,7 @@
 		
 	</test>
   
+
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />

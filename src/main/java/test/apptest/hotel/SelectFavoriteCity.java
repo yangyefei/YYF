@@ -29,7 +29,7 @@ public class SelectFavoriteCity extends BaseTest{
     
     @BeforeClass
     public void beforeclass() throws MalformedURLException{
-    	driver = initial.appiumAndroidCtripSetUp(driver);
+    	driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
     }
     
     @Test(description = "hotelBySxm", groups = { "Base" })
@@ -43,9 +43,9 @@ public class SelectFavoriteCity extends BaseTest{
 		driver.findElement(By.id("myctrip_hotel_icon")).click();
 		
 		logger.info("--C1309666喜爱酒店城市筛选---");
-		driver.findElement(By.id("tv_my_hotel_title")).click();
-		logger.info(" --点击喜爱酒店--");
-		driver.findElement(By.id("favoriteRL")).click();
+		driver.findElement(By.id("tv_hotel_favorite")).click();
+		//logger.info(" --点击喜爱酒店--");
+		//driver.findElement(By.id("favoriteRL")).click();
 		logger.info(" --点击所有喜爱酒店，出来下拉城市--");
 		driver.findElement(By.id("tv_title")).click();
 		

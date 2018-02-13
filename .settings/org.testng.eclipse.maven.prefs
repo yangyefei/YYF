@@ -1,2 +1,15 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+org.testng.eclipse.maven.additionalClasspath=true
+org.testng.eclipse.maven.argline=true
+org.testng.eclipse.maven.environ=true
+org.testng.eclipse.maven.sysproperties=true
+=======
+>>>>>>> 5e1a2c60f56e422ed8df428c6185a60a7f1d60a8
+=======
+>>>>>>> 5e1a2c60f56e422ed8df428c6185a60a7f1d60a8
+=======
+>>>>>>> 5e1a2c60f56e422ed8df428c6185a60a7f1d60a8
 userprojectsettings=false

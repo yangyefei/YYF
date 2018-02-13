@@ -3,6 +3,7 @@ package com.web.test;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
+import java.util.Scanner;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
@@ -32,6 +33,8 @@ public class EmailTest {
 
 	public static void main(String[] args) throws MessagingException {
 
+		Scanner sacn=new Scanner(System.in);
+		sacn.hasNext();
 		TakeScreen.picture();
 		EmailTest.sendemail();
 	}

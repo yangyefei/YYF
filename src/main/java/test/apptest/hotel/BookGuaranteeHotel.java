@@ -36,7 +36,9 @@ public class BookGuaranteeHotel extends BaseTest{
     
     @BeforeClass
     public void beforeclass() throws MalformedURLException{
-    	driver = initial.appiumAndroidCtripSetUp(driver);
+    	driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+    	logger.info("初始化成功，准备登陆");
+		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
     }
     
     public void bookGuaranteeHotel() throws Exception{
