@@ -5,6 +5,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
@@ -204,6 +205,17 @@ public class AdultChildrenSearch extends BaseTest {
         }
 	}
 
+	@AfterMethod
+	public void afterTest() {
+	     //返回搜索列表页
+	     logger.info("---返回搜索列表页---");
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+	     logger.info("---返回搜索首页---");
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+	     //返回Trip首页	     
+	     logger.info("---返回Trip首页---");
+	     driver.findElementByClassName("android.widget.ImageButton").click();
+	}	
 	
  	@AfterClass
 	public void afterClass() {
