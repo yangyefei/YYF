@@ -90,13 +90,13 @@ public class AdultChildrenSearch extends BaseTest {
 	    }
 	}
 	
-	@Test(description = "by sxm: C1309644 2成人1儿童（1岁），搜索酒店", groups = { "Base" })
+	@Test(description = "by sxm: C1309644 2成人1儿童（1岁），搜索酒店+C1309638 页面默认成人儿童数量搜索", groups = { "Base" })
 	public void twoadultOneChildrenSearch() throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
 	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
 	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
-	                      .sendKeys("新加坡"); 
+	                      .sendKeys("Singapore"); 
 	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
 	     destinationlist.get(0).click(); 
 	     
@@ -183,9 +183,9 @@ public class AdultChildrenSearch extends BaseTest {
         List<WebElement> hotelNames = driver.findElements(By.id("tv_hotel_name"));
         logger.info("---点击第一家酒店---");
         hotelNames.get(0).click();
+        logger.info("---点击酒店详情页成人儿童---");
+        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotel_view_hotel_rooms_date_people_container"))).click();
         try{
-        	 logger.info("---点击酒店详情页成人儿童---");
-             new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotel_view_hotel_rooms_date_people_container"))).click();
              List<WebElement> numbers = driver.findElements(By.id("plus_minus_number_view_number"));
              String adultNum = number.get(0).getText();
              Assert.assertEquals("2",adultNum);
@@ -194,7 +194,6 @@ public class AdultChildrenSearch extends BaseTest {
              if(driver.findElement(By.id("view_child_item")).isDisplayed())
              {
              	String childagerange = driver.findElement(By.id("tv_age_range")).getText();
-             	
              	Assert.assertEquals("1 歲",childagerange);
              }
              logger.info("---C1309644 2成人1儿童（1岁），搜索酒店验证通过---");
@@ -203,13 +202,42 @@ public class AdultChildrenSearch extends BaseTest {
         	exception.printStackTrace();
         	logger.info("---C1309644 2成人1儿童（1岁），搜索酒店验证失败---");
         }
+        try{
+        	logger.info("---开始验证C1309638页面默认成人儿童数量搜索--- ");
+			logger.info("---返回到酒店详情页---");
+			driver.findElement(By.id("tv_apply")).click();
+			logger.info("---返回搜索列表页---");
+		    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ivBack"))).click();
+		    logger.info("---返回搜索首页---");
+		    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+			String children = driver.findElement(By.id("tv_children")).getText();
+			String adultnum = driver.findElement(By.id("tv_adult")).getText();
+			logger.info("---判断酒店首页成人儿童条件是否存在---");
+			Assert.assertTrue(adultnum.contains("2"));
+			Assert.assertTrue(children.contains("1"));
+			logger.info("---酒店首页成人儿童条件存在---");
+			logger.info("---点击搜索按钮---");
+	        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
+	        List<WebElement> hotelName = driver.findElements(By.id("tv_hotel_name"));
+	        logger.info("---点击第一家酒店---");
+	        hotelName.get(0).click(); 
+	        logger.info("---验证酒店详情页成人儿童数量---");
+	        String childdetail = driver.findElement(By.id("tv_child_number")).getText();
+	        String adultdetail = driver.findElement(By.id("tv_adult_number")).getText();
+	        Assert.assertTrue(adultdetail.contains("2"));
+			Assert.assertTrue(childdetail.contains("1"));
+			logger.info("---验证C1309638页面默认成人儿童数量搜索通过--- ");
+			//返回搜索列表页
+		     logger.info("---返回搜索列表页---");
+		     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ivBack"))).click();
+		} catch (Exception e) {
+			// TODO: handle exception
+			logger.info("---验证C1309638页面默认成人儿童数量搜索失败--- ");
+		}
 	}
 
 	@AfterMethod
 	public void afterTest() {
-	     //返回搜索列表页
-	     logger.info("---返回搜索列表页---");
-	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
 	     logger.info("---返回搜索首页---");
 	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
 	     //返回Trip首页	     
