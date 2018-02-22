@@ -3,10 +3,6 @@ package test.apptest.hotel;
 import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-
-import com.web.utils.TestLinster;
-import com.web.utils.TestLinster;
-
 import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
 import service.AppCommonService;
@@ -17,12 +13,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Scanner;
-
 import org.testng.annotations.DataProvider;
 import common.frame.test.BaseTest;
-
-import org.eclipse.jetty.util.ReadLineInputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,6 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class HomeKeySearch extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
+	@SuppressWarnings("rawtypes")
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
 
@@ -52,11 +45,11 @@ public class HomeKeySearch extends BaseTest {
 	 * 
 	 */
 	// 测试用例 执行 ，数据提供testData
-	@Test(enabled=false,dataProvider = "testData", description = "yefei.yang", groups = { "yyf" })
+	@Test(dataProvider = "testData", description = "yefei.yang", groups = { "yyf" })
 	public void hotelSearch(Map<String, String> datadriven) throws Exception {
 		logger.info("---" + datadriven.get("id") + "---==>StartTest");
-
-		driver.findElement(By.id("myctrip_hotel_icon")).click(); // 进入酒店首页
+		// 进入酒店首页
+		driver.findElement(By.id("myctrip_hotel_icon")).click(); 
 		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_stay_in")))
 				.click();
 		WebElement e = new WebDriverWait(driver, timeOutInSeconds)
@@ -70,7 +63,7 @@ public class HomeKeySearch extends BaseTest {
 		driver.pressKeyCode(4);
 		Thread.sleep(1000);
 		driver.pressKeyCode(4);
-		logger.info("---" + datadriven.get("id") + "---==>PASS");
+		logger.info("---" + datadriven.get("id") + "==>PASS---");
 	}
 
 	

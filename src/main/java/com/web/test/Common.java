@@ -16,17 +16,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.web.utils.TestLinster;
 
-@Listeners({ TestLinster.class })
 public class Common {
 	int a = 57;
 	int b = 9;
-private  By nameput;
 	public Common() throws MalformedURLException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -191,5 +188,16 @@ private  By nameput;
 			System.out.println(i);
 		}
 	}
+	
+	
+//
+//	String str = Integer.toString(456); //获取数字的十进制表示
+//	String str2 = Integer.toBinaryString(456); //获取数字的二进制表示
+//	String str3 = Integer.toHexString(456); //获取数字的十六进制表示
+//	String str4 = Integer.toOctalString(456); //获取数字的八进制表示
+//	System.out.println("'456'的十进制表示为："+str);
+//	System.out.println("'456'的二进制表示为："+str2);
+//	System.out.println("'456'的十六进制表示为："+str3);
+//	System.out.println("'456'的八进制表示为："+str4);
 
 }

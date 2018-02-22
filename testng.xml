@@ -31,6 +31,8 @@
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+			<!--失败重试监听器  -->
+			<listener class-name="com.web.utils.RetryListener" />
 		<listener class-name="com.web.utils.TestLinster"></listener>
 	</listeners>
 

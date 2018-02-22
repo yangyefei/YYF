@@ -69,8 +69,18 @@ public class test2 extends BaseTest {
 					System.out.println("");
 				}
 				System.out.print(str[i][j]);
+				System.out.print(1/0);
 			}
 		}
+	}
+	@Test
+	public void testb1(){
+		String string="5100 0000 0000 0008";
+		String string2;
+		do {
+			System.out.println("----------="+string);
+			string2=string;
+		} while (string2!="5100 0000 0000 0008");
 	}
 	}
 
