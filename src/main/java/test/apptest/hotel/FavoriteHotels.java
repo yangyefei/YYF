@@ -38,7 +38,7 @@ public class FavoriteHotels extends BaseTest{
 	}
 	
 	@Test(description = "by ylf: C1309665	无任何喜爱的酒店+返回上级菜单 ", groups = { "Base" })
-	public void menuHome() throws Exception {
+	public void NoFavoriteHotels() throws Exception {
 		logger.info("准备登陆");
 		appCommonService.loginForApp(driver, "avepellaba-2332@yopmail.com", "1qaz@wsx");
 		
