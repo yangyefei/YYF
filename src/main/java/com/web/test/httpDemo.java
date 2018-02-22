@@ -1,21 +1,9 @@
 package com.web.test;
 
-import java.net.*;
-import java.util.Arrays;
-import java.util.List;
-
-import org.apache.http.impl.client.HttpClients;
-import org.openqa.selenium.remote.http.HttpClient;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
-import com.sun.corba.se.spi.orbutil.fsm.Input;
+
 
 import net.sf.json.JSONObject;
 

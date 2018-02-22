@@ -1,9 +1,5 @@
 package com.web.utils;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -27,7 +23,7 @@ public class TestLinster implements ITestListener {
 
 	public void onTestFailure(ITestResult it) {
 	
-		System.out.println("--------------onTestFailure:"+it.getName()+"测试失败-------------");
+		System.err.println("--------------onTestFailure:"+it.getName()+"测试失败-------------");
 	   //TakeScreen.snapshot(webDriver, "yyf");
 	}
 

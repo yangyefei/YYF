@@ -48,7 +48,7 @@ public class AppCommonServiceImpl implements AppCommonService {
 		
 		// 点击账户
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_account"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
+		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
 		return driver;
