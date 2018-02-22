@@ -10,6 +10,8 @@
 			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
 			<class name="test.apptest.hotel.StarSearch"></class>
 			<class name="test.apptest.hotel.AdultChildrenSearch"></class>
+				<!-- 20180213 yyf -->
+			<class name="test.apptest.hotel.HomeKeySearch"></class>
 			<!-- 20180213 chr -->
             <class name="test.apptest.hotel.SearchDomesticHotelName"></class>
             <class name="test.apptest.hotel.SearchOverseasHotelName"></class>
