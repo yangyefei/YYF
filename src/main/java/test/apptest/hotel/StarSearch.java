@@ -116,7 +116,7 @@ public class StarSearch extends BaseTest {
 	     logger.info("---清除酒店首页的成人儿童筛选---");
 	     hotelHomePageInitialImpl.HotelPageAdultsChildFilter(driver);
 	     
-	     //搜2星到列表页
+	     //搜3星到列表页
 	     logger.info("---搜3星到列表页---");
 	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("rl_star_price"))).click();
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_no_limit"))).click();
@@ -134,7 +134,7 @@ public class StarSearch extends BaseTest {
 	     logger.info("---进入酒店搜索首页---");
 	     new WebDriverWait(driver, 120).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
 	     
-	     //2星仍在
+	     //3星仍在
 	     try {
 	    	 logger.info("---判断3星仍在---");
 	    	 WebElement star3= driver.findElement(By.id("tv_star_text"));
@@ -144,7 +144,7 @@ public class StarSearch extends BaseTest {
 	    {
 	    	logger.info("默认3星失败");
 	    }	     
-	     //进入2星列表页
+	     //进入3星列表页
 	     try {
 	    	 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click(); 
 	    	 logger.info("---进入3星列表页，判断筛选红点---");
@@ -158,6 +158,39 @@ public class StarSearch extends BaseTest {
 	    	logger.info("C1309627	默认价格搜索，默认星级失败");
 	    }
 
+
+	}
+	
+	@Test(description = "by ylf: C1309632	星级为3,4,5搜索", groups = { "Base" })
+	public void Star345Search() throws Exception {
+		logger.info("---搜 上海---");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys("上海"); 
+	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	     destinationlist.get(0).click(); 
+	     
+		 //清除酒店首页的成人儿童筛选
+	     hotelHomePageInitialImpl.HotelPageAdultsChildFilter(driver);
+	     
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("rl_star_price"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_no_limit"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_3"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_4"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_5"))).click();
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_done"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click(); 
+	     
+	     try {
+	    	 WebElement filterreddot= driver.findElement(By.id("top_bar_filter_red_dot"));
+	    	 Assert.assertTrue(filterreddot.isDisplayed());
+	    	 logger.info("C1309632	星级为3,4,5搜索成功");
+	     } catch (Exception e) 
+	    {
+	    	logger.info("C1309632	星级为3,4,5搜索失败");
+	    }
 
 	}
 	
