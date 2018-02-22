@@ -17,6 +17,7 @@
             <class name="test.apptest.hotel.SearchOverseasHotelName"></class>
             <class name="test.apptest.hotel.SearchHotelOverseasProvince"></class>
 			<!-- <class name="test.apptest.hotel.HotelSearchEngine" /> -->
+			<class name="test.apptest.hotel.MyHotelOrder"></class>
 		</classes>
 	</test>
 
