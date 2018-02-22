@@ -42,6 +42,7 @@ public class AdultChildrenSearch extends BaseTest {
 	}
 	@Test(description = "by lnn: 8成人3儿童（均成年）搜索C1309639", groups = { "Base" })
 	public void adultChildrenSearch() throws Exception {
+		logger.info("by lnn: 8成人3儿童（均成年）");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
 	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
@@ -86,12 +87,13 @@ public class AdultChildrenSearch extends BaseTest {
 	    	 logger.info("C1309639:验证3儿童成功");  	 
 	     } catch (Exception e) 
 	    {
-	    	logger.info("C1309639:验证8成人3儿童成功失败");
+	    	logger.info("C1309639:验证8成人3儿童失败");
 	    }
 	}
 	
 	@Test(description = "by sxm: C1309644 2成人1儿童（1岁），搜索酒店+C1309638 页面默认成人儿童数量搜索", groups = { "Base" })
 	public void twoadultOneChildrenSearch() throws Exception {
+		logger.info("by sxm: C1309644 2成人1儿童（1岁）");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
 	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
@@ -234,6 +236,131 @@ public class AdultChildrenSearch extends BaseTest {
 			// TODO: handle exception
 			logger.info("---验证C1309638页面默认成人儿童数量搜索失败--- ");
 		}
+	}
+	
+	@Test(description = "by ylf: C1309640 2成人2儿童（一成年，一未成年）搜索酒店", groups = { "Base" })
+	public void twoadultOneAdultChildrenSearch() throws Exception {
+		logger.info("by ylf: C1309640 2成人2儿童（一成年13岁，一未成年）");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys("Singapore"); 
+	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	     destinationlist.get(0).click(); 
+	     
+	     //清除首页的星级筛选
+	     hotelHomePageInitialImpl.HotelPageStarsFilter(driver);
+	     
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_adult"))).click();
+	     //获取刚进入首页时，显示的成人数
+    	 List<WebElement> number=driver.findElements(By.id("plus_minus_number_view_number"));
+    	 int adult = Integer.parseInt(number.get(0).getText());
+    	 int child = Integer.parseInt(number.get(1).getText());
+    	 
+    	 List<WebElement> numberPlus = driver.findElements(By.id("plus_minus_number_view_plus"));
+    	 List<WebElement> numberMinus = driver.findElements(By.id("plus_minus_number_view_minus"));
+    	 
+    	 if (adult == 2 ) 
+    	 {
+			logger.info("---成人数是2---");
+			}
+    	 else if (adult < 2) 
+    	 {
+			for( ; adult < 2; adult++)
+			{
+				numberPlus.get(0).click();
+				logger.info("--点击增加成人数目--");
+				Thread.sleep(1000);
+				}
+			}
+    	 else 
+    	 {
+ 				for( ; adult>2 ;adult--)
+ 				{
+ 					numberMinus.get(0).click();
+ 					logger.info("--点击减少成人数目--");
+ 					Thread.sleep(1000);
+ 				}
+		}
+    	 
+    	 if(child == 2 )
+    	 {
+    		 logger.info("---儿童数量是2---");
+
+    	 }
+    	 else if (child < 2) 
+    	 {
+    		 for( ; child<2 ; child++)
+    		 {
+    			 logger.info("---增加儿童数目---");
+    			 numberPlus.get(1).click();
+    			 Thread.sleep(1000);
+    		 }
+    	 }
+    	 else 
+    	 {
+    		 if(child > 2)
+    		 {
+    			 for( ; child>2 ; child--)
+    			 {
+    				 logger.info("---减少儿童数目---");
+    				 numberMinus.get(1).click();
+    				 Thread.sleep(1000);
+    			 }
+    		 }
+    	 }
+    	 
+    	 new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_child_item"))).click();
+    	 AppCommonServiceImpl acs = new AppCommonServiceImpl();
+    	 acs.swipeToDown(driver);
+    	 acs.swipeToDown(driver);    	 
+    	 List<WebElement> childAges = driver.findElements(By.id("view_select_age_item"));
+         for (WebElement childage : childAges) 
+         {
+        	 String childAge = childage.findElement(By.id("tv_age_index")).getText();
+        	 //logger.info(childAge);
+        	 if(childAge.equals("13 歲"))
+        	 {
+        		Actions actions = new Actions(driver);
+ 				actions.moveToElement(childage);
+ 				logger.info("---选择儿童年龄"+childAge+"---");
+ 				childage.click();
+ 				break;
+        	 }
+		}
+        logger.info("---点击入住人数确认按钮---");
+        new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("tv_apply"))).click();
+        logger.info("---点击搜索按钮---");
+        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
+        List<WebElement> hotelNames = driver.findElements(By.id("tv_hotel_name"));
+        logger.info("---点击第一家酒店---");
+        hotelNames.get(0).click();
+        logger.info("---点击酒店详情页成人儿童---");
+        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("iv_change_people_arrow"))).click();
+        try{
+             List<WebElement> numbers = driver.findElements(By.id("plus_minus_number_view_number"));
+             String adultNum = number.get(0).getText();
+             Assert.assertEquals("2",adultNum);
+             String childNum = number.get(1).getText();
+             Assert.assertEquals("2",childNum);
+             if(driver.findElement(By.id("view_child_item")).isDisplayed())
+             {
+             	String childagerange = driver.findElement(By.id("tv_age_range")).getText();
+             	Assert.assertEquals("13 歲",childagerange);
+             }
+             logger.info("---C1309640 2成人2儿童（一成年，一未成年）搜索酒店验证通过---");
+             
+        }
+        catch(Exception exception){
+        	exception.printStackTrace();
+        	logger.info("---C1309640 2成人2儿童（一成年，一未成年）搜索酒店验证失败---");
+        }
+        //返回详情页
+        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_apply"))).click();
+        //返回酒店列表页
+        driver.findElementById("ivBack").click();
+
 	}
 
 	@AfterMethod
