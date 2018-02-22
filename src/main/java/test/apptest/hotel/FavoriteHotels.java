@@ -20,6 +20,7 @@ import org.testng.annotations.BeforeClass;
 import org.apache.tools.ant.taskdefs.Sleep;
 import org.eclipse.jetty.util.ReadLineInputStream;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -32,23 +33,29 @@ public class FavoriteHotels extends BaseTest{
 	
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-
+		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		logger.info("初始化成功");
 	}
 	
-	@Test(description = "hotelBySxm", groups = {"base"})
-	public void menuHome() throws Exception {
+	@Test(description = "by ylf: C1309665	无任何喜爱的酒店+返回上级菜单 ", groups = { "Base" })
+	public void NoFavoriteHotels() throws Exception {
+		logger.info("准备登陆");
+		appCommonService.loginForApp(driver, "avepellaba-2332@yopmail.com", "1qaz@wsx");
 		
-		//logger.info("APP " + datadriven.get("version") + "---启动携程app---");
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
-		logger.info("初始化成功，准备登陆");
-		appCommonService.loginForApp(driver, "wwwwww", "good08");
+		logger.info("进入搜索首页 ");
 		driver.findElement(By.id("myctrip_hotel_icon")).click();
 		
 		logger.info("C1309665	无任何喜爱的酒店+返回上级菜单 ");
-		//new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_my_hotel_title"))).click();
-		driver.findElement(By.id("tv_my_hotel_title")).click();
-		driver.findElement(By.id("favoriteRL")).click();
-		driver.findElement(By.id("hotel_wish_list_menu_home")).click();
+		
+		driver.findElement(By.id("tv_hotel_favorite")).click();
+		WebElement content=driver.findElement(By.id("viw_wish_list_empty_tv"));
+		//无任何喜爱的酒店
+		logger.info("---验证无任何喜爱的酒店---");
+		Assert.assertTrue(content.getText().contains("沒有喜愛的酒店。請按心形標誌，收藏酒店！"));
+		
+		//返回酒店首页	     
+	     logger.info("---返回酒店首页---");
+	     driver.findElementByClassName("android.widget.ImageButton").click();
 	}
 	
 	
@@ -62,3 +69,4 @@ public class FavoriteHotels extends BaseTest{
 		driver.quit();
 	}
 }
+
