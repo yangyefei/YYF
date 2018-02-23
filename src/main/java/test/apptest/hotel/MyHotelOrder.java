@@ -122,6 +122,59 @@ public class MyHotelOrder extends BaseTest{
 		}
 	}
 	
+	@Test(description = "by lnn: 无任何酒店订单/历史订单记录，卡片展示（快速预订用户和ctrip用户）C1309653", groups = { "Base" })
+	public void noBookingsFound() throws Exception {	
+		logger.info("--用特定的无任何订单和历史记录的账号登录--");
+		Userloginin("ojubanes-7458@yopmail.com", "lmr07155511909");
+    	logger.info("--进入酒店首页--");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		logger.info("--进入我的订单列表--");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("tv_my_order_title"))).click();
+		try {
+	    	 WebElement nohotelbookings= driver.findElement(By.id("tv_error_title"));
+	    	 Assert.assertEquals("無相符結果",nohotelbookings.getText());
+	    	 logger.info("C1309653:验证无任何酒店订单记录，卡片展示（ctrip用户）成功");	 
+	     } catch (Exception e) 
+	    {
+	    	logger.info("C1309653:验证无任何酒店订单记录，卡片展示（ctrip用户）失败");
+	    }
+		logger.info("--进入历史订单列表--");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.xpath
+				("//android.widget.TextView[contains(@text,'歷史記錄')]"))).click();
+		try {
+	    	 WebElement nohistorybookings= driver.findElement(By.id("tv_error_title"));
+	    	 Assert.assertEquals("無相符結果",nohistorybookings.getText());
+	    	 logger.info("C1309653:验证无任何历史订单记录，卡片展示（ctrip用户）成功");	 
+	     } catch (Exception e) 
+	    {
+	    	logger.info("C1309653:验证无任何历史订单记录，卡片展示（ctrip用户）失败");
+	    }
+		logger.info("--返回我的订单列表--");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.xpath
+				("//android.widget.ImageButton"))).click();
+		logger.info("--返回酒店首页--");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.xpath
+				("//android.widget.ImageButton"))).click();
+
+	}
+	
+	public void Userloginin(String userName, String userPassWord) throws InterruptedException {
+		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.id("rl_account"))).click();
+			//用户先登出
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
+			//用户后登录
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tvSignIn"))).click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("login_btn"))).click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("account_input")))
+					.clear();
+			driver.findElement(By.id("account_input")).sendKeys(userName);
+			driver.findElement(By.id("password_input")).sendKeys(userPassWord);
+			driver.findElement(By.id("login_btn")).click();
+		    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
+	}
+	
 	@AfterMethod
 	public void afterTest() {
 //	     logger.info("---返回搜索首页---");
