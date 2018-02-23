@@ -26,7 +26,7 @@ import com.web.utils.TakeScreen;
 /**
  * 发送邮件的测试程序
  * 
- * @author lwq
+ * @author yyf
  * 
  */
 public class EmailTest {
@@ -71,7 +71,8 @@ public class EmailTest {
 
 		MimeBodyPart text = new MimeBodyPart();
 		// setContent(“邮件的正文内容”,”设置邮件内容的编码方式”)
-		text.setContent("系统自动发送，无需回复！ 报告地址：http://10.32.86.32:8080/jenkins/job/AppHotelTest/lastCompletedBuild/testReport/<img src='cid:a'>", "text/html;charset=gb2312");
+		//text.setContent("系统自动发送，无需回复！  <img src='cid:a'>", "text/html;charset=gb2312");
+		text.setContent("报告地址：http://10.32.86.32:8080/jenkins/job/AppHotelTest/lastCompletedBuild/testReport/ <img src='cid:a'>", "text/html;charset=gb2312");
 		MimeBodyPart img = new MimeBodyPart();
 		DataHandler dh = new DataHandler(new FileDataSource("./target/" + date + ".jpg"));// 图片路径
 		img.setDataHandler(dh);
@@ -101,7 +102,7 @@ public class EmailTest {
 		// message.setRecipient(RecipientType.CC, bcc);
 
 		// 设置邮件标题
-		message.setSubject("测试邮件");
+		message.setSubject("Android Hotel TestReport");
 
 		// 设置邮件的内容体
 		message.setContent(mm);
