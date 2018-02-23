@@ -128,6 +128,9 @@ public class MyHotelOrder extends BaseTest{
         appCommonService.logoutForApp(driver);
 		logger.info("---进入首页---");
 		appCommonService.homeSearchHotel(driver, "新加坡");
+	    Thread.sleep(5000);
+	    List<WebElement> hotelNames = driver.findElements(By.id("tv_hotel_name"));
+	    hotelNames.get(0).click();
 		logger.info("---酒店详情页选择房型---");
 		WebElement baseRoom = new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("hotel_rooms_list_main_room_root_container")));
 		baseRoom.click();

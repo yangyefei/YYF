@@ -163,9 +163,6 @@ public class AppCommonServiceImpl implements AppCommonService {
 	     destinationlist.get(0).click(); 
 	    //点击搜索按钮
 	    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
-	    Thread.sleep(5000);
-	    List<WebElement> hotelNames = driver.findElements(By.id("tv_hotel_name"));
-	    hotelNames.get(0).click();
 	    return driver;
 	}
 
