@@ -50,5 +50,11 @@ public interface AppCommonService {
 	 */
 	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNum);
 	
+	/*
+	 * 酒店首页搜索
+	 * @param driver
+	 * @param keyword
+	 * */
+	public AppiumDriver homeSearchHotel(AppiumDriver driver, String keyword) throws InterruptedException;
 	
 }

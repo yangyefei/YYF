@@ -1,5 +1,6 @@
 package service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -48,9 +49,18 @@ public class AppCommonServiceImpl implements AppCommonService {
 		
 		// 点击账户
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_account"))).click();
-		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
+		
+		try {
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("tvSignIn")))
+			.isDisplayed();
+		} catch (Exception e) {
+			// TODO: handle exception
+			new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
+		
+		}
+		
 		return driver;
 	}
 
@@ -137,6 +147,26 @@ public class AppCommonServiceImpl implements AppCommonService {
 		System.out.println("内容没有被找到！");
 
 		return driver;
+	}
+
+	@Override
+	public AppiumDriver homeSearchHotel(AppiumDriver driver, String keyword) throws InterruptedException {
+		//进入首页
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys(keyword); 
+	    Thread.sleep(5000);
+	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	     destinationlist.get(0).click(); 
+	    //点击搜索按钮
+	    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
+	    Thread.sleep(5000);
+	    List<WebElement> hotelNames = driver.findElements(By.id("tv_hotel_name"));
+	    hotelNames.get(0).click();
+	    return driver;
 	}
 
 }
