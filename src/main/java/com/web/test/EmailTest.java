@@ -73,7 +73,7 @@ public class EmailTest {
 		// setContent(“邮件的正文内容”,”设置邮件内容的编码方式”)
 		text.setContent("系统自动发送，无需回复！<img src='cid:a'>", "text/html;charset=gb2312");
 		MimeBodyPart img = new MimeBodyPart();
-		DataHandler dh = new DataHandler(new FileDataSource("D:\\gitlab\\maven\\maven\\target" + date + ".jpg"));// 图片路径
+		DataHandler dh = new DataHandler(new FileDataSource("./target/" + date + ".jpg"));// 图片路径
 		img.setDataHandler(dh);
 		img.setContentID("a");
 		MimeMultipart mm = new MimeMultipart();
