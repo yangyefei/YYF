@@ -103,8 +103,7 @@ public class SearchOverseasHotelName extends BaseTest{
 		    		break;
 		    	}
 			}
-		    //List<WebElement> distinct = driver.findElements(By.className("android.widget.LinearLayout"));
-		    //distinct.click();
+            //中文繁体选择Hong kong
 		    ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("ibu_baseview_item_unsupport_language_country_subname"));
 		    attractionText1=destinationlist.get(1).getText();
 		    logger.info("----已经选择了繁體中文----");
