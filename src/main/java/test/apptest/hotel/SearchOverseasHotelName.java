@@ -103,7 +103,7 @@ public class SearchOverseasHotelName extends BaseTest{
 		    		break;
 		    	}
 			}
-            //中文繁体选择Hong kong
+            //中文繁体选择 Hong kong
 		    ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("ibu_baseview_item_unsupport_language_country_subname"));
 		    attractionText1=destinationlist.get(1).getText();
 		    logger.info("----已经选择了繁體中文----");
@@ -133,7 +133,7 @@ public class SearchOverseasHotelName extends BaseTest{
 		try{
 			String hotelname = tvTitle.getText();
 			assertTrue(hotelname.contains(searchKeyWord));
-			logger.info("----C1309624中文输入英文酒店名称搜索Pass----");
+			logger.info("----C1309624中文输入英文酒店名称搜索成功----");
 		}
 		catch(Exception exception){
 			exception.printStackTrace();
