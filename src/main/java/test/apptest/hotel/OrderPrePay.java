@@ -35,6 +35,7 @@ public class OrderPrePay extends BaseTest {
 	String hote_name_detail;
 	String room_name_detail;
 	String mycardnumber;
+	int i;//
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		
@@ -69,7 +70,7 @@ public class OrderPrePay extends BaseTest {
 		fromHomeToList();
 
 		logger.info("切换币种");
-		int i = Integer.parseInt(datadriven.get("currency"));
+		i = Integer.parseInt(datadriven.get("currency"));
 		exchange(i);
 
 		logger.info("进入酒店详情页");
@@ -192,6 +193,7 @@ public class OrderPrePay extends BaseTest {
 
 		try {
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
+			logger.info("已提交过相同订单");
 		} catch (Exception e) {
 			logger.info("第一次下单，非同城订单");
 		}
@@ -220,9 +222,15 @@ public class OrderPrePay extends BaseTest {
 		String roomName = strings[0];
 		// 判断房间名字是否一致
 		assertEquals(room_name_detail, roomName);
+		
 		try {
-		ArrayList<AndroidElement> ivarrow=(ArrayList<AndroidElement>) driver.findElementsById("iv_arrow");
-		ivarrow.get(1).click();
+			ArrayList<AndroidElement> ivarrow=(ArrayList<AndroidElement>) driver.findElementsById("iv_arrow");
+			if (i==1) {
+				ivarrow.get(0).click();
+			} else if (i==10) {
+				ivarrow.get(1).click();
+			} 
+	
 		} catch (Exception e) {
 		
 		}

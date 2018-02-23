@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.web.utils.TestLinster"/>
+  </listeners>
+  <test name="HotelApp(failed)">
+    <groups>
+      <run>
+        <include name="orderpay"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.apptest.hotel.OrderPrePay">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="after"/>
+          <include name="prePay" invocation-numbers="1 2"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- test.apptest.hotel.OrderPrePay -->
+    </classes>
+  </test> <!-- HotelApp(failed) -->
+</suite> <!-- Failed suite [Suite] -->
