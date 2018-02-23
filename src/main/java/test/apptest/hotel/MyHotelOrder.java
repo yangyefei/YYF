@@ -231,12 +231,6 @@ public class MyHotelOrder extends BaseTest{
 	    {
 	    	logger.info("C1309653:验证无任何历史订单记录，卡片展示（ctrip用户）失败");
 	    }
-		logger.info("--返回我的订单列表--");
-		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.xpath
-				("//android.widget.ImageButton"))).click();
-		logger.info("--返回酒店首页--");
-		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.xpath
-				("//android.widget.ImageButton"))).click();
 
 	}
 	
