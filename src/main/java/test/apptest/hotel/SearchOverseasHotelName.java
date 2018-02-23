@@ -1,6 +1,7 @@
 package test.apptest.hotel;
 
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import org.testng.annotations.DataProvider;
 import common.frame.test.BaseTest;
@@ -72,6 +74,70 @@ public class SearchOverseasHotelName extends BaseTest{
 		    	logger.info("跳转到列表页失败");
 		    }
 	        
+	}
+	
+	@Test(description = "by chr: 中文输入英文酒店名称搜索C1309624", groups = { "Base" })
+	public void HkSearchEn() throws Exception{
+		String attractionText1 = null;
+		logger.info("----开始测试C1309624中文输入英文酒店名称搜索----");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_home_bottom_account_icon"))).click();
+		logger.info("----点击设定----");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("ll_settings"))).click();
+		List<WebElement> vaule = driver.findElements(By.id("value"));
+		if(vaule.get(0).getText().equals("繁體中文")){
+			logger.info("----已经是繁體中文站点----");
+			logger.info("----点击返回到公共首页----");
+			driver.findElement(By.className("android.widget.ImageButton")).click();
+			logger.info("----点击返回到主页----");
+			driver.findElement(By.id("rl_home")).click();
+		}
+		else{
+			List<WebElement> sites = driver.findElements(By.id("text"));
+		    logger.info("----点击语言----");
+		    sites.get(0).click();
+		    List<WebElement> languages = driver.findElements(By.id("ibu_baseview_language_item_name"));
+		    for (WebElement language : languages) {
+		    	if(language.getText().equals("繁體中文")){
+		    		logger.info("----是繁體中文站点就点击----");
+		    		language.click();
+		    		break;
+		    	}
+			}
+            //中文繁体选择 Hong kong
+		    ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("ibu_baseview_item_unsupport_language_country_subname"));
+		    attractionText1=destinationlist.get(1).getText();
+		    logger.info("----已经选择了繁體中文----");
+		    logger.info(attractionText1);
+		    destinationlist.get(1).click();
+		    if(driver.findElement(By.className("android.widget.ImageButton")).isDisplayed()){
+				logger.info("----点击返回到公共首页----");
+				driver.findElement(By.className("android.widget.ImageButton")).click();
+				logger.info("----点击返回到主页----");
+				new AppCommonServiceImpl();
+				driver = new InitialServiceImpl().appiumAndroidCtripSetUp(driver,"ctrip.english");
+				new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
+				driver.findElement(By.id("rl_home")).click();
+			}
+		}
+		logger.info("----点击酒店----");
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_stay_in"))).click();
+        WebElement e = new WebDriverWait(driver, timeOutInSeconds)
+		.until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")));
+        e.clear();
+        String searchKeyWord = "V Hotel Lavender Singapore";
+        logger.info("----输入英文酒店名称----"+searchKeyWord);
+        e.sendKeys(searchKeyWord);
+		WebElement tvTitle = new WebDriverWait(driver, timeOutInSeconds)
+				.until(ExpectedConditions.elementToBeClickable(By.id("tvTitle")));
+		try{
+			String hotelname = tvTitle.getText();
+			assertTrue(hotelname.contains(searchKeyWord));
+			logger.info("----C1309624中文输入英文酒店名称搜索成功----");
+		}
+		catch(Exception exception){
+			exception.printStackTrace();
+		}
 	}
 	
 	@AfterClass
