@@ -82,6 +82,19 @@ public class test2 extends BaseTest {
 			string2=string;
 		} while (string2!="5100 0000 0000 0008");
 	}
+	
+	@Test
+	public String deleteZero(String string){
+		
+		String lastString=string.substring(string.length()-1, string.length());
+		if (string.contains(".") && lastString.equals("0")) {
+			String  string2=string.substring(0,(string.length()-1));
+			return string2;
+		}else {
+			return string;
+		}
+	   
+	}
 	}
 
 

@@ -187,7 +187,8 @@ public class OrderPrePay extends BaseTest {
 
 		WebElement element = new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions
 				.elementToBeClickable(By.id("hotel_book_bottom_bar_normal_price_view_payment_currency_and_amount")));
-		logger.info(element.getText());
+		total_amount_detail = element.getText();
+		logger.info(deleteZero(total_amount_detail));
 		total_amount_detail = element.getText();
 		driver.findElementById("tv_bottom_select").click();
 
@@ -210,7 +211,8 @@ public class OrderPrePay extends BaseTest {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.id("tvTotal")));
 		String total_amount_pay = totalMonkey.getText();
 		// 判断支付价格是否和详情页一致
-		assertEquals(total_amount_detail, total_amount_pay);
+		String formatMoney=deleteZero(total_amount_detail);
+		assertEquals(formatMoney, total_amount_pay);
 		ArrayList<WebElement> hotelinfo = (ArrayList<WebElement>) driver
 				.findElementsByClassName("android.widget.TextView");
 		String hotel_name_pay = hotelinfo.get(3).getText();
@@ -303,7 +305,17 @@ public class OrderPrePay extends BaseTest {
 		new WebDriverWait(driver,timeOutInSeconds).until(ExpectedConditions.visibilityOfElementLocated(By.id("tv_order_number")));
 
 	}
-
+	
+	public String deleteZero(String string){
+		
+		String lastString=string.substring(string.length()-1, string.length());
+		if (string.contains(".") && lastString.equals("0")) {
+			String  string2=string.substring(0,(string.length()-1));
+			return string2;
+		}else {
+			return string;
+		}
+	}
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
