@@ -89,7 +89,7 @@ public class EmailTest {
 		message.setFrom(form);
 
 		// 设置收件人
-		InternetAddress to = new InternetAddress("IBU_Htl_@ctrip.com");
+		InternetAddress to = new InternetAddress("IBU_Htl_Test@ctrip.com");
 		message.setRecipient(RecipientType.TO, to);
 
 		// 设置抄送
