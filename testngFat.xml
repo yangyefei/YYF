@@ -8,6 +8,7 @@
       </run>
    </groups>
       <packages>
+          <!--测试环境下单流程  by yyf  -->
       <package name = "test.apptest.hotel" />
    </packages>
    </test> 
