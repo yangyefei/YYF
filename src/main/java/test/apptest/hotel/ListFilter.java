@@ -19,6 +19,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.service.DriverCommandExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -83,6 +84,93 @@ public class ListFilter extends BaseTest{
 	    else
 	    	logger.info("C1309676 其他筛选失败");	
   }
+  
+  @Test(description = "By sxm : C1309668	附近酒店/目的地搜索少结果的情况下，检查酒店列表是否显示正常", groups={"Base"})
+  public void lessFilterResult()throws Exception{
+	  logger.info("---搜索上海---");
+	  appCommonService.homeSearchHotel(driver, "上海");
+	  doFilterDistance();
+	  doFilterCommercial();
+	  try {
+		  logger.info("---开始验证C1309668	目的地搜索少结果，检查酒店列表是否显示正常---");
+		  WebElement lessresult = driver.findElement(By.id("tv_no_more_result"));
+		  Assert.assertTrue(lessresult.isDisplayed());
+		  logger.info("---验证C1309668	目的地搜索少结果，检查酒店列表是否显示正常Pass---");
+	} catch (Exception e) {
+		// TODO: handle exception
+		logger.info("---验证C1309668	目的地搜索少结果，检查酒店列表是否显示正常Fail---");
+	}
+  }
+  
+  @Test(description = "By sxm : C1309668	附近酒店/目的地搜索无结果的情况下，检查酒店列表是否显示正常", groups={"Base"})
+  public void emptyFilterResult() throws Exception{
+	  logger.info("---搜索冲绳---");
+	  appCommonService.homeSearchHotel(driver, "冲绳市");
+	  doFilterMarkland();
+	  WebElement filters = driver.findElement(By.id("hrv_filter_quick"));
+	  List<WebElement> filter = filters.findElements(By.className("android.widget.CheckedTextView"));
+	  filter.get(2).click();
+	  logger.info("---点击"+filter.get(2).getText()+"---");
+	  filter.get(5).click();
+	  logger.info("---点击"+filter.get(5).getText()+"---");
+	  try {
+		  logger.info("---开始验证C1309668	附近酒店/目的地搜索无结果的情况下，检查酒店列表是否显示正常---");
+		  WebElement emptyresult = driver.findElement(By.id("view_filter_empty_view_text"));
+		  
+		  Assert.assertTrue(emptyresult.isDisplayed());
+		  logger.info("---C1309668	附近酒店/目的地搜索无结果的情况下，检查酒店列表是否显示正常Pass---");
+	} catch (Exception e) {
+		// TODO: handle exception
+		logger.info("---C1309668	附近酒店/目的地搜索无结果的情况下，检查酒店列表是否显示正常Fail---");
+	}
+  }
+  
+  private void doFilterDistance() {
+	    logger.info("--点击位置---");
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_location"))).click(); 
+		
+		List<WebElement> filterNames = driver.findElements(By.id("tv_filter_content"));
+		for (WebElement filterName : filterNames) 
+		{
+	       	 if(filterName.getText().equals("距離"))
+	       	 {
+				logger.info("---点击距離---");
+				filterName.click();
+				
+				WebElement submenu = driver.findElement(By.id("list_sub_menus"));
+
+				List<WebElement>  Items = submenu.findElements(By.className("android.widget.LinearLayout"));
+				Items.get(0).click();
+				logger.info("---选中"+Items.get(0).getText()+"---");
+				break;
+	       	 }
+		}
+    logger.info("---显示筛选结果---");
+    driver.findElement(By.id("tv_show_result")).click();	
+}
+  private void doFilterCommercial() {
+	    logger.info("--点击位置---");
+		  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("top_bar_location_red_dot"))).click(); 
+		
+		List<WebElement> filterNames = driver.findElements(By.id("tv_filter_content"));
+		for (WebElement filterName : filterNames) 
+		{
+	       	 if(filterName.getText().equals("商業區"))
+	       	 {
+				logger.info("---点击商業區---");
+				filterName.click();
+				
+				WebElement submenu = driver.findElement(By.id("list_sub_menus"));
+
+				List<WebElement>  Items = submenu.findElements(By.className("android.widget.LinearLayout"));
+				Items.get(1).click();
+				logger.info("---选中"+Items.get(1).getText()+"---");
+				break;
+	       	 }
+		}
+  logger.info("---显示筛选结果---");
+  driver.findElement(By.id("tv_show_result")).click();	
+}
   
   private boolean LocationChecked() {
 	 WebElement filterreddot= driver.findElement(By.id("top_bar_location_red_dot"));
