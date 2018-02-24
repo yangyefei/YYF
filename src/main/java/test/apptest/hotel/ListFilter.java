@@ -142,7 +142,7 @@ public class ListFilter extends BaseTest{
 	    driver.findElement(By.id("tv_show_result")).click();	
 	  try {
 		  logger.info("---开始验证C1309673	下级城市或更多下级城市筛选---");
-		  WebElement redresult = driver.findElement(By.id("top_bar_location_red_dot"));
+		  WebElement redresult = new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("top_bar_location_red_dot")));
 		  String hotelsname = driver.findElement(By.id("tv_hotel_name")).getText();
 		  Assert.assertTrue(redresult.isDisplayed());
 		  Assert.assertTrue(hotelsname.contains(city));
