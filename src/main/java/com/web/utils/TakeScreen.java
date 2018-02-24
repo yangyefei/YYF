@@ -8,6 +8,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -40,13 +42,17 @@ public class TakeScreen {
 
 	@Test
 	public static void picture() {
-		
+//		
 		System.setProperty("webdriver.ie.driver", "./driver/IEDriverServer.exe");
+
 //		webdriver = new RemoteWebDriver(new URL("http://"+"127.0.0.1"+":4444/wd/hub"), DesiredCapabilities.internetExplorer());
-		DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer(); 
-		ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true); 
-		WebDriver webdriver = new InternetExplorerDriver();
-		webdriver.get("D:/gitlab/maven/maven/target/surefire-reports/html/index.html");
+		DesiredCapabilities caps = DesiredCapabilities.internetExplorer(); 
+		caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true); 
+		caps.setCapability("ignoreZoomSetting", true);
+		WebDriver webdriver = new InternetExplorerDriver(caps);
+
+		webdriver.get("D:\\Users\\yefeiyang\\.jenkins\\workspace\\AppHotelTest\\target\\surefire-reports\\html/index.html");
+
 		snapshot(webdriver);
 	}
 }
