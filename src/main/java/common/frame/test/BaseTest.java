@@ -5,9 +5,6 @@ import java.util.Iterator;
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import org.testng.annotations.Listeners;
-
-import com.web.utils.TestLinster;
 
 import common.frame.data.ExcelProviderByTest;
 
