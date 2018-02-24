@@ -246,7 +246,7 @@
 				<configuration>
 					   <testFailureIgnore>true</testFailureIgnore> 
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>${xmlFileName}</suiteXmlFile>
 					</suiteXmlFiles>
 
 				</configuration>

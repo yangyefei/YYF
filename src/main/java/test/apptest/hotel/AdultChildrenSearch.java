@@ -28,6 +28,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.log4j.Logger;
 
 public class AdultChildrenSearch extends BaseTest {
@@ -372,7 +373,7 @@ public class AdultChildrenSearch extends BaseTest {
 	     driver.findElementByClassName("android.widget.ImageButton").click();
 	}	
 	
- 	@AfterClass
+ 	@AfterClass(alwaysRun=true)
 	public void afterClass() {
 		logger.info("I here afterclass");
 		driver.quit();

@@ -13,7 +13,7 @@ import common.frame.data.ExcelProviderByTest;
 
 @ContextConfiguration(locations = { "classpath*:ApplicationContext.xml" })
 //AbstractTransactionalTestNGSpringContextTests
-@Listeners(TestLinster.class)
+//@Listeners(TestLinster.class)
 public class BaseTest  extends AbstractTransactionalTestNGSpringContextTests{
 
 	ExcelProviderByTest excelProviderByTest = new ExcelProviderByTest();

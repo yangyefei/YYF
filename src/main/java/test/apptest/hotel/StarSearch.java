@@ -203,7 +203,7 @@ public class StarSearch extends BaseTest {
 	     logger.info("---返回Trip首页---");
 	     driver.findElementByClassName("android.widget.ImageButton").click();
 	}	
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void afterClass() {
 		logger.info("I here afterclass");
 		driver.quit();

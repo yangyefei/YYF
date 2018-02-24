@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HotelHomePage"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="134.767">
+  <properties />
+  
+  
+            <testcase name="twostarSearch" time="29.019" classname="test.apptest.hotel.StarSearch" />
+                <testcase name="starSearch" time="27.167" classname="test.apptest.hotel.StarSearch" />
+                <testcase name="defaultStarSearch" time="35.480" classname="test.apptest.hotel.StarSearch" />
+                <testcase name="Star345Search" time="43.101" classname="test.apptest.hotel.StarSearch" />
+      
+</testsuite>

@@ -33,6 +33,7 @@ public class TestLinster implements ITestListener {
 	}
 
 	public void onTestStart(ITestResult it) {
+		System.out.println("--------------onTestStart:"+it.getName()+"开始测试-------------");
 		
 	}
 
