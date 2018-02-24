@@ -2,8 +2,11 @@ package test.apptest.hotel;
 
 import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
 import io.appium.java_client.android.AndroidDriver;
 import service.AppCommonService;
 import service.InitialService;
@@ -28,13 +31,17 @@ public class HomeKeySearch extends BaseTest {
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
 
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
+	@BeforeMethod
+	public void beforeMethod() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 		// TestLinster.webDriver = driver; // androiddriver 传递给testlinster
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 
+	}
+	@AfterMethod
+	public void afterMethod(){
+		driver.quit();
 	}
 	/**
 	 * @author yefeiyang
@@ -104,9 +111,9 @@ public class HomeKeySearch extends BaseTest {
 		return ExcelProviderByEnv(this, "testData");
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void afterClass() {
-		logger.info("I am here afterclass");
+	
 		driver.quit();
 	}
 

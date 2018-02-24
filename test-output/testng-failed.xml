@@ -3,18 +3,19 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.hotel.OrderPrePay">
+      <class name="test.apptest.hotel.HomeKeySearch">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="after"/>
-          <include name="prePay" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="beforeClass"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="hotelSearch" invocation-numbers="4"/>
           <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- test.apptest.hotel.OrderPrePay -->
+      </class> <!-- test.apptest.hotel.HomeKeySearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
