@@ -54,5 +54,6 @@ public class TakeScreen {
 		webdriver.get("D:\\Users\\yefeiyang\\.jenkins\\workspace\\AppHotelTest\\target\\surefire-reports\\html/index.html");
 
 		snapshot(webdriver);
+		webdriver.close();
 	}
 }
