@@ -18,6 +18,8 @@ import java.util.Iterator;
 import java.util.Map;
 import org.testng.annotations.DataProvider;
 import common.frame.test.BaseTest;
+
+import org.aspectj.lang.annotation.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,16 +32,17 @@ public class HomeKeySearch extends BaseTest {
 	@SuppressWarnings("rawtypes")
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
-
+	
+	
 	@BeforeMethod
-	public void beforeMethod() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+	public void beforeMethod()  {
+
 		// TestLinster.webDriver = driver; // androiddriver 传递给testlinster
-		logger.info("初始化成功，准备登陆");
-		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
+
+	
 
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void afterMethod(){
 		driver.quit();
 	}
@@ -54,6 +57,10 @@ public class HomeKeySearch extends BaseTest {
 	// 测试用例 执行 ，数据提供testData
 	@Test(dataProvider = "testData", description = "yefei.yang", groups = { "yyf" })
 	public void hotelSearch(Map<String, String> datadriven) throws Exception {
+		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		// TestLinster.webDriver = driver; // androiddriver 传递给testlinster
+		logger.info("初始化成功，准备登陆");
+		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 		logger.info("---" + datadriven.get("id") + "---==>StartTest");
 		// 进入酒店首页
 		driver.findElement(By.id("myctrip_hotel_icon")).click(); 

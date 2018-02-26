@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="20.650">
+           time="21.082">
   <properties />
   
   
-            <testcase name="searchForDomesticAttractions" time="20.650" classname="test.apptest.hotel.SearchForDomesticAttractions" />
+            <testcase name="searchForDomesticAttractions" time="21.082" classname="test.apptest.hotel.SearchForDomesticAttractions" />
       
 </testsuite>

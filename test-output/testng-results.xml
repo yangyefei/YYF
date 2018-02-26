@@ -1,17 +1,1210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="9" failed="2" total="26" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3819" started-at="2018-02-24T11:44:52Z" finished-at="2018-02-24T11:44:56Z">
+  <suite name="HotelApp" duration-ms="677735" started-at="2018-02-26T04:44:33Z" finished-at="2018-02-26T04:55:50Z">
     <groups>
+      <group name="yyf">
+        <method signature="HomeKeySearch.hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" class="test.apptest.hotel.HomeKeySearch"/>
+        <method signature="HomeKeySearch.recentSearches()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="recentSearches" class="test.apptest.hotel.HomeKeySearch"/>
+      </group> <!-- yyf -->
+      <group name="Base">
+        <method signature="AdultChildrenSearch.adultChildrenSearch()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="adultChildrenSearch" class="test.apptest.hotel.AdultChildrenSearch"/>
+        <method signature="AdultChildrenSearch.twoadultOneAdultChildrenSearch()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="twoadultOneAdultChildrenSearch" class="test.apptest.hotel.AdultChildrenSearch"/>
+        <method signature="AdultChildrenSearch.twoadultOneChildrenSearch()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="twoadultOneChildrenSearch" class="test.apptest.hotel.AdultChildrenSearch"/>
+        <method signature="FullRoomRate.districtFullRoomRate()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="districtFullRoomRate" class="test.apptest.hotel.FullRoomRate"/>
+        <method signature="MyHotelOrder.MyHotelOrderGuest()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="MyHotelOrderGuest" class="test.apptest.hotel.MyHotelOrder"/>
+        <method signature="MyHotelOrder.myHotelOrderTrip()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="myHotelOrderTrip" class="test.apptest.hotel.MyHotelOrder"/>
+        <method signature="MyHotelOrder.noBookingsFound()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="noBookingsFound" class="test.apptest.hotel.MyHotelOrder"/>
+        <method signature="SearchDomesticHotelName.SearchDomesticHotelName()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="SearchDomesticHotelName" class="test.apptest.hotel.SearchDomesticHotelName"/>
+        <method signature="SearchForDomesticAttractions.searchForDomesticAttractions()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="searchForDomesticAttractions" class="test.apptest.hotel.SearchForDomesticAttractions"/>
+        <method signature="SearchHotelInOverseasTrain.searchHotelInOverseasTrain()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="searchHotelInOverseasTrain" class="test.apptest.hotel.SearchHotelInOverseasTrain"/>
+        <method signature="SearchHotelOverseasProvince.SearchHotelOverseasProvince()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="SearchHotelOverseasProvince" class="test.apptest.hotel.SearchHotelOverseasProvince"/>
+        <method signature="SearchOverseasHotelName.HkSearchEn()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="HkSearchEn" class="test.apptest.hotel.SearchOverseasHotelName"/>
+        <method signature="SearchOverseasHotelName.SearchOverseasHotelName()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="SearchOverseasHotelName" class="test.apptest.hotel.SearchOverseasHotelName"/>
+        <method signature="StarSearch.Star345Search()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="Star345Search" class="test.apptest.hotel.StarSearch"/>
+        <method signature="StarSearch.defaultStarSearch()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="defaultStarSearch" class="test.apptest.hotel.StarSearch"/>
+        <method signature="StarSearch.starSearch()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="starSearch" class="test.apptest.hotel.StarSearch"/>
+        <method signature="StarSearch.twostarSearch()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="twostarSearch" class="test.apptest.hotel.StarSearch"/>
+      </group> <!-- Base -->
     </groups>
-    <test name="Default test" duration-ms="3819" started-at="2018-02-24T11:44:52Z" finished-at="2018-02-24T11:44:56Z">
-      <class name="com.web.utils.TakeScreen">
-        <test-method status="PASS" signature="picture()[pri:0, instance:com.web.utils.TakeScreen@31a5c39e]" name="picture" duration-ms="3806" started-at="2018-02-24T19:44:52Z" finished-at="2018-02-24T19:44:56Z">
+    <test name="HotelHomePage" duration-ms="677704" started-at="2018-02-26T04:44:33Z" finished-at="2018-02-26T04:55:50Z">
+      <class name="test.apptest.hotel.MyHotelOrder">
+        <test-method status="SKIP" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- picture -->
-      </class> <!-- com.web.utils.TakeScreen -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="SKIP" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="SKIP" signature="MyHotelOrderGuest()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="MyHotelOrderGuest" duration-ms="0" started-at="2018-02-26T12:55:50Z" description="By sxm : C1309650 酒店订单/历史订单与订单详情页的跳转联动（快速预订用户）" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MyHotelOrderGuest -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.MyHotelOrder.MyHotelOrderGuest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="myHotelOrderTrip()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="myHotelOrderTrip" duration-ms="0" started-at="2018-02-26T12:55:50Z" description="By sxm : C1309650 酒店订单/历史订单与订单详情页的跳转联动（ctrip用户）" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myHotelOrderTrip -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="noBookingsFound()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="noBookingsFound" duration-ms="0" started-at="2018-02-26T12:55:50Z" description="by lnn: 无任何酒店订单/历史订单记录，卡片展示（快速预订用户和ctrip用户）C1309653" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noBookingsFound -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.MyHotelOrder.myHotelOrderTrip() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.MyHotelOrder.noBookingsFound() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:test.apptest.hotel.MyHotelOrder@27ae2fd0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.apptest.hotel.MyHotelOrder -->
+      <class name="test.apptest.hotel.SearchDomesticHotelName">
+        <test-method status="SKIP" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="SearchDomesticHotelName()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="SearchDomesticHotelName" duration-ms="1" started-at="2018-02-26T12:55:50Z" description="by chr: 搜索国内酒店名称C1309603" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchDomesticHotelName -->
+        <test-method status="SKIP" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchDomesticHotelName.SearchDomesticHotelName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.apptest.hotel.SearchDomesticHotelName@71b1176b]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.apptest.hotel.SearchDomesticHotelName -->
+      <class name="test.apptest.hotel.AdultChildrenSearch">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:54:26Z" finished-at="2018-02-26T12:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1" started-at="2018-02-26T12:54:26Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="beforeClass" is-config="true" duration-ms="13670" started-at="2018-02-26T12:54:26Z" finished-at="2018-02-26T12:54:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:54:40Z" finished-at="2018-02-26T12:54:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.AdultChildrenSearch.adultChildrenSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="adultChildrenSearch()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="adultChildrenSearch" duration-ms="36170" started-at="2018-02-26T12:54:40Z" description="by lnn: 8成人3儿童（均成年）搜索C1309639" finished-at="2018-02-26T12:55:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adultChildrenSearch -->
+        <test-method status="FAIL" signature="afterTest()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:16Z" finished-at="2018-02-26T12:55:16Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 30 seconds waiting for element to be clickable: By.id: iv_back
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
+Session ID: a81636de-0149-42e0-86b1-082c44d65cb3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.id: iv_back
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
+Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at test.apptest.hotel.AdultChildrenSearch.afterTest(AdultChildrenSearch.java:370)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 115 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
+Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
+*** Element info: {Using=id, value=iv_back}
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.AdultChildrenSearch.adultChildrenSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="twoadultOneAdultChildrenSearch()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="twoadultOneAdultChildrenSearch" duration-ms="1" started-at="2018-02-26T12:55:46Z" description="by ylf: C1309640 2成人2儿童（一成年，一未成年）搜索酒店" finished-at="2018-02-26T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- twoadultOneAdultChildrenSearch -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.AdultChildrenSearch.twoadultOneAdultChildrenSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="twoadultOneChildrenSearch()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="twoadultOneChildrenSearch" duration-ms="0" started-at="2018-02-26T12:55:46Z" description="by sxm: C1309644 2成人1儿童（1岁），搜索酒店+C1309638 页面默认成人儿童数量搜索" finished-at="2018-02-26T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- twoadultOneChildrenSearch -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.AdultChildrenSearch.twoadultOneChildrenSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="afterClass" is-config="true" duration-ms="4413" started-at="2018-02-26T12:55:46Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.AdultChildrenSearch@56a6d5a6]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.AdultChildrenSearch -->
+      <class name="test.apptest.hotel.FullRoomRate">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="2" started-at="2018-02-26T12:49:37Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:49:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:49:37Z" finished-at="2018-02-26T12:49:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="beforeClass" is-config="true" duration-ms="14843" started-at="2018-02-26T12:49:37Z" finished-at="2018-02-26T12:49:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:49:52Z" finished-at="2018-02-26T12:49:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.FullRoomRate.districtFullRoomRate() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="districtFullRoomRate()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="districtFullRoomRate" duration-ms="21498" started-at="2018-02-26T12:49:52Z" description="by lnn: 测试区域满房度C1306883/C1315188" finished-at="2018-02-26T12:50:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- districtFullRoomRate -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:50:13Z" finished-at="2018-02-26T12:50:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.FullRoomRate.districtFullRoomRate() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="afterClass" is-config="true" duration-ms="4225" started-at="2018-02-26T12:50:13Z" finished-at="2018-02-26T12:50:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.FullRoomRate@25d250c6]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:50:18Z" finished-at="2018-02-26T12:50:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.FullRoomRate -->
+      <class name="test.apptest.hotel.SearchForDomesticAttractions">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:50:18Z" finished-at="2018-02-26T12:50:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="2" started-at="2018-02-26T12:50:18Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:50:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="beforeClass" is-config="true" duration-ms="16726" started-at="2018-02-26T12:50:18Z" finished-at="2018-02-26T12:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:50:34Z" finished-at="2018-02-26T12:50:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchForDomesticAttractions.searchForDomesticAttractions() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="searchForDomesticAttractions()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="searchForDomesticAttractions" duration-ms="21082" started-at="2018-02-26T12:50:34Z" description="by lnn: 搜索国内区域景点C1309606" finished-at="2018-02-26T12:50:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForDomesticAttractions -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:50:55Z" finished-at="2018-02-26T12:50:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchForDomesticAttractions.searchForDomesticAttractions() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="afterClass" is-config="true" duration-ms="4380" started-at="2018-02-26T12:50:55Z" finished-at="2018-02-26T12:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.SearchForDomesticAttractions@1a04f701]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:51:00Z" finished-at="2018-02-26T12:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.SearchForDomesticAttractions -->
+      <class name="test.apptest.hotel.SearchHotelOverseasProvince">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="SKIP" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="SearchHotelOverseasProvince()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="SearchHotelOverseasProvince" duration-ms="0" started-at="2018-02-26T12:55:50Z" description="by chr: 根据海外省或城市搜索酒店C1309610" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchHotelOverseasProvince -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchHotelOverseasProvince.SearchHotelOverseasProvince() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.apptest.hotel.SearchHotelOverseasProvince@1677d1]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.apptest.hotel.SearchHotelOverseasProvince -->
+      <class name="test.apptest.hotel.SearchHotelInOverseasTrain">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="2" started-at="2018-02-26T12:51:00Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:51:00Z" finished-at="2018-02-26T12:51:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="beforeClass" is-config="true" duration-ms="16112" started-at="2018-02-26T12:51:00Z" finished-at="2018-02-26T12:51:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="3" started-at="2018-02-26T12:51:16Z" finished-at="2018-02-26T12:51:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchHotelInOverseasTrain.searchHotelInOverseasTrain() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="searchHotelInOverseasTrain()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="searchHotelInOverseasTrain" duration-ms="13417" started-at="2018-02-26T12:51:16Z" description="by lnn: 根据海外火车站搜索酒店C1309613" finished-at="2018-02-26T12:51:29Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 1, Size: 1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at test.apptest.hotel.SearchHotelInOverseasTrain.searchHotelInOverseasTrain(SearchHotelInOverseasTrain.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotelInOverseasTrain -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:51:29Z" finished-at="2018-02-26T12:51:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchHotelInOverseasTrain.searchHotelInOverseasTrain() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="afterClass" is-config="true" duration-ms="4422" started-at="2018-02-26T12:51:29Z" finished-at="2018-02-26T12:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.SearchHotelInOverseasTrain@51e5fc98]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:51:34Z" finished-at="2018-02-26T12:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.SearchHotelInOverseasTrain -->
+      <class name="test.apptest.hotel.SearchOverseasHotelName">
+        <test-method status="SKIP" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="HkSearchEn()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="HkSearchEn" duration-ms="0" started-at="2018-02-26T12:55:50Z" description="by chr: 中文输入英文酒店名称搜索C1309624" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HkSearchEn -->
+        <test-method status="SKIP" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchOverseasHotelName.HkSearchEn() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="SearchOverseasHotelName()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="SearchOverseasHotelName" duration-ms="0" started-at="2018-02-26T12:55:50Z" description="by chr: 根据海外酒店名称搜索酒店C1309616" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchOverseasHotelName -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.SearchOverseasHotelName.SearchOverseasHotelName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.apptest.hotel.SearchOverseasHotelName@159f197]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:55:50Z" finished-at="2018-02-26T12:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.apptest.hotel.SearchOverseasHotelName -->
+      <class name="test.apptest.hotel.StarSearch">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="2" started-at="2018-02-26T12:51:34Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:51:34Z" finished-at="2018-02-26T12:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="beforeClass" is-config="true" duration-ms="13385" started-at="2018-02-26T12:51:34Z" finished-at="2018-02-26T12:51:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:51:47Z" finished-at="2018-02-26T12:51:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.Star345Search() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="Star345Search()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="Star345Search" duration-ms="43871" started-at="2018-02-26T12:51:47Z" description="by ylf: C1309632	星级为3,4,5搜索" finished-at="2018-02-26T12:52:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Star345Search -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="afterTest" is-config="true" duration-ms="4593" started-at="2018-02-26T12:52:31Z" finished-at="2018-02-26T12:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:52:36Z" finished-at="2018-02-26T12:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.Star345Search() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:52:36Z" finished-at="2018-02-26T12:52:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.defaultStarSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="defaultStarSearch()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="defaultStarSearch" duration-ms="36314" started-at="2018-02-26T12:52:36Z" description="by ylf: C1309627	默认价格搜索，默认星级" finished-at="2018-02-26T12:53:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- defaultStarSearch -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="afterTest" is-config="true" duration-ms="5437" started-at="2018-02-26T12:53:12Z" finished-at="2018-02-26T12:53:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:53:17Z" finished-at="2018-02-26T12:53:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.defaultStarSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:53:17Z" finished-at="2018-02-26T12:53:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.starSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="starSearch()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="starSearch" duration-ms="27884" started-at="2018-02-26T12:53:17Z" description="by lnn: 星级为3星或者4星或者5星搜索C1309631" finished-at="2018-02-26T12:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- starSearch -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="afterTest" is-config="true" duration-ms="1935" started-at="2018-02-26T12:53:45Z" finished-at="2018-02-26T12:53:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:53:47Z" finished-at="2018-02-26T12:53:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.starSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:53:47Z" finished-at="2018-02-26T12:53:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.twostarSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="twostarSearch()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="twostarSearch" duration-ms="29954" started-at="2018-02-26T12:53:47Z" description="by sxm: C1309630星级分别为&lt;=2星搜索" finished-at="2018-02-26T12:54:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- twostarSearch -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="afterTest" is-config="true" duration-ms="5743" started-at="2018-02-26T12:54:17Z" finished-at="2018-02-26T12:54:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:54:23Z" finished-at="2018-02-26T12:54:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.StarSearch.twostarSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="afterClass" is-config="true" duration-ms="3006" started-at="2018-02-26T12:54:23Z" finished-at="2018-02-26T12:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.StarSearch@56de5251]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2018-02-26T12:54:26Z" finished-at="2018-02-26T12:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.StarSearch -->
+      <class name="test.apptest.hotel.HomeKeySearch">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="6" started-at="2018-02-26T12:44:33Z" finished-at="2018-02-26T12:44:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="558" started-at="2018-02-26T12:44:33Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-02-26T12:44:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="232" started-at="2018-02-26T12:44:33Z" finished-at="2018-02-26T12:44:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="15304" started-at="2018-02-26T12:44:34Z" finished-at="2018-02-26T12:44:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17695" started-at="2018-02-26T12:44:49Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:45:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=上海, id=C1309602 目的地搜索国内城市名, version=6.2, searchKeyWord=上海}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3915" started-at="2018-02-26T12:45:07Z" finished-at="2018-02-26T12:45:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="3" started-at="2018-02-26T12:45:11Z" finished-at="2018-02-26T12:45:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:45:11Z" finished-at="2018-02-26T12:45:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13611" started-at="2018-02-26T12:45:11Z" finished-at="2018-02-26T12:45:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17392" started-at="2018-02-26T12:45:24Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:45:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=虹橋火車站, id=C1309608 国内火车站搜索酒店, version=6.2, searchKeyWord=上海虹桥火车站}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3530" started-at="2018-02-26T12:45:42Z" finished-at="2018-02-26T12:45:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:45:45Z" finished-at="2018-02-26T12:45:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:45:45Z" finished-at="2018-02-26T12:45:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13336" started-at="2018-02-26T12:45:45Z" finished-at="2018-02-26T12:45:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17870" started-at="2018-02-26T12:45:58Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:46:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=上海虹橋元一希爾頓酒店, id=C1309615 当前城市搜索酒店, version=6.2, searchKeyWord=上海希尔顿}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3880" started-at="2018-02-26T12:46:16Z" finished-at="2018-02-26T12:46:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:46:20Z" finished-at="2018-02-26T12:46:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:46:20Z" finished-at="2018-02-26T12:46:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13554" started-at="2018-02-26T12:46:20Z" finished-at="2018-02-26T12:46:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17344" started-at="2018-02-26T12:46:34Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:46:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=東方明珠, id=C1309606 根据国内地标搜索酒店, version=6.2, searchKeyWord=东方明珠}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3336" started-at="2018-02-26T12:46:51Z" finished-at="2018-02-26T12:46:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:46:54Z" finished-at="2018-02-26T12:46:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:46:54Z" finished-at="2018-02-26T12:46:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13309" started-at="2018-02-26T12:46:54Z" finished-at="2018-02-26T12:47:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="16715" started-at="2018-02-26T12:47:08Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:47:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=聖淘沙島, id=C1309614 根据海外商圈搜索酒店, version=6.2, searchKeyWord=圣淘沙岛}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<圣淘沙島> but was:<聖淘沙島>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<圣淘沙島> but was:<聖淘沙島>
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
+	at test.apptest.hotel.HomeKeySearch.hotelSearch(HomeKeySearch.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="4317" started-at="2018-02-26T12:47:24Z" finished-at="2018-02-26T12:47:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:47:29Z" finished-at="2018-02-26T12:47:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13578" started-at="2018-02-26T12:47:29Z" finished-at="2018-02-26T12:47:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-02-26T12:47:29Z" finished-at="2018-02-26T12:47:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17499" started-at="2018-02-26T12:47:42Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:48:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=上海浦東國際機場, id=C1309604 搜索国内机场, version=6.2, searchKeyWord=上海浦东国际机场}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3863" started-at="2018-02-26T12:48:00Z" finished-at="2018-02-26T12:48:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:48:04Z" finished-at="2018-02-26T12:48:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:48:04Z" finished-at="2018-02-26T12:48:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13389" started-at="2018-02-26T12:48:04Z" finished-at="2018-02-26T12:48:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17215" started-at="2018-02-26T12:48:17Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:48:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=東京羽田國際機場, id=C1309612 根据海外机场搜索酒店, version=6.2, searchKeyWord=东京羽田国际机场}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3523" started-at="2018-02-26T12:48:34Z" finished-at="2018-02-26T12:48:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:48:38Z" finished-at="2018-02-26T12:48:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="4" started-at="2018-02-26T12:48:38Z" finished-at="2018-02-26T12:48:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13569" started-at="2018-02-26T12:48:38Z" finished-at="2018-02-26T12:48:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="hotelSearch(java.util.Map)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="hotelSearch" duration-ms="17670" started-at="2018-02-26T12:48:51Z" description="yefei.yang" data-provider="testData" finished-at="2018-02-26T12:49:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{result=曼谷杜莎夫人蠟像館, id=C1309617 根据海外地标筛选酒店功能, version=6.2, searchKeyWord=曼谷杜莎夫人蜡像馆}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hotelSearch -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="3362" started-at="2018-02-26T12:49:09Z" finished-at="2018-02-26T12:49:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-02-26T12:49:12Z" finished-at="2018-02-26T12:49:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.hotelSearch(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:49:13Z" finished-at="2018-02-26T12:49:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.recentSearches()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="beforeMethod" is-config="true" duration-ms="13607" started-at="2018-02-26T12:49:13Z" finished-at="2018-02-26T12:49:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="recentSearches()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="recentSearches" duration-ms="6620" started-at="2018-02-26T12:49:26Z" description="yefei.yang" finished-at="2018-02-26T12:49:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recentSearches -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterMethod" is-config="true" duration-ms="4230" started-at="2018-02-26T12:49:33Z" finished-at="2018-02-26T12:49:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-02-26T12:49:37Z" finished-at="2018-02-26T12:49:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.HomeKeySearch.recentSearches()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:49:37Z" finished-at="2018-02-26T12:49:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.HomeKeySearch@54c562f7]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-02-26T12:49:37Z" finished-at="2018-02-26T12:49:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.apptest.hotel.HomeKeySearch -->
+    </test> <!-- HotelHomePage -->
+    <test name="HotelListPage" duration-ms="1" started-at="2018-02-26T04:55:50Z" finished-at="2018-02-26T04:55:50Z">
+    </test> <!-- HotelListPage -->
+    <test name="HotelDetailPage" duration-ms="1" started-at="2018-02-26T04:55:50Z" finished-at="2018-02-26T04:55:50Z">
+    </test> <!-- HotelDetailPage -->
+    <test name="HotelOrderPage" duration-ms="0" started-at="2018-02-26T04:55:50Z" finished-at="2018-02-26T04:55:50Z">
+    </test> <!-- HotelOrderPage -->
+  </suite> <!-- HotelApp -->
 </testng-results>

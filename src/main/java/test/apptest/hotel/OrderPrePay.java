@@ -36,23 +36,13 @@ public class OrderPrePay extends BaseTest {
 	String room_name_detail;
 	String mycardnumber;
 	int i;//
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
-		
-
-	}
 
 	/**
-	 * C1320608  CNY支付全流程
-	 * C1320610  HKD支付全流程
-	 * C1320612  KRW支付全流程
-	 * C1320613  USD支付全流程
-	 * C1320614  JPY支付全流程
-	 * C1320616  EUR支付全流程
-	 * C1320617  SGD支付全流程
-	 * C1320843  TWD支付全流程
+	 * C1320608 CNY支付全流程 C1320610 HKD支付全流程 C1320612 KRW支付全流程 C1320613 USD支付全流程
+	 * C1320614 JPY支付全流程 C1320616 EUR支付全流程 C1320617 SGD支付全流程 C1320843 TWD支付全流程
+	 * 
 	 * @throws InterruptedException
-	 * @throws MalformedURLException 
+	 * @throws MalformedURLException
 	 * @throws Exception
 	 */
 	@Test(description = "yefei.yang", dataProvider = "testData", groups = { "orderpay" })
@@ -82,10 +72,11 @@ public class OrderPrePay extends BaseTest {
 		logger.info("进入支付页面");
 		payPage();
 		logger.info("---Version:" + datadriven.get("version") + "---" + datadriven.get("money") + "==>Test Pass---");
-		
+
 	}
-	@AfterMethod(alwaysRun=true)
-	public void after(){
+
+	@AfterMethod(alwaysRun = true)
+	public void after() {
 		driver.quit();
 	}
 
@@ -157,7 +148,8 @@ public class OrderPrePay extends BaseTest {
 		try {
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("more_account"))).click();
 
-		} catch(Exception e){}
+		} catch (Exception e) {
+		}
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("guest_button"))).click();
 		// hotel_book_summery_hotel_name
@@ -203,15 +195,14 @@ public class OrderPrePay extends BaseTest {
 	// 支付页面
 	@SuppressWarnings("unchecked")
 	public void payPage() throws InterruptedException {
-		int j=0;//支付while循环体初始值
+		int j = 0;// 支付while循环体初始值
 		Boolean flag;
-	
 
 		WebElement totalMonkey = new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.visibilityOfElementLocated(By.id("tvTotal")));
 		String total_amount_pay = totalMonkey.getText();
 		// 判断支付价格是否和详情页一致
-		String formatMoney=deleteZero(total_amount_detail);
+		String formatMoney = deleteZero(total_amount_detail);
 		assertEquals(formatMoney, total_amount_pay);
 		ArrayList<WebElement> hotelinfo = (ArrayList<WebElement>) driver
 				.findElementsByClassName("android.widget.TextView");
@@ -224,32 +215,33 @@ public class OrderPrePay extends BaseTest {
 		String roomName = strings[0];
 		// 判断房间名字是否一致
 		assertEquals(room_name_detail, roomName);
-		
+
 		try {
-			ArrayList<AndroidElement> ivarrow=(ArrayList<AndroidElement>) driver.findElementsById("iv_arrow");
-			if (i==1) {
+			ArrayList<AndroidElement> ivarrow = (ArrayList<AndroidElement>) driver.findElementsById("iv_arrow");
+			if (i == 1) {
 				ivarrow.get(0).click();
-			} else if (i==10) {
+			} else if (i == 10) {
 				ivarrow.get(1).click();
-			} 
-	
+			}
+
 		} catch (Exception e) {
-		
+
 		}
-        new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("cardbinCardNum")));
-		AndroidElement cardnum=(AndroidElement) driver.findElement(By.id("cardbinCardNum"));
+		new WebDriverWait(driver, timeOutInSeconds)
+				.until(ExpectedConditions.elementToBeClickable(By.id("cardbinCardNum")));
+		AndroidElement cardnum = (AndroidElement) driver.findElement(By.id("cardbinCardNum"));
 		cardnum.click();
-		
-		//输入银行卡号
+
+		// 输入银行卡号
 		do {
-			logger.info("--------------="+mycardnumber);
+			logger.info("--------------=" + mycardnumber);
 			cardnum.clear();
-			driver.pressKeyCode(12);//5
+			driver.pressKeyCode(12);// 5
 			driver.pressKeyCode(8);// 1
 			driver.pressKeyCode(7);// 0
 			driver.pressKeyCode(7);// 0
 			Thread.sleep(1000);
-			driver.pressKeyCode(7);// 0		
+			driver.pressKeyCode(7);// 0
 			driver.pressKeyCode(7);// 0
 			driver.pressKeyCode(7);// 0
 			driver.pressKeyCode(7);// 0
@@ -265,65 +257,64 @@ public class OrderPrePay extends BaseTest {
 			driver.pressKeyCode(7);// 0
 			driver.pressKeyCode(15);// 8
 			j++;
-			mycardnumber=cardnum.getText();
-			flag =mycardnumber.equals("5100 0000 0000 0008");
-			logger.info("----------flag----"+flag);
-			logger.info("---------------="+j);
-			if (j==5) {
+			mycardnumber = cardnum.getText();
+			flag = mycardnumber.equals("5100 0000 0000 0008");
+			logger.info("----------flag----" + flag);
+			logger.info("---------------=" + j);
+			if (j == 5) {
 				break;
 			}
 		} while (!flag);
 
-		
-		
 		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("etContent")));
-		ArrayList<WebElement> etContent = (ArrayList<WebElement>) driver.findElementsById("etContent");
-		etContent.get(0).sendKeys("yyf");
-		etContent.get(1).click();
-		//输入有效期
+		driver.findElementById("ceibName").sendKeys("yyf");
+		driver.findElementById("ceibEmail").sendKeys("yefeiyang@ctrip.com");
+		// etContent.get(0).sendKeys("yyf");
+		// etContent.get(1).click();
+		// 输入有效期
+		driver.findElementById("ceibDate").click();
 		driver.pressKeyCode(8);
 		driver.pressKeyCode(8);
 		driver.pressKeyCode(9);
 		driver.pressKeyCode(9);
-		etContent.get(2).sendKeys("123");
+		driver.findElementById("ceibCvv").sendKeys("123");
+		// etContent.get(2).sendKeys("123");
 		try {
-			etContent.get(3).sendKeys("13000000001");
+			driver.findElementById("vPhoneGetVerify").sendKeys("13000000001");
 		} catch (Exception e) {
-			
+
 		}
 
 		// ctvSubmit
 		driver.findElementById("ctvSubmit").click();
 		try {
-			new WebDriverWait(driver, 10)
-			.until(ExpectedConditions.visibilityOfElementLocated(By.id("ll_edc")));
-			new WebDriverWait(driver, 10)
-			.until(ExpectedConditions.visibilityOfElementLocated(By.id("ib_pay"))).click();
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("ll_edc")));
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("ib_pay"))).click();
 		} catch (Exception e) {
-			
+
 		}
-		new WebDriverWait(driver,timeOutInSeconds).until(ExpectedConditions.visibilityOfElementLocated(By.id("tv_order_number")));
+		new WebDriverWait(driver, timeOutInSeconds)
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("tv_order_number")));
 
 	}
-	
-	public String deleteZero(String string){
-		
-		String lastString=string.substring(string.length()-1, string.length());
+
+	public String deleteZero(String string) {
+
+		String lastString = string.substring(string.length() - 1, string.length());
 		if (string.contains(".") && lastString.equals("0")) {
-			String  string2=string.substring(0,(string.length()-1));
+			String string2 = string.substring(0, (string.length() - 1));
 			return string2;
-		}else {
+		} else {
 			return string;
 		}
 	}
+
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
 	}
 
-
-
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void afterClass() {
 		driver.quit();
 	}

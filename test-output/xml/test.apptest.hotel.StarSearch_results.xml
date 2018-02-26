@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="134.767">
+           time="138.023">
   <properties />
   
   
-            <testcase name="twostarSearch" time="29.019" classname="test.apptest.hotel.StarSearch" />
-                <testcase name="starSearch" time="27.167" classname="test.apptest.hotel.StarSearch" />
-                <testcase name="defaultStarSearch" time="35.480" classname="test.apptest.hotel.StarSearch" />
-                <testcase name="Star345Search" time="43.101" classname="test.apptest.hotel.StarSearch" />
+            <testcase name="defaultStarSearch" time="36.314" classname="test.apptest.hotel.StarSearch" />
+                <testcase name="twostarSearch" time="29.954" classname="test.apptest.hotel.StarSearch" />
+                <testcase name="Star345Search" time="43.871" classname="test.apptest.hotel.StarSearch" />
+                <testcase name="starSearch" time="27.884" classname="test.apptest.hotel.StarSearch" />
       
 </testsuite>

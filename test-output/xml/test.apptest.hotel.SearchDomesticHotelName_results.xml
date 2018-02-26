@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="HotelHomePage"
-           tests="1"
+           tests="6"
            failures="0"
            errors="0"
-           skipped="0"
-           time="79.759">
+           skipped="6"
+           time="0.001">
   <properties />
   
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.SearchDomesticHotelName">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextBeforeTestClass" time="0.0" classname="test.apptest.hotel.SearchDomesticHotelName">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="test.apptest.hotel.SearchDomesticHotelName">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextPrepareTestInstance" time="0.0" classname="test.apptest.hotel.SearchDomesticHotelName">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="test.apptest.hotel.SearchDomesticHotelName">
+          <skipped />
+    </testcase>
+            <testcase name="SearchDomesticHotelName" time="0.0" classname="test.apptest.hotel.SearchDomesticHotelName">
+          <skipped />
+    </testcase>
   
-            <testcase name="SearchDomesticHotelName" time="79.759" classname="test.apptest.hotel.SearchDomesticHotelName" />
-      
+  
 </testsuite>

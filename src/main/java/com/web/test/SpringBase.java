@@ -10,7 +10,7 @@ import com.web.utils.TestLinster;
 import java.net.MalformedURLException;
 
 @ContextConfiguration(locations = { "classpath*:ApplicationContext.xml" })
-@Listeners(TestLinster.class)
+//@Listeners(TestLinster.class)
 public class SpringBase extends AbstractTestNGSpringContextTests {
  
 	private String webRunMachineIp;
