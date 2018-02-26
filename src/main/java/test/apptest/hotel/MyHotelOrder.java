@@ -13,26 +13,17 @@ import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
-import service.impl.HotelHomePageInitialImpl;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.List;
-import java.util.Map;
-import org.testng.annotations.DataProvider;
+
 import common.frame.test.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.log4j.Logger;
-import org.aspectj.lang.annotation.After;
 
-import java.io.File;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
 public class MyHotelOrder extends BaseTest{
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();

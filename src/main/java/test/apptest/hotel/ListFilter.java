@@ -28,7 +28,7 @@ import org.testng.annotations.AfterClass;
 public class ListFilter extends BaseTest{
 	
 	private InitialService initial = new InitialServiceImpl();
-	private AppCommonService appCommonService = new AppCommonServiceImpl();
+	private AppCommonServiceImpl appCommonService = new AppCommonServiceImpl();
 	private AndroidDriver driver;
 	
   @Test(description = "by ylf: C1309670 热门地标或更多地标筛选", groups = { "Base" })
@@ -153,6 +153,7 @@ public class ListFilter extends BaseTest{
 	}
   }
   
+
   private void doFilterDistance() {
 	    logger.info("--点击位置---");
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_location"))).click(); 

@@ -89,6 +89,55 @@ public class AppCommonServiceImpl implements AppCommonService {
 
 		return driver;
 	}
+	
+	/** 
+	 * 下拉 
+	 *  
+	 * @param driver 
+	 * @param during 
+	 * @param num 
+	 */ 
+	@Override
+	public AppiumDriver swipeToDown(AppiumDriver driver,int during, int num) {  
+	    int width = driver.manage().window().getSize().width;  
+	    int height = driver.manage().window().getSize().height;  
+	    for (int i = 0; i < num; i++) {  
+	    	driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, during);  
+	    }
+		return driver;  
+	}  
+	
+	/** 
+	 * 向左滑动 
+	 *   
+	 * @param driver 
+	 * @param during 
+	 * @param num 
+	 */  
+	public AppiumDriver swipeToLeft(AppiumDriver driver,int during, int num) {  
+	    int width = driver.manage().window().getSize().width;  
+	    int height = driver.manage().window().getSize().height;  
+	    for (int i = 0; i < num; i++) {  
+	        driver.swipe(width * 3 / 4, height / 2, width / 4, height / 2, during);  
+	    }  
+	    return driver;
+	}  
+	
+	/** 
+	 * 向右滑动 
+	 *  
+	 * @param driver 
+	 * @param during 
+	 * @param num 
+	 */  
+	public AppiumDriver swipeToRight(AppiumDriver driver,int during, int num) {  
+	    int width = driver.manage().window().getSize().width;  
+	    int height = driver.manage().window().getSize().height;  
+	    for (int i = 0; i < num; i++) {  
+	        driver.swipe(width / 4, height / 2, width * 3 / 4, height / 2, during);  
+	    }  
+	    return driver;
+	}  
 
 	@Override
 	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNum) {
@@ -155,12 +204,18 @@ public class AppCommonServiceImpl implements AppCommonService {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
-	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
-	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
-	                      .sendKeys(keyword); 
-	    Thread.sleep(5000);
-	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
-	     destinationlist.get(0).click(); 
+	    String keywords = new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .getText();
+	    if (keywords.equals(keyword)) {
+			driver.findElement(By.id("hotel_destination_search_cancel")).click();;
+		}
+	    else{
+	    	new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	    	.sendKeys(keyword);
+	    	Thread.sleep(5000);
+		     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+		     destinationlist.get(0).click(); 
+	    }
 	    //点击搜索按钮
 	    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
 	    return driver;
