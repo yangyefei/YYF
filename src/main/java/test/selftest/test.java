@@ -2,6 +2,8 @@ package test.selftest;
 
 import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
@@ -24,17 +26,33 @@ public class test extends BaseTest {
 	private AppCommonService appCommonService = new AppCommonServiceImpl();
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
+	SoftAssert assertion = new SoftAssert(); 
 	
 	@BeforeSuite
 	public void beforeSuites() {
 		logger.info("-------------beforesuite-------------");
 	}
-
-	@Test(description = "携程测试hotel",groups = { "base" },retryAnalyzer =com.web.utils.Retry.class)
-	public void testa() throws MalformedURLException {
-		System.out.println(1/1);
-		
+    //硬断言
+	@Test
+	public void hardAssert() {
+		try {
+			Assert.assertEquals(1, 0 ,"yyf");
+		} catch (Exception e) {
+			logger.info("测试失败");
+		}
+		logger.info("外面失败");
 	}
+	//软断言
+	@Test
+	public void softAssert() {
+		assertion.assertEquals(1, 0,"2个不相等");
+		logger.info("woowowoowo测试失败");
+		assertion.assertAll();  //词句后面语句不执行
+		logger.info("woowowoowo测试ok-----------------------------------------------");
+	}
+	
+	
+	
 	@Test
 	public void testaa(){
 	
