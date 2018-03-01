@@ -4,16 +4,16 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="146.020">
+           time="315.148">
   <properties />
-            <testcase name="hotelSearch" time="16.715" classname="test.apptest.hotel.HomeKeySearch">
+            <testcase name="hotelSearch" time="36.986" classname="test.apptest.hotel.HomeKeySearch">
                 <failure type="java.lang.AssertionError"
                   message="expected:&lt;圣淘沙島&gt; but was:&lt;聖淘沙島&gt;"
               >
 <![CDATA[java.lang.AssertionError: expected:<圣淘沙島> but was:<聖淘沙島>
   org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
   org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
-  test.apptest.hotel.HomeKeySearch.hotelSearch(HomeKeySearch.java:72)
+  test.apptest.hotel.HomeKeySearch.hotelSearch(HomeKeySearch.java:75)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,13 +51,13 @@
           </testcase>
   
   
-            <testcase name="hotelSearch" time="17.344" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="hotelSearch" time="17.870" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="recentSearches" time="6.620" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="hotelSearch" time="17.695" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="hotelSearch" time="17.392" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="hotelSearch" time="17.215" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="hotelSearch" time="17.499" classname="test.apptest.hotel.HomeKeySearch" />
-                <testcase name="hotelSearch" time="17.670" classname="test.apptest.hotel.HomeKeySearch" />
+            <testcase name="hotelSearch" time="33.876" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="recentSearches" time="23.277" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="hotelSearch" time="33.158" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="hotelSearch" time="38.183" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="hotelSearch" time="39.851" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="hotelSearch" time="34.978" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="hotelSearch" time="34.751" classname="test.apptest.hotel.HomeKeySearch" />
+                <testcase name="hotelSearch" time="40.088" classname="test.apptest.hotel.HomeKeySearch" />
       
 </testsuite>

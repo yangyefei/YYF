@@ -34,9 +34,9 @@ public class HomeKeySearch extends BaseTest {
 	int timeOutInSeconds = 60;
 	
 	
-	@BeforeMethod
-	public void beforeMethod()  {
-
+	@BeforeClass
+	public void beforeClass() throws MalformedURLException  {
+	
 		// TestLinster.webDriver = driver; // androiddriver 传递给testlinster
 
 	
@@ -84,9 +84,11 @@ public class HomeKeySearch extends BaseTest {
 	/**
 	 * @author yefeiyang
 	 *  C1309622 最近搜索酒店再次点击搜索功能
+	 * @throws MalformedURLException 
 	 */
 	@Test(description = "yefei.yang", groups = { "yyf" })
-	public void recentSearches() {
+	public void recentSearches() throws MalformedURLException {
+		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 		logger.info("---C1309622  最近搜索酒店再次点击搜索功能---==>StartTest");
 		driver.findElement(By.id("myctrip_hotel_icon")).click(); // 进入酒店首页
 		WebElement inputBox = new WebDriverWait(driver, timeOutInSeconds)

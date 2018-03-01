@@ -4,7 +4,7 @@
            failures="1"
            errors="0"
            skipped="6"
-           time="36.171">
+           time="42.788">
   <properties />
             <testcase name="afterTest" time="0.000" classname="test.apptest.hotel.AdultChildrenSearch">
                 <failure type="org.openqa.selenium.TimeoutException"
@@ -13,14 +13,14 @@ Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b
 System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
-Session ID: a81636de-0149-42e0-86b1-082c44d65cb3"
+Session ID: 603abdb9-5a31-4e2d-bda2-597487af1dc4"
               >
 <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.id: iv_back
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
-Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
+Session ID: 603abdb9-5a31-4e2d-bda2-597487af1dc4
   org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
   org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
   test.apptest.hotel.AdultChildrenSearch.afterTest(AdultChildrenSearch.java:370)
@@ -51,15 +51,15 @@ Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 115 milliseconds
+Command duration or timeout: 63 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
-Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
+Session ID: 603abdb9-5a31-4e2d-bda2-597487af1dc4
 *** Element info: {Using=id, value=iv_back}
-  sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+  sun.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
   java.lang.reflect.Constructor.newInstance(Constructor.java:423)
   org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
@@ -126,10 +126,10 @@ Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
             <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.AdultChildrenSearch">
           <skipped />
     </testcase>
-            <testcase name="afterTest" time="0.0" classname="test.apptest.hotel.AdultChildrenSearch">
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.AdultChildrenSearch">
           <skipped />
     </testcase>
-            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.AdultChildrenSearch">
+            <testcase name="afterTest" time="0.0" classname="test.apptest.hotel.AdultChildrenSearch">
           <skipped />
     </testcase>
             <testcase name="twoadultOneChildrenSearch" time="0.0" classname="test.apptest.hotel.AdultChildrenSearch">
@@ -139,6 +139,6 @@ Session ID: a81636de-0149-42e0-86b1-082c44d65cb3
           <skipped />
     </testcase>
   
-            <testcase name="adultChildrenSearch" time="36.170" classname="test.apptest.hotel.AdultChildrenSearch" />
+            <testcase name="adultChildrenSearch" time="42.784" classname="test.apptest.hotel.AdultChildrenSearch" />
       
 </testsuite>

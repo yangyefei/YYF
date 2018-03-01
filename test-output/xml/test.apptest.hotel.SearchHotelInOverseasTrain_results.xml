@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="13.417">
+           time="14.400">
   <properties />
-            <testcase name="searchHotelInOverseasTrain" time="13.417" classname="test.apptest.hotel.SearchHotelInOverseasTrain">
+            <testcase name="searchHotelInOverseasTrain" time="14.400" classname="test.apptest.hotel.SearchHotelInOverseasTrain">
                 <failure type="java.lang.IndexOutOfBoundsException"
                   message="Index: 1, Size: 1"
               >

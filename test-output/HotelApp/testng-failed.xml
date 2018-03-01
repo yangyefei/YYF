@@ -8,29 +8,24 @@
   </listeners>
   <test name="HotelHomePage(failed)">
     <classes>
-      <class name="test.apptest.hotel.MyHotelOrder">
+      <class name="test.apptest.hotel.ListKeywordsSearch">
         <methods>
-          <include name="MyHotelOrderGuest"/>
+          <include name="listProvinceSearchBrand"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="noBookingsFound"/>
-          <include name="myHotelOrderTrip"/>
           <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- test.apptest.hotel.MyHotelOrder -->
-      <class name="test.apptest.hotel.AdultChildrenSearch">
+      </class> <!-- test.apptest.hotel.ListKeywordsSearch -->
+      <class name="test.apptest.hotel.SearchDomesticHotelName">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="twoadultOneChildrenSearch"/>
-          <include name="twoadultOneAdultChildrenSearch"/>
           <include name="beforeClass"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextBeforeTestMethod"/>
-          <include name="afterTest"/>
-          <include name="springTestContextAfterTestMethod"/>
           <include name="afterClass"/>
+          <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- test.apptest.hotel.AdultChildrenSearch -->
+      </class> <!-- test.apptest.hotel.SearchDomesticHotelName -->
       <class name="test.apptest.hotel.FullRoomRate">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
@@ -45,11 +40,11 @@
       <class name="test.apptest.hotel.HomeKeySearch">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="beforeMethod"/>
           <include name="afterClass"/>
           <include name="afterMethod"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
+          <include name="beforeClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="hotelSearch" invocation-numbers="4"/>
           <include name="springTestContextAfterTestMethod"/>
@@ -78,21 +73,43 @@
           <include name="afterClass"/>
         </methods>
       </class> <!-- test.apptest.hotel.StarSearch -->
-      <class name="test.apptest.hotel.SearchDomesticHotelName">
-        <methods>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="SearchDomesticHotelName"/>
-        </methods>
-      </class> <!-- test.apptest.hotel.SearchDomesticHotelName -->
       <class name="test.apptest.hotel.SearchOverseasHotelName">
         <methods>
+          <include name="afterClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="beforeClass"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="HkSearchEn"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="SearchOverseasHotelName"/>
         </methods>
       </class> <!-- test.apptest.hotel.SearchOverseasHotelName -->
+      <class name="test.apptest.hotel.SearchHotelOverseasProvince">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="afterClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- test.apptest.hotel.SearchHotelOverseasProvince -->
+      <class name="test.apptest.hotel.MyHotelOrder">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="MyHotelOrderGuest"/>
+          <include name="beforeClass"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="noBookingsFound"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="myHotelOrderTrip"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- test.apptest.hotel.MyHotelOrder -->
       <class name="test.apptest.hotel.SearchHotelInOverseasTrain">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
@@ -105,13 +122,6 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- test.apptest.hotel.SearchHotelInOverseasTrain -->
-      <class name="test.apptest.hotel.SearchHotelOverseasProvince">
-        <methods>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="SearchHotelOverseasProvince"/>
-        </methods>
-      </class> <!-- test.apptest.hotel.SearchHotelOverseasProvince -->
     </classes>
   </test> <!-- HotelHomePage(failed) -->
 </suite> <!-- Failed suite [HotelApp] -->

@@ -3,45 +3,278 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - HotelApp</title>
+  <title>Test Results Report - HotelHomePage</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>HotelApp</h1>
+<h1>HotelHomePage</h1>
 <p>
-  Test duration: 2249.371s
+  Test duration: 1006.513s
 </p>
 
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">test.apptest.hotel.MyHotelOrder</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 59 milliseconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d84190dd-3571-4e04-8c9d-c60316a33608<br/>
+*** Element info: {Using=class name, value=android.widget.ImageButton}</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+              org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)<br />
+              io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+              io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)<br />
+              io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+              io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:477)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.findElementByClassName(DefaultGenericMobileDriver.java:112)<br />
+              io.appium.java_client.AppiumDriver.findElementByClassName(AppiumDriver.java:1)<br />
+              io.appium.java_client.android.AndroidDriver.findElementByClassName(AndroidDriver.java:1)<br />
+              org.openqa.selenium.By$ByClassName.findElement(By.java:391)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)<br />
+              io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+              io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+              test.apptest.hotel.MyHotelOrder.afterTest(MyHotelOrder.java:257)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">test.apptest.hotel.ListKeywordsSearch</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextPrepareTestInstance
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass</span>
+                
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">test.apptest.hotel.MyHotelOrder</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+            </table>
 
 
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">test.apptest.hotel.OrderPrePay</td>
+        <td colspan="3" class="group">test.apptest.hotel.HomeKeySearch</td>
       </tr>
             
 <tr>
   <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
+                  <span class="description" title="yefei.yang">hotelSearch</span>
       </td>
   <td class="duration">
-    277.737s
+    36.986s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">{money=JPY, name=testjpy, currency=9, version=6.2}</span><br />
+          <i>Method arguments: </i><span class="arguments">{result=聖淘沙島, id=C1309614 根据海外商圈搜索酒店, version=6.2, searchKeyWord=圣淘沙岛}</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
+        <a href="javascript:toggleElement('exception-10', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected:&lt;圣淘沙島&gt; but was:&lt;聖淘沙島&gt;</b></a><br />
+    <div class="stackTrace" id="exception-10">
+              org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)<br />
+              org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)<br />
+              test.apptest.hotel.HomeKeySearch.hotelSearch(HomeKeySearch.java:75)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -76,242 +309,32 @@
                 </div>
       </td>
 </tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.MyHotelOrder</td>
+      </tr>
+            
 <tr>
   <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
+                  <span class="description" title="By sxm : C1309650 酒店订单/历史订单与订单详情页的跳转联动（快速预订用户）">MyHotelOrderGuest</span>
       </td>
   <td class="duration">
-    268.497s
+    105.494s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">{money=KRW, name=testkrw, currency=10, version=6.2}</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
-              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
-              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
-              org.testng.TestRunner.run(TestRunner.java:617)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
-              org.testng.TestNG.run(TestNG.java:1031)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
-                </div>
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
-      </td>
-  <td class="duration">
-    281.907s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">{money=EUR, name=testeur, currency=4, version=6.2}</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-2">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
-              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
-              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
-              org.testng.TestRunner.run(TestRunner.java:617)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
-              org.testng.TestNG.run(TestNG.java:1031)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
-                </div>
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
-      </td>
-  <td class="duration">
-    267.502s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">{money=SGD, name=testsgd, currency=13, version=6.2}</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-3">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
-              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
-              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
-              org.testng.TestRunner.run(TestRunner.java:617)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
-              org.testng.TestNG.run(TestNG.java:1031)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
-                </div>
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
-      </td>
-  <td class="duration">
-    327.979s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">{money=CNY, name=testcny, currency=0, version=6.2}</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-4">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
-              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
-              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
-              org.testng.TestRunner.run(TestRunner.java:617)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
-              org.testng.TestNG.run(TestNG.java:1031)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
-                </div>
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
-      </td>
-  <td class="duration">
-    226.482s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">{money=USD, name=testusd, currency=1, version=6.2}</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for visibility of element located by By.id: tvTotal<br/>
+        <a href="javascript:toggleElement('exception-11', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for element to be clickable: By.id: hotel_rooms_list_main_room_root_container<br/>
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
 System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
 Driver info: io.appium.java_client.android.AndroidDriver<br/>
-Capabilities [{appPackage=ctrip.english.debug, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english.debug, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
-Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871</b></a><br />
-    <div class="stackTrace" id="exception-5">
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d84190dd-3571-4e04-8c9d-c60316a33608</b></a><br />
+    <div class="stackTrace" id="exception-11">
               org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br />
               org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:214)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
+              test.apptest.hotel.MyHotelOrder.MyHotelOrderGuest(MyHotelOrder.java:135)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -319,8 +342,7 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871</b></a><br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
               org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
               org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
               java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
@@ -343,17 +365,17 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871</b></a><br />
               org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
               org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
               org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
-                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-6', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
-Command duration or timeout: 110 milliseconds<br/>
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-12', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 76 milliseconds<br/>
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
 System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
 Driver info: io.appium.java_client.android.AndroidDriver<br/>
-Capabilities [{appPackage=ctrip.english.debug, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english.debug, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
-Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
-*** Element info: {Using=id, value=tvTotal}</a><br />
-        <div class="stackTrace" id="exception-6">
-                      sun.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)<br />
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d84190dd-3571-4e04-8c9d-c60316a33608<br/>
+*** Element info: {Using=id, value=hotel_rooms_list_main_room_root_container}</a><br />
+        <div class="stackTrace" id="exception-12">
+                      sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)<br />
                       sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
                       java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
                       org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
@@ -379,9 +401,10 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
                       org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)<br />
                       org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)<br />
                       org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)<br />
                       org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)<br />
-                      test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:214)<br />
-                      test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
+                      test.apptest.hotel.MyHotelOrder.MyHotelOrderGuest(MyHotelOrder.java:135)<br />
                       sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
                       sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
                       sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -389,8 +412,7 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
                       org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
                       org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
                       org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)<br />
                       sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
                       java.lang.reflect.Method.invoke(Method.java:498)<br />
                       org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
@@ -417,25 +439,27 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
           </div>
       </td>
 </tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchHotelInOverseasTrain</td>
+      </tr>
+            
 <tr>
   <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
+                  <span class="description" title="by lnn: 根据海外火车站搜索酒店C1309613">searchHotelInOverseasTrain</span>
       </td>
   <td class="duration">
-    277.866s
+    14.400s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">{money=TWD, name=testtwd, currency=3, version=6.2}</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-7', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-7">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
+        <a href="javascript:toggleElement('exception-13', 'block')" title="Click to expand/collapse"><b>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</b></a><br />
+    <div class="stackTrace" id="exception-13">
+              java.util.ArrayList.rangeCheck(ArrayList.java:653)<br />
+              java.util.ArrayList.get(ArrayList.java:429)<br />
+              test.apptest.hotel.SearchHotelInOverseasTrain.searchHotelInOverseasTrain(SearchHotelInOverseasTrain.java:58)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -470,25 +494,32 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
                 </div>
       </td>
 </tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchOverseasHotelName</td>
+      </tr>
+            
 <tr>
   <td class="method">
-                  <span class="description" title="yefei.yang">prePay</span>
+                  <span class="description" title="by chr: 根据海外酒店名称搜索酒店C1309616">SearchOverseasHotelName</span>
       </td>
   <td class="duration">
-    277.216s
+    30.361s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">{money=HKD, name=testhkd, currency=2, version=6.2}</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-8', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
-房型名称不一致</b></a><br />
-    <div class="stackTrace" id="exception-8">
-              org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)<br />
-              test.apptest.hotel.OrderPrePay.payPage(OrderPrePay.java:323)<br />
-              test.apptest.hotel.OrderPrePay.prePay(OrderPrePay.java:73)<br />
+        <a href="javascript:toggleElement('exception-14', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.id: myctrip_hotel_icon<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: e513973a-0e91-439a-a3bf-1416d248e8f4</b></a><br />
+    <div class="stackTrace" id="exception-14">
+              org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br />
+              org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)<br />
+              test.apptest.hotel.SearchOverseasHotelName.SearchOverseasHotelName(SearchOverseasHotelName.java:49)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -496,8 +527,7 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
               org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
               org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
               java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
@@ -520,12 +550,412 @@ Session ID: 64ee48f3-7b0d-4bf1-8eda-d3f9df557871<br/>
               org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
               org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
               org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
-                </div>
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-15', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 81 milliseconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, noReset=true, noSign=true, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: e513973a-0e91-439a-a3bf-1416d248e8f4<br/>
+*** Element info: {Using=id, value=myctrip_hotel_icon}</a><br />
+        <div class="stackTrace" id="exception-15">
+                      sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)<br />
+                      sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+                      java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+                      org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+                      org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)<br />
+                      io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)<br />
+                      io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.By$ById.findElement(By.java:218)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)<br />
+                      org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)<br />
+                      test.apptest.hotel.SearchOverseasHotelName.SearchOverseasHotelName(SearchOverseasHotelName.java:49)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+                      org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
+                      org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
+                      sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
+                      org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
+                      org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+                      org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+                      org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+                      org.testng.TestRunner.run(TestRunner.java:617)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+                      org.testng.TestNG.run(TestNG.java:1031)<br />
+                      org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                  </div>
+          </div>
       </td>
 </tr>
       </table>
 
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.ListKeywordsSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="By sxm : C1309690	海外省和景点下的品牌搜索">listProvinceSearchBrand</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
 
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.MyHotelOrder</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="By sxm : C1309650 酒店订单/历史订单与订单详情页的跳转联动（ctrip用户）">myHotelOrderTrip</span>
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 无任何酒店订单/历史订单记录，卡片展示（快速预订用户和ctrip用户）C1309653">noBookingsFound</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+      </table>
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.FullRoomRate</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 测试区域满房度C1306883/C1315188">districtFullRoomRate</span>
+      </td>
+  <td class="duration">
+    22.279s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.HomeKeySearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    33.158s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=東方明珠, id=C1309606 根据国内地标搜索酒店, version=6.2, searchKeyWord=东方明珠}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    39.851s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=東京羽田國際機場, id=C1309612 根据海外机场搜索酒店, version=6.2, searchKeyWord=东京羽田国际机场}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    34.751s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=曼谷杜莎夫人蠟像館, id=C1309617 根据海外地标筛选酒店功能, version=6.2, searchKeyWord=曼谷杜莎夫人蜡像馆}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    40.088s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=上海浦東國際機場, id=C1309604 搜索国内机场, version=6.2, searchKeyWord=上海浦东国际机场}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    34.978s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=上海虹橋元一希爾頓酒店, id=C1309615 当前城市搜索酒店, version=6.2, searchKeyWord=上海希尔顿}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    38.183s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=上海, id=C1309602 目的地搜索国内城市名, version=6.2, searchKeyWord=上海}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    33.876s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=虹橋火車站, id=C1309608 国内火车站搜索酒店, version=6.2, searchKeyWord=上海虹桥火车站}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">recentSearches</span>
+      </td>
+  <td class="duration">
+    23.277s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchDomesticHotelName</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 搜索国内酒店名称C1309603">SearchDomesticHotelName</span>
+      </td>
+  <td class="duration">
+    81.740s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchForDomesticAttractions</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 搜索国内区域景点C1309606">searchForDomesticAttractions</span>
+      </td>
+  <td class="duration">
+    24.012s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchHotelOverseasProvince</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 根据海外省或城市搜索酒店C1309610">SearchHotelOverseasProvince</span>
+      </td>
+  <td class="duration">
+    25.272s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchOverseasHotelName</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 中文输入英文酒店名称搜索C1309624">HkSearchEn</span>
+      </td>
+  <td class="duration">
+    26.511s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.StarSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by ylf: C1309632	星级为3,4,5搜索">Star345Search</span>
+      </td>
+  <td class="duration">
+    37.039s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by ylf: C1309627	默认价格搜索，默认星级">defaultStarSearch</span>
+      </td>
+  <td class="duration">
+    50.503s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 星级为3星或者4星或者5星搜索C1309631">starSearch</span>
+      </td>
+  <td class="duration">
+    27.609s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by sxm: C1309630星级分别为<=2星搜索">twostarSearch</span>
+      </td>
+  <td class="duration">
+    27.664s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+      </table>
   
 </body>
 </html>

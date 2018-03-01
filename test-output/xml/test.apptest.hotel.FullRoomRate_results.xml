@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="21.498">
+           time="22.279">
   <properties />
   
   
-            <testcase name="districtFullRoomRate" time="21.498" classname="test.apptest.hotel.FullRoomRate" />
+            <testcase name="districtFullRoomRate" time="22.279" classname="test.apptest.hotel.FullRoomRate" />
       
 </testsuite>
