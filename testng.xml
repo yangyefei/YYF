@@ -18,6 +18,7 @@
             <class name="test.apptest.hotel.SearchHotelOverseasProvince"></class>
 			<class name="test.apptest.hotel.MyHotelOrder"></class>
 			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
+			<class name="test.apptest.hotel.ListChangeCurrency"></class>
 		</classes>
 	</test>
 
