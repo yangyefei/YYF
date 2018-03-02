@@ -70,7 +70,7 @@ public class ListChangeCurrency extends BaseTest{
 					break;
 				}
 			}
-			
+
 		}
     }
     
