@@ -16,15 +16,16 @@
             <class name="test.apptest.hotel.SearchDomesticHotelName"></class>
             <class name="test.apptest.hotel.SearchOverseasHotelName"></class>
             <class name="test.apptest.hotel.SearchHotelOverseasProvince"></class>
-			<class name="test.apptest.hotel.MyHotelOrder"></class>
-			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
-			<class name="test.apptest.hotel.ListChangeCurrency"></class>
+
+
 		</classes>
 	</test>
 
 	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
 	<test name="HotelListPage">
-
+			<class name="test.apptest.hotel.ListFilter"></class>
+			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
+			<class name="test.apptest.hotel.ListChangeCurrency"></class>
 	</test>
 
 	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
@@ -34,9 +35,12 @@
 
 	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
 	<test name="HotelOrderPage">
-
-
-		
+			<class name="test.apptest.hotel.MyHotelOrder"></class>		
+	</test>
+	
+	<!-- 5. Hotel_App_AutoTestCase 收藏酒店 -->
+	<test name="FavoriteHotels">
+			<class name="test.apptest.hotel.FavoriteHotels"></class>		
 	</test>
   
 
