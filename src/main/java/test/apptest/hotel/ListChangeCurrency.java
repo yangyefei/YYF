@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-@Test
+
 public class ListChangeCurrency extends BaseTest{
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService  appCommonService = new AppCommonServiceImpl();
@@ -39,6 +39,7 @@ public class ListChangeCurrency extends BaseTest{
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 	}
     
+    @Test(description = "by sxm: C1309722	切换韩币酒店筛选", groups = { "Base" })
     public void listChangeKRW() throws Exception{
     	logger.info("---搜索上海---");
   	    appCommonService.homeSearchHotel(driver, "上海");
@@ -51,6 +52,22 @@ public class ListChangeCurrency extends BaseTest{
 			logger.info("---验证C1309722	切换韩币酒店筛选Pass---");
 		} catch (Exception e) {
 			logger.info("---验证C1309722	切换韩币酒店筛选Fail---");
+		}
+    }
+    
+    @Test(description = "by sxm: C1309723	切换小币种筛选酒店", groups = { "Base" })
+    public void listChangePHP() throws Exception{
+    	logger.info("---搜索上海---");
+  	    appCommonService.homeSearchHotel(driver, "上海");
+  	    doChangeCurrency("PHP");
+    	WebElement price= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("tv_currency_name")));
+    	try {
+			logger.info("---开始验证C1309723	切换小币种筛选酒店---");
+			logger.info("---当前页面币种："+price.getText());
+			assertTrue(price.getText().contains("PHP"));
+			logger.info("---验证C1309723	切换小币种筛选酒店Pass---");
+		} catch (Exception e) {
+			logger.info("---验证C1309723	切换小币种筛选酒店Fail---");
 		}
     }
     
@@ -72,6 +89,14 @@ public class ListChangeCurrency extends BaseTest{
 			}
 
 		}
+    }
+    
+    @AfterMethod
+    public void afterMethod(){
+    	logger.info("---返回到酒店首页---");
+    	new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+    	logger.info("---返回到首页---");
+    	new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.className("android.widget.ImageButton"))).click();
     }
     
     @AfterClass

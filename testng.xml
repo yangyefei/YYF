@@ -26,6 +26,7 @@
 			<class name="test.apptest.hotel.ListFilter"></class>
 			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
 			<class name="test.apptest.hotel.ListChangeCurrency"></class>
+			<class name="test.apptest.hotel.ListWithOtherPage"></class>
 	</test>
 
 	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
