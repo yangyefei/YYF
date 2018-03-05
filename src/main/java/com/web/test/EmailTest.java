@@ -1,5 +1,6 @@
 package com.web.test;
 
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
+import javax.mail.Address;
 import javax.mail.Authenticator;
 import javax.mail.Message.RecipientType;
 import javax.mail.MessagingException;
@@ -31,26 +33,20 @@ import com.web.utils.TakeScreen;
  */
 public class EmailTest {
 
-	public static void main(String[] args) throws MessagingException {
+	public static void main(String[] args) throws MessagingException, UnsupportedEncodingException {
 
-		Scanner sacn=new Scanner(System.in);
-		sacn.hasNext();
 		TakeScreen.picture();
 		EmailTest.sendemail();
 	}
 
-	public static void sendemail() throws MessagingException {
+	public static void sendemail() throws MessagingException, UnsupportedEncodingException {
 		System.out.println("---------发送email------------");
+		
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat sFormat = new SimpleDateFormat("YYYY-MM-dd");
 		String date = sFormat.format(calendar.getTime());
 		// 配置发送邮件的环境属性
 		final Properties props = new Properties();
-		/*
-		 * 可用的属性： mail.store.protocol / mail.transport.protocol / mail.host /
-		 * mail.user / mail.from
-		 */
-		// 表示SMTP发送邮件，需要进行身份验证
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.host", "smtp.163.com");
 		// 发件人的账号
@@ -88,11 +84,21 @@ public class EmailTest {
 		// 设置发件人
 		InternetAddress form = new InternetAddress(props.getProperty("mail.user"));
 		message.setFrom(form);
-
+//		String addresses="";
 		// 设置收件人IBU_Htl_Test
-		InternetAddress to = new InternetAddress("IBU_Htl_Test@ctrip.com");
-		message.setRecipient(RecipientType.TO, to);
-
+//		InternetAddress to = new InternetAddress("yefeiyang@Ctrip.com");
+//		message.setRecipient(RecipientType.TO, to);
+	
+		message.setRecipients(RecipientType.TO, InternetAddress.parse("yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com"));
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		// 设置抄送
 		InternetAddress cc = new InternetAddress("yefeiyang@ctrip.com");
 		message.setRecipient(RecipientType.CC, cc);

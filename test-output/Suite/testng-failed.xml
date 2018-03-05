@@ -17,7 +17,7 @@
         <methods>
           <include name="springTestContextBeforeTestClass"/>
           <include name="after"/>
-          <include name="prePay" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="prePay" invocation-numbers="1 2 3 4 5 6 7"/>
           <include name="afterClass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
