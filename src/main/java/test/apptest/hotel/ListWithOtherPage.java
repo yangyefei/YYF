@@ -74,6 +74,6 @@ public class ListWithOtherPage extends BaseTest{
     
     @AfterClass
     public void afterClass() {
-  	  //driver.quit();
+  	  driver.quit();
     }
 }
