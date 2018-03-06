@@ -198,6 +198,7 @@ public class AppCommonServiceImpl implements AppCommonService {
 		return driver;
 	}
 
+	
 	@Override
 	public AppiumDriver homeSearchHotel(AppiumDriver driver, String keyword) throws InterruptedException {
 		//进入首页
@@ -207,7 +208,7 @@ public class AppCommonServiceImpl implements AppCommonService {
 	    String keywords = new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
 	                      .getText();
 	    if (keywords.equals(keyword)) {
-			driver.findElement(By.id("hotel_destination_search_cancel")).click();;
+			driver.findElement(By.id("hotel_destination_search_cancel")).click();
 		}
 	    else{
 	    	new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
@@ -219,6 +220,14 @@ public class AppCommonServiceImpl implements AppCommonService {
 	    //点击搜索按钮
 	    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
 	    return driver;
+	}
+	
+
+	@Override
+	public AppiumDriver listToDetail(AppiumDriver driver) throws InterruptedException{
+		//列表页点击首个酒店进入到详情页
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container"))).click();
+		return driver;
 	}
 
 }

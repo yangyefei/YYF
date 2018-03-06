@@ -58,5 +58,11 @@ public interface AppCommonService {
 	public AppiumDriver homeSearchHotel(AppiumDriver driver, String keyword) throws InterruptedException;
 
 	public AppiumDriver swipeToDown(AppiumDriver driver, int during, int num);
+
+	/*
+	 * 列表页到详情页
+	 * @param driver
+	 * */
+	public AppiumDriver listToDetail(AppiumDriver driver) throws InterruptedException;
 	
 }
