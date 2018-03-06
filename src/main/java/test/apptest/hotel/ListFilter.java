@@ -153,6 +153,33 @@ public class ListFilter extends BaseTest{
 	}
   }
   
+  @Test(description = "By sxm : C1309669	商圈或更多商圈筛选", groups={"Base"})
+  public void commercialFilter() throws Exception{
+	  logger.info("---搜索上海---");
+	  appCommonService.homeSearchHotel(driver, "上海");
+	  logger.info("--点击位置---");
+	  driver.findElement(By.id("tv_location")).click();
+	  List<WebElement> cityNames = driver.findElements(By.id("tv_filter_content"));
+	  cityNames.get(1).click();
+	  WebElement submenu = driver.findElement(By.id("list_sub_menus"));
+	  List<WebElement>  Items = submenu.findElements(By.className("android.widget.CheckedTextView"));
+	  Items.get(0).click();
+	  logger.info("---选中"+Items.get(0).getText()+"---");
+	  String city = Items.get(0).getText();
+	  logger.info("---显示筛选结果---");
+	    driver.findElement(By.id("tv_show_result")).click();	
+	  try {
+		  logger.info("---开始验证C1309669	商圈或更多商圈筛选---");
+		  WebElement redresult = new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("top_bar_location_red_dot")));
+		  String hotelsname = driver.findElement(By.id("tv_tip_full_house")).getText();
+		  Assert.assertTrue(redresult.isDisplayed());
+		  Assert.assertTrue(hotelsname.contains(city));
+		  logger.info("---C1309669	商圈或更多商圈筛选Pass---");
+	} catch (Exception e) {
+		// TODO: handle exception
+		logger.info("---C1309669	商圈或更多商圈筛选Fail---");
+	}
+  }
 
   private void doFilterDistance() {
 	    logger.info("--点击位置---");
