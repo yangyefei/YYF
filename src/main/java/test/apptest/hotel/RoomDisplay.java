@@ -56,6 +56,16 @@ public class RoomDisplay extends BaseTest{
 		}
     }
     
+    @AfterMethod
+	public void afterTest() {
+    	logger.info("---返回列表页---");
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ivBack"))).click();
+	     logger.info("---返回搜索首页---");
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+	     //返回Trip首页	     
+	     logger.info("---返回Trip首页---");
+	     driver.findElementByClassName("android.widget.ImageButton").click();
+	}	
     @AfterClass
     public void afterClass() {
   	  driver.quit();

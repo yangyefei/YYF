@@ -1,328 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1933627" started-at="2018-03-02T08:56:19Z" finished-at="2018-03-02T09:28:32Z">
+  <suite name="Default suite" duration-ms="96525" started-at="2018-03-06T07:05:51Z" finished-at="2018-03-06T07:07:28Z">
     <groups>
-      <group name="orderpay">
-        <method signature="OrderPrePay.prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" class="test.apptest.hotel.OrderPrePay"/>
-      </group> <!-- orderpay -->
+      <group name="Base">
+        <method signature="RoomDisplay.reviews()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="reviews" class="test.apptest.hotel.RoomDisplay"/>
+      </group> <!-- Base -->
     </groups>
-    <test name="HotelApp" duration-ms="1933627" started-at="2018-03-02T08:56:19Z" finished-at="2018-03-02T09:28:32Z">
-      <class name="test.apptest.hotel.OrderPrePay">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2018-03-02T16:56:19Z" finished-at="2018-03-02T16:56:19Z">
+    <test name="Default test" duration-ms="96525" started-at="2018-03-06T07:05:51Z" finished-at="2018-03-06T07:07:28Z">
+      <class name="test.apptest.hotel.RoomDisplay">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2018-03-06T15:05:51Z" finished-at="2018-03-06T15:05:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="618" started-at="2018-03-02T16:56:19Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-03-02T16:56:19Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="766" started-at="2018-03-06T15:05:51Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-03-06T15:05:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="263" started-at="2018-03-02T16:56:19Z" finished-at="2018-03-02T16:56:20Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="beforeClass" is-config="true" duration-ms="40981" started-at="2018-03-06T15:05:52Z" finished-at="2018-03-06T15:06:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="374" started-at="2018-03-06T15:06:33Z" finished-at="2018-03-06T15:06:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
+                <![CDATA[public void test.apptest.hotel.RoomDisplay.reviews() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="261913" started-at="2018-03-02T16:56:20Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:00:41Z">
+        <test-method status="FAIL" signature="reviews()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="reviews" duration-ms="46171" started-at="2018-03-06T15:06:33Z" description="by sxm: C1309740	详情页酒店政策下方外露优质点评" finished-at="2018-03-06T15:07:19Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:92)
+	at org.junit.Assert.assertTrue(Assert.java:43)
+	at org.junit.Assert.assertTrue(Assert.java:54)
+	at test.apptest.hotel.RoomDisplay.reviews(RoomDisplay.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reviews -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="5" started-at="2018-03-06T15:07:19Z" finished-at="2018-03-06T15:07:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{money=CNY, name=testcny, currency=0, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="5337" started-at="2018-03-02T17:00:41Z" finished-at="2018-03-02T17:00:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2018-03-02T17:00:47Z" finished-at="2018-03-02T17:00:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:00:47Z" finished-at="2018-03-02T17:00:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="247318" started-at="2018-03-02T17:00:47Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:04:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=USD, name=testusd, currency=1, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="5100" started-at="2018-03-02T17:04:54Z" finished-at="2018-03-02T17:04:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:04:59Z" finished-at="2018-03-02T17:04:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
+                <![CDATA[public void test.apptest.hotel.RoomDisplay.reviews() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:04:59Z" finished-at="2018-03-02T17:04:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="215600" started-at="2018-03-02T17:04:59Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:08:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=HKD, name=testhkd, currency=2, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="4230" started-at="2018-03-02T17:08:35Z" finished-at="2018-03-02T17:08:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:08:39Z" finished-at="2018-03-02T17:08:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-03-02T17:08:39Z" finished-at="2018-03-02T17:08:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="220797" started-at="2018-03-02T17:08:39Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:12:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=TWD, name=testtwd, currency=3, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="5040" started-at="2018-03-02T17:12:20Z" finished-at="2018-03-02T17:12:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:12:25Z" finished-at="2018-03-02T17:12:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:12:25Z" finished-at="2018-03-02T17:12:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="258519" started-at="2018-03-02T17:12:25Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:16:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=EUR, name=testeur, currency=4, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="5181" started-at="2018-03-02T17:16:43Z" finished-at="2018-03-02T17:16:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:16:49Z" finished-at="2018-03-02T17:16:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:16:49Z" finished-at="2018-03-02T17:16:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="210267" started-at="2018-03-02T17:16:49Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:20:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=JPY, name=testjpy, currency=9, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="5098" started-at="2018-03-02T17:20:19Z" finished-at="2018-03-02T17:20:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:20:24Z" finished-at="2018-03-02T17:20:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-02T17:20:24Z" finished-at="2018-03-02T17:20:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="253773" started-at="2018-03-02T17:20:24Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:24:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=KRW, name=testkrw, currency=10, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="3984" started-at="2018-03-02T17:24:38Z" finished-at="2018-03-02T17:24:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:24:42Z" finished-at="2018-03-02T17:24:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-02T17:24:42Z" finished-at="2018-03-02T17:24:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="prePay(java.util.Map)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="prePay" duration-ms="224377" started-at="2018-03-02T17:24:42Z" description="yefei.yang" data-provider="testData" finished-at="2018-03-02T17:28:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{money=SGD, name=testsgd, currency=13, version=6.2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prePay -->
-        <test-method status="PASS" signature="after()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="after" is-config="true" duration-ms="5916" started-at="2018-03-02T17:28:26Z" finished-at="2018-03-02T17:28:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-02T17:28:32Z" finished-at="2018-03-02T17:28:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.hotel.OrderPrePay.prePay(java.util.Map) throws java.lang.InterruptedException,java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-03-02T17:28:32Z" finished-at="2018-03-02T17:28:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.OrderPrePay@4c9f8c13]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-03-02T17:28:32Z" finished-at="2018-03-02T17:28:32Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="afterClass" is-config="true" duration-ms="8209" started-at="2018-03-06T15:07:19Z" finished-at="2018-03-06T15:07:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.hotel.OrderPrePay -->
-    </test> <!-- HotelApp -->
-  </suite> <!-- Suite -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.RoomDisplay@f0f2775]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-03-06T15:07:28Z" finished-at="2018-03-06T15:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.RoomDisplay -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

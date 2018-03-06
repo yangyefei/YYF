@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="com.web.utils.TestLinster"/>
-  </listeners>
-  <test name="HotelApp(failed)">
-    <groups>
-      <run>
-        <include name="orderpay"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.hotel.OrderPrePay">
+      <class name="test.apptest.hotel.RoomDisplay">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="after"/>
-          <include name="prePay" invocation-numbers="1 2 3 4 5 6 7"/>
-          <include name="afterClass"/>
+          <include name="reviews"/>
           <include name="springTestContextPrepareTestInstance"/>
+          <include name="afterClass"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="beforeClass"/>
           <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- test.apptest.hotel.OrderPrePay -->
+      </class> <!-- test.apptest.hotel.RoomDisplay -->
     </classes>
-  </test> <!-- HotelApp(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

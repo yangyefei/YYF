@@ -44,6 +44,10 @@
 			<class name="test.apptest.hotel.FavoriteHotels"></class>		
 	</test>
   
+	<!-- 6. Hotel_App_AutoTestCase 酒店详情页 -->
+	<test name="FavoriteHotels">
+			<class name="test.apptest.hotel.RoomDisplay"></class>		
+	</test>
 
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
