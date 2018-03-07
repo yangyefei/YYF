@@ -252,9 +252,9 @@
 				<configuration>
 					   <testFailureIgnore>true</testFailureIgnore> 
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>${xmlFileName}</suiteXmlFile> -->
+						<suiteXmlFile>${xmlFileName}</suiteXmlFile>
 						
-						<suiteXmlFile>testngFat.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>testngFat.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 
 				</configuration>
