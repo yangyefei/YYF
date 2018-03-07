@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HotelListPage"
+           tests="13"
+           failures="0"
+           errors="0"
+           skipped="13"
+           time="0.002">
+  <properties />
+  
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextPrepareTestInstance" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextBeforeTestClass" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="listProvinceSearchBrand" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="listMetroStationMoreSearch" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+            <testcase name="listMetroStationSearch" time="0.0" classname="test.apptest.hotel.ListKeywordsSearch">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

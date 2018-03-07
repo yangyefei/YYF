@@ -5,17 +5,17 @@
 	<test name="HotelHomePage">
 
 		<classes>
-		    <class name="test.apptest.hotel.HomeKeySearch"></class>  <!-- 20180213 yyf -->
+			<class name="test.apptest.hotel.HomeKeySearch"></class>  <!-- 20180213 yyf -->
 			<class name="test.apptest.hotel.FullRoomRate"></class>
 			<class name="test.apptest.hotel.SearchForDomesticAttractions"></class>
 			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
 			<class name="test.apptest.hotel.StarSearch"></class>
 			<class name="test.apptest.hotel.AdultChildrenSearch"></class>
-		
+
 			<!-- 20180213 chr -->
-            <class name="test.apptest.hotel.SearchDomesticHotelName"></class>
-            <class name="test.apptest.hotel.SearchOverseasHotelName"></class>
-            <class name="test.apptest.hotel.SearchHotelOverseasProvince"></class>
+			<class name="test.apptest.hotel.SearchDomesticHotelName"></class>
+			<class name="test.apptest.hotel.SearchOverseasHotelName"></class>
+			<class name="test.apptest.hotel.SearchHotelOverseasProvince"></class>
 
 
 		</classes>
@@ -23,10 +23,12 @@
 
 	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
 	<test name="HotelListPage">
+		<classes>
 			<class name="test.apptest.hotel.ListFilter"></class>
 			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
 			<class name="test.apptest.hotel.ListChangeCurrency"></class>
 			<class name="test.apptest.hotel.ListWithOtherPage"></class>
+		</classes>
 	</test>
 
 	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
@@ -36,24 +38,31 @@
 
 	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
 	<test name="HotelOrderPage">
-			<class name="test.apptest.hotel.MyHotelOrder"></class>		
+		<classes>
+			<class name="test.apptest.hotel.MyHotelOrder"></class>
+
+		</classes>
 	</test>
-	
+
 	<!-- 5. Hotel_App_AutoTestCase 收藏酒店 -->
 	<test name="FavoriteHotels">
-			<class name="test.apptest.hotel.FavoriteHotels"></class>		
+		<classes>
+			<class name="test.apptest.hotel.FavoriteHotels"></class>
+		</classes>
 	</test>
-  
+
 	<!-- 6. Hotel_App_AutoTestCase 酒店详情页 -->
-	<test name="FavoriteHotels">
-			<class name="test.apptest.hotel.RoomDisplay"></class>		
+	<test name="RoomDisplay">
+		<classes>
+			<class name="test.apptest.hotel.RoomDisplay"></class>
+		</classes>
 	</test>
 
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-			<!--失败重试监听器  -->
-		<!-- 	<listener class-name="com.web.utils.RetryListener" /> -->
+		<!--失败重试监听器 -->
+		<!-- <listener class-name="com.web.utils.RetryListener" /> -->
 		<listener class-name="com.web.utils.TestLinster"></listener>
 	</listeners>
 
