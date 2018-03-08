@@ -145,6 +145,80 @@ public class ListKeywordsSearch extends BaseTest{
 	    	logger.info("C1309691 地铁站搜索失败");	
         
 	}
+	
+	@Test(description = "By ylf : C1309697	海外火车站搜索", groups={"Base"})
+	public void listOverseaRailwayStationSearch() throws Exception{
+		logger.info("---酒店首页搜索东京---");
+		appCommonService.homeSearchHotel(driver, "東京");
+		logger.info("---酒店列表页点击搜索框---");
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("etKeyword"))).sendKeys("JR站");
+
+
+	   	List<WebElement> titles = driver.findElements(By.id("tvTitle"));
+
+	   	
+	   	logger.info(titles.size());
+	   	
+        for (WebElement title : titles) 
+        {
+        	 //String groupName = group.findElement(By.id("view_hotel_top_destination_group_title")).getText();
+        	 logger.info(title.getText());
+        	 if(title.getText().equals("JR東京站"))
+        	 {
+        		logger.info("---点击火车站中第一个按钮'JR東京站'---");
+        		title.click();
+ 				break;
+        	 }
+		}
+                
+        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).getText();
+	    if(FilterChecked())	  
+	    {
+	    	Assert.assertTrue(true);
+	    	logger.info("C1309697	海外火车站搜索成功");
+	    }
+	    else
+	    	logger.info("C1309697	海外火车站搜索失败");	
+        
+	}
+	
+	@Test(description = "By ylf : C1309696	海外机场车站搜索", groups={"Base"})
+	public void listOverseaAirportSearch() throws Exception{
+		logger.info("---酒店首页搜索东京---");
+		appCommonService.homeSearchHotel(driver, "東京");
+		logger.info("---酒店列表页点击搜索框---");
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("etKeyword"))).sendKeys("羽田國際機場");
+
+
+	   	List<WebElement> titles = driver.findElements(By.id("tvTitle"));
+
+	   	
+	   	logger.info(titles.size());
+	   	
+        for (WebElement title : titles) 
+        {
+        	 //String groupName = group.findElement(By.id("view_hotel_top_destination_group_title")).getText();
+        	 logger.info(title.getText());
+        	 if(title.getText().equals("東京羽田國際機場"))
+        	 {
+        		logger.info("---点击東京羽田國際機場---");
+        		title.click();
+ 				break;
+        	 }
+		}
+                
+        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).getText();
+	    if(FilterChecked())	  
+	    {
+	    	Assert.assertTrue(true);
+	    	logger.info("C1309696	海外机场车站搜索成功");
+	    }
+	    else
+	    	logger.info("C1309696	海外机场车站搜索失败");	
+        
+	}
 
 	@Test(description = "By sxm : C1309690	海外省和景点下的品牌搜索", groups={"Base"})
 	public void listProvinceSearchBrand() throws Exception{
