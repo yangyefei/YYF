@@ -97,7 +97,19 @@ public class ListSort extends BaseTest{
 	    	logger.info("C1309704	星级由高到低失败");	
   }
   
-    
+  @Test(description = "by sxm: C1309703	用户评分", groups = { "Base" })
+public void ListSortByScore() throws InterruptedException{
+	  logger.info("搜上海");
+	  appCommonService.homeSearchHotel(driver, "上海");
+	  doSort(ListSortType.ByScore, "用户评分");
+	  if (SortChecked()) {
+		  Assert.assertTrue(true);
+	    	logger.info("C1309703	用户评分Pass");
+	} else {
+		logger.info("C1309703	用户评分Fail");	
+	}
+  }
+  
   private boolean SortChecked() {
 	 WebElement filterreddot= driver.findElement(By.id("top_bar_sort_red_dot"));
 	 return filterreddot.isDisplayed();
