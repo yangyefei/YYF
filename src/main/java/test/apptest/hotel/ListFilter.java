@@ -180,6 +180,32 @@ public class ListFilter extends BaseTest{
 		logger.info("---C1309669	商圈或更多商圈筛选Fail---");
 	}
   }
+  
+  @Test(description = "By sxm : C1309681	重置功能，所有的筛选项都会被清除", groups={"Base"})
+  public void removeFilters() throws Exception{
+	  logger.info("--搜索上海--");
+	  appCommonService.homeSearchHotel(driver, "上海");
+	  doFilterDistance();
+	  doRemoveFilters();
+	  if (! existElemnet()) {
+		  logger.info("--C1309681	重置功能，所有的筛选项都会被清除Pass--");
+	}
+	  else
+		  logger.info("--C1309681	重置功能，所有的筛选项都会被清除Fail--");
+	  }
+  public boolean existElemnet(){
+	  boolean location = driver.getPageSource().contains("top_bar_location_red_dot");
+	  return location;
+  }
+  
+  public void doRemoveFilters(){
+	  logger.info("--点击位置--");
+	  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_location"))).click();
+	  logger.info("--点击清除按钮--");
+	  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_hotel_filter_clear"))).click();
+	  logger.info("---显示筛选结果---");
+	  driver.findElement(By.id("tv_show_result")).click();	
+  }
 
   private void doFilterDistance() {
 	    logger.info("--点击位置---");
