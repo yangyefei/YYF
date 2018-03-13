@@ -254,6 +254,28 @@ public class ListKeywordsSearch extends BaseTest{
 		}
 	}
 	
+	@Test(description = "By sxm : C1309695	景点搜索", groups={"Base"})
+	public void listSearchScenic() throws Exception{
+		logger.info("---首页搜索上海---");
+		appCommonService.homeSearchHotel(driver, "上海");
+		logger.info("---酒店列表页搜索景点---");
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).click();
+		WebElement etKeyWord = new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("etKeyword")));
+		etKeyWord.sendKeys("外滩");
+		List<WebElement> list = driver.findElements(By.id("tvTitle"));
+		logger.info("---点击第一个搜索结果---");
+		list.get(1).click();
+			if (SearchChecked()) {
+				logger.info("---C1309695	景点搜索Pass---");
+			}
+			else
+				logger.info("---C1309695	景点搜索Fail---");
+	}
+	
+	private boolean SearchChecked() {
+		 WebElement filterreddot= driver.findElement(By.id("top_bar_location_red_dot"));
+		 return filterreddot.isDisplayed();
+	 }
 	
 	  private boolean FilterChecked() {
 			 WebElement filterreddot= driver.findElement(By.id("top_bar_filter_red_dot"));
