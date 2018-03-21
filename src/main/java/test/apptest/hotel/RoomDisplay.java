@@ -56,6 +56,25 @@ public class RoomDisplay extends BaseTest{
 		}
     }
     
+    @Test(description = "By sxm: C1309739	【房型弹层】功能", groups = { "Base" })
+    public void RoomShell() throws Exception{
+    	logger.info("---搜索上海思南公館酒店---");
+    	appCommonService.homeSearchHotel(driver, "上海思南公館酒店");
+    	appCommonService.listToDetail(driver);
+    	logger.info("---点击房型弹层---");
+    	new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("hotel_rooms_list_sub_room_right")))
+		.click();
+    	try {
+    		logger.info("---开始验证C1309739	【房型弹层】功能---");
+    		WebElement book = new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("htl_room_detail_bottom_bar_btn")));
+    		Assert.assertTrue(book.isDisplayed());
+    		logger.info("---验证C1309739	【房型弹层】功能Pass---");
+		} catch (Exception e) {
+			logger.info("---验证C1309739	【房型弹层】功能Fail---");
+		}
+    	driver.findElement(By.id("tvClose")).click();
+    }
+    
     @AfterMethod
 	public void afterTest() {
     	logger.info("---返回列表页---");
