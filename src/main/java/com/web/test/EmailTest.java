@@ -88,8 +88,8 @@ public class EmailTest {
 		// 设置收件人IBU_Htl_Test
 //		InternetAddress to = new InternetAddress("yefeiyang@Ctrip.com");
 //		message.setRecipient(RecipientType.TO, to);
-	
-		message.setRecipients(RecipientType.TO, InternetAddress.parse("yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com"));
+//		"yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com"
+		message.setRecipients(RecipientType.TO, InternetAddress.parse("yefeiyang@Ctrip.com"));
 		
 		
 		

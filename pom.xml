@@ -72,7 +72,8 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>${spring.version}</version>
-			<type>jar</type>
+			<!-- <type>jar</type> -->
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -120,7 +121,7 @@
 
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>	
+			<artifactId>spring-tx</artifactId>
 			<scope>compile</scope>
 			<version>${spring.version}</version>
 		</dependency>
@@ -209,7 +210,7 @@
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
 			<version>3.0</version>
-
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -228,15 +229,15 @@
 
 
 	</dependencies>
-	
+
 	<build>
 		<plugins>
-		
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				 <version>3.6.1</version>
-				 
+				<version>3.6.1</version>
+
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -250,11 +251,11 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.17</version>
 				<configuration>
-					   <testFailureIgnore>true</testFailureIgnore> 
+					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<suiteXmlFile>${xmlFileName}</suiteXmlFile>
-						
-					<!-- 	<suiteXmlFile>testng.xml</suiteXmlFile> -->
+
+						<!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 
 				</configuration>
@@ -273,9 +274,9 @@
 							<goal>java</goal>
 						</goals>
 						<configuration>
-		
-							<mainClass>	com.web.test.EmailTest</mainClass>
-					
+
+							<mainClass> com.web.test.EmailTest</mainClass>
+
 						</configuration>
 					</execution>
 				</executions>
