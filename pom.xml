@@ -254,7 +254,7 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>${xmlFileName}</suiteXmlFile>
 						
-						<!-- <suiteXmlFile>testngFat.xml</suiteXmlFile> -->
+					<!-- 	<suiteXmlFile>testng.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 
 				</configuration>
