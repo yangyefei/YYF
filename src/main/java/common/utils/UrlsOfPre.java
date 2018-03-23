@@ -11,7 +11,7 @@ public enum UrlsOfPre {
 	BackGroundSystem {
 		@Override
 		public String getUrl(){
-			String url = "http://fwgl.yirongbang.net/";			
+			String url = "http://trip.com";			
 			return url;			
 		}
 	};

@@ -22,8 +22,7 @@ import org.testng.annotations.Test;
 import com.web.utils.TestLinster;
 
 public class Common {
-	int a = 57;
-	int b = 9;
+
 	public Common() throws MalformedURLException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -138,13 +137,6 @@ public class Common {
 		System.out.println(Collections.binarySearch(arrayList, 1));
 	}
 
-	public void swdap(int a, int b) {
-		int temp;
-		temp = this.a;
-		this.a = this.b;
-		this.b = temp;
-
-	}
 
 	public static void main(String[] args) throws MalformedURLException {
 
@@ -160,11 +152,6 @@ public class Common {
 		// Arrays.fill(a,6);
 		// System.out.println(Arrays.toString(a));
 		// Arrays.asList(a);
-		Common common = new Common();
-
-		common.swdap(common.a, common.b);
-		System.out.println(common.a + " " + " " + common.b);
-		
 		String string = "abcdef";
 		String reverse = new StringBuffer(string).reverse().toString();
 		System.out.println("String before reverse: " + string);
