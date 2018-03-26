@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="5" failed="2" total="7" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="84276" started-at="2018-03-26T06:19:15Z" finished-at="2018-03-26T06:20:39Z">
+    <groups>
+      <group name="Base">
+        <method signature="ListFilter.cityFilter()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="cityFilter" class="test.apptest.hotel.ListFilter"/>
+        <method signature="ListFilter.commercialFilter()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="commercialFilter" class="test.apptest.hotel.ListFilter"/>
+        <method signature="ListFilter.emptyFilterResult()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="emptyFilterResult" class="test.apptest.hotel.ListFilter"/>
+        <method signature="ListFilter.filterMarkland()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="filterMarkland" class="test.apptest.hotel.ListFilter"/>
+        <method signature="ListFilter.filterOthers()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="filterOthers" class="test.apptest.hotel.ListFilter"/>
+        <method signature="ListFilter.lessFilterResult()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="lessFilterResult" class="test.apptest.hotel.ListFilter"/>
+        <method signature="ListFilter.removeFilters()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="removeFilters" class="test.apptest.hotel.ListFilter"/>
+      </group> <!-- Base -->
+    </groups>
+    <test name="Default test" duration-ms="84276" started-at="2018-03-26T06:19:15Z" finished-at="2018-03-26T06:20:39Z">
+      <class name="test.apptest.hotel.ListFilter">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="7" started-at="2018-03-26T14:19:15Z" finished-at="2018-03-26T14:19:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="588" started-at="2018-03-26T14:19:15Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-03-26T14:19:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="beforeClass" is-config="true" duration-ms="19821" started-at="2018-03-26T14:19:16Z" finished-at="2018-03-26T14:19:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="334" started-at="2018-03-26T14:19:35Z" finished-at="2018-03-26T14:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.cityFilter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="cityFilter()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="cityFilter" duration-ms="29247" started-at="2018-03-26T14:19:36Z" description="By sxm : C1309673	下级城市或更多下级城市筛选" finished-at="2018-03-26T14:20:05Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 0, Size: 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at test.apptest.hotel.ListFilter.cityFilter(ListFilter.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cityFilter -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="4162" started-at="2018-03-26T14:20:05Z" finished-at="2018-03-26T14:20:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="3" started-at="2018-03-26T14:20:09Z" finished-at="2018-03-26T14:20:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.cityFilter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2018-03-26T14:20:09Z" finished-at="2018-03-26T14:20:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.commercialFilter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="FAIL" signature="commercialFilter()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="commercialFilter" duration-ms="29519" started-at="2018-03-26T14:20:09Z" description="By sxm : C1309669	商圈或更多商圈筛选" finished-at="2018-03-26T14:20:39Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 1, Size: 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at test.apptest.hotel.ListFilter.commercialFilter(ListFilter.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commercialFilter -->
+        <test-method status="FAIL" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 547 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, noReset=true, noSign=true, deviceName=Android Emulator, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
+Session ID: 3ecbc427-0021-4153-bacd-423689a985a1
+*** Element info: {Using=class name, value=android.widget.ImageButton}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 547 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DST65976', ip: '10.32.86.32', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, noReset=true, noSign=true, deviceName=Android Emulator, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]
+Session ID: 3ecbc427-0021-4153-bacd-423689a985a1
+*** Element info: {Using=class name, value=android.widget.ImageButton}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:477)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByClassName(DefaultGenericMobileDriver.java:112)
+	at io.appium.java_client.AppiumDriver.findElementByClassName(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByClassName(AndroidDriver.java:1)
+	at test.apptest.hotel.ListFilter.afterMethod(ListFilter.java:317)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.commercialFilter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="emptyFilterResult()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="emptyFilterResult" duration-ms="0" started-at="2018-03-26T14:20:39Z" description="By sxm : C1309668	附近酒店/目的地搜索无结果的情况下，检查酒店列表是否显示正常" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyFilterResult -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.emptyFilterResult() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="filterMarkland()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="filterMarkland" duration-ms="1" started-at="2018-03-26T14:20:39Z" description="by ylf: C1309670 热门地标或更多地标筛选" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterMarkland -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.filterMarkland()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="filterOthers()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="filterOthers" duration-ms="1" started-at="2018-03-26T14:20:39Z" description="by ylf: C1309676 其他筛选" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterOthers -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.filterOthers()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="SKIP" signature="lessFilterResult()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="lessFilterResult" duration-ms="0" started-at="2018-03-26T14:20:39Z" description="By sxm : C1309668	附近酒店/目的地搜索少结果的情况下，检查酒店列表是否显示正常" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lessFilterResult -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.lessFilterResult() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="removeFilters()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="removeFilters" duration-ms="1" started-at="2018-03-26T14:20:39Z" description="By sxm : C1309681	重置功能，所有的筛选项都会被清除" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFilters -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.hotel.ListFilter.removeFilters() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:test.apptest.hotel.ListFilter@3f200884]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-03-26T14:20:39Z" finished-at="2018-03-26T14:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- test.apptest.hotel.ListFilter -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

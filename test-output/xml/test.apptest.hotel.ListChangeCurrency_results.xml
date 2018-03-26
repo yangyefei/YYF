@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HotelListPage"
+           tests="10"
+           failures="0"
+           errors="0"
+           skipped="10"
+           time="0.000">
+  <properties />
+  
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="beforeClass" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextBeforeTestClass" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="afterClass" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextBeforeTestMethod" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="springTestContextPrepareTestInstance" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="afterMethod" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="listChangePHP" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+            <testcase name="listChangeKRW" time="0.0" classname="test.apptest.hotel.ListChangeCurrency">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

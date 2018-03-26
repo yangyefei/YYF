@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - HotelHomePage</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>HotelHomePage</h1>
+<p>
+  Test duration: 713.509s
+</p>
+
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">test.apptest.hotel.AdultChildrenSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.id: iv_back<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, noReset=true, noSign=true, deviceName=Android Emulator, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d90a6c5e-2d67-4523-beb0-f463dd2b881f</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br />
+              org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)<br />
+              test.apptest.hotel.AdultChildrenSearch.afterTest(AdultChildrenSearch.java:668)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 106 milliseconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, noReset=true, noSign=true, deviceName=Android Emulator, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d90a6c5e-2d67-4523-beb0-f463dd2b881f<br/>
+*** Element info: {Using=id, value=iv_back}</a><br />
+        <div class="stackTrace" id="exception-1">
+                      sun.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)<br />
+                      sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+                      java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+                      org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+                      org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)<br />
+                      io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)<br />
+                      io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.By$ById.findElement(By.java:218)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)<br />
+                      org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)<br />
+                      test.apptest.hotel.AdultChildrenSearch.afterTest(AdultChildrenSearch.java:668)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+                      org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+                      org.testng.internal.Invoker.invokeMethod(Invoker.java:786)<br />
+                      org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+                      org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+                      org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+                      org.testng.TestRunner.run(TestRunner.java:617)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+                      org.testng.TestNG.run(TestNG.java:1031)<br />
+                      org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+    
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">test.apptest.hotel.AdultChildrenSearch</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">test.apptest.hotel.SearchDomesticHotelName</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextPrepareTestInstance
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass</span>
+                
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">test.apptest.hotel.SearchHotelOverseasProvince</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextPrepareTestInstance
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass</span>
+                
+    
+        
+
+      </td>
+</tr>
+              <tr>
+          <td colspan="3" class="group">test.apptest.hotel.SearchOverseasHotelName</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestClass
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextBeforeTestMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  springTestContextPrepareTestInstance
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass</span>
+                
+    
+        
+
+      </td>
+</tr>
+            </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.AdultChildrenSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: C1309642 海外城市，选择大于两天的入离日期，2成人1儿童（未成年）搜索酒店">OverseasdaysAdultChildrenSearch</span>
+      </td>
+  <td class="duration">
+    94.193s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-22', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for element to be clickable: By.id: tv_search<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, noReset=true, noSign=true, deviceName=Android Emulator, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d90a6c5e-2d67-4523-beb0-f463dd2b881f</b></a><br />
+    <div class="stackTrace" id="exception-22">
+              org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br />
+              org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)<br />
+              test.apptest.hotel.AdultChildrenSearch.OverseasdaysAdultChildrenSearch(AdultChildrenSearch.java:581)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
+              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
+              sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-23', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)<br/>
+Command duration or timeout: 143 milliseconds<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;<br/>
+System info: host: &apos;DST65976&apos;, ip: &apos;10.32.86.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;<br/>
+Driver info: io.appium.java_client.android.AndroidDriver<br/>
+Capabilities [{appPackage=ctrip.english, noReset=true, deviceName=127.0.0.1:62025, platform=LINUX, deviceUDID=127.0.0.1:62025, desired={appPackage=ctrip.english, noReset=true, noSign=true, deviceName=Android Emulator, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, newCommandTimeout=10, platformVersion=null, browserName=, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, resetKeyboard=true, autoAcceptAlerts=True}, newCommandTimeout=10, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, udid=127.0.0.1:62025, deviceManufacturer=Xiaomi, resetKeyboard=true, deviceScreenSize=720x1280, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity, locationContextEnabled=false, deviceModel=MI 6, autoAcceptAlerts=True}]<br/>
+Session ID: d90a6c5e-2d67-4523-beb0-f463dd2b881f<br/>
+*** Element info: {Using=id, value=tv_search}</a><br />
+        <div class="stackTrace" id="exception-23">
+                      sun.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)<br />
+                      sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+                      java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+                      org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br />
+                      org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)<br />
+                      io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)<br />
+                      io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.By$ById.findElement(By.java:218)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
+                      io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)<br />
+                      io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)<br />
+                      io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)<br />
+                      org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)<br />
+                      org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)<br />
+                      test.apptest.hotel.AdultChildrenSearch.OverseasdaysAdultChildrenSearch(AdultChildrenSearch.java:581)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+                      org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
+                      org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
+                      sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
+                      org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
+                      org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+                      org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+                      org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+                      org.testng.TestRunner.run(TestRunner.java:617)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+                      org.testng.TestNG.run(TestNG.java:1031)<br />
+                      org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.HomeKeySearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    26.729s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=聖淘沙島, id=C1309614 根据海外商圈搜索酒店, version=6.2, searchKeyWord=圣淘沙岛}</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-24', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected:&lt;圣淘沙島&gt; but was:&lt;聖淘沙島&gt;</b></a><br />
+    <div class="stackTrace" id="exception-24">
+              org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)<br />
+              org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)<br />
+              test.apptest.hotel.HomeKeySearch.hotelSearch(HomeKeySearch.java:75)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
+              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchHotelInOverseasTrain</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 根据海外火车站搜索酒店C1309613">searchHotelInOverseasTrain</span>
+      </td>
+  <td class="duration">
+    12.296s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-25', 'block')" title="Click to expand/collapse"><b>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</b></a><br />
+    <div class="stackTrace" id="exception-25">
+              java.util.ArrayList.rangeCheck(ArrayList.java:653)<br />
+              java.util.ArrayList.get(ArrayList.java:429)<br />
+              test.apptest.hotel.SearchHotelInOverseasTrain.searchHotelInOverseasTrain(SearchHotelInOverseasTrain.java:58)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
+              org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:182)<br />
+              org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:175)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:194)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:707)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
+              org.testng.TestRunner.run(TestRunner.java:617)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
+              org.testng.TestNG.run(TestNG.java:1031)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.AdultChildrenSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 8成人3儿童（均成年）搜索C1309639">adultChildrenSearch</span>
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by ylf: C1309640 2成人2儿童（一成年，一未成年）搜索酒店">twoadultOneAdultChildrenSearch</span>
+      </td>
+  <td class="duration">
+    0.003s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by sxm: C1309644 2成人1儿童（1岁），搜索酒店+C1309638 页面默认成人儿童数量搜索">twoadultOneChildrenSearch</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchDomesticHotelName</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 搜索国内酒店名称C1309603">SearchDomesticHotelName</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchHotelOverseasProvince</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 根据海外省或城市搜索酒店C1309610">SearchHotelOverseasProvince</span>
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchOverseasHotelName</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 中文输入英文酒店名称搜索C1309624">HkSearchEn</span>
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: 根据海外酒店名称搜索酒店C1309616">SearchOverseasHotelName</span>
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+      </table>
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.AdultChildrenSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by chr: C1309641 国内城市，选择大于两天的入离日期，2成人1儿童（未成年）搜索酒店">DomesticdaysAdultChildrenSearch</span>
+      </td>
+  <td class="duration">
+    40.047s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.FullRoomRate</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 测试区域满房度C1306883/C1315188">districtFullRoomRate</span>
+      </td>
+  <td class="duration">
+    19.201s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.HomeKeySearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    27.269s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=虹橋火車站, id=C1309608 国内火车站搜索酒店, version=6.2, searchKeyWord=上海虹桥火车站}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    27.863s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=東方明珠, id=C1309606 根据国内地标搜索酒店, version=6.2, searchKeyWord=东方明珠}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    27.144s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=曼谷杜莎夫人蠟像館, id=C1309617 根据海外地标筛选酒店功能, version=6.2, searchKeyWord=曼谷杜莎夫人蜡像馆}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    30.871s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=東京羽田國際機場, id=C1309612 根据海外机场搜索酒店, version=6.2, searchKeyWord=东京羽田国际机场}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    27.433s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=上海虹橋元一希爾頓酒店, id=C1309615 当前城市搜索酒店, version=6.2, searchKeyWord=上海希尔顿}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    58.414s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=上海, id=C1309602 目的地搜索国内城市名, version=6.2, searchKeyWord=上海}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">hotelSearch</span>
+      </td>
+  <td class="duration">
+    27.792s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{result=上海浦東國際機場, id=C1309604 搜索国内机场, version=6.2, searchKeyWord=上海浦东国际机场}</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="yefei.yang">recentSearches</span>
+      </td>
+  <td class="duration">
+    17.576s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.SearchForDomesticAttractions</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 搜索国内区域景点C1309606">searchForDomesticAttractions</span>
+      </td>
+  <td class="duration">
+    18.343s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">test.apptest.hotel.StarSearch</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description" title="by ylf: C1309632	星级为3,4,5搜索">Star345Search</span>
+      </td>
+  <td class="duration">
+    34.194s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by ylf: C1309627	默认价格搜索，默认星级">defaultStarSearch</span>
+      </td>
+  <td class="duration">
+    33.029s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by lnn: 星级为3星或者4星或者5星搜索C1309631">starSearch</span>
+      </td>
+  <td class="duration">
+    25.940s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="by sxm: C1309630星级分别为<=2星搜索">twostarSearch</span>
+      </td>
+  <td class="duration">
+    26.448s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>

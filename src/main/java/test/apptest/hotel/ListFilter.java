@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
