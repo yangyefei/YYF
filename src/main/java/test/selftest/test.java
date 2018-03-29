@@ -4,6 +4,8 @@ import static org.testng.AssertJUnit.assertEquals;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.app.po.HtlHomePage;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
@@ -55,7 +57,6 @@ public class test extends BaseTest {
 	
 	@Test
 	public void testaa(){
-	
 		String str = Integer.toString(456); //获取数字的十进制表示
 		String str2 = Integer.toBinaryString(456); //获取数字的二进制表示
 		String str3 = Integer.toHexString(456); //获取数字的十六进制表示
