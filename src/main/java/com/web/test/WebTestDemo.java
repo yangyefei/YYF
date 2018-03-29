@@ -3,6 +3,7 @@ package com.web.test;
 import java.net.MalformedURLException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -24,26 +25,31 @@ public class WebTestDemo {
 		// "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		// webdriver = new FirefoxDriver();
 
-		// System.setProperty("webdriver.chrome.driver",
-		// "D:\\github\\com.ctrip.hotel.test\\src\\main\\resources\\chromedriver.exe");
-		// WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 
-		System.setProperty("webdriver.ie.driver", "./driver/IEDriverServer.exe");
+		// System.setProperty("webdriver.ie.driver",
+		// "./driver/IEDriverServer.exe");
 		// webdriver = new RemoteWebDriver(new
 		// URL("http://"+"127.0.0.1"+":4444/wd/hub"),
 		// DesiredCapabilities.internetExplorer());
-		DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-		ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-		webdriver = new InternetExplorerDriver();
-		webdriver.get("trip.com");
-		// webdriver.manage().window().maximize();
-		webdriver.findElement(By.id("hotelsCity")).click();
-		webdriver.findElement(By.linkText("Hong Kong")).click();
+		// DesiredCapabilities ieCapabilities =
+		// DesiredCapabilities.internetExplorer();
+		// ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
+		// true);
+		// ieCapabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING,
+		// true);
+		// webdriver = new InternetExplorerDriver();
+
+		driver.get("http://www.trip.com");
+
+		driver.findElement(By.id("hotelsCity")).click();
+		driver.findElement(By.linkText("Hong Kong")).click();
 		// homesearch-btn
-		webdriver.findElement(By.id("homesearch-btn")).click();
+		driver.findElement(By.id("homesearch-btn")).click();
 		// driver.findElement(By.linkText("请登录")).click();
 		Thread.sleep(3000);
-		webdriver.quit();
+		driver.quit();
 
 	}
 

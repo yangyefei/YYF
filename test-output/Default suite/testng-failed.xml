@@ -3,24 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.hotel.ListFilter">
+      <class name="com.web.test.WebTestDemo">
         <methods>
-          <include name="removeFilters"/>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="cityFilter"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="filterMarkland"/>
-          <include name="filterOthers"/>
-          <include name="afterMethod"/>
-          <include name="commercialFilter"/>
-          <include name="lessFilterResult"/>
+          <include name="OpenUrl"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="emptyFilterResult"/>
         </methods>
-      </class> <!-- test.apptest.hotel.ListFilter -->
+      </class> <!-- com.web.test.WebTestDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

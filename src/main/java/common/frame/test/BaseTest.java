@@ -5,9 +5,7 @@ import java.util.Iterator;
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-
 import common.frame.data.ExcelProviderByTest;
-
 @ContextConfiguration(locations = { "classpath*:ApplicationContext.xml" })
 //AbstractTransactionalTestNGSpringContextTests
 //@Listeners(TestLinster.class)
