@@ -23,23 +23,23 @@ public class TestLinster implements ITestListener {
 
 	public void onTestFailure(ITestResult it) {
 	
-		System.err.println("--------------onTestFailure:"+it.getName()+"测试失败-------------");
+		System.err.println("--------------onTestFailure:"+it.getName()+"testFail-------------");
 	   //TakeScreen.snapshot(webDriver, "yyf");
 	}
 
-	public void onTestSkipped(ITestResult arg0) {
-		
+	public void onTestSkipped(ITestResult it) {
+		System.err.println("--------------onTestFailure:"+it.getName()+"testSkipped-------------");
 		
 	}
 
 	public void onTestStart(ITestResult it) {
-		System.out.println("--------------onTestStart:"+it.getName()+"开始测试-------------");
+		System.out.println("--------------onTestStart:"+it.getName()+"StartTest------------");
 		
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
 
-		System.out.println("--------------onTestSuccess:"+arg0.getName()+"测试成功-------------");
+		System.out.println("--------------onTestSuccess:"+arg0.getName()+"testPass-------------");
 		
 	}
 

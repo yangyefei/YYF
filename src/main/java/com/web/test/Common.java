@@ -60,8 +60,8 @@ public class Common {
 	@Test
 	public void testtest() {
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("name", "阳阳");
-		map.put("贱男", "禁勃然");
+		map.put("name", "AA");
+		map.put("BB", "test");
 		System.out.println("----------------"+map.entrySet());
 		Set<String> keys = map.keySet();
 		for (String string : keys) {
