@@ -41,7 +41,7 @@ public class InitialServiceImpl implements InitialService {
 		// capabilities.setCapability("deviceName", "emulator-5554");
 		// capabilities.setCapability("deviceName","device");
 		// capabilities.setCapability("automationName","Appium");
-		capabilities.setCapability("udid", "127.0.0.1:62025");
+//		capabilities.setCapability("udid", "127.0.0.1:62025");
 		capabilities.setCapability("newCommandTimeout", "10");
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
