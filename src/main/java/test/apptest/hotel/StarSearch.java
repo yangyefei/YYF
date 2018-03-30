@@ -193,12 +193,46 @@ public class StarSearch extends BaseTest {
 	    }
 
 	}
+	@Test(description = "by yyf: C1309634	星级为3,5搜索", groups = { "Base" })
+	public void Star35Search() throws Exception {
+		logger.info("---搜 上海---");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys("上海"); 
+	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	     destinationlist.get(0).click(); 
+	     
+		 //清除酒店首页的成人儿童筛选
+	     hotelHomePageInitialImpl.HotelPageAdultsChildFilter(driver);
+	     
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("rl_star_price"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_no_limit"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_3"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_5"))).click();
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_done"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click(); 
+	     
+	     try {
+	    	 WebElement filterreddot= driver.findElement(By.id("top_bar_filter_red_dot"));
+	    	 Assert.assertTrue(filterreddot.isDisplayed());
+	    	 logger.info("C1309634	星级为3,5搜索成功");
+	     } catch (Exception e) 
+	    {
+	    	logger.info("C1309632	星级为3,5搜索失败");
+	    }
+
+	}
 	
 	@AfterMethod
 	public void afterTest() {
 	     //返回搜索首页
 	     logger.info("---返回搜索首页---");
 	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("rl_star_price"))).click();
+	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotel_filter_rating_no_limit"))).click();
+	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_done"))).click();
 	     //返回Trip首页	     
 	     logger.info("---返回Trip首页---");
 	     driver.findElementByClassName("android.widget.ImageButton").click();

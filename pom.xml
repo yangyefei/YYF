@@ -271,7 +271,7 @@
 						</goals>
 						<configuration>
 
-							<mainClass> com.web.test.EmailTest</mainClass>
+							<!-- <mainClass> com.web.test.EmailTest</mainClass> -->
 
 						</configuration>
 					</execution>
