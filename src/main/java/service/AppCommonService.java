@@ -17,9 +17,9 @@ public interface AppCommonService {
 	public AppiumDriver loginForApp(AppiumDriver driver, String userName, String userPassWord); 
 	
 	/**
-	 * 退出app
+	 * 退出app,无需确认是否已登录
 	 * @param driver
-	 * @return
+	 * @return AppiumDriver
 	 */
 	public AppiumDriver logoutForApp(AppiumDriver driver);
 	
