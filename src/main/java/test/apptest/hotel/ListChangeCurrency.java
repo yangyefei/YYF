@@ -39,7 +39,45 @@ public class ListChangeCurrency extends BaseTest{
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 	}
     
-    @Test(description = "by sxm: C1309722	切换韩币酒店筛选", groups = { "Base" })
+    @Test(description = "by yulf: C1309724	筛选币种酒店详情页查看", groups = { "Base" })
+    public void CheckCurrencyOnDetailPage() throws Exception{
+    	logger.info("by yulf: C1309724	筛选币种酒店详情页查看");
+		
+	    logger.info("搜上海");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys("上海"); 
+	    ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	    destinationlist.get(0).click();
+
+	    logger.info("进入上海列表页");
+	    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click(); 
+  	    
+	    doChangeCurrency("HK$");
+	    
+	    
+    	WebElement hotel= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container")));
+    	hotel.click();
+   
+    	
+    	WebElement price= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_sub_room_price")));
+    	try {
+			logger.info("---开始验证C1309724	筛选币种酒店详情页查看---");
+			logger.info("---当前页面币种："+price.getText());
+			assertTrue(price.getText().contains("HK$"));
+			logger.info("---验证C1309724	筛选币种酒店详情页查看PASS---");
+		} catch (Exception e) {
+			logger.info("---验证C1309724	筛选币种酒店详情页查看Fail---");
+		}
+    	
+    	logger.info("---返回到酒店列表页---");
+    	new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("ivBack"))).click();
+ 
+    }
+    
+   @Test(description = "by sxm: C1309722	切换韩币酒店筛选", groups = { "Base" })
     public void listChangeKRW() throws Exception{
     	logger.info("---搜索上海---");
   	    appCommonService.homeSearchHotel(driver, "上海");
@@ -72,23 +110,22 @@ public class ListChangeCurrency extends BaseTest{
     }
     
     public void doChangeCurrency(String curreny){
+    	logger.info("---定位货币符号---");
     	WebElement curr= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("ll_currency")));
-    	String currency_name = curr.findElement(By.id("tv_currency_name")).getText();
-    	if (currency_name.equals(curreny)) {
-			logger.info("---当前币种和要切换的币种一致---");
-		}
-    	else {
-			curr.click();
-			List<WebElement> currenys = driver.findElements(By.id("tv_title"));
-			for (WebElement cur : currenys) {
-				if (cur.getText().contains(curreny)) {
-					logger.info("---选择币种"+cur.getText()+"---");
-					cur.click();
-					break;
-				}
-			}
+      	logger.info("---展开货币列表---");  	
+      	curr.click();
+      	
 
+		List<WebElement> currenys = driver.findElements(By.id("tv_title"));
+		for (WebElement cur : currenys) {
+			if (cur.getText().contains(curreny)) {
+				logger.info("---选择币种"+cur.getText()+"---");
+				cur.click();
+				break;
+			}
 		}
+
+	
     }
     
     @AfterMethod
