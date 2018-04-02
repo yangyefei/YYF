@@ -39,6 +39,41 @@ public class RoomDisplay extends BaseTest{
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 	}
     
+    @Test(description = "by yulf: C1309736	基础房型的起价和列表页起价保持一致", groups = { "Base" })
+    public void checkStartingPrice() throws Exception{
+    	logger.info("by yulf: C1309736	基础房型的起价和列表页起价保持一致");
+		
+	    logger.info("搜上海");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_stay_in"))).click();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import"))).clear();
+	    new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")))
+	                      .sendKeys("上海"); 
+	    ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
+	    destinationlist.get(0).click();
+
+	    logger.info("进入上海列表页");
+	    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click(); 
+	    
+	    logger.info("获取第一个酒店起价");
+	    WebElement listPrice = new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("price")));
+	    logger.info(listPrice.getText());
+	    
+	    listPrice.click();
+/*    	WebElement hotel= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container")));
+    	hotel.click();*/
+	    WebElement detailPrice= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_sub_room_price")));
+	    logger.info("详情页酒店起价："+ detailPrice.getText());
+	    
+    	try {
+			logger.info("---开始验证C1309736	基础房型的起价和列表页起价保持一致---");
+			assertTrue(detailPrice.getText().equals(listPrice.getText()));
+			logger.info("---验证C1309736	基础房型的起价和列表页起价保持一致Pass---");
+		} catch (Exception e) {
+			logger.info("---验证C1309736	基础房型的起价和列表页起价保持一致Fail---");
+		}
+    }
+    
     @Test(description = "by sxm: C1309740	详情页酒店政策下方外露优质点评", groups = { "Base" })
     public void reviews() throws Exception{
     	logger.info("---搜索上海思南公館酒店---");
