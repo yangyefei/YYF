@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.appium.java_client.android.AndroidDriver;
 
 public class PoBase {
-	public static WebElement findElemnet(AndroidDriver driver, By by) {
+	public static WebElement findElement(AndroidDriver driver, By by) {
 		return new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(by));
 	}
     //查找多个元素
-	public static ArrayList<WebElement> findElemnets(AndroidDriver driver, By by) {
+	public static ArrayList<WebElement> findElements(AndroidDriver driver, By by) {
 		return (ArrayList<WebElement>) driver.findElements(by);
 }
 }

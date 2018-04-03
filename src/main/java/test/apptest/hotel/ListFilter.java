@@ -323,19 +323,19 @@ public class ListFilter extends BaseTest {
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
 				.click();
-		PoBase.findElemnet(driver, HtlHomePage.hotel_main_search).click();
-		PoBase.findElemnet(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).clear();
-		PoBase.findElemnet(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).sendKeys("上海");
-		PoBase.findElemnets(driver, HtlHomePage.SearchEnginePage.tvTitle).get(0).click();
-		PoBase.findElemnet(driver, HtlHomePage.search_button).click();
+		PoBase.findElement(driver, HtlHomePage.hotel_main_search).click();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).clear();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).sendKeys("上海");
+		PoBase.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle).get(0).click();
+		PoBase.findElement(driver, HtlHomePage.search_button).click();
 
 		logger.info("进入酒店列表");
-		PoBase.findElemnet(driver, HtlListPage.location).click();
+		PoBase.findElement(driver, HtlListPage.location).click();
 		driver.findElementByXPath(HtlListPage.locationPage.subway).click();
 		driver.findElementByXPath(HtlListPage.locationPage.line5).click();
 		driver.findElementByXPath(HtlListPage.locationPage.xinzhuang).click();
-		PoBase.findElemnet(driver, HtlListPage.locationPage.show_result).click();
-		String result = PoBase.findElemnet(driver, HtlListPage.bottom_address).getText();
+		PoBase.findElement(driver, HtlListPage.locationPage.show_result).click();
+		String result = PoBase.findElement(driver, HtlListPage.bottom_address).getText();
 		logger.info(result+"----------------");
 		Boolean condition = result.contains("莘莊工業區");
 		Assert.assertTrue(condition);
