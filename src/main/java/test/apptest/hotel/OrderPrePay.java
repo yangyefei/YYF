@@ -127,10 +127,7 @@ public class OrderPrePay extends BaseTest {
 		// arrayList.get(arrayList.size()-1).click();
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By
-						.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.RelativeLayout/android.support.v7.widget.RecyclerView/android.widget.CheckedTextView[7]")))
-				.click();
-		new WebDriverWait(driver, timeOutInSeconds)
-				.until(ExpectedConditions.elementToBeClickable(By.id("hotel_rooms_list_main_room_default_container")))
+						.xpath("//android.widget.CheckedTextView[contains(@text,'網上預付')]")))
 				.click();
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("hotel_rooms_list_sub_room_btn_book"))).click();

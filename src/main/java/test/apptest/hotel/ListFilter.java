@@ -335,12 +335,31 @@ public class ListFilter extends BaseTest {
 		driver.findElementByXPath(HtlListPage.locationPage.line5).click();
 		driver.findElementByXPath(HtlListPage.locationPage.xinzhuang).click();
 		PoBase.findElement(driver, HtlListPage.locationPage.show_result).click();
-		String result = PoBase.findElement(driver, HtlListPage.bottom_address).getText();
+		String result = PoBase.findElement(driver, HtlListPage.hotel_address).getText();
 		logger.info(result+"----------------");
 		Boolean condition = result.contains("莘莊工業區");
 		Assert.assertTrue(condition);
 	}
+	@Test(description = "By yyf : C1309677	品牌筛选", groups = { "Base" })
+	public void searchBrand() {
+		logger.info("进入酒店首页");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
+				.click();
+		PoBase.findElement(driver, HtlHomePage.hotel_main_search).click();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).clear();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).sendKeys("上海");
+		PoBase.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle).get(0).click();
+		PoBase.findElement(driver, HtlHomePage.search_button).click();
 
+		logger.info("进入酒店列表");
+		PoBase.findElement(driver, HtlListPage.filter).click();
+		driver.findElementByXPath(HtlListPage.filterPage.brand).click();
+		driver.findElementByXPath(HtlListPage.filterPage.sevenDay).click();
+		PoBase.findElement(driver, HtlListPage.filterPage.show_result).click();
+		String result= PoBase.findElement(driver, HtlListPage.hotel_name).getText();
+		Boolean flag=result.contains("7天連鎖酒店");
+		Assert.assertTrue(flag);
+	}
 	@AfterMethod
 	public void afterMethod() {
 		logger.info("---返回搜索首页---");
@@ -359,6 +378,7 @@ public class ListFilter extends BaseTest {
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
+	
 	}
 
 }

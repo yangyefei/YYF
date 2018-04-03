@@ -90,17 +90,8 @@ public class EmailTest {
 //		message.setRecipient(RecipientType.TO, to);
 //		"yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com,fbyan@Ctrip.com"
 		message.setRecipients(RecipientType.TO, InternetAddress.parse("yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com,fbyan@Ctrip.com"));
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		// 设置抄送
-		InternetAddress cc = new InternetAddress("yefeiyang@ctrip.com");
+		InternetAddress cc = new InternetAddress(props.getProperty("mail.user"));
 		message.setRecipient(RecipientType.CC, cc);
 
 		// 设置密送，其他的收件人不能看到密送的邮件地址
