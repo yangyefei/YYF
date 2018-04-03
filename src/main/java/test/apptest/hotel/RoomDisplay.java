@@ -2,6 +2,11 @@ package test.apptest.hotel;
 
 import org.testng.annotations.Test;
 
+import com.app.po.HtlDetailPage;
+import com.app.po.HtlHomePage;
+import com.app.po.HtlListPage;
+import com.app.po.PoBase;
+
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import service.AppCommonService;
@@ -60,8 +65,8 @@ public class RoomDisplay extends BaseTest{
 	    logger.info(listPrice.getText());
 	    
 	    listPrice.click();
-/*    	WebElement hotel= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container")));
-    	hotel.click();*/
+    	WebElement hotel= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container")));
+    	hotel.click();
 	    WebElement detailPrice= new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("view_sub_room_price")));
 	    logger.info("详情页酒店起价："+ detailPrice.getText());
 	    
@@ -108,6 +113,43 @@ public class RoomDisplay extends BaseTest{
 			logger.info("---验证C1309739	【房型弹层】功能Fail---");
 		}
     	driver.findElement(By.id("tvClose")).click();
+    }
+    
+    @Test(description = "By yulf: C1309746	酒店描述的展示", groups = { "Base" })
+    public void VerifyDescription() throws Exception{
+		logger.info("进入酒店首页");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
+				.click();
+		
+		logger.info("搜上海");
+		PoBase.findElement(driver, HtlHomePage.hotel_main_search).click();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).clear();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).sendKeys("上海");
+		PoBase.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle).get(0).click();
+		
+		logger.info("进入酒店列表");
+		PoBase.findElement(driver, HtlHomePage.search_button).click();
+
+		logger.info("进入酒店详情页");
+		HtlListPage.ToFirstHotelDetailPage(driver);
+		
+		logger.info("翻屏幕");
+		appCommonService.swipeToDown(driver, 1000, 2);
+		appCommonService.swipeToDown(driver, 1000, 2);
+		appCommonService.swipeToDown(driver, 1000, 2);
+		
+		String description = HtlDetailPage.getHotelDescription(driver);
+		
+		logger.info("酒店描述："+ description);
+		try {
+    		logger.info("---开始验证C1309746	酒店描述的展示---");
+    		
+    		Assert.assertTrue(description!="");
+    		logger.info("---验证C1309746	酒店描述的展示Pass---");
+		} catch (Exception e) {
+			logger.info("---验证C1309746	酒店描述的展示Fail---");
+		}
+    	
     }
     
     @AfterMethod

@@ -1,6 +1,9 @@
 package com.app.po;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mysql.jdbc.Driver;
 
@@ -20,6 +23,15 @@ public class HtlListPage extends PoBase {
 	public static By location = By.id("tv_location"); // 位置 筛选元素
 	public static By hotel_address = By.id("view_hotels_item_bottom_address");//酒店底部距离，位置区
 	public static By hotel_name = By.id("tv_hotel_name");//酒店名字
+	
+	public static By hotel_item = By.id("view_hotels_item_container");//酒店项
+	
+	public static void ToFirstHotelDetailPage(AndroidDriver driver)
+	{
+		WebElement hotel= new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(hotel_item));
+		hotel.click();		
+	}
+	
 	//子页面 Location页面
 	public static class locationPage {
 	
