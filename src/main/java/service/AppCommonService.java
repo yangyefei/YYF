@@ -2,6 +2,8 @@ package service;
 
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.WebElement;
 
 
 public interface AppCommonService {
@@ -68,4 +70,5 @@ public interface AppCommonService {
      * */
     public AppiumDriver listToDetail(AppiumDriver driver) throws InterruptedException;
 
+    void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage);
 }

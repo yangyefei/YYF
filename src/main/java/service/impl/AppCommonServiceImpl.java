@@ -1,6 +1,10 @@
 package service.impl;
 
+import com.trip.hotel.test.android.book.DriverUtils;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppCommonServiceImpl implements AppCommonService {
+    protected final Log logger = LogFactory.getLog(this.getClass());
 
     @Override
     public AppiumDriver loginForApp(AppiumDriver driver, String userName, String userPassWord) {
@@ -225,4 +230,36 @@ public class AppCommonServiceImpl implements AppCommonService {
         return driver;
     }
 
+    @Override
+    public void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage) {
+        logger.info("开始设置" + targetLanguage);
+        logger.info("点击\"Account\"");
+        DriverUtils.waitClickId(driver, "myctrip_home_bottom_account_icon");
+        logger.info("点击\"Setting\"");
+        DriverUtils.waitClickId(driver, "ll_settings");
+
+        // 切换语言
+        List<WebElement> values = driver.findElements(By.id("value"));
+        if (values.get(0).getText().equals(targetLanguage)) {
+            logger.info("已经是" + targetLanguage);
+        } else {
+            List<WebElement> sites = driver.findElements(By.id("text"));
+            logger.info("点击语言");
+            sites.get(0).click();
+            List<WebElement> languages = driver.findElements(By.id("ibu_baseview_language_item_name"));
+            for (WebElement language : languages) {
+                if (language.getText().equals(targetLanguage)) {
+                    logger.info("是" + targetLanguage + "语言就点击");
+                    language.click();
+                    break;
+                }
+            }
+        }
+
+        // 返回到首页
+        logger.info("返回到Account首页");
+        driver.navigate().back();
+        logger.info("返回到Home");
+        driver.navigate().back();
+    }
 }
