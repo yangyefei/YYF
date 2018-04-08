@@ -25,6 +25,7 @@
 	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
 	<test name="HotelListPage">
 		<classes>
+			<class name="test.apptest.hotel.ListSearch"></class>
 			<class name="test.apptest.hotel.ListFilter"></class>
 			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
 			<class name="test.apptest.hotel.ListChangeCurrency"></class>
