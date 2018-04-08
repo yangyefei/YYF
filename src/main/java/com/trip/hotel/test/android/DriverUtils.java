@@ -1,4 +1,4 @@
-package com.trip.hotel.test.android.book;
+package com.trip.hotel.test.android;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
