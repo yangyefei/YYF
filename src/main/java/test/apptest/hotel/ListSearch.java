@@ -105,6 +105,59 @@ public class ListSearch extends BaseTest {
 		
 		HtlDetailPage.backToList(driver);
 	}
+	
+	@Test(description = "by ylf: C1309713	8成人3儿童（均成年）", groups = { "Base" })
+	public void Adults8Children3() 
+	{
+		String searchKey = "首尔";
+		logger.info("--C1309713	8成人3儿童（均成年）---");
+		
+		logger.info("--点击输入框 转到输入页面---");
+		HtlHomePage.findElement(driver,HtlHomePage.hotel_main_search).click();
+		
+		logger.info("--在输入框输入 "+searchKey+"---");
+		WebElement input = HtlHomePage.findElement(driver,HtlHomePage.SearchEnginePage.hotel_destination_search_keyword);
+		input.clear();
+		input.sendKeys(searchKey);
+		
+		logger.info("--在搜索结果列表选第一个结果 回到搜索首页---");
+		ArrayList<WebElement>  elm= HtlHomePage.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle);	
+		elm.get(0).click();
+		
+		logger.info("进入酒店列表");
+		HtlHomePage.DoSearch(driver);
+		
+		logger.info("打开日期、人数设置");
+		HtlListPage.ShowDateAdultChildPage(driver);
+		
+		logger.info("打开成人、儿童设置");
+		HtlListPage.DateAdultChildPage.ShowAdultChildPage(driver);
+		
+		logger.info("设置8成人3儿童");
+		HtlListPage.AdultChildPage.SetAdultChildNumber(driver, 8, 3);
+		
+		HtlListPage.AdultChildPage.SetChildAge(driver, 1, 12);
+		HtlListPage.AdultChildPage.SetChildAge(driver, 2, 13);
+		HtlListPage.AdultChildPage.SetChildAge(driver, 3, 14);
+
+		
+		logger.info("点击确认");
+		HtlListPage.AdultChildPage.Confirm(driver);
+		
+		logger.info("点击搜寻");
+		HtlListPage.DateAdultChildPage.DoSearch(driver);
+		
+		logger.info("进入详情页");
+		HtlListPage.ToFirstHotelDetailPage(driver);
+		
+		logger.info("验证成人数");
+		Assert.assertTrue(HtlDetailPage.getAdultNumber(driver).equals("8 成人"));
+		
+		logger.info("验证儿童数");
+		Assert.assertTrue(HtlDetailPage.getChildNumber(driver).equals("3 小童"));
+		
+		HtlDetailPage.backToList(driver);
+	}
 
 
 	@AfterMethod
