@@ -337,6 +337,8 @@ public class ListFilter extends BaseTest {
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
 				.click();
+		HtlHomePage.Adults_Child_Defult(driver);
+		HtlHomePage.Stars_no_limit(driver);
 		PoBase.findElement(driver, HtlHomePage.hotel_main_search).click();
 		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).clear();
 		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).sendKeys("上海");
@@ -352,7 +354,6 @@ public class ListFilter extends BaseTest {
 		Boolean flag=result.contains("7天連鎖酒店");
 		Assert.assertTrue(flag);
 	}
-	
 	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	@Test(description = "By chr : C1309672	区域或更多区域筛选", groups = { "Base" })
 	public void searchregion() {
