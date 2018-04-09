@@ -139,7 +139,7 @@ public class HtlHomeSearch extends BaseTest {
 		//driver.findElementByClassName("android.widget.ImageButton").click();
 	}
 
-	
+
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		logger.info("---启动APP---");

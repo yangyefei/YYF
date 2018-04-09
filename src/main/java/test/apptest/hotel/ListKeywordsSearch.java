@@ -8,6 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
 import io.appium.java_client.android.AndroidDriver;
 import service.AppCommonService;
 import service.InitialService;
@@ -30,8 +32,8 @@ public class ListKeywordsSearch extends BaseTest{
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
 	
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
+	@BeforeMethod
+	public void beforeMethod() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 	}
 
@@ -282,13 +284,15 @@ public class ListKeywordsSearch extends BaseTest{
 			 return filterreddot.isDisplayed();
 		 }
 	
+	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	  @AfterMethod
 	  public void afterMethod() {
-		     logger.info("---返回搜索首页---");
-		     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
-		     //返回Trip首页	     
-		     logger.info("---返回Trip首页---");
-		     driver.findElementByClassName("android.widget.ImageButton").click();
+//		     logger.info("---返回搜索首页---");
+//		     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+//		     //返回Trip首页	     
+//		     logger.info("---返回Trip首页---");
+//		     driver.findElementByClassName("android.widget.ImageButton").click();
+		  driver.quit();
 	  }
 	  
 	@AfterClass

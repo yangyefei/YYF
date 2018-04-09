@@ -57,6 +57,8 @@ public class test extends BaseTest {
 	
 	@Test
 	public void testaa(){
+		
+		//10转其他进制
 		String str = Integer.toString(456); //获取数字的十进制表示
 		String str2 = Integer.toBinaryString(456); //获取数字的二进制表示
 		String str3 = Integer.toHexString(456); //获取数字的十六进制表示
@@ -65,7 +67,7 @@ public class test extends BaseTest {
 		System.out.println("'456'的二进制表示为："+str2);
 		System.out.println("'456'的十六进制表示为："+str3);
 		System.out.println("'456'的八进制表示为："+str4);
-		System.out.println(1/0);
+	
 	}
 
 	//test

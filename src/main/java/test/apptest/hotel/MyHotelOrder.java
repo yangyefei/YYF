@@ -8,6 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
 import io.appium.java_client.android.AndroidDriver;
 import service.AppCommonService;
 import service.InitialService;
@@ -30,8 +32,10 @@ public class MyHotelOrder extends BaseTest{
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
 	
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
+	
+	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
+	@BeforeMethod
+	public void beforeMethod() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
@@ -242,14 +246,16 @@ public class MyHotelOrder extends BaseTest{
 		    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
 	}
 	
+	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	@AfterMethod
-	public void afterTest() {
-		logger.info("---返回到酒店订单列表页---");
-		driver.findElement(By.className("android.widget.ImageButton")).click();
-		logger.info("---返回到酒店首页---");
-		driver.findElement(By.className("android.widget.ImageButton")).click();
-		logger.info("---返回到首页---");
-		driver.findElement(By.className("android.widget.ImageButton")).click();
+	public void afterMethod() {
+//		logger.info("---返回到酒店订单列表页---");
+//		driver.findElement(By.className("android.widget.ImageButton")).click();
+//		logger.info("---返回到酒店首页---");
+//		driver.findElement(By.className("android.widget.ImageButton")).click();
+//		logger.info("---返回到首页---");
+//		driver.findElement(By.className("android.widget.ImageButton")).click();
+		driver.quit();
 	}	
 	
  	@AfterClass

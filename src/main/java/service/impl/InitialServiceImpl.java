@@ -30,24 +30,25 @@ public class InitialServiceImpl implements InitialService {
     @Override
     public AndroidDriver<WebElement> appiumAndroidCtripSetUp(AndroidDriver driver, String AppPackage) throws MalformedURLException {
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android Emulator");
-        // capabilities.setCapability(Mobi, "7.1");
-        // capabilities.setCapability("deviceName", "emulator-5554");
-        // capabilities.setCapability("deviceName","device");
-        // capabilities.setCapability("automationName","Appium");
-//		capabilities.setCapability("udid", "127.0.0.1:62025");
-        capabilities.setCapability("newCommandTimeout", "10");
-        capabilities.setCapability("unicodeKeyboard", "True");
-        capabilities.setCapability("resetKeyboard", "True");
-        capabilities.setCapability("autoAcceptAlerts", "True");
-        capabilities.setCapability("noReset", true);
-        capabilities.setCapability("platformVersion", platformVersion);
-        // capabilities.setCapability("udid",
-        // "emulator-5554");//如果要远程调用模拟器，这个参数必须要有
-        // capabilities.setCapability("app", app.getAbsolutePath());
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("deviceName", "Android Emulator");
+		// capabilities.setCapability(Mobi, "7.1");
+		// capabilities.setCapability("deviceName", "emulator-5554");
+		// capabilities.setCapability("deviceName","device");
+		// capabilities.setCapability("automationName","Appium");
+		capabilities.setCapability("udid", "127.0.0.1:62025");
+		capabilities.setCapability("newCommandTimeout", "10");
+		capabilities.setCapability("unicodeKeyboard", "True");
+//		capabilities.setCapability("resetKeyboard", "True");
+		capabilities.setCapability("autoAcceptAlerts", "True");	
+		capabilities.setCapability("noReset", true);
+		capabilities.setCapability("platformVersion", platformVersion);
+		// capabilities.setCapability("udid",
+		// "emulator-5554");//如果要远程调用模拟器，这个参数必须要有
+		// capabilities.setCapability("app", app.getAbsolutePath());
+
 //		capabilities.setCapability("app", apkPath);
         capabilities.setCapability("appPackage", AppPackage);
         capabilities.setCapability("appActivity", AppActivity);

@@ -1,6 +1,8 @@
 package test.apptest.hotel;
 
 import static org.testng.AssertJUnit.assertEquals;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -19,6 +21,7 @@ import java.util.Map;
 import org.testng.annotations.DataProvider;
 import common.frame.test.BaseTest;
 
+import org.apache.xpath.operations.Bool;
 import org.aspectj.lang.annotation.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -110,8 +113,9 @@ public class HomeKeySearch extends BaseTest {
 		WebElement recentName = new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_history_record")));
 		String actual =recentName.getText();
+		boolean result= actual.contains(expected);
 
-		assertEquals(expected, actual);
+		Assert.assertTrue(result);
 		logger.info("---C1309622  最近搜索酒店再次点击搜索功能---==>PASS");
 	}
 

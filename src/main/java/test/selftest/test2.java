@@ -22,6 +22,9 @@ public class test2 extends BaseTest {
 	public void testb() {
 		int count = 0;
 		String str = "i Am a ApplE";
+StringBuffer yyf=new StringBuffer(str).reverse();
+
+System.out.println(yyf);
 		for (int i = 0; i < str.length(); i++) {
 
 			char ch = str.charAt(i);
