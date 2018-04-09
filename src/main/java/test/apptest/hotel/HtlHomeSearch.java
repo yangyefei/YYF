@@ -130,7 +130,7 @@ public class HtlHomeSearch extends BaseTest {
     
 	}
 
-	
+
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");

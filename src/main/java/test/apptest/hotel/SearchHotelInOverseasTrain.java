@@ -46,7 +46,7 @@ public class SearchHotelInOverseasTrain extends BaseTest {
 	     logger.info("点击第二条搜出首尔火车站 ");
 	     ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("tvTitle"));
 	     try {
-	    	 trainText=destinationlist.get(1).getText();
+	    	 trainText=destinationlist.get(0).getText();
 		     logger.info(trainText);
 		     Thread.sleep(3000);
 	    	 Assert.assertEquals("首爾火車站",trainText);
@@ -55,7 +55,7 @@ public class SearchHotelInOverseasTrain extends BaseTest {
 	    {
 	    	logger.info("C1309613:没有找到海外火车站首尔火车站");
 	    }
-	     destinationlist.get(1).click();
+	     destinationlist.get(0).click();
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_search"))).click();
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).click();
 	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("etKeyword"))).clear();

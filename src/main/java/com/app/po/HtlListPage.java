@@ -24,7 +24,7 @@ public class HtlListPage extends PoBase {
 	public static class locationPage {
 	
 		public static By show_result = By.id("tv_show_result"); //显示结果 按钮
-		public static String  subway="//android.widget.CheckedTextView[contains(@text,'地鐵站')]";//地铁站
+		public static String  subway="//android.widget.CheckedTextView[@text='地鐵站']";//地铁站
 		public static String line5="//android.widget.CheckedTextView[contains(@text,'5號線')]";//5号线
 		public static String  xinzhuang="//android.widget.CheckedTextView[contains(@text,'莘莊')]";//地铁莘莊
 	}

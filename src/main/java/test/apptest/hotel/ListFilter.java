@@ -5,28 +5,20 @@ import org.testng.annotations.Test;
 import com.app.po.HtlHomePage;
 import com.app.po.HtlListPage;
 import com.app.po.PoBase;
-
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
-import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.sound.midi.MidiDevice.Info;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.service.DriverCommandExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -360,17 +352,21 @@ public class ListFilter extends BaseTest {
 		Boolean flag=result.contains("7天連鎖酒店");
 		Assert.assertTrue(flag);
 	}
+	
+	
+	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	@AfterMethod
 	public void afterMethod() {
-		logger.info("---返回搜索首页---");
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
-		// 返回Trip首页
-		logger.info("---返回Trip首页---");
-		driver.findElementByClassName("android.widget.ImageButton").click();
+//		logger.info("---返回搜索首页---");
+//		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+//		// 返回Trip首页
+//		logger.info("---返回Trip首页---");
+//		driver.findElementByClassName("android.widget.ImageButton").click();
+	    driver.quit();
 	}
 
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
+	@BeforeMethod
+	public void beforeMethod() throws MalformedURLException {
 		driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english");
 		logger.info("初始化成功");
 	}
