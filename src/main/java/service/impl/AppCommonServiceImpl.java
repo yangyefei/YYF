@@ -1,6 +1,7 @@
 package service.impl;
 
 import com.trip.hotel.test.android.DriverUtils;
+import com.trip.hotel.test.android.Page;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.logging.Log;
@@ -234,9 +235,9 @@ public class AppCommonServiceImpl implements AppCommonService {
     public void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage) {
         logger.info("开始设置" + targetLanguage);
         logger.info("点击\"Account\"");
-        DriverUtils.waitClickId(driver, "myctrip_home_bottom_account_icon");
+        DriverUtils.waitClickId(driver, Page.AppHome.ACCOUNT);
         logger.info("点击\"Setting\"");
-        DriverUtils.waitClickId(driver, "ll_settings");
+        DriverUtils.waitClickId(driver, Page.Account.SETTING);
 
         // 切换语言
         List<WebElement> values = driver.findElements(By.id("value"));
@@ -246,7 +247,7 @@ public class AppCommonServiceImpl implements AppCommonService {
             List<WebElement> sites = driver.findElements(By.id("text"));
             logger.info("点击语言");
             sites.get(0).click();
-            List<WebElement> languages = driver.findElements(By.id("ibu_baseview_language_item_name"));
+            List<WebElement> languages = driver.findElements(Page.Account.Setting.LANGUAGE_LIST_LANGUAGE_NAME);
             for (WebElement language : languages) {
                 if (language.getText().equals(targetLanguage)) {
                     logger.info("是" + targetLanguage + "语言就点击");

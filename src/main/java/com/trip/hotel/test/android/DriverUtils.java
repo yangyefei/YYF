@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class DriverUtils {
     private static final long TIMEOUT = 30;
 
-    public static void waitClickId(AndroidDriver driver, String id) {
-        new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(By.id(id))).click();
+    public static void waitClickId(AndroidDriver driver, By by) {
+        new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(by)).click();
     }
 }
