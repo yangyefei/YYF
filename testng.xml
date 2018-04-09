@@ -10,6 +10,7 @@
 			<class name="test.apptest.hotel.SearchForDomesticAttractions"></class>
 			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
 			<class name="test.apptest.hotel.StarSearch"></class>
+			<class name="test.apptest.hotel.HtlHomeSearch"></class>
 		<!-- 	<class name="test.apptest.hotel.AdultChildrenSearch"></class> -->
 
 			<!-- 20180213 chr -->
@@ -24,6 +25,7 @@
 	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
 	<test name="HotelListPage">
 		<classes>
+			<class name="test.apptest.hotel.ListSearch"></class>
 			<class name="test.apptest.hotel.ListFilter"></class>
 			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
 			<class name="test.apptest.hotel.ListChangeCurrency"></class>

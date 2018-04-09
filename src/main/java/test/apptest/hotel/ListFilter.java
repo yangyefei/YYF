@@ -353,8 +353,52 @@ public class ListFilter extends BaseTest {
 		Assert.assertTrue(flag);
 	}
 	
-	
 	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
+	@Test(description = "By chr : C1309672	区域或更多区域筛选", groups = { "Base" })
+	public void searchregion() {
+		String attractionText = null;
+		logger.info("进入酒店首页");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
+				.click();
+		PoBase.findElement(driver, HtlHomePage.hotel_main_search).click();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).clear();
+		PoBase.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword).sendKeys("上海");
+		PoBase.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle).get(0).click();
+		PoBase.findElement(driver, HtlHomePage.search_button).click();
+		logger.info("进入酒店列表");
+		//列表页搜索框
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input")))
+		.click();
+		//
+   	     AppCommonServiceImpl acs = new AppCommonServiceImpl();
+         acs.swipeToDown(driver);
+		 ArrayList<WebElement> destinationlist = (ArrayList<WebElement>) driver.findElements(By.id("view_hotel_top_destination_group_title"));
+		 try {
+	    	 attractionText=destinationlist.get(4).getText();
+		     logger.info(attractionText);
+		     Thread.sleep(3000);
+	    	 Assert.assertEquals("區域",attractionText);
+	         logger.info("有區域");
+	         destinationlist.get(4).click();
+	         Thread.sleep(1000);
+	     } catch (Exception e) 
+	    {
+	    	logger.info("區域没有找到");
+	    }
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("tv_filter_content")))
+			.click();
+		attractionText=new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("hotels_list_search_input"))).getText();
+		logger.info(attractionText);
+		//
+		Assert.assertEquals("奉賢區",attractionText);
+		//
+		attractionText=new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_bottom_address"))).getText();
+		logger.info(attractionText);
+		Boolean condition = attractionText.contains("奉賢");
+		Assert.assertTrue(condition);
+		 
+	}
+	
 	@AfterMethod
 	public void afterMethod() {
 //		logger.info("---返回搜索首页---");
