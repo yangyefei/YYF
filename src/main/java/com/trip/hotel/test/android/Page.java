@@ -24,4 +24,10 @@ public class Page {
             public static final By LANGUAGE_LIST_LANGUAGE_NAME = By.id("ibu_baseview_language_item_name");
         }
     }
+
+    public static class HotelDetails {
+        public static class RoomsList {
+            public static final By.ById BOOK_BUTTON = new By.ById("hotel_rooms_list_sub_room_btn_book");
+        }
+    }
 }

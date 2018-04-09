@@ -1,8 +1,11 @@
 package com.trip.hotel.test.android.book;
 
+import com.trip.hotel.test.android.DriverUtils;
+import com.trip.hotel.test.android.Page;
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import service.AppCommonService;
@@ -34,7 +37,12 @@ public class HotelBookBaseInformationTest extends BaseTest {
         appCommonService.changeLanguageTo(driver, targetLanguage);
         // 通过DeepLink跳转到酒店详情
         driver.get("ctripglobal://HotelDetail?ct=2&hid=436187&cin=2015-10-01&cout=2015-10-04&td=2");
-
+        // 找到Book按钮
+        WebElement buttonBook = DriverUtils.scrollFind(driver, Page.HotelDetails.RoomsList.BOOK_BUTTON);
+        Assert.assertNotNull(buttonBook);
+        Assert.assertTrue(buttonBook.isDisplayed());
+        // 点击Book按钮
+        buttonBook.click();
     }
 
 }
