@@ -1,30 +1,24 @@
 package test.apptest.hotel;
 
-import org.testng.annotations.Test;
-
+import com.trip.hotel.test.android.TouchUtils;
 import common.frame.test.BaseTest;
 import common.utils.ListSortType;
 import io.appium.java_client.android.AndroidDriver;
-import service.AppCommonService;
-import service.InitialService;
-import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
-
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.service.DriverCommandExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import service.InitialService;
+import service.impl.AppCommonServiceImpl;
+import service.impl.InitialServiceImpl;
+
+import java.net.MalformedURLException;
+import java.util.ArrayList;
 
 
 public class ListSort extends BaseTest{
@@ -151,11 +145,11 @@ private void doSort(ListSortType sorttype, String descript) {
 	  }
       logger.info("---点击"+descript+"---");
       int click_x_0 = driver.manage().window().getSize().width;
-      int click_y_0 = driver.manage().window().getSize().height; 
-      int x_click0 = 270 * click_x_0 / 540;      
-      int y_click0 = Y_offset * click_y_0 / 850; 
+	int click_y_0 = driver.manage().window().getSize().height;
+	int x_click0 = 270 * click_x_0 / 540;
+	int y_click0 = Y_offset * click_y_0 / 850;
 
-      driver.tap(1, x_click0, y_click0, 100);
+	TouchUtils.tap(driver, x_click0, y_click0, 100);
       logger.info("---点击"+descript+"成功---");
       try {
     	  logger.info("---等待5秒---");

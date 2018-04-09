@@ -30,4 +30,12 @@ public class Page {
             public static final By.ById BOOK_BUTTON = new By.ById("hotel_rooms_list_sub_room_btn_book");
         }
     }
+
+    public static class HotelBook {
+        public static final By.ById CONTACT_GAVEN_NAME_CONTAINER = new By.ById("hotel_book_contact_givenname_input");
+        public static final By.ById CONTACT_GAVEN_NAME = new By.ById("view_edit_text");
+        public static final By.ById CONTACT_SURNAME_CONTAINER = new By.ById("hotel_book_contact_surname_input");
+        public static final By.ById CONTACT_SURNAME = new By.ById("view_edit_text");
+        public static final By.ById BOOK_BUTTON = new By.ById("tv_bottom_select");
+    }
 }

@@ -2,6 +2,7 @@ package service.impl;
 
 import com.trip.hotel.test.android.DriverUtils;
 import com.trip.hotel.test.android.Page;
+import com.trip.hotel.test.android.TouchUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.logging.Log;
@@ -87,7 +88,7 @@ public class AppCommonServiceImpl implements AppCommonService {
 
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
-        driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, 1000);// 向下滑动，间隔1s
+        TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, 1000);// 向下滑动，间隔1s
 
         return driver;
     }
@@ -104,7 +105,7 @@ public class AppCommonServiceImpl implements AppCommonService {
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
         for (int i = 0; i < num; i++) {
-            driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, during);
+            TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, during);
         }
         return driver;
     }
@@ -120,7 +121,7 @@ public class AppCommonServiceImpl implements AppCommonService {
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
         for (int i = 0; i < num; i++) {
-            driver.swipe(width * 3 / 4, height / 2, width / 4, height / 2, during);
+            TouchUtils.swipe(driver, width * 3 / 4, height / 2, width / 4, height / 2, during);
         }
         return driver;
     }
@@ -136,7 +137,7 @@ public class AppCommonServiceImpl implements AppCommonService {
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
         for (int i = 0; i < num; i++) {
-            driver.swipe(width / 4, height / 2, width * 3 / 4, height / 2, during);
+            TouchUtils.swipe(driver, width / 4, height / 2, width * 3 / 4, height / 2, during);
         }
         return driver;
     }
@@ -191,7 +192,7 @@ public class AppCommonServiceImpl implements AppCommonService {
             // 滑动屏幕
             int width = driver.manage().window().getSize().width;
             int height = driver.manage().window().getSize().height;
-            driver.swipe(width / 2, height * 7 / 8, width / 2, height * 1 / 8, 1000);
+            TouchUtils.swipe(driver, width / 2, height * 7 / 8, width / 2, height * 1 / 8, 1000);
 
         } while (!isfound && allNum < realTotalNum);// 如果没有找到内容并且查找的项目数已经超过项目总数，跳出循环
 
@@ -235,13 +236,13 @@ public class AppCommonServiceImpl implements AppCommonService {
     public void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage) {
         logger.info("开始设置" + targetLanguage);
         logger.info("点击\"Account\"");
-        DriverUtils.waitClickId(driver, Page.AppHome.ACCOUNT);
+        DriverUtils.waitClick(driver, Page.AppHome.ACCOUNT);
         logger.info("点击\"Setting\"");
-        DriverUtils.waitClickId(driver, Page.Account.SETTING);
+        DriverUtils.waitClick(driver, Page.Account.SETTING);
 
         // 切换语言
-        List<WebElement> values = driver.findElements(By.id("value"));
-        if (values.get(0).getText().equals(targetLanguage)) {
+        WebElement values = DriverUtils.waitFind(driver, new By.ById("value"));
+        if (values.getText().equals(targetLanguage)) {
             logger.info("已经是" + targetLanguage);
         } else {
             List<WebElement> sites = driver.findElements(By.id("text"));
