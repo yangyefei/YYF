@@ -1,8 +1,13 @@
 package com.trip.hotel.test.android.book;
 
+import com.trip.hotel.test.android.DriverUtils;
+import com.trip.hotel.test.android.Page;
+import com.trip.hotel.test.android.TouchUtils;
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import service.AppCommonService;
@@ -29,12 +34,48 @@ public class HotelBookBaseInformationTest extends BaseTest {
      * C1309754	非中文站点填写中文
      */
     @Test
-    public void testChineseInNonChineseSite() {
+    public void testChineseInNonChineseSite() throws InterruptedException {
         String targetLanguage = "English";
         appCommonService.changeLanguageTo(driver, targetLanguage);
-        // 通过DeepLink跳转到酒店详情
+        logger.info("通过DeepLink跳转到酒店详情");
         driver.get("ctripglobal://HotelDetail?ct=2&hid=436187&cin=2015-10-01&cout=2015-10-04&td=2");
+        logger.info("找Book按钮");
+        WebElement buttonBook = DriverUtils.scrollFind(driver, Page.HotelDetails.RoomsList.BOOK_BUTTON);
+        Assert.assertNotNull(buttonBook);
+        Assert.assertTrue(buttonBook.isDisplayed());
+        Assert.assertEquals(buttonBook.getText(), "Book");
+//        TouchUtils.swipe(driver, 500, 1000, 500, 1500);
+        TouchUtils.swipeDown(driver);
+        logger.info("点击Book按钮");
+        buttonBook.click();
+        Thread.sleep(1000);
+        String currentActivity = driver.currentActivity();
+        logger.debug("currentActivity = " + currentActivity);
+        logger.info("判断到了预订页面");
+        Assert.assertEquals(currentActivity, "com.ctrip.ibu.hotel.module.book.HotelBookActivity");
 
+        String strGivenName = "雷";
+        WebElement gavenName = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME);
+        Assert.assertTrue(gavenName.isDisplayed());
+        gavenName.clear();
+        gavenName.sendKeys(strGivenName);
+        Assert.assertEquals(gavenName.getText(), strGivenName);
+
+        String strSurname = "李";
+        WebElement surname = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME);
+        Assert.assertTrue(surname.isDisplayed());
+        surname.clear();
+        surname.sendKeys(strSurname);
+        Assert.assertEquals(surname.getText(), strSurname);
+
+        driver.findElement(Page.HotelBook.BOOK_BUTTON).click();
+
+        WebElement toast = DriverUtils.waitToast(driver, "English Only");
+        Assert.assertNotNull(toast);
     }
 
+    @AfterClass
+    public void afterClass() {
+        driver.quit();
+    }
 }

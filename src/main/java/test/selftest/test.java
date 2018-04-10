@@ -29,14 +29,6 @@ public class test extends BaseTest {
 	private AndroidDriver driver;
 	int timeOutInSeconds = 60;
 	SoftAssert assertion = new SoftAssert(); 
-	
-	@Test
-	public void testActivity() throws MalformedURLException{
-		driver=initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
-		driver.startActivity("ctrip.english", "com.ctrip.ibu.hotel.module.list.HotelsActivity");
-	}
-	
-	
 	@BeforeSuite
 	public void beforeSuites() {
 		logger.info("-------------beforesuite-------------");

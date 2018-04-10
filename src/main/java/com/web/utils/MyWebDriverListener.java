@@ -1,28 +1,30 @@
 package com.web.utils;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.events.WebDriverEventListener;
+
 import java.io.File;
 import java.io.IOException;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class MyWebDriverListener implements WebDriverEventListener {
 
-	@Override
-	public void afterChangeValueOf(WebElement arg0, WebDriver arg1) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void afterClickOn(WebElement arg0, WebDriver driver) {
 		// TODO Auto-generated method stub
 		if (arg0.getText().equals("军事"))
 			System.err.println(driver.getCurrentUrl());
+	}
+
+	@Override
+	public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
+
+	}
+
+	@Override
+	public void afterChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
+
 	}
 
 	@Override
@@ -62,12 +64,6 @@ public class MyWebDriverListener implements WebDriverEventListener {
 	}
 
 	@Override
-	public void beforeChangeValueOf(WebElement arg0, WebDriver arg1) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void beforeClickOn(WebElement arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
 
@@ -94,6 +90,26 @@ public class MyWebDriverListener implements WebDriverEventListener {
 	@Override
 	public void beforeNavigateRefresh(WebDriver arg0) {
 		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void beforeAlertAccept(WebDriver webDriver) {
+
+	}
+
+	@Override
+	public void afterAlertAccept(WebDriver webDriver) {
+
+	}
+
+	@Override
+	public void afterAlertDismiss(WebDriver webDriver) {
+
+	}
+
+	@Override
+	public void beforeAlertDismiss(WebDriver webDriver) {
 
 	}
 
