@@ -16,6 +16,7 @@ import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -132,16 +133,17 @@ public class HtlHomeSearch extends BaseTest {
 	
 	@AfterMethod
 	public void afterMethod() {
-		logger.info("---返回搜索首页---");
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+//		logger.info("---返回搜索首页---");
+//		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
 		// 返回Trip首页
 		//logger.info("---返回Trip首页---");
 		//driver.findElementByClassName("android.widget.ImageButton").click();
+		driver.quit();
 	}
 
 
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
+	@BeforeMethod
+	public void beforeMethod() throws MalformedURLException {
 		logger.info("---启动APP---");
 		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
 

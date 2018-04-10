@@ -41,7 +41,7 @@ public class AdultChildrenSearch extends BaseTest {
 	private Logger logger = Logger.getLogger("AdultChildrenSearch.class");
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+
 	}
 
 	@Test(description = "by sxm: C1309644 2成人1儿童（1岁），搜索酒店+C1309638 页面默认成人儿童数量搜索", groups = { "Base" })

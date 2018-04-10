@@ -359,7 +359,7 @@ public class ListFilter extends BaseTest {
 		Boolean flag=result.contains("7天連鎖酒店");
 		Assert.assertTrue(flag);
 	}
-	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
+
 	@Test(description = "By chr : C1309672	区域或更多区域筛选", groups = { "Base" })
 	public void searchregion() {
 		String attractionText = null;
@@ -404,7 +404,7 @@ public class ListFilter extends BaseTest {
 		Assert.assertTrue(condition);
 		 
 	}
-	
+	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	@AfterMethod
 	public void afterMethod() {
 //		logger.info("---返回搜索首页---");

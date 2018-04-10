@@ -161,6 +161,7 @@ public class RoomDisplay extends BaseTest{
 	     //返回Trip首页	     
 	     logger.info("---返回Trip首页---");
 	     driver.findElementByClassName("android.widget.ImageButton").click();
+	     
 	}	
     @AfterClass
     public void afterClass() {

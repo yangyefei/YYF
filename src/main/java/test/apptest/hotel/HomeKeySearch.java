@@ -16,7 +16,9 @@ import service.impl.InitialServiceImpl;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -53,6 +55,7 @@ public class HomeKeySearch extends BaseTest {
     public void hotelSearch(Map<String, String> datadriven) throws Exception {
         driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english");
         // TestLinster.webDriver = driver; // androiddriver 传递给testlinster
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         logger.info("初始化成功，准备登陆");
         appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
         logger.info("---" + datadriven.get("id") + "---==>StartTest");
@@ -67,11 +70,11 @@ public class HomeKeySearch extends BaseTest {
         WebElement tvTitle = new WebDriverWait(driver, timeOutInSeconds)
                 .until(ExpectedConditions.elementToBeClickable(By.id("tvTitle")));
         assertEquals(tvTitle.getText(), datadriven.get("result"));
-
         driver.pressKeyCode(4);
         Thread.sleep(1000);
         driver.pressKeyCode(4);
         logger.info("---" + datadriven.get("id") + "==>PASS---");
+        
     }
 
 
