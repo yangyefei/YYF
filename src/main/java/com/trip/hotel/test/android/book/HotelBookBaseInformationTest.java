@@ -99,6 +99,39 @@ public class HotelBookBaseInformationTest extends BaseTest {
         DriverUtils.assertToast(driver, "Please provide contact phone number.");
     }
 
+    /**
+     * C1309764Edit: 邮箱验证填写，正确邮箱地址，异常邮箱地址
+     *
+     * @throws InterruptedException InterruptedException
+     */
+    @Test
+    public void testEmailFormat() throws InterruptedException {
+        appCommonService.changeLanguageTo(driver, "English");
+        int cityId = 2;
+        int hotelId = 436187;
+        appCommonService.gotoHotelBook(driver, cityId, hotelId);
+
+        WebElement bookButton = DriverUtils.waitFind(driver, Page.HotelBook.BOOK_BUTTON);
+
+        // 输入姓名，情况电话号码
+        DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME).sendKeys("Lei");
+        DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME).sendKeys("Lee");
+        DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_PHONE_NUMBER).clear();
+
+        WebElement email = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_EMAIL_CONTAINER).findElement(Page.HotelBook.CONTACT_EMAIL);
+        Assert.assertTrue(email.isDisplayed());
+
+        email.clear();
+        email.sendKeys("fsdfdfsdf");
+        bookButton.click();
+        DriverUtils.assertToast(driver, "Email address invalid, please try again.");
+
+        email.clear();
+        email.sendKeys("test@test.com");
+        bookButton.click();
+        DriverUtils.assertToast(driver, "Please provide contact phone number.");
+    }
+
     private void testWrongLanguageInput(String targetLanguage, String expectedToast, String strGivenName, String strSurname) throws InterruptedException {
         appCommonService.changeLanguageTo(driver, targetLanguage);
         logger.info("通过DeepLink跳转到酒店详情");
