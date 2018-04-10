@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import service.AppCommonService;
 
 import java.util.ArrayList;
@@ -242,20 +243,29 @@ public class AppCommonServiceImpl implements AppCommonService {
 
         // 切换语言
         WebElement values = DriverUtils.waitFind(driver, new By.ById("value"));
-        if (values.getText().equals(targetLanguage)) {
+        String currentLanguage = values.getText();
+        logger.info("当前语言是：" + currentLanguage);
+        if (currentLanguage.equals(targetLanguage)) {
             logger.info("已经是" + targetLanguage);
         } else {
             List<WebElement> sites = driver.findElements(By.id("text"));
             logger.info("点击语言");
             sites.get(0).click();
+            // 只是为了等待
+            DriverUtils.waitFind(driver, Page.Account.Setting.LANGUAGE_LIST_LANGUAGE_NAME);
             List<WebElement> languages = driver.findElements(Page.Account.Setting.LANGUAGE_LIST_LANGUAGE_NAME);
+            boolean isFound = false;
             for (WebElement language : languages) {
-                if (language.getText().equals(targetLanguage)) {
+                String checkingLanguage = language.getText();
+                logger.info("checkingLanguage = " + checkingLanguage);
+                if (checkingLanguage.equals(targetLanguage)) {
                     logger.info("是" + targetLanguage + "语言就点击");
                     language.click();
+                    isFound = true;
                     break;
                 }
             }
+            Assert.assertTrue(isFound);
         }
 
         // 返回到首页

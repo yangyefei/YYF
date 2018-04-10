@@ -36,6 +36,7 @@ public class Page {
         public static final By.ById CONTACT_GAVEN_NAME = new By.ById("view_edit_text");
         public static final By.ById CONTACT_SURNAME_CONTAINER = new By.ById("hotel_book_contact_surname_input");
         public static final By.ById CONTACT_SURNAME = new By.ById("view_edit_text");
+        public static final By.ById CONTACT_PHONE_NUMBER = new By.ById("hotel_book_contact_phone_input");
         public static final By.ById BOOK_BUTTON = new By.ById("tv_bottom_select");
     }
 }
