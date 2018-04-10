@@ -274,4 +274,23 @@ public class AppCommonServiceImpl implements AppCommonService {
         logger.info("返回到Home");
         driver.navigate().back();
     }
+
+    @Override
+    public void gotoHotelBook(AndroidDriver<WebElement> driver, int cityId, int hotelId) throws InterruptedException {
+        driver.get(String.format("ctripglobal://HotelDetail?ct=%1$d&hid=%2$d&cin=2015-10-01&cout=2015-10-04&td=2", cityId, hotelId));
+        logger.info("找Book按钮");
+        WebElement buttonBook = DriverUtils.scrollFind(driver, Page.HotelDetails.RoomsList.BOOK_BUTTON);
+        Assert.assertNotNull(buttonBook);
+        Assert.assertTrue(buttonBook.isDisplayed());
+        TouchUtils.swipeDown(driver, buttonBook);
+        logger.info("点击Book按钮");
+        // 等Toast消失，防止被Toast View 盖住
+        Thread.sleep(4000);
+        buttonBook.click();
+        Thread.sleep(1000);
+        String currentActivity = driver.currentActivity();
+        logger.debug("currentActivity = " + currentActivity);
+        logger.info("判断到了预订页面");
+        Assert.assertEquals(currentActivity, "com.ctrip.ibu.hotel.module.book.HotelBookActivity");
+    }
 }

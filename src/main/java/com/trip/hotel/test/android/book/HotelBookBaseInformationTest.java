@@ -2,7 +2,6 @@ package com.trip.hotel.test.android.book;
 
 import com.trip.hotel.test.android.DriverUtils;
 import com.trip.hotel.test.android.Page;
-import com.trip.hotel.test.android.TouchUtils;
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
@@ -54,24 +53,58 @@ public class HotelBookBaseInformationTest extends BaseTest {
         testWrongLanguageInput(targetLanguage, expectedToast, strGivenName, strSurname);
     }
 
+    /**
+     * C1309759：联系人的姓名+电子邮件+电话号码（不输入时弹出提示）
+     *
+     * @throws InterruptedException InterruptedException
+     */
+    @Test
+    public void testEmptyToast() throws InterruptedException {
+        appCommonService.changeLanguageTo(driver, "English");
+        int cityId = 2;
+        int hotelId = 436187;
+        appCommonService.gotoHotelBook(driver, cityId, hotelId);
+
+        WebElement bookButton = DriverUtils.waitFind(driver, Page.HotelBook.BOOK_BUTTON);
+
+        // 验证 Gaven Name
+        WebElement gavenName = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME);
+        Assert.assertTrue(gavenName.isDisplayed());
+        gavenName.clear();
+        bookButton.click();
+        DriverUtils.assertToast(driver, "Please provide guest name.");
+
+        // 输入Gaven Name 验证 Surname
+        gavenName.sendKeys("Lei");
+        WebElement surname = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME);
+        Assert.assertTrue(surname.isDisplayed());
+        surname.clear();
+        bookButton.click();
+        DriverUtils.assertToast(driver, "Please provide guest name.");
+
+        // 输入Surname 验证 Email
+        surname.sendKeys("Lee");
+        WebElement email = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_EMAIL_CONTAINER).findElement(Page.HotelBook.CONTACT_EMAIL);
+        Assert.assertTrue(email.isDisplayed());
+        email.clear();
+        bookButton.click();
+        DriverUtils.assertToast(driver, "Please provide email address.");
+
+        // 输入 email 验证电话号码
+        email.sendKeys("test@test.com");
+        WebElement phoneNumber = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_PHONE_NUMBER);
+        Assert.assertTrue(phoneNumber.isDisplayed());
+        phoneNumber.clear();
+        bookButton.click();
+        DriverUtils.assertToast(driver, "Please provide contact phone number.");
+    }
+
     private void testWrongLanguageInput(String targetLanguage, String expectedToast, String strGivenName, String strSurname) throws InterruptedException {
         appCommonService.changeLanguageTo(driver, targetLanguage);
         logger.info("通过DeepLink跳转到酒店详情");
-        driver.get("ctripglobal://HotelDetail?ct=2&hid=436187&cin=2015-10-01&cout=2015-10-04&td=2");
-        logger.info("找Book按钮");
-        WebElement buttonBook = DriverUtils.scrollFind(driver, Page.HotelDetails.RoomsList.BOOK_BUTTON);
-        Assert.assertNotNull(buttonBook);
-        Assert.assertTrue(buttonBook.isDisplayed());
-        TouchUtils.swipeDown(driver, buttonBook);
-        logger.info("点击Book按钮");
-        // 等Toast消失，防止被Toast View 盖住
-        Thread.sleep(4000);
-        buttonBook.click();
-        Thread.sleep(1000);
-        String currentActivity = driver.currentActivity();
-        logger.debug("currentActivity = " + currentActivity);
-        logger.info("判断到了预订页面");
-        Assert.assertEquals(currentActivity, "com.ctrip.ibu.hotel.module.book.HotelBookActivity");
+        int cityId = 2;
+        int hotelId = 436187;
+        appCommonService.gotoHotelBook(driver, cityId, hotelId);
 
         WebElement gavenName = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME);
         Assert.assertTrue(gavenName.isDisplayed());
@@ -92,8 +125,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
 
         driver.findElement(Page.HotelBook.BOOK_BUTTON).click();
 
-        WebElement toast = DriverUtils.waitToast(driver, expectedToast);
-        Assert.assertNotNull(toast);
+        DriverUtils.assertToast(driver, expectedToast);
     }
 
     @AfterClass

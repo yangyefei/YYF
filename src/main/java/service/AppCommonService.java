@@ -71,4 +71,6 @@ public interface AppCommonService {
     public AppiumDriver listToDetail(AppiumDriver driver) throws InterruptedException;
 
     void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage);
+
+    void gotoHotelBook(AndroidDriver<WebElement> driver, int cityId, int hotelId) throws InterruptedException;
 }

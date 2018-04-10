@@ -8,6 +8,7 @@ import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -23,10 +24,15 @@ public class DriverUtils {
         return new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.elementToBeClickable(by));
     }
 
-    public static WebElement waitToast(AndroidDriver driver, String toastText) {
+    private static WebElement waitToast(AndroidDriver driver, String toastText) {
         String xpath = String.format("//*[@text='%1$s']", toastText);
         logger.info("waitToast(...) xpath = " + xpath);
         return new WebDriverWait(driver, TIMEOUT).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+    }
+
+    public static void assertToast(AndroidDriver driver, String toastText) {
+        WebElement element = waitToast(driver, toastText);
+        Assert.assertNotNull(element);
     }
 
     /**
