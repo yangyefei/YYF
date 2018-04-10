@@ -47,8 +47,8 @@ public class HtlHomePage extends PoBase {
 	
 	/**
 	 * @param driver
-	 * @return
-	 * no_limit
+	 * @return AppiumDriver
+	 * @description 默认星级无限制
 	 */
 	public static AppiumDriver Stars_no_limit(AppiumDriver driver) {
 		try{

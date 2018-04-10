@@ -17,6 +17,8 @@ import org.testng.annotations.BeforeMethod;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -310,8 +312,8 @@ public class ListFilter extends BaseTest {
 	}
 
 	@Test(description = "By yyf : C1309671	地铁站或更多地铁站筛选", groups = { "Base" })
-	public void searchSubway() {
-
+	public void searchSubway()  {
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
 				.click();
@@ -322,6 +324,7 @@ public class ListFilter extends BaseTest {
 		PoBase.findElement(driver, HtlHomePage.search_button).click();
 
 		logger.info("进入酒店列表");
+		PoBase.findElement(driver, HtlListPage.hotel_address);
 		PoBase.findElement(driver, HtlListPage.location).click();
 		driver.findElementByXPath(HtlListPage.locationPage.subway).click();
 		driver.findElementByXPath(HtlListPage.locationPage.line5).click();
@@ -334,6 +337,7 @@ public class ListFilter extends BaseTest {
 	}
 	@Test(description = "By yyf : C1309677	品牌筛选", groups = { "Base" })
 	public void searchBrand() {
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
 				.click();
@@ -346,6 +350,7 @@ public class ListFilter extends BaseTest {
 		PoBase.findElement(driver, HtlHomePage.search_button).click();
 
 		logger.info("进入酒店列表");
+		PoBase.findElement(driver, HtlListPage.hotel_address);
 		PoBase.findElement(driver, HtlListPage.filter).click();
 		driver.findElementByXPath(HtlListPage.filterPage.brand).click();
 		driver.findElementByXPath(HtlListPage.filterPage.sevenDay).click();

@@ -14,6 +14,7 @@ public class HtlDetailPage  extends PoBase {
 	public static By back = By.id("ivBack"); //返回
 	public static By adult_number = By.id("tv_adult_number"); //成人数
 	public static By child_number = By.id("tv_child_number"); //儿童数
+	
 	public static String getHotelDescription(AndroidDriver driver)
 	{
 		WebElement descript= new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(hotel_description));
