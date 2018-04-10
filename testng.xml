@@ -11,7 +11,7 @@
 			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
 			<class name="test.apptest.hotel.StarSearch"></class>
 			<class name="test.apptest.hotel.HtlHomeSearch"></class>
-		<!-- 	<class name="test.apptest.hotel.AdultChildrenSearch"></class> -->
+			<!-- <class name="test.apptest.hotel.AdultChildrenSearch"></class> -->
 
 			<!-- 20180213 chr -->
 			<class name="test.apptest.hotel.SearchDomesticHotelName"></class>
@@ -35,7 +35,9 @@
 
 	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
 	<test name="HotelDetailPage">
-
+		<classes>
+			<class name="test.apptest.hotel.RoomDisplay"></class>
+		</classes>
 	</test>
 
 	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
@@ -47,18 +49,13 @@
 	</test>
 
 	<!-- 5. Hotel_App_AutoTestCase 收藏酒店 -->
-	<test name="FavoriteHotels">
+	<test name="FavoriteHotelsPage">
 		<classes>
 			<class name="test.apptest.hotel.FavoriteHotels"></class>
 		</classes>
 	</test>
 
-	<!-- 6. Hotel_App_AutoTestCase 酒店详情页 -->
-	<test name="RoomDisplay">
-		<classes>
-			<class name="test.apptest.hotel.RoomDisplay"></class>
-		</classes>
-	</test>
+
 
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
