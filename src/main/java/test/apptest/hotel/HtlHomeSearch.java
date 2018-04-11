@@ -1,32 +1,10 @@
 package test.apptest.hotel;
 
-import org.testng.annotations.Test;
-
-import com.app.po.HtlDetailPage;
-import com.app.po.HtlHomePage;
-import com.app.po.HtlListPage;
-import com.app.po.PoBase;
-
+import com.trip.hotel.test.android.po.HtlDetailPage;
+import com.trip.hotel.test.android.po.HtlHomePage;
+import com.trip.hotel.test.android.po.HtlListPage;
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import service.AppCommonService;
-import service.InitialService;
-import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-
-import static org.testng.AssertJUnit.assertEquals;
-
-import java.net.MalformedURLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -34,6 +12,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import service.AppCommonService;
+import service.InitialService;
+import service.impl.AppCommonServiceImpl;
+import service.impl.InitialServiceImpl;
+
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class HtlHomeSearch extends BaseTest {
 

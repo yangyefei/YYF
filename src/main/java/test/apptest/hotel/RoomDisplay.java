@@ -1,37 +1,30 @@
 package test.apptest.hotel;
 
-import org.testng.annotations.Test;
-
-import com.app.po.HtlDetailPage;
-import com.app.po.HtlHomePage;
-import com.app.po.HtlListPage;
-import com.app.po.PoBase;
-
+import com.trip.hotel.test.android.po.HtlDetailPage;
+import com.trip.hotel.test.android.po.HtlHomePage;
+import com.trip.hotel.test.android.po.HtlListPage;
+import com.trip.hotel.test.android.po.PoBase;
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.service.DriverCommandExecutor;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 
 public class RoomDisplay extends BaseTest{
 	private InitialService initial = new InitialServiceImpl();

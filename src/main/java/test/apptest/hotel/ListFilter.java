@@ -1,30 +1,27 @@
 package test.apptest.hotel;
 
-import org.testng.annotations.Test;
-
-import com.app.po.HtlHomePage;
-import com.app.po.HtlListPage;
-import com.app.po.PoBase;
+import com.trip.hotel.test.android.po.HtlHomePage;
+import com.trip.hotel.test.android.po.HtlListPage;
+import com.trip.hotel.test.android.po.PoBase;
 import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
-import service.InitialService;
-import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import service.InitialService;
+import service.impl.AppCommonServiceImpl;
+import service.impl.InitialServiceImpl;
+
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ListFilter extends BaseTest {
 

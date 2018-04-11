@@ -1,13 +1,12 @@
-package com.app.po;
+package com.trip.hotel.test.android.po;
 
-import java.util.ArrayList;
-
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.appium.java_client.android.AndroidDriver;
+import java.util.ArrayList;
 
 public class PoBase {
 	public static WebElement findElement(AndroidDriver driver, By by) {
