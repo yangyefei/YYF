@@ -1,4 +1,4 @@
-package com.trip.hotel.test.android;
+package com.trip.hotel.test.android.developer;
 
 import com.sun.istack.internal.NotNull;
 import org.openqa.selenium.By;

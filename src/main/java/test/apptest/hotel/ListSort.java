@@ -1,6 +1,6 @@
 package test.apptest.hotel;
 
-import com.trip.hotel.test.android.TouchUtils;
+import com.trip.hotel.test.android.developer.TouchUtils;
 import common.frame.test.BaseTest;
 import common.utils.ListSortType;
 import io.appium.java_client.android.AndroidDriver;

@@ -1,4 +1,4 @@
-package com.trip.hotel.test.android;
+package com.trip.hotel.test.android.developer;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;

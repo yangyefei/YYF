@@ -1,8 +1,8 @@
 package service.impl;
 
-import com.trip.hotel.test.android.DriverUtils;
-import com.trip.hotel.test.android.Page;
-import com.trip.hotel.test.android.TouchUtils;
+import com.trip.hotel.test.android.developer.DriverUtils;
+import com.trip.hotel.test.android.developer.Page;
+import com.trip.hotel.test.android.developer.TouchUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.logging.Log;
