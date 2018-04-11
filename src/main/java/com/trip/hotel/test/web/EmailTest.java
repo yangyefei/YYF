@@ -1,6 +1,6 @@
 package com.trip.hotel.test.web;
 
-import com.web.utils.TakeScreen;
+import com.trip.hotel.test.web.utils.TakeScreen;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
