@@ -1,4 +1,4 @@
-package test.apptest.hotel;
+package com.trip.hotel.test.android.qa;
 
 import com.trip.hotel.test.android.po.HtlDetailPage;
 import com.trip.hotel.test.android.po.HtlHomePage;

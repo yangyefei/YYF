@@ -5,18 +5,18 @@
 	<test name="HotelHomePage">
 
 		<classes>
-			<class name="test.apptest.hotel.HomeKeySearch"></class>  <!-- 20180213 yyf -->
-			<class name="test.apptest.hotel.FullRoomRate"></class>
-			<class name="test.apptest.hotel.SearchForDomesticAttractions"></class>
-			<class name="test.apptest.hotel.SearchHotelInOverseasTrain"></class>
-			<class name="test.apptest.hotel.StarSearch"></class>
-			<class name="test.apptest.hotel.HtlHomeSearch"></class>
-			<!-- <class name="test.apptest.hotel.AdultChildrenSearch"></class> -->
+			<class name="com.trip.hotel.test.android.qa.HomeKeySearch"></class>  <!-- 20180213 yyf -->
+			<class name="com.trip.hotel.test.android.qa.FullRoomRate"></class>
+			<class name="com.trip.hotel.test.android.qa.SearchForDomesticAttractions"></class>
+			<class name="com.trip.hotel.test.android.qa.SearchHotelInOverseasTrain"></class>
+			<class name="com.trip.hotel.test.android.qa.StarSearch"></class>
+			<class name="com.trip.hotel.test.android.qa.HtlHomeSearch"></class>
+			<!-- <class name="test.apptest.qaultChildrenSearch"></class> -->
 
 			<!-- 20180213 chr -->
-			<class name="test.apptest.hotel.SearchDomesticHotelName"></class>
-			<class name="test.apptest.hotel.SearchOverseasHotelName"></class>
-			<class name="test.apptest.hotel.SearchHotelOverseasProvince"></class>
+			<class name="com.trip.hotel.test.android.qa.SearchDomesticHotelName"></class>
+			<class name="com.trip.hotel.test.android.qa.SearchOverseasHotelName"></class>
+			<class name="com.trip.hotel.test.android.qa.SearchHotelOverseasProvince"></class>
 
 
 		</classes>
@@ -25,25 +25,25 @@
 	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
 	<test name="HotelListPage">
 		<classes>
-			<class name="test.apptest.hotel.ListSearch"></class>
-			<class name="test.apptest.hotel.ListFilter"></class>
-			<class name="test.apptest.hotel.ListKeywordsSearch"></class>
-			<class name="test.apptest.hotel.ListChangeCurrency"></class>
-			<class name="test.apptest.hotel.ListWithOtherPage"></class>
+			<class name="com.trip.hotel.test.android.qa.ListSearch"></class>
+			<class name="com.trip.hotel.test.android.qa.ListFilter"></class>
+			<class name="com.trip.hotel.test.android.qa.ListKeywordsSearch"></class>
+			<class name="com.trip.hotel.test.android.qa.ListChangeCurrency"></class>
+			<class name="com.trip.hotel.test.android.qa.ListWithOtherPage"></class>
 		</classes>
 	</test>
 
 	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
 	<test name="HotelDetailPage">
 		<classes>
-			<class name="test.apptest.hotel.RoomDisplay"></class>
+			<class name="com.trip.hotel.test.android.qa.RoomDisplay"></class>
 		</classes>
 	</test>
 
 	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
 	<test name="HotelOrderPage">
 		<classes>
-			<class name="test.apptest.hotel.MyHotelOrder"></class>
+			<class name="com.trip.hotel.test.android.qa.MyHotelOrder"></class>
 
 		</classes>
 	</test>
@@ -51,7 +51,7 @@
 	<!-- 5. Hotel_App_AutoTestCase 收藏酒店 -->
 	<test name="FavoriteHotelsPage">
 		<classes>
-			<class name="test.apptest.hotel.FavoriteHotels"></class>
+			<class name="com.trip.hotel.test.android.qa.FavoriteHotels"></class>
 		</classes>
 	</test>
 
@@ -61,7 +61,7 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 		<!--失败重试监听器 -->
-		<!-- <listener class-name="com.trip.hotel.test.web.utils.RetryListener" /> -->
+		<!-- <listener class-name="com.trip.qa.test.web.utils.RetryListener" /> -->
 		<listener class-name="com.trip.hotel.test.web.utils.TestLinster"></listener>
 	</listeners>
 
