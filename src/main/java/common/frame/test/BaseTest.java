@@ -1,12 +1,10 @@
 package common.frame.test;
 
-import java.util.Iterator;
-
 import org.apache.log4j.PropertyConfigurator;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import common.frame.data.ExcelProviderByTest;
+
+import java.util.Iterator;
 @ContextConfiguration(locations = { "classpath*:ApplicationContext.xml" })
 //AbstractTransactionalTestNGSpringContextTests
 //@Listeners(TestLinster.class)
