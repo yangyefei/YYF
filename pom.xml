@@ -272,7 +272,7 @@
 						</goals>
 						<configuration>
 
-							<mainClass> com.web.test.EmailTest</mainClass>
+							<mainClass>com.trip.hotel.test.web.EmailTest</mainClass>
 
 						</configuration>
 					</execution>
