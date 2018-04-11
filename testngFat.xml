@@ -9,14 +9,14 @@
    </groups>
       <packages>
           <!--测试环境下单流程  by yyf  -->
-      <package name="test.apptest.hotel" />
+          <package name="com.trip.hotel.test.android.qa"/>
    </packages>
    </test> 
  
    <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter" />
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-      <listener class-name="com.web.utils.TestLinster"></listener>
+       <listener class-name="com.trip.hotel.test.web.utils.TestLinster"></listener>
     </listeners> 
  
 </suite> <!-- Suite -->
