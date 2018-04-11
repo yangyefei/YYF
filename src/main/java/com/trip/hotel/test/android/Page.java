@@ -1,6 +1,8 @@
 package com.trip.hotel.test.android;
 
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Page {
     /**
@@ -40,5 +42,25 @@ public class Page {
         public static final By.ById CONTACT_EMAIL = new By.ById("view_edit_text");
         public static final By.ById CONTACT_PHONE_NUMBER = new By.ById("hotel_book_contact_phone_input");
         public static final By.ById BOOK_BUTTON = new By.ById("tv_bottom_select");
+
+        public static WebElement findBookButton(AndroidDriver<WebElement> driver) {
+            return DriverUtils.waitFind(driver, Page.HotelBook.BOOK_BUTTON);
+        }
+
+        public static WebElement findContactGavenName(AndroidDriver<WebElement> driver) {
+            return DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME);
+        }
+
+        public static WebElement findContactSurname(AndroidDriver<WebElement> driver) {
+            return DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME);
+        }
+
+        public static WebElement findContactPhoneNumber(AndroidDriver<WebElement> driver) {
+            return DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_PHONE_NUMBER);
+        }
+
+        public static WebElement findContactEmail(AndroidDriver<WebElement> driver) {
+            return DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_EMAIL_CONTAINER).findElement(Page.HotelBook.CONTACT_EMAIL);
+        }
     }
 }

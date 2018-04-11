@@ -65,10 +65,10 @@ public class HotelBookBaseInformationTest extends BaseTest {
         int hotelId = 436187;
         appCommonService.gotoHotelBook(driver, cityId, hotelId);
 
-        WebElement bookButton = DriverUtils.waitFind(driver, Page.HotelBook.BOOK_BUTTON);
+        WebElement bookButton = Page.HotelBook.findBookButton(driver);
 
         // 验证 Gaven Name
-        WebElement gavenName = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME);
+        WebElement gavenName = Page.HotelBook.findContactGavenName(driver);
         Assert.assertTrue(gavenName.isDisplayed());
         gavenName.clear();
         bookButton.click();
@@ -76,7 +76,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
 
         // 输入Gaven Name 验证 Surname
         gavenName.sendKeys("Lei");
-        WebElement surname = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME);
+        WebElement surname = Page.HotelBook.findContactSurname(driver);
         Assert.assertTrue(surname.isDisplayed());
         surname.clear();
         bookButton.click();
@@ -84,7 +84,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
 
         // 输入Surname 验证 Email
         surname.sendKeys("Lee");
-        WebElement email = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_EMAIL_CONTAINER).findElement(Page.HotelBook.CONTACT_EMAIL);
+        WebElement email = Page.HotelBook.findContactEmail(driver);
         Assert.assertTrue(email.isDisplayed());
         email.clear();
         bookButton.click();
@@ -92,7 +92,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
 
         // 输入 email 验证电话号码
         email.sendKeys("test@test.com");
-        WebElement phoneNumber = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_PHONE_NUMBER);
+        WebElement phoneNumber = Page.HotelBook.findContactPhoneNumber(driver);
         Assert.assertTrue(phoneNumber.isDisplayed());
         phoneNumber.clear();
         bookButton.click();
@@ -111,14 +111,15 @@ public class HotelBookBaseInformationTest extends BaseTest {
         int hotelId = 436187;
         appCommonService.gotoHotelBook(driver, cityId, hotelId);
 
-        WebElement bookButton = DriverUtils.waitFind(driver, Page.HotelBook.BOOK_BUTTON);
+
+        WebElement bookButton = Page.HotelBook.findBookButton(driver);
 
         // 输入姓名，情况电话号码
-        DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME).sendKeys("Lei");
-        DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME).sendKeys("Lee");
-        DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_PHONE_NUMBER).clear();
+        Page.HotelBook.findContactGavenName(driver).sendKeys("Lei");
+        Page.HotelBook.findContactSurname(driver).sendKeys("Lee");
+        Page.HotelBook.findContactPhoneNumber(driver).clear();
 
-        WebElement email = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_EMAIL_CONTAINER).findElement(Page.HotelBook.CONTACT_EMAIL);
+        WebElement email = Page.HotelBook.findContactEmail(driver);
         Assert.assertTrue(email.isDisplayed());
 
         email.clear();
@@ -139,24 +140,24 @@ public class HotelBookBaseInformationTest extends BaseTest {
         int hotelId = 436187;
         appCommonService.gotoHotelBook(driver, cityId, hotelId);
 
-        WebElement gavenName = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_GAVEN_NAME_CONTAINER).findElement(Page.HotelBook.CONTACT_GAVEN_NAME);
+        WebElement gavenName = Page.HotelBook.findContactGavenName(driver);
         Assert.assertTrue(gavenName.isDisplayed());
         gavenName.clear();
         gavenName.sendKeys(strGivenName);
         Assert.assertEquals(gavenName.getText(), strGivenName);
 
-        WebElement surname = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_SURNAME_CONTAINER).findElement(Page.HotelBook.CONTACT_SURNAME);
+        WebElement surname = Page.HotelBook.findContactSurname(driver);
         Assert.assertTrue(surname.isDisplayed());
         surname.clear();
         surname.sendKeys(strSurname);
         Assert.assertEquals(surname.getText(), strSurname);
 
-        WebElement phoneNumber = DriverUtils.waitFind(driver, Page.HotelBook.CONTACT_PHONE_NUMBER);
+        WebElement phoneNumber = Page.HotelBook.findContactPhoneNumber(driver);
         Assert.assertTrue(phoneNumber.isDisplayed());
         // 清空电话号码，防止创单成功，以便通过Toast信息判断
         phoneNumber.clear();
 
-        driver.findElement(Page.HotelBook.BOOK_BUTTON).click();
+        Page.HotelBook.findBookButton(driver).click();
 
         DriverUtils.assertToast(driver, expectedToast);
     }
