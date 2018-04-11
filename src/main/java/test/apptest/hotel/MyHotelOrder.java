@@ -1,6 +1,8 @@
 package test.apptest.hotel;
 
 import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
+import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,8 +15,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import service.AppCommonService;
 import service.InitialService;
-import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
 
 import java.net.MalformedURLException;
 import java.util.List;

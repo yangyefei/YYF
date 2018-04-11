@@ -1,6 +1,8 @@
 package test.selftest;
 
 import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
+import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
@@ -9,8 +11,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import service.AppCommonService;
 import service.InitialService;
-import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
 
 import java.io.IOException;
 import java.util.Iterator;
