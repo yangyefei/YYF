@@ -6,27 +6,39 @@ import common.frame.test.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import service.AppCommonService;
-import service.InitialService;
 import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
 
 import java.net.MalformedURLException;
 
 @Test
 public class HotelBookBaseInformationTest extends BaseTest {
-    private InitialService initial = new InitialServiceImpl();
     private AppCommonService appCommonService = new AppCommonServiceImpl();
     private AndroidDriver<WebElement> driver;
 
     @BeforeClass
     public void beforeClass() throws MalformedURLException {
-        driver = initial.appiumAndroidCtripSetUp(null, "ctrip.english");
+        logger.info("beforeClass()...");
+        AndroidDriver<WebElement> driver = Page.createDrive();
         logger.info("初始化成功，准备登陆");
         appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
+        driver.quit();
+    }
+
+    @BeforeMethod
+    public void beforeMethod() throws MalformedURLException {
+        logger.info("beforeMethod()...");
+        driver = Page.createDrive();
+    }
+
+    @AfterMethod
+    public void afterMethod() {
+        logger.info("afterMethod()...");
+        driver.quit();
     }
 
     /**
@@ -34,6 +46,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
      */
     @Test
     public void testChineseInNonChineseSite() throws InterruptedException {
+        logger.info("testChineseInNonChineseSite()...");
         String targetLanguage = "English";
         String expectedToast = "English Only";
         String strGivenName = "雷";
@@ -46,6 +59,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
      */
     @Test
     public void testEnglishInChineseSite() throws InterruptedException {
+        logger.info("testEnglishInChineseSite()...");
         String targetLanguage = "繁體中文";
         String expectedToast = "請提供聯絡電話號碼。"; //提示这个Toast说明填写英文可以通过
         String strGivenName = "Lei";
@@ -60,6 +74,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
      */
     @Test
     public void testEmptyToast() throws InterruptedException {
+        logger.info("testEmptyToast()...");
         appCommonService.changeLanguageTo(driver, "English");
         int cityId = 2;
         int hotelId = 436187;
@@ -106,6 +121,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
      */
     @Test
     public void testEmailFormat() throws InterruptedException {
+        logger.info("testEmailFormat()...");
         appCommonService.changeLanguageTo(driver, "English");
         int cityId = 2;
         int hotelId = 436187;
@@ -160,10 +176,5 @@ public class HotelBookBaseInformationTest extends BaseTest {
         Page.HotelBook.findBookButton(driver).click();
 
         DriverUtils.assertToast(driver, expectedToast);
-    }
-
-    @AfterClass
-    public void afterClass() {
-        driver.quit();
     }
 }
