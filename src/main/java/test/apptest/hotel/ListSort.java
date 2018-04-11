@@ -2,7 +2,7 @@ package test.apptest.hotel;
 
 import com.trip.hotel.test.android.developer.TouchUtils;
 import com.trip.hotel.test.common.BaseTest;
-import common.utils.ListSortType;
+import com.trip.hotel.test.common.utils.ListSortType;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
