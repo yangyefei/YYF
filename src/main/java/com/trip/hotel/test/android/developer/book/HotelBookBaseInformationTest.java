@@ -2,7 +2,7 @@ package com.trip.hotel.test.android.developer.book;
 
 import com.trip.hotel.test.android.developer.DriverUtils;
 import com.trip.hotel.test.android.developer.Page;
-import common.frame.test.BaseTest;
+import com.trip.hotel.test.common.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

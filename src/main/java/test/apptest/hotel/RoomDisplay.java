@@ -4,7 +4,7 @@ import com.trip.hotel.test.android.po.HtlDetailPage;
 import com.trip.hotel.test.android.po.HtlHomePage;
 import com.trip.hotel.test.android.po.HtlListPage;
 import com.trip.hotel.test.android.po.PoBase;
-import common.frame.test.BaseTest;
+import com.trip.hotel.test.common.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,6 @@
 package test.apptest.hotel;
 
-import common.frame.test.BaseTest;
+import com.trip.hotel.test.common.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,6 @@ import service.impl.InitialServiceImpl;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 

@@ -1,6 +1,6 @@
 package test.selftest;
 
-import common.frame.test.BaseTest;
+import com.trip.hotel.test.common.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;

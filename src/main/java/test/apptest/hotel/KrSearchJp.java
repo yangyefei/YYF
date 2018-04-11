@@ -1,33 +1,23 @@
 package test.apptest.hotel;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
-import static org.junit.Assert.assertEquals;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.Calendar;
-import java.util.Iterator;
-import java.util.List;
-
-import org.testng.annotations.Test;
+import com.trip.hotel.test.common.BaseTest;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-
-import common.frame.test.BaseTest;
-import io.appium.java_client.android.AndroidDriver;
-import jxl.write.DateTime;
+import org.testng.annotations.Test;
 import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
+
+import java.net.MalformedURLException;
+import java.util.List;
+
+import static org.testng.AssertJUnit.assertTrue;
 public class KrSearchJp extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService appCommonService = new AppCommonServiceImpl();

@@ -1,31 +1,23 @@
 package test.apptest.hotel;
 
-import org.testng.annotations.Test;
-
-import common.frame.test.BaseTest;
+import com.trip.hotel.test.common.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import service.AppCommonService;
 import service.InitialService;
 import service.impl.AppCommonServiceImpl;
 import service.impl.InitialServiceImpl;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-
-import static org.junit.Assert.assertTrue;
-
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.service.DriverCommandExecutor;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+import static org.junit.Assert.assertTrue;
 public class ListWithOtherPage extends BaseTest{
 	private InitialService initial = new InitialServiceImpl();
 	private AppCommonService  appCommonService = new AppCommonServiceImpl();

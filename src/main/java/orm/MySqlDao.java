@@ -1,14 +1,13 @@
 package orm;
 
-import java.net.MalformedURLException;
-
+import com.trip.hotel.test.common.BaseTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-import common.frame.test.BaseTest;
+import java.net.MalformedURLException;
 
 
 

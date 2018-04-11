@@ -1,6 +1,6 @@
 package test.selftest;
 
-import common.frame.test.BaseTest;
+import com.trip.hotel.test.common.BaseTest;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;

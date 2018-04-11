@@ -1,28 +1,26 @@
 package test.apptest.hotel;
 
-import static org.testng.AssertJUnit.assertEquals;
-
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
+import com.trip.hotel.test.common.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
-import service.AppCommonService;
-import service.InitialService;
-import service.impl.AppCommonServiceImpl;
-import service.impl.InitialServiceImpl;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import org.testng.annotations.DataProvider;
-import common.frame.test.BaseTest;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.log4j.Logger;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import service.AppCommonService;
+import service.InitialService;
+import service.impl.AppCommonServiceImpl;
+import service.impl.InitialServiceImpl;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class FullRoomRate extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
