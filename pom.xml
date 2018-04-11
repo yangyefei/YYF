@@ -252,6 +252,7 @@
 				<!-- 		<suiteXmlFile>${xmlFileName}</suiteXmlFile> -->
 
 						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>testng-developer.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
 				</configuration>
