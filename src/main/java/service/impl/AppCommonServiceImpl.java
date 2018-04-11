@@ -3,6 +3,7 @@ package service.impl;
 import com.trip.hotel.test.android.developer.DriverUtils;
 import com.trip.hotel.test.android.developer.Page;
 import com.trip.hotel.test.android.developer.TouchUtils;
+import com.trip.hotel.test.service.AppCommonService;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.logging.Log;
@@ -12,7 +13,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import service.AppCommonService;
 
 import java.util.ArrayList;
 import java.util.List;
