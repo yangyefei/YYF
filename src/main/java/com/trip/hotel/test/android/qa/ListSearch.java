@@ -4,6 +4,7 @@ import com.trip.hotel.test.android.po.HtlDetailPage;
 import com.trip.hotel.test.android.po.HtlHomePage;
 import com.trip.hotel.test.android.po.HtlListPage;
 import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
@@ -16,7 +17,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import service.InitialService;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;

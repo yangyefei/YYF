@@ -1,11 +1,11 @@
 package com.trip.hotel.test.service.impl;
 
+import com.trip.hotel.test.service.HotelHomePageInitial;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import service.HotelHomePageInitial;
 
 public class HotelHomePageInitialImpl implements HotelHomePageInitial {
 	

@@ -1,6 +1,8 @@
 package com.trip.hotel.test.android.qa;
 
 import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.service.AppCommonService;
+import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
@@ -13,8 +15,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import service.AppCommonService;
-import service.InitialService;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
