@@ -1,6 +1,7 @@
 package com.trip.hotel.test.android.qa;
 
 import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import com.trip.hotel.test.service.impl.HotelHomePageInitialImpl;
 import com.trip.hotel.test.service.impl.InitialServiceImpl;
@@ -16,7 +17,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import service.InitialService;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
