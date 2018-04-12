@@ -11,6 +11,15 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 public class InitialServiceImpl implements InitialService {
 
 	private String AppPackage = "ctrip.english";
@@ -38,7 +47,7 @@ public class InitialServiceImpl implements InitialService {
 		// capabilities.setCapability("deviceName","device");
 		// capabilities.setCapability("automationName", "Appium");
 		capabilities.setCapability("automationName", "UiAutomator2");
-//		capabilities.setCapability("udid", "127.0.0.1:62025");
+		capabilities.setCapability("udid", "127.0.0.1:62025");
 		capabilities.setCapability("newCommandTimeout", "10");
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");

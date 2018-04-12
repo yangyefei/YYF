@@ -1,9 +1,11 @@
 package com.trip.hotel.test.android.qa;
 
-import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-
+import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.service.InitialService;
+import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
+import com.trip.hotel.test.service.impl.HotelHomePageInitialImpl;
+import com.trip.hotel.test.service.impl.InitialServiceImpl;
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,13 +18,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.trip.hotel.test.common.BaseTest;
-import com.trip.hotel.test.service.InitialService;
-import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
-import com.trip.hotel.test.service.impl.HotelHomePageInitialImpl;
-import com.trip.hotel.test.service.impl.InitialServiceImpl;
-
-import io.appium.java_client.android.AndroidDriver;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdultChildrenSearch extends BaseTest {
 	private InitialService initial = new InitialServiceImpl();
