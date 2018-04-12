@@ -15,7 +15,7 @@ import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.Map;
 
-@Test
+@Test(groups = {"fabinyan", "Developer", "HotelBook"})
 public class HotelBookBaseInformationTest extends BaseTest {
     private AppCommonService appCommonService = new AppCommonServiceImpl();
     private AndroidDriver<WebElement> driver;
@@ -49,7 +49,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
     /**
      * C1309755	中文站点填写英文；C1309754	非中文站点填写中文。
      */
-    @Test(dataProvider = "getLanguageTestData")
+    @Test(dataProvider = "getLanguageTestData", description = "非中文站点输入中文的联系人信息")
     public void testEnglishInChineseSite(Map<String, String> data) throws InterruptedException {
         logger.info("testEnglishInChineseSite()...");
         String targetLanguage = data.get("targetLanguage");
@@ -64,7 +64,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
      *
      * @throws InterruptedException InterruptedException
      */
-    @Test
+    @Test(description = "输入为空的时候Toast信息")
     public void testEmptyToast() throws InterruptedException {
         logger.info("testEmptyToast()...");
         appCommonService.changeLanguageTo(driver, "English");
@@ -111,7 +111,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
      *
      * @throws InterruptedException InterruptedException
      */
-    @Test
+    @Test(description = "测试email格式")
     public void testEmailFormat() throws InterruptedException {
         logger.info("testEmailFormat()...");
         appCommonService.changeLanguageTo(driver, "English");
