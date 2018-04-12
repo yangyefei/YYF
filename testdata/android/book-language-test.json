@@ -6,8 +6,57 @@
     "strSurname": "李"
   },
   {
+    //de-DE
+    "targetLanguage": "Deutsch",
+    "expectedToast": "Nur auf Englisch",
+    "strGivenName": "雷",
+    "strSurname": "李"
+  },
+  {
+    //es-ES
+    "targetLanguage": "Español",
+    "expectedToast": "Solo en inglés",
+    "strGivenName": "雷",
+    "strSurname": "李"
+  },
+  {
+    //fr-FR
+    "targetLanguage": "Français",
+    "expectedToast": "Uniquement en anglais",
+    "strGivenName": "雷",
+    "strSurname": "李"
+  },
+  {
+    //it-IT
+    "targetLanguage": "Italiano",
+    "expectedToast": "Solo inglese",
+    "strGivenName": "雷",
+    "strSurname": "李"
+  },
+  {
+    //ru-RU
+    "targetLanguage": "Pусский",
+    "expectedToast": "Только на английском языке",
+    "strGivenName": "雷",
+    "strSurname": "李"
+  },
+  {
     "targetLanguage": "繁體中文",
     "expectedToast": "請提供聯絡電話號碼。",
+    "strGivenName": "Lei",
+    "strSurname": "Lee"
+  },
+  {
+    // ko-KR
+    "targetLanguage": "한국어",
+    "expectedToast": "연락 가능한 전화 번호를 입력하세요!",
+    "strGivenName": "Lei",
+    "strSurname": "Lee"
+  },
+  {
+    //ja-JP
+    "targetLanguage": "日本語",
+    "expectedToast": "連絡先電話番号を記入してください。",
     "strGivenName": "Lei",
     "strSurname": "Lee"
   }
