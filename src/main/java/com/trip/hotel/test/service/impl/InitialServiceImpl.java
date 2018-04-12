@@ -1,14 +1,15 @@
-import java.net.MalformedURLException;
-import java.net.URL;
+package com.trip.hotel.test.service.impl;
+
+import com.trip.hotel.test.service.InitialService;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import com.trip.hotel.test.service.InitialService;
-
-import io.appium.java_client.android.AndroidDriver;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class InitialServiceImpl implements InitialService {
 
