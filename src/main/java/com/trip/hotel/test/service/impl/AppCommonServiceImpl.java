@@ -291,6 +291,6 @@ public class AppCommonServiceImpl implements AppCommonService {
         String currentActivity = driver.currentActivity();
         logger.debug("currentActivity = " + currentActivity);
         logger.info("判断到了预订页面");
-        Assert.assertEquals(currentActivity, "com.ctrip.ibu.qa.module.book.HotelBookActivity");
+        Assert.assertEquals(currentActivity, "com.ctrip.ibu.hotel.module.book.HotelBookActivity");
     }
 }
