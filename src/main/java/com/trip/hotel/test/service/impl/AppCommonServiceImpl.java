@@ -59,7 +59,7 @@ public class AppCommonServiceImpl implements AppCommonService {
                     .isDisplayed();
         } catch (Exception e) {
             // TODO: handle exception
-            new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
+            new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("tv_email"))).click();
             new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("tv_sign_out"))).click();
             new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("btn_positive"))).click();
 

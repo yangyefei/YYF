@@ -1,14 +1,16 @@
+package com.trip.hotel.test.service.impl;
+
+import com.trip.hotel.test.service.InitialService;
+import io.appium.java_client.android.AndroidDriver;
+
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import com.trip.hotel.test.service.InitialService;
-
-import io.appium.java_client.android.AndroidDriver;
 
 public class InitialServiceImpl implements InitialService {
 
@@ -37,7 +39,7 @@ public class InitialServiceImpl implements InitialService {
 		// capabilities.setCapability("deviceName","device");
 		// capabilities.setCapability("automationName", "Appium");
 		capabilities.setCapability("automationName", "UiAutomator2");
-//		capabilities.setCapability("udid", "127.0.0.1:62025");
+		capabilities.setCapability("udid", "127.0.0.1:62025");
 		capabilities.setCapability("newCommandTimeout", "10");
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");

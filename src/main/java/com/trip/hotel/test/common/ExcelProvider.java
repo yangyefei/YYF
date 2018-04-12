@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
  public class ExcelProvider implements Iterator<Object[]>{
 	
 	 private Workbook book = null;
@@ -22,23 +24,9 @@ import java.util.Map;
 
 	 public ExcelProvider(Object aa, String sheetName, String envTestID)
 	 {
+		 
 	     try
 	     {
-	    	 
-//	    	 String patha = new File("./").getCanonicalPath();
-//	    	 File pathc = new File(System.getProperty("user.dir"));
-//	    	 
-//	    	 System.out.println("canonicalpath="+patha);
-//	    	 System.out.println("user.dir="+pathc);
-	    	 
-//	         this.book = Workbook.getWorkbook(
-//	         new File(new File("./").getCanonicalPath() + 
-//	          "\\src\\main\\resources\\datadriver\\" + envTestID + "\\" +  aa.getClass().getSimpleName() + ".xls"));
-//	         System.out.println("数据驱动url:" + 
-//	          new File(new StringBuilder(String.valueOf(new File("./").getCanonicalPath()))
-//	          .append("\\src\\main\\resources\\datadriver\\").append(envTestID).append("\\").append(aa.getClass().getSimpleName())
-//	          .append(".xls").toString()));
-	    	 
 	         this.book = Workbook.getWorkbook(
 	         new File(new File("./").getCanonicalPath() + "//testdata//"+ envTestID + "//"+ aa.getClass().getSimpleName() + ".xls"));
 	         System.out.println("数据驱动url:" + 
