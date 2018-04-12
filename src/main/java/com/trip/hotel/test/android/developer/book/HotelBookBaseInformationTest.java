@@ -3,22 +3,27 @@ package com.trip.hotel.test.android.developer.book;
 import com.trip.hotel.test.android.developer.DriverUtils;
 import com.trip.hotel.test.android.developer.Page;
 import com.trip.hotel.test.common.BaseTest;
+import com.trip.hotel.test.common.JsonUtils;
 import com.trip.hotel.test.service.AppCommonService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
+import java.util.Iterator;
+import java.util.Map;
 
 @Test
 public class HotelBookBaseInformationTest extends BaseTest {
     private AppCommonService appCommonService = new AppCommonServiceImpl();
     private AndroidDriver<WebElement> driver;
+
+    @DataProvider
+    public static Iterator<Object[]> getLanguageTestData() {
+        return JsonUtils.readJson("book-language-test.json");
+    }
 
     @BeforeClass
     public void beforeClass() throws MalformedURLException {
@@ -42,28 +47,15 @@ public class HotelBookBaseInformationTest extends BaseTest {
     }
 
     /**
-     * C1309754	非中文站点填写中文
+     * C1309755	中文站点填写英文；C1309754	非中文站点填写中文。
      */
-    @Test
-    public void testChineseInNonChineseSite() throws InterruptedException {
-        logger.info("testChineseInNonChineseSite()...");
-        String targetLanguage = "English";
-        String expectedToast = "English Only";
-        String strGivenName = "雷";
-        String strSurname = "李";
-        testWrongLanguageInput(targetLanguage, expectedToast, strGivenName, strSurname);
-    }
-
-    /**
-     * C1309755	中文站点填写英文
-     */
-    @Test
-    public void testEnglishInChineseSite() throws InterruptedException {
+    @Test(dataProvider = "getLanguageTestData")
+    public void testEnglishInChineseSite(Map<String, String> data) throws InterruptedException {
         logger.info("testEnglishInChineseSite()...");
-        String targetLanguage = "繁體中文";
-        String expectedToast = "請提供聯絡電話號碼。"; //提示这个Toast说明填写英文可以通过
-        String strGivenName = "Lei";
-        String strSurname = "Lee";
+        String targetLanguage = data.get("targetLanguage");
+        String expectedToast = data.get("expectedToast");
+        String strGivenName = data.get("strGivenName");
+        String strSurname = data.get("strSurname");
         testWrongLanguageInput(targetLanguage, expectedToast, strGivenName, strSurname);
     }
 

@@ -1,0 +1,14 @@
+[
+  {
+    "targetLanguage": "English",
+    "expectedToast": "English Only",
+    "strGivenName": "雷",
+    "strSurname": "李"
+  },
+  {
+    "targetLanguage": "繁體中文",
+    "expectedToast": "請提供聯絡電話號碼。",
+    "strGivenName": "Lei",
+    "strSurname": "Lee"
+  }
+]
