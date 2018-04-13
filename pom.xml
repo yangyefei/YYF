@@ -272,7 +272,11 @@
 						</goals>
 						<configuration>
 
-							<mainClass>com.trip.hotel.test.web.EmailTest</mainClass>
+                            <!--<mainClass>com.trip.hotel.test.web.EmailTest</mainClass>-->
+                            <mainClass>com.trip.hotel.test.web.EmailReport</mainClass>
+                            <arguments>
+                                <argument>http://10.32.86.32:8080/jenkins/job/AppHotelTest/Test_Report/</argument>
+                            </arguments>
 
 						</configuration>
 					</execution>
