@@ -31,7 +31,7 @@ public class EmailTest {
 
 	public static void sendemail() throws MessagingException, UnsupportedEncodingException {
 		System.out.println("---------发送email------------");
-		
+
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat sFormat = new SimpleDateFormat("YYYY-MM-dd");
 		String date = sFormat.format(calendar.getTime());
@@ -57,8 +57,10 @@ public class EmailTest {
 
 		MimeBodyPart text = new MimeBodyPart();
 		// setContent(“邮件的正文内容”,”设置邮件内容的编码方式”)
-		//text.setContent("系统自动发送，无需回复！  <img src='cid:a'>", "text/html;charset=gb2312");
-		text.setContent("报告地址：http://10.32.86.32:8080/jenkins/job/AppHotelTest/Test_Report/ <img src='cid:a'>", "text/html;charset=gb2312");
+		// text.setContent("系统自动发送，无需回复！ <img src='cid:a'>",
+		// "text/html;charset=gb2312");
+		text.setContent("报告地址：http://10.32.86.32:8080/jenkins/job/AppHotelTest/Test_Report/ <img src='cid:a'>",
+				"text/html;charset=gb2312");
 		MimeBodyPart img = new MimeBodyPart();
 		DataHandler dh = new DataHandler(new FileDataSource("./target/" + date + ".jpg"));// 图片路径
 		img.setDataHandler(dh);
@@ -74,15 +76,17 @@ public class EmailTest {
 		// 设置发件人
 		InternetAddress form = new InternetAddress(props.getProperty("mail.user"));
 		message.setFrom(form);
-//		String addresses="";
+		// String addresses="";
 		// 设置收件人IBU_Htl_Test
-//		InternetAddress to = new InternetAddress("yefeiyang@Ctrip.com");
-//		message.setRecipient(RecipientType.TO, to);
-//		"yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com,fbyan@Ctrip.com"
-		message.setRecipients(RecipientType.TO, InternetAddress.parse("yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com,fbyan@Ctrip.com"));
+		// InternetAddress to = new InternetAddress("yefeiyang@Ctrip.com");
+		// message.setRecipient(RecipientType.TO, to);
+
 		// 设置抄送
 		InternetAddress cc = new InternetAddress(props.getProperty("mail.user"));
 		message.setRecipient(RecipientType.CC, cc);
+		// "yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com,fbyan@Ctrip.com"
+		message.setRecipients(RecipientType.TO, InternetAddress.parse(
+				"yefeiyang@Ctrip.com,hrchen@Ctrip.com,nnlu@Ctrip.com,xmsu@Ctrip.com,yulf@Ctrip.com,fbyan@Ctrip.com"));
 
 		// 设置密送，其他的收件人不能看到密送的邮件地址
 		// InternetAddress bcc = new InternetAddress("aaaaa@163.com");
