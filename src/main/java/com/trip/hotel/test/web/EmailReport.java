@@ -104,7 +104,7 @@ public class EmailReport {
 
         // 组装发邮件请求数据
         String from = "IBU-Hotel-Android-UI-Test-Report-no-reply@ctrip.com";
-        String[] to = {"fbyan@ctrip.com", "yefeiyang@Ctrip.com>"};
+        String[] to = {"fbyan@ctrip.com", "yefeiyang@Ctrip.com","hrchen@Ctrip.com","nnlu@Ctrip.com","xmsu@Ctrip.com","yulf@Ctrip.com","fbyan@Ctrip.com"};
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String subject = "Android Hotel TestReport - " + format.format(new Date());
         String text = doc.html();

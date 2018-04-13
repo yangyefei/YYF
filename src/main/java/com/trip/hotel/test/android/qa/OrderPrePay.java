@@ -167,8 +167,8 @@ public class OrderPrePay extends BaseTest {
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container")));
 		ArrayList<WebElement> elements = (ArrayList<WebElement>) driver.findElementsById("view_hotels_item_container");
-		
-		//选择第一家酒店
+
+		// 选择第一家酒店
 		elements.get(0).click();
 	}
 
@@ -178,12 +178,12 @@ public class OrderPrePay extends BaseTest {
 		// ArrayList<WebElement> arrayList=(ArrayList<WebElement>)
 		// driver.findElementsByClassName("android.widget.CheckedTextView");
 		// arrayList.get(arrayList.size()-1).click();
-		
+
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions
 						.elementToBeClickable(By.xpath("//android.widget.CheckedTextView[contains(@text,'網上預付')]")))
 				.click();
-		
+
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("hotel_rooms_list_sub_room_btn_book"))).click();
 
@@ -210,16 +210,16 @@ public class OrderPrePay extends BaseTest {
 		logger.info("guset用户登录完成");
 
 		try {
-			new WebDriverWait(driver, timeOutInSeconds)
+			new WebDriverWait(driver, 30)
 					.until(ExpectedConditions.visibilityOfElementLocated(By.id("hotel_book_summery_hotel_name")));
 		} catch (Exception e) {
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_positive")))
 					.click();
 		} finally {
-			logger.debug("2");
+
 			hotelName = new WebDriverWait(driver, timeOutInSeconds)
 					.until(ExpectedConditions.visibilityOfElementLocated(By.id("hotel_book_summery_hotel_name")));
-			logger.debug("3");
+
 			hote_name_detail = hotelName.getText();
 			logger.info("---------hote_name_detail--------" + hote_name_detail);
 			// hotel_book_summery_room_name
