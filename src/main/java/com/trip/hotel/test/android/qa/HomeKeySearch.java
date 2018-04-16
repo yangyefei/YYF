@@ -1,11 +1,15 @@
 package com.trip.hotel.test.android.qa;
 
+import com.trip.hotel.test.android.po.HtlHomePage;
+import com.trip.hotel.test.android.po.PoBase;
 import com.trip.hotel.test.common.BaseTest;
 import com.trip.hotel.test.service.AppCommonService;
 import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -70,9 +74,11 @@ public class HomeKeySearch extends BaseTest {
         WebElement tvTitle = new WebDriverWait(driver, timeOutInSeconds)
                 .until(ExpectedConditions.elementToBeClickable(By.id("tvTitle")));
         assertEquals(tvTitle.getText(), datadriven.get("result"));
-        driver.pressKeyCode(4);
-        Thread.sleep(1000);
-        driver.pressKeyCode(4);
+        tvTitle.click();
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        PoBase.findElement(driver, HtlHomePage.search_button).click();
+        //view_hotels_item_container
+        new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.id("view_hotels_item_container")));
         logger.info("---" + datadriven.get("id") + "==>PASS---");
         
     }
