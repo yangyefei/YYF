@@ -34,7 +34,7 @@ public class RoomDisplay extends BaseTest{
     
     @BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
 	}
     
     @Test(description = "by yulf: C1309736	基础房型的起价和列表页起价保持一致", groups = { "Base" })

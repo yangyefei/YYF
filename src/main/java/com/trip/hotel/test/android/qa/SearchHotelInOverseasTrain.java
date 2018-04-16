@@ -27,7 +27,7 @@ public class SearchHotelInOverseasTrain extends BaseTest {
 	Logger logger = Logger.getLogger("SearchHotelInOverseasTrain.class");
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
 	}
 	@Test(description = "by lnn: 根据海外火车站搜索酒店C1309613", groups = { "Base" })
 	public void searchHotelInOverseasTrain() throws Exception {

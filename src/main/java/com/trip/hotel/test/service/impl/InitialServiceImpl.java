@@ -11,15 +11,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 public class InitialServiceImpl implements InitialService {
 
 	private String AppPackage = "ctrip.english";
@@ -35,7 +26,7 @@ public class InitialServiceImpl implements InitialService {
 	private String appiumPort = "4723";
 
 	@Override
-	public AndroidDriver<WebElement> appiumAndroidCtripSetUp(AndroidDriver driver, String AppPackage)
+	public AndroidDriver<WebElement> appiumAndroidCtripSetUp(String AppPackage)
 			throws MalformedURLException {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();

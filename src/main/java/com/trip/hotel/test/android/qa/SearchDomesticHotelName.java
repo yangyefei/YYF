@@ -29,7 +29,7 @@ public class SearchDomesticHotelName extends BaseTest{
 	
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
 	}
 	@Test(description = "by chr: 搜索国内酒店名称C1309603", groups = { "Base" })
 	public void SearchDomesticHotelName() throws Exception {

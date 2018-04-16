@@ -133,7 +133,7 @@ public class HtlHomeSearch extends BaseTest {
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
 		logger.info("---启动APP---");
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
 
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))

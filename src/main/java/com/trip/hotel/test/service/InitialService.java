@@ -10,11 +10,10 @@ public interface InitialService {
     /**
      * 启动ctrip应用
      *
-     * @param driver
      * @return
      * @throws MalformedURLException
      */
-    public AndroidDriver<WebElement> appiumAndroidCtripSetUp(AndroidDriver driver, String AppPackage) throws MalformedURLException;
+    public AndroidDriver<WebElement> appiumAndroidCtripSetUp(String AppPackage) throws MalformedURLException;
 
 
     public WebDriver browserOfInternetSetUp(WebDriver driver) throws Exception;

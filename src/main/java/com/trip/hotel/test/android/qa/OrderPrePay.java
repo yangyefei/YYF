@@ -1,18 +1,15 @@
 package com.trip.hotel.test.android.qa;
 
-import com.trip.hotel.test.android.developer.TouchUtils;
 import com.trip.hotel.test.common.BaseTest;
 import com.trip.hotel.test.service.AppCommonService;
 import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import com.trip.hotel.test.service.impl.InitialServiceImpl;
-
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -53,7 +50,7 @@ public class OrderPrePay extends BaseTest {
 	 */
 	@Test(description = "yefei.yang", dataProvider = "testData", groups = { "orderpay" })
 	public void prePay(Map<String, String> datadriven) throws InterruptedException, MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english.debug");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english.debug");
 		logger.info("---Version:" + datadriven.get("version") + "---" + datadriven.get("money") + "Start Test---");
 		try {
 			new WebDriverWait(driver, 5)

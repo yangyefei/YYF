@@ -52,7 +52,7 @@ public class HomeKeySearch extends BaseTest {
     // 测试用例 执行 ，数据提供testData
     @Test(dataProvider = "testData", description = "yefei.yang", groups = {"yyf"})
     public void hotelSearch(Map<String, String> datadriven) throws Exception {
-        driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english");
+        driver = initial.appiumAndroidCtripSetUp("ctrip.english");
         // TestLinster.webDriver = driver; // androiddriver 传递给testlinster
         appCommonService.changeLanguageTo(driver, "繁體中文");
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -85,7 +85,7 @@ public class HomeKeySearch extends BaseTest {
      */
     @Test(description = "yefei.yang", groups = {"yyf"})
     public void recentSearches() throws MalformedURLException {
-        driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english");
+        driver = initial.appiumAndroidCtripSetUp("ctrip.english");
         logger.info("---C1309622  最近搜索酒店再次点击搜索功能---==>StartTest");
         driver.findElement(By.id("myctrip_hotel_icon")).click(); // 进入酒店首页
         WebElement inputBox = new WebDriverWait(driver, timeOutInSeconds)

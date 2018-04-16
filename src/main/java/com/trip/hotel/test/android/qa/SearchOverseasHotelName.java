@@ -32,7 +32,7 @@ public class SearchOverseasHotelName extends BaseTest{
 	
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
 	}
 	@Test(description = "by chr: 根据海外酒店名称搜索酒店C1309616", groups = { "Base" })
 	public void SearchOverseasHotelName() throws Exception {
@@ -105,7 +105,7 @@ public class SearchOverseasHotelName extends BaseTest{
 				driver.findElement(By.className("android.widget.ImageButton")).click();
 				logger.info("----点击返回到主页----");
 				new AppCommonServiceImpl();
-				driver = new InitialServiceImpl().appiumAndroidCtripSetUp(driver,"ctrip.english");
+				driver = new InitialServiceImpl().appiumAndroidCtripSetUp("ctrip.english");
 				new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
 				driver.findElement(By.id("rl_home")).click();
 			}

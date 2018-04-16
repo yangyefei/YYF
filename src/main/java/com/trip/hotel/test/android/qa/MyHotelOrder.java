@@ -29,7 +29,7 @@ public class MyHotelOrder extends BaseTest{
 	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
 		logger.info("初始化成功，准备登陆");
 		appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
 	}
