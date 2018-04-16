@@ -26,7 +26,7 @@ public class FavoriteHotels extends BaseTest {
 
     @BeforeMethod
     public void beforeMethod() throws MalformedURLException {
-        driver = initial.appiumAndroidCtripSetUp("ctrip.english");
+        driver = initial.createAndroidReleaseDriver();
         logger.info("初始化成功");
     }
 

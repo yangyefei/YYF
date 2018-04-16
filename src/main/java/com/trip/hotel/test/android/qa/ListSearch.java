@@ -203,7 +203,7 @@ public class ListSearch extends BaseTest {
 
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
 		logger.info("初始化成功");
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))

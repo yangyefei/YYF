@@ -27,7 +27,7 @@ public class ListKeywordsSearch extends BaseTest{
 	
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
 	}
 
 	@Test(description = "By ylf : C1309692	地铁站更多搜索", groups={"Base"})

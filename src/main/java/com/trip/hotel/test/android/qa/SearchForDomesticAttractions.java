@@ -28,7 +28,7 @@ public class SearchForDomesticAttractions extends BaseTest {
 	
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
 	}
 	@Test(description = "by lnn: 搜索国内区域景点C1309606", groups = { "Base" })
 	public void searchForDomesticAttractions() throws Exception {

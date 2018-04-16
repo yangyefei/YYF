@@ -50,7 +50,7 @@ public class OrderPrePay extends BaseTest {
 	 */
 	@Test(description = "yefei.yang", dataProvider = "testData", groups = { "orderpay" })
 	public void prePay(Map<String, String> datadriven) throws InterruptedException, MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp("ctrip.english.debug");
+		driver = initial.createAndroidDebugDriver();
 		logger.info("---Version:" + datadriven.get("version") + "---" + datadriven.get("money") + "Start Test---");
 		try {
 			new WebDriverWait(driver, 5)

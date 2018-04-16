@@ -30,7 +30,7 @@ public class ListChangeCurrency extends BaseTest {
 	// 2018/4/8 修改驱动丢失导致的配置失败 by yyf
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
 	}
 
 	@Test(description = "by yulf: C1309724	筛选币种酒店详情页查看", groups = { "Base" })

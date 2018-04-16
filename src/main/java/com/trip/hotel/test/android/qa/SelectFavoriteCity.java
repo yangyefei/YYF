@@ -27,7 +27,7 @@ public class SelectFavoriteCity extends BaseTest{
     
     @BeforeClass
     public void beforeclass() throws MalformedURLException{
-		driver = initial.appiumAndroidCtripSetUp("ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
     }
     
     @Test(description = "hotelBySxm", groups = { "Base" })
