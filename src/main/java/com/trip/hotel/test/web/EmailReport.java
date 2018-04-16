@@ -9,10 +9,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -26,14 +23,16 @@ public class EmailReport {
         PropertyConfigurator.configure("log4j.properties");
         logger.info("发送Report邮件");
 
-        String baseURL = args[0];
+        String surefireReportsHome = args[0];
+        String reportURL = args[1];
 
         // 读Overview.html
-        Document doc = Jsoup.connect(baseURL + "overview.html").get();
+        File overviewFile = new File(surefireReportsHome + "/html/overview.html");
+        Document doc = Jsoup.parse(overviewFile, "UTF-8");
         Element body = doc.body();
 
         // 最后加上报告的完整链接
-        body.append(String.format("<br/><div>详细信息见：<a href='%1$s'>%1$s</a></div>", baseURL));
+        body.append(String.format("<br/><div>详细信息见：<a href='%1$s'>%1$s</a></div>", reportURL));
 
         // 超链接的相对路径改为绝对路径
         Elements tagAs = body.getElementsByTag("a");
@@ -41,7 +40,7 @@ public class EmailReport {
             Element a = tagAs.get(i);
             String href = a.attr("href");
             if (!href.startsWith("http")) {
-                a.attr("href", baseURL + href);
+                a.attr("href", reportURL + href);
             }
         }
 
@@ -109,6 +108,7 @@ public class EmailReport {
         String subject = "Android Hotel TestReport - " + format.format(new Date());
         String text = doc.html();
         text = "<!DOCTYPE HTML><html>" + text.substring(text.indexOf("<head>")); //改成html5的标准
+//        logger.info("test = " + text);
         String type = "html";
         JSONObject json = new JSONObject();
         json.put("from", from);
