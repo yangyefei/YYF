@@ -23,6 +23,7 @@ public class HtlHomePage extends PoBase {
 	public static By search_button = By.id("tv_search");// 搜索按钮
 	public static By checkin = By.id("tvDepartMonth");
 	public static By checkout = By.id("tvReturnMonth");
+	public static By star_price = By.id("rl_star_price");
 
 	public static void DoSearch(AndroidDriver driver)
 	{

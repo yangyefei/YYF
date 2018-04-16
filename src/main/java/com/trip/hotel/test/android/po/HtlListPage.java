@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * 
@@ -51,14 +52,14 @@ public class HtlListPage extends PoBase {
 	
 	public static void ShowDateAdultChildPage(AndroidDriver driver)
 	{
-		WebElement d = new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ll_check_date")));
+		WebElement d = new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("ll_check_date")));
 		d.click();
 	}
 	public static class DateAdultChildPage {
 		
 		public static void ShowAdultChildPage(AndroidDriver driver)
 		{
-			WebElement d = new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ll_choose_adult_children")));
+			WebElement d = new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("ll_choose_adult_children")));
 			d.click();
 		}
 		
@@ -70,6 +71,7 @@ public class HtlListPage extends PoBase {
 	}
 	
 	public static class AdultChildPage {
+		public static By numbers = By.id("plus_minus_number_view_number");
 		
 		public static void SetAdultChildNumber(AndroidDriver driver, int AdultNumber, int ChildNumber)
 		{
