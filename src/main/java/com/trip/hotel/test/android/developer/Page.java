@@ -3,45 +3,8 @@ package com.trip.hotel.test.android.developer;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class Page {
-    private static final String APP_PACKAGE_NAME = "ctrip.english";
-    private static final String APPIUM_HOST = "127.0.0.1";
-    private static final int APPIUM_PORT = 4723;
-    private static final String APP_MAIN_ACTIVITY = "com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity";
-
-    public static AndroidDriver<WebElement> createDrive() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android Emulator");
-        // capabilities.setCapability(Mobi, "7.1");
-        // capabilities.setCapability("deviceName", "emulator-5554");
-        // capabilities.setCapability("deviceName","device");
-        // capabilities.setCapability("automationName", "Appium");
-        capabilities.setCapability("automationName", "UiAutomator2");
-//		capabilities.setCapability("udid", "127.0.0.1:62025");
-        capabilities.setCapability("newCommandTimeout", "10");
-        capabilities.setCapability("unicodeKeyboard", "True");
-        capabilities.setCapability("resetKeyboard", "True");
-        capabilities.setCapability("autoAcceptAlerts", "True");
-        capabilities.setCapability("noReset", true);
-        // capabilities.setCapability("udid",
-        // "emulator-5554");//如果要远程调用模拟器，这个参数必须要有
-        // capabilities.setCapability("app", app.getAbsolutePath());
-        // capabilities.setCapability("app", apkPath);
-        capabilities.setCapability("appPackage", APP_PACKAGE_NAME);
-        capabilities.setCapability("appActivity", APP_MAIN_ACTIVITY);
-        capabilities.setCapability("noSign", "True");
-
-        return new AndroidDriver<>(new URL(String.format("http://%1$s:%2$d/wd/hub", APPIUM_HOST, APPIUM_PORT)), capabilities);
-    }
-
     /**
      * App 首页
      */
