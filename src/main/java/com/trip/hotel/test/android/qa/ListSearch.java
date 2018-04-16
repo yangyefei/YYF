@@ -3,6 +3,7 @@ package com.trip.hotel.test.android.qa;
 import com.trip.hotel.test.android.po.HtlDetailPage;
 import com.trip.hotel.test.android.po.HtlHomePage;
 import com.trip.hotel.test.android.po.HtlListPage;
+import com.trip.hotel.test.android.po.PoBase;
 import com.trip.hotel.test.common.BaseTest;
 import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
@@ -166,6 +167,7 @@ public class ListSearch extends BaseTest {
 			HtlHomePage.DoSearch(driver);
 			
 			logger.info("点击日历框");
+			PoBase.findElement(driver, HtlListPage.hotel_address);
 			HtlListPage.ShowDateAdultChildPage(driver);
 			HtlListPage.DateAdultChildPage.ShowAdultChildPage(driver);
 			
