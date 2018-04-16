@@ -164,7 +164,7 @@ private void doSort(ListSortType sorttype, String descript) {
 
   @BeforeClass
   public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+	  driver = initial.createAndroidReleaseDriver();
 		logger.info("初始化成功");
 	}
   

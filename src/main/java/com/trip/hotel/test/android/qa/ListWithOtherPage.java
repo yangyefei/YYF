@@ -26,7 +26,7 @@ public class ListWithOtherPage extends BaseTest{
     
     @BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
 	}
     
     @Test(description = "by sxm: C1309727	包早餐，免费取消，2张床，1张床，及时确认等", groups = { "Base" })

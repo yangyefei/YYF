@@ -237,23 +237,22 @@ public class AppCommonServiceImpl implements AppCommonService {
     public void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage) {
         logger.info("开始设置" + targetLanguage);
         logger.info("点击\"Account\"");
-        DriverUtils.waitClick(driver, Page.AppHome.ACCOUNT);
+        Page.AppHome.findAccount(driver).click();
         logger.info("点击\"Setting\"");
-        DriverUtils.waitClick(driver, Page.Account.SETTING);
+        Page.Account.findSetting(driver).click();
 
         // 切换语言
-        WebElement values = DriverUtils.waitFind(driver, new By.ById("value"));
-        String currentLanguage = values.getText();
+        WebElement currentLanguageElement = Page.Account.Setting.findLanguage(driver);
+        String currentLanguage = currentLanguageElement.getText();
         logger.info("当前语言是：" + currentLanguage);
         if (currentLanguage.equals(targetLanguage)) {
             logger.info("已经是" + targetLanguage);
         } else {
-            List<WebElement> sites = driver.findElements(By.id("text"));
             logger.info("点击语言");
-            sites.get(0).click();
+            currentLanguageElement.click();
             // 只是为了等待
-            DriverUtils.waitFind(driver, Page.Account.Setting.LANGUAGE_LIST_LANGUAGE_NAME);
-            List<WebElement> languages = driver.findElements(Page.Account.Setting.LANGUAGE_LIST_LANGUAGE_NAME);
+            DriverUtils.waitFind(driver, Page.Account.Setting.LanguageList.LANGUAGE_LIST_LANGUAGE_NAME);
+            List<WebElement> languages = Page.Account.Setting.LanguageList.findAllLanguages(driver);
             boolean isFound = false;
             for (WebElement language : languages) {
                 String checkingLanguage = language.getText();

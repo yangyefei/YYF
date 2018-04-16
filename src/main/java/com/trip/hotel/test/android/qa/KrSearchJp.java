@@ -26,7 +26,7 @@ public class KrSearchJp extends BaseTest {
 	
 	@BeforeClass
     public void beforeclass() throws MalformedURLException{
-    	driver = initial.appiumAndroidCtripSetUp(driver,"ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
     	//logger.info("初始化成功，准备登陆");
 		//appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
     }
@@ -65,7 +65,7 @@ public class KrSearchJp extends BaseTest {
 				driver.findElement(By.className("android.widget.ImageButton")).click();
 				logger.info("----点击返回到主页----");
 				new AppCommonServiceImpl();
-				driver = new InitialServiceImpl().appiumAndroidCtripSetUp(driver,"ctrip.english");
+				driver = new InitialServiceImpl().createAndroidReleaseDriver();
 				new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_home"))).click();
 				driver.findElement(By.id("rl_home")).click();
 			}

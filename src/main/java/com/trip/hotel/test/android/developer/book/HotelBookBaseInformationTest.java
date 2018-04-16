@@ -5,7 +5,9 @@ import com.trip.hotel.test.android.developer.Page;
 import com.trip.hotel.test.common.BaseTest;
 import com.trip.hotel.test.common.JsonUtils;
 import com.trip.hotel.test.service.AppCommonService;
+import com.trip.hotel.test.service.InitialService;
 import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
+import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -18,6 +20,7 @@ import java.util.Map;
 @Test(groups = {"fabinyan", "Developer", "HotelBook"})
 public class HotelBookBaseInformationTest extends BaseTest {
     private AppCommonService appCommonService = new AppCommonServiceImpl();
+    private InitialService initialService = new InitialServiceImpl();
     private AndroidDriver<WebElement> driver;
 
     @DataProvider
@@ -28,7 +31,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
     @BeforeClass
     public void beforeClass() throws MalformedURLException {
         logger.info("beforeClass()...");
-        AndroidDriver<WebElement> driver = Page.createDrive();
+        AndroidDriver<WebElement> driver = initialService.createAndroidReleaseDriver();
         logger.info("初始化成功，准备登陆");
         appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
         driver.quit();
@@ -37,7 +40,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
     @BeforeMethod
     public void beforeMethod() throws MalformedURLException {
         logger.info("beforeMethod()...");
-        driver = Page.createDrive();
+        driver = initialService.createAndroidReleaseDriver();
     }
 
     @AfterMethod

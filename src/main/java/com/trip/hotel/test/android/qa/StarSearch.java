@@ -33,7 +33,7 @@ public class StarSearch extends BaseTest {
 	//2018/4/8   修改驱动丢失导致的配置失败  by yyf
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english");
+		driver = initial.createAndroidReleaseDriver();
 	}
 
 	@Test(description = "by lnn: 星级为3星或者4星或者5星搜索C1309631", groups = { "Base" })
