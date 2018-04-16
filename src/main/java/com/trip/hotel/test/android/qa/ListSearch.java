@@ -18,6 +18,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 
@@ -145,8 +147,52 @@ public class ListSearch extends BaseTest {
 		
 		HtlDetailPage.backToList(driver);
 	}
+	
+	@Test(description = "by sxm: C1309712 页面默认成人儿童数量搜索" ,groups = { "Base" })
+	public void DefaultAdultChild() throws Exception
+	{
+		try
+		{
+			logger.info("---开始验证C1309712 页面默认成人儿童数量搜索---");
+			String searchKey = "广州";
+			
+			HtlHomePage.findElement(driver, HtlHomePage.hotel_main_search).click();
+			WebElement input = HtlHomePage.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword);
+			input.clear();
+			input.sendKeys(searchKey);
 
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(HtlHomePage.SearchEnginePage.tvTitle));
+			ArrayList<WebElement> elements = HtlHomePage.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle);
+			logger.info("查看联想的数据");
+			elements.get(0).click();	
+			HtlHomePage.DoSearch(driver);
+			
+			logger.info("点击日历框");
+			HtlListPage.ShowDateAdultChildPage(driver);
+			HtlListPage.DateAdultChildPage.ShowAdultChildPage(driver);
+			
+			logger.info("获取列表页默认的成人儿童数");
+			ArrayList<WebElement> numbers = HtlListPage.findElements(driver, HtlListPage.AdultChildPage.numbers);
+			String  adult = numbers.get(0).getText();
+			String  child = numbers.get(1).getText();
 
+			HtlListPage.AdultChildPage.Confirm(driver);
+			HtlListPage.DateAdultChildPage.DoSearch(driver);
+			HtlListPage.ToFirstHotelDetailPage(driver);
+			logger.info("详情页验证成人数");
+			Assert.assertTrue(HtlDetailPage.getAdultNumber(driver).contains(adult));
+			logger.info("详情页验证儿童数");
+			Assert.assertTrue(HtlDetailPage.getChildNumber(driver).contains(child));
+			logger.info("---验证C1309712 页面默认成人儿童数量搜索成功---");
+
+		}
+		catch(Exception exception)
+		{
+			logger.info("---验证C1309712 页面默认成人儿童数量搜索失败---");
+			exception.printStackTrace();
+		}
+	}
+	
 	@AfterMethod
 	public void afterMethod() {
 		//		logger.info("---返回搜索首页---");

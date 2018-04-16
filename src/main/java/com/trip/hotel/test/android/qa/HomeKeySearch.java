@@ -54,6 +54,7 @@ public class HomeKeySearch extends BaseTest {
     public void hotelSearch(Map<String, String> datadriven) throws Exception {
         driver = initial.appiumAndroidCtripSetUp(driver, "ctrip.english");
         // TestLinster.webDriver = driver; // androiddriver 传递给testlinster
+        appCommonService.changeLanguageTo(driver, "繁體中文");
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         logger.info("初始化成功，准备登陆");
         appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆

@@ -1,6 +1,8 @@
 package com.trip.hotel.test.android.po;
 
 import io.appium.java_client.android.AndroidDriver;
+
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,4 +18,5 @@ public class PoBase {
 	public static ArrayList<WebElement> findElements(AndroidDriver driver, By by) {
 		return (ArrayList<WebElement>) driver.findElements(by);
 }
+	
 }
