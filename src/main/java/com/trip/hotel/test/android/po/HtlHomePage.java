@@ -24,10 +24,18 @@ public class HtlHomePage extends PoBase {
 	public static By checkin = By.id("tvDepartMonth");
 	public static By checkout = By.id("tvReturnMonth");
 	public static By star_price = By.id("rl_star_price");
+	public static By adult = By.id("tv_adult");
+	public static By children = By.id("children");
 
 	public static void DoSearch(AndroidDriver driver)
 	{
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(search_button))
+		.click();
+	}
+	
+	public static void ShowDateAdultChildPage(AndroidDriver driver)
+	{
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(adult))
 		.click();
 	}
 	
@@ -168,4 +176,5 @@ public class HtlHomePage extends PoBase {
 			}
 		}
 	}
+
 }
