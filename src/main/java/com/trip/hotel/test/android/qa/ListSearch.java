@@ -193,6 +193,52 @@ public class ListSearch extends BaseTest {
 		}
 	}
 	
+	@Test(description = "By sxm :C1309717	2成人1儿童（1岁），搜索酒店" ,groups = {"Base"} )
+	public void Adult2Children1() throws Exception{
+		try {
+			logger.info("---开始验证C1309717	2成人1儿童（1岁），搜索酒店---");
+			String searchKey = "深圳";
+			
+			HtlHomePage.findElement(driver, HtlHomePage.hotel_main_search).click();
+			WebElement input = HtlHomePage.findElement(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword);
+			input.clear();
+			input.sendKeys(searchKey);
+
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(HtlHomePage.SearchEnginePage.tvTitle));
+			ArrayList<WebElement> elements = HtlHomePage.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle);
+			logger.info("查看联想的数据");
+			elements.get(0).click();	
+			HtlHomePage.DoSearch(driver);
+			
+			logger.info("点击日历框");
+			PoBase.findElement(driver, HtlListPage.hotel_address);
+			HtlListPage.ShowDateAdultChildPage(driver);
+			HtlListPage.DateAdultChildPage.ShowAdultChildPage(driver);
+			
+			logger.info("设置2成人1儿童");
+			HtlListPage.AdultChildPage.SetAdultChildNumber(driver, 2, 1);
+			HtlListPage.AdultChildPage.SetChildAge(driver, 1, 1);
+			
+			logger.info("点击确认");
+			HtlListPage.AdultChildPage.Confirm(driver);
+			logger.info("点击搜寻");
+			HtlListPage.DateAdultChildPage.DoSearch(driver);
+			
+			logger.info("进入详情页");
+			HtlListPage.ToFirstHotelDetailPage(driver);
+			
+			logger.info("验证成人数");
+			Assert.assertTrue(HtlDetailPage.getAdultNumber(driver).equals("2 成人"));
+			
+			logger.info("验证儿童数");
+			Assert.assertTrue(HtlDetailPage.getChildNumber(driver).equals("1 小童"));
+			
+			HtlDetailPage.backToList(driver);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
 	@AfterMethod
 	public void afterMethod() {
 		//		logger.info("---返回搜索首页---");
