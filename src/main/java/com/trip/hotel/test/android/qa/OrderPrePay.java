@@ -1,5 +1,7 @@
 package com.trip.hotel.test.android.qa;
 
+import com.trip.hotel.test.android.po.HtlListPage;
+import com.trip.hotel.test.android.po.PoBase;
 import com.trip.hotel.test.common.BaseTest;
 import com.trip.hotel.test.service.AppCommonService;
 import com.trip.hotel.test.service.InitialService;
@@ -129,6 +131,12 @@ public class OrderPrePay extends BaseTest {
 	 */
 	@SuppressWarnings("unchecked")
 	public void exchange(int i) {
+		PoBase.findElement(driver, HtlListPage.hotel_address);
+		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("tv_filter")))
+		.click();
+		ArrayList<WebElement> list=(ArrayList<WebElement>) driver.findElements(By.id("hotel_filter_checkbox_view_checkbox"));
+		list.get(2).click();
+		driver.findElement(By.id("tv_show_result")).click();
 		new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("ll_currency")))
 				.click();
 		try {
@@ -176,10 +184,10 @@ public class OrderPrePay extends BaseTest {
 		// driver.findElementsByClassName("android.widget.CheckedTextView");
 		// arrayList.get(arrayList.size()-1).click();
 
-		new WebDriverWait(driver, timeOutInSeconds)
-				.until(ExpectedConditions
-						.elementToBeClickable(By.xpath("//android.widget.CheckedTextView[contains(@text,'網上預付')]")))
-				.click();
+//		new WebDriverWait(driver, timeOutInSeconds)
+//				.until(ExpectedConditions
+//						.elementToBeClickable(By.xpath("//android.widget.CheckedTextView[contains(@text,'網上預付')]")))
+//				.click();
 
 		new WebDriverWait(driver, timeOutInSeconds)
 				.until(ExpectedConditions.elementToBeClickable(By.id("hotel_rooms_list_sub_room_btn_book"))).click();

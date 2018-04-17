@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Iterator;
 
 public class test extends BaseTest {
@@ -24,6 +25,9 @@ public class test extends BaseTest {
 	@BeforeSuite
 	public void beforeSuites() {
 		logger.info("-------------beforesuite-------------");
+	}
+	@Test
+	public void calendar() throws MalformedURLException{
 	}
     //硬断言
 	@Test
