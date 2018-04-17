@@ -10,6 +10,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.trip.hotel.test.android.developer.DriverUtils;
+import com.trip.hotel.test.android.developer.Page;
+
 public class HtlDetailPage extends PoBase {
 	public static By hotel_description = By.id("view_hotel_detail_description_content"); // 详情页酒店描述
 	public static By days = By.id("rooms_top_days"); // 详情页酒店描述
@@ -18,7 +21,19 @@ public class HtlDetailPage extends PoBase {
 	public static By child_number = By.id("tv_child_number"); //儿童数
 	public static By book = By.id("hotel_rooms_list_sub_room_btn_book");
 	public static By reviews = By.id("view_hotel_detail_review_reviews_count");
+	public final static By Favorite = By.id("ivFavorite");
+
+	private static final By.ById Share = new By.ById("ivShare");
+
+	public static WebElement findFavorite(AndroidDriver driver)
+	{
+		return PoBase.waitFind(driver, HtlDetailPage.Favorite);
+	}
 	
+	public static WebElement findShare(AndroidDriver<WebElement> driver)
+	{
+		return PoBase.waitFind(driver, HtlDetailPage.Share);
+	}
 	public static void toReviews(AndroidDriver driver)
 	{
 		WebElement ele= new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(reviews));
@@ -103,5 +118,6 @@ public class HtlDetailPage extends PoBase {
 			}
 		}
 	}
+
 	
 }

@@ -18,6 +18,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -36,7 +37,7 @@ public class DetailPageInfo extends BaseTest{
 
   @BeforeClass
 	public void beforeClass() throws MalformedURLException {
-		driver = initial.createAndroidReleaseDriver();
+		//driver = initial.createAndroidReleaseDriver();
 	}
   
   @Test(description = "By yulf: C1309731	点评页各元素展示", groups = { "Base" })
@@ -105,18 +106,39 @@ public class DetailPageInfo extends BaseTest{
 		}
 		HtlDetailPage.ReviewPage.Back(driver);
   }
+  
+  @Test(description = "By sxm: C1309729	收藏功能", groups = {"Base"})
+  public void Share() throws Exception{
+	  try {
+		String keyword = "北京";
+		logger.info("开始搜索");
+	    HtlHomePage.DoSearch(driver, keyword);
+	    
+	} catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	}
+  }
 
+	@BeforeMethod
+	public void beforeMethod() throws MalformedURLException {
+		driver = initial.createAndroidReleaseDriver();
+		logger.info("初始化成功");
+		logger.info("进入酒店首页");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
+				.click();
 
+	}
   @AfterMethod
 	public void afterTest() {
-  	logger.info("---返回列表页---");
-	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ivBack"))).click();
-	     logger.info("---返回搜索首页---");
-	     new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
+  	//logger.info("---返回列表页---");
+	     //new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("ivBack"))).click();
+	     //logger.info("---返回搜索首页---");
+	     //new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("iv_back"))).click();
 	     //返回Trip首页	     
-	     logger.info("---返回Trip首页---");
-	     driver.findElementByClassName("android.widget.ImageButton").click();
-	     
+	     //logger.info("---返回Trip首页---");
+	     //driver.findElementByClassName("android.widget.ImageButton").click();
+	     driver.quit();
 	}	
   @AfterClass
   public void afterClass() {

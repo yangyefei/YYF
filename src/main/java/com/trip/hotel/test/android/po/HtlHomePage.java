@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ import java.util.List;
 //酒店搜索首页
 public class HtlHomePage extends PoBase {
     //页面元素
-	public static By hotel_main_search = By.id("rl_stay_in"); // 酒店首页搜索框
+	public final static By hotel_main_search = By.id("rl_stay_in"); // 酒店首页搜索框
 	public static By search_button = By.id("tv_search");// 搜索按钮
 	public static By checkin = By.id("tvDepartMonth");
 	public static By checkout = By.id("tvReturnMonth");
@@ -27,10 +28,39 @@ public class HtlHomePage extends PoBase {
 	public static By adult = By.id("tv_adult");
 	public static By children = By.id("children");
 
+	public static WebElement findmainSearch(AndroidDriver<WebElement> driver)
+	{
+		return PoBase.waitFind(driver, HtlHomePage.hotel_main_search);
+	}
+	
+	public static WebElement findsearchButton(AndroidDriver<WebElement> driver){
+		return PoBase.waitFind(driver, HtlHomePage.search_button);
+	}
+	//首页关键字页面SearchEnginePage
+	public static WebElement findSearchEnginePage(AndroidDriver<WebElement> driver)
+	{
+		return PoBase.waitFind(driver, HtlHomePage.SearchEnginePage.hotel_destination_search_keyword);
+	}
+	//关键字搜索框联想列表
+	public static ArrayList<WebElement> findEngineTitle(AndroidDriver<WebElement> driver){
+		PoBase.waitFind(driver, HtlHomePage.SearchEnginePage.tvTitle);
+		return PoBase.findElements(driver, HtlHomePage.SearchEnginePage.tvTitle);
+	}
+	
 	public static void DoSearch(AndroidDriver driver)
 	{
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(search_button))
 		.click();
+	}
+	
+	public static void DoSearch(AndroidDriver<WebElement> driver,String keyword){
+		findmainSearch(driver).click();;
+		WebElement engine = findSearchEnginePage(driver);
+		engine.clear();
+		engine.sendKeys(keyword);
+		ArrayList<WebElement> elements = findEngineTitle(driver);
+		elements.get(0).click();
+		findsearchButton(driver);
 	}
 	
 	public static void ShowDateAdultChildPage(AndroidDriver driver)
@@ -116,6 +146,7 @@ public class HtlHomePage extends PoBase {
 		public static By hotel_destination_search_keyword = By.id("hotel_destination_search_keyword_import");// 关键字也搜索框
 		public static By tvTitle = By.id("tvTitle");// 关键字搜索框联想列表
 	}
+	
 	
 	public static class CalendarPage
 	{
