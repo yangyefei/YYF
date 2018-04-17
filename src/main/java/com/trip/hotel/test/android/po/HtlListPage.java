@@ -75,6 +75,7 @@ public class HtlListPage extends PoBase {
 		
 		public static void SetAdultChildNumber(AndroidDriver driver, int AdultNumber, int ChildNumber)
 		{
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("plus_minus_number_view_number")));
 	    	 List<WebElement> number=driver.findElements(By.id("plus_minus_number_view_number"));
 	    	 int adult = Integer.parseInt(number.get(0).getText());
 	    	 int child = Integer.parseInt(number.get(1).getText());
@@ -99,9 +100,10 @@ public class HtlListPage extends PoBase {
 	    	 {
 	 				for( ; adult>AdultNumber ;adult--)
 	 				{
-	 					numberMinus.get(0).click();
+	 					
 	 					try {
-							Thread.sleep(1000);
+							Thread.sleep(1500);
+							numberMinus.get(0).click();
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -115,7 +117,7 @@ public class HtlListPage extends PoBase {
 	    		 {
 	    			 numberPlus.get(1).click();
 	    			 try {
-						Thread.sleep(1000);
+						Thread.sleep(1500);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -128,9 +130,10 @@ public class HtlListPage extends PoBase {
 	    		 {
 	    			 for( ; child>ChildNumber ; child--)
 	    			 {
-	    				 numberMinus.get(1).click();
+	    				 
 	    				 try {
-							Thread.sleep(1000);
+							Thread.sleep(1500);
+							numberMinus.get(1).click();
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
