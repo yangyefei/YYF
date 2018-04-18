@@ -38,8 +38,10 @@ public class DetailPageInfo extends BaseTest{
   @BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		//driver = initial.createAndroidReleaseDriver();
-	  driver = initial.createAndroidReleaseDriver();
-		logger.info("初始化成功");
+	    driver = initial.createAndroidReleaseDriver();
+		logger.info("初始化成功，准备登陆");
+		appCommonService.loginForApp(driver, "wwwwww", "good08");
+		logger.info("登陆成功");
 		logger.info("进入酒店首页");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
 				.click();
@@ -112,7 +114,8 @@ public class DetailPageInfo extends BaseTest{
 		HtlDetailPage.ReviewPage.Back(driver);
   }
   
-  @Test(description = "By sxm: C1309729	收藏功能", groups = {"Base"})
+
+@Test(description = "By sxm: C1309730	分享功能", groups = {"Base"})
   public void Share() throws Exception{
 	  try {
 		String keyword = "北京";
@@ -127,12 +130,34 @@ public class DetailPageInfo extends BaseTest{
 	    final By share = By.id("share_chooser_list_view_item_text");
 	    WebElement shares = PoBase.waitFind(driver, share);
 	    Assert.assertTrue(shares.isDisplayed());
+	    logger.info("By sxm: C1309730	分享功能Success");
+	} catch (Exception e) {
+		e.printStackTrace();
+		logger.info("By sxm: C1309730	分享功能Fail");
+	}
+  }
+
+@Test(description = "By sxm: C1309729	收藏功能", groups = {"Base"})
+public void favoriteHotel() throws Exception{
+	try {
+		String keyword = "北京";
+		logger.info("开始搜索"+keyword);
+	    HtlHomePage.DoSearch(driver, keyword);
 	    
+	    logger.info("进入到酒店详情页");
+	    HtlListPage.ToFirstHotelDetailPage(driver);
+	    logger.info("点击收藏");
+	    HtlDetailPage.findFavorite(driver).click();
+	    final By flFavorite = By.id("flFavorite");
+	    WebElement favorite = PoBase.waitFind(driver, flFavorite);
+	    Assert.assertTrue(favorite.isDisplayed());
+	    logger.info("By sxm: C1309729	收藏功能Success");
 	} catch (Exception e) {
 		// TODO: handle exception
 		e.printStackTrace();
+		logger.info("By sxm: C1309729	收藏功能Fail");
 	}
-  }
+}
 
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
