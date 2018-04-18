@@ -33,20 +33,20 @@ public class TouchUtils {
     }
 
 
-    public static void swipeDown(AppiumDriver<WebElement> driver, WebElement buttonBook) {
+    public static void swipeToCenterY(AppiumDriver<WebElement> driver, WebElement buttonBook) {
         Rectangle buttonRect = buttonBook.getRect();
         Dimension size = driver.manage().window().getSize();
         int centerX = size.width / 2;
 
-        int moveUp = buttonRect.y - size.height / 2;
-        int pressY = size.height / 2 + moveUp / 2;
-        int moveToY = size.height / 2 - moveUp / 2;
+        int moveY = size.height / 2 - buttonRect.y;
+        int pressY = size.height / 2 - moveY / 2;
 
         TouchAction action = new TouchAction(driver);
         action.press(centerX, pressY);
         logger.info("press [" + centerX + ", " + pressY + "]");
-        action.moveTo(centerX, moveToY);
-        logger.info("moveTo [" + centerX + ", " + moveToY + "]");
+        // 居然是相对距离
+        action.moveTo(0, moveY);
+        logger.info("moveTo [" + 0 + ", " + moveY + "]");
         action.cancel();
     }
 }

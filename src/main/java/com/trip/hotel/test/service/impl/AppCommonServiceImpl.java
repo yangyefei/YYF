@@ -281,7 +281,7 @@ public class AppCommonServiceImpl implements AppCommonService {
         WebElement buttonBook = DriverUtils.scrollFind(driver, Page.HotelDetails.RoomsList.BOOK_BUTTON);
         Assert.assertNotNull(buttonBook);
         Assert.assertTrue(buttonBook.isDisplayed());
-        TouchUtils.swipeDown(driver, buttonBook);
+        TouchUtils.swipeToCenterY(driver, buttonBook);
         logger.info("点击Book按钮");
         // 等Toast消失，防止被Toast View 盖住
         Thread.sleep(4000);
