@@ -60,7 +60,7 @@ public class HtlHomePage extends PoBase {
 		engine.sendKeys(keyword);
 		ArrayList<WebElement> elements = findEngineTitle(driver);
 		elements.get(0).click();
-		findsearchButton(driver);
+		findsearchButton(driver).click();
 	}
 	
 	public static void ShowDateAdultChildPage(AndroidDriver driver)

@@ -38,6 +38,11 @@ public class DetailPageInfo extends BaseTest{
   @BeforeClass
 	public void beforeClass() throws MalformedURLException {
 		//driver = initial.createAndroidReleaseDriver();
+	  driver = initial.createAndroidReleaseDriver();
+		logger.info("初始化成功");
+		logger.info("进入酒店首页");
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
+				.click();
 	}
   
   @Test(description = "By yulf: C1309731	点评页各元素展示", groups = { "Base" })
@@ -111,8 +116,17 @@ public class DetailPageInfo extends BaseTest{
   public void Share() throws Exception{
 	  try {
 		String keyword = "北京";
-		logger.info("开始搜索");
+		logger.info("开始搜索"+keyword);
 	    HtlHomePage.DoSearch(driver, keyword);
+	    
+	    logger.info("进入到酒店详情页");
+	    HtlListPage.ToFirstHotelDetailPage(driver);
+	    logger.info("点击分享");
+	    HtlDetailPage.findShare(driver).click();
+	    
+	    final By share = By.id("share_chooser_list_view_item_text");
+	    WebElement shares = PoBase.waitFind(driver, share);
+	    Assert.assertTrue(shares.isDisplayed());
 	    
 	} catch (Exception e) {
 		// TODO: handle exception
@@ -122,12 +136,7 @@ public class DetailPageInfo extends BaseTest{
 
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		driver = initial.createAndroidReleaseDriver();
-		logger.info("初始化成功");
-		logger.info("进入酒店首页");
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("myctrip_hotel_icon")))
-				.click();
-
+		logger.info("@BeforeMethod");
 	}
   @AfterMethod
 	public void afterTest() {
