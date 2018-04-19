@@ -159,9 +159,52 @@ public void favoriteHotel() throws Exception{
 	}
 }
 
+@Test(description = "By sxm:C1309734	出游类型筛选+基础房型筛选", groups = {"Base"})
+ public void ReviewsFilter() throws Exception{
+	 try {
+		  String keyword = "香港";
+		  logger.info("开始搜索"+keyword);
+		  HtlHomePage.DoSearch(driver, keyword);
+		    
+		  logger.info("进入到酒店详情页");
+		  HtlListPage.ToFirstHotelDetailPage(driver);
+		  logger.info("点击点评页面");
+		  HtlDetailPage.toReviews(driver);
+		  
+		  logger.info("点击旅行类别");
+		  HtlDetailPage.Reviews.findFilter(driver).click();
+		  
+		  ArrayList<WebElement> filternames = HtlDetailPage.Reviews.findfiltertitle(driver);
+		  logger.info("选择旅行类别");
+		  String filtername = filternames.get(3).getText().toString();
+		  logger.info(filtername);
+		  filternames.get(3).click();
+		  
+		  logger.info("点击房型");
+		  HtlDetailPage.Reviews.findbaseRoom(driver).click();
+		  
+		  ArrayList<WebElement> roomnames = HtlDetailPage.Reviews.findfiltertitle(driver);
+		  logger.info("选择房型类别");
+		  String roomname = roomnames.get(3).getText().toString();
+		  roomnames.get(3).click();
+		  String left = HtlDetailPage.Reviews.getleftfilter(driver);
+		  String right = HtlDetailPage.Reviews.getrightfilter(driver);
+		  
+		  logger.info("验证选择类别:"+left);
+		  Assert.assertEquals(filtername, left);
+		  logger.info("验证房型类别:"+right);
+		  Assert.assertEquals(roomname, right);
+		  
+		 logger.info("By sxm:C1309734	出游类型筛选+基础房型筛选Success");
+		 
+	} catch (Exception e) {
+		e.printStackTrace();
+		logger.info("By sxm:C1309734	出游类型筛选+基础房型筛选Fail");
+	}
+ }
+
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
-		logger.info("@BeforeMethod");
 	}
   @AfterMethod
 	public void afterTest() {

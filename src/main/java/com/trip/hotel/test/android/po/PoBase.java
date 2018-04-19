@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 
 public class PoBase {
-	private static final long TIMEOUT = 30;
+	private static final long TIMEOUT = 60;
 	
 	public static WebElement findElement(AndroidDriver driver, By by) {
 		return new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(by));
