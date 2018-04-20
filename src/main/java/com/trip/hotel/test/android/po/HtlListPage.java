@@ -30,7 +30,13 @@ public class HtlListPage extends PoBase {
 	public static void ToFirstHotelDetailPage(AndroidDriver driver)
 	{
 		WebElement hotel= new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(hotel_item));
-		hotel.click();		
+		hotel.click();
+		try { //waitting for loading detail page rooms info
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	//子页面 Location页面

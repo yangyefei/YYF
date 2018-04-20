@@ -89,7 +89,7 @@ public class AppCommonServiceImpl implements AppCommonService {
 
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
-        TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, 1000);// 向下滑动，间隔1s
+        TouchUtils.swipe(driver, width / 2, height * 3 / 4, 0, -height / 4, 1000);// 向下滑动，间隔1s
 
         return driver;
     }
