@@ -14,6 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -202,6 +203,29 @@ public void favoriteHotel() throws Exception{
 		logger.info("By sxm:C1309734	出游类型筛选+基础房型筛选Fail");
 	}
  }
+@Test(description = "By sxm: C1309750	筛选项展示功能", groups = {"Base"})
+public void showfilter() throws Exception{
+	try {
+		String keyword = "上海思南公館酒店";
+		  logger.info("开始搜索"+keyword);
+		  HtlHomePage.DoSearch(driver, keyword);
+		  logger.info("进入到酒店详情页");
+		  HtlListPage.ToFirstHotelDetailPage(driver);
+		  logger.info("点击筛选项");
+		  ArrayList<WebElement> filtercontents = HtlDetailPage.findfilter_quick(driver);
+		  String filtercontent = filtercontents.get(3).getText().toString();
+		  logger.info("点击筛选项内容"+filtercontent);
+		  filtercontents.get(3).click();
+		  ArrayList<WebElement> showcontents = HtlDetailPage.findfiltercontent(driver);
+		  String showcontent = showcontents.get(0).getText().toString();
+		  logger.info("展示筛选项内容"+showcontent);
+		  Assert.assertTrue(showcontent.equals(filtercontent));
+		  logger.info("By sxm: C1309750	筛选项展示功能Sucess");
+	} catch (Exception e) {
+		e.printStackTrace();
+		logger.info("By sxm: C1309750	筛选项展示功能Fail");
+	}
+}
 
 	@BeforeMethod
 	public void beforeMethod() throws MalformedURLException {
