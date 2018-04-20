@@ -2,6 +2,7 @@ package com.trip.hotel.test.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -11,6 +12,7 @@ import java.net.MalformedURLException;
  * @author yyf
  *
  */
+@Component
 public class MySqlDao extends SpringBase{
 
 	public MySqlDao() throws MalformedURLException {

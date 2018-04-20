@@ -80,7 +80,7 @@ public class HomeKeySearch extends BaseTest {
         //view_hotels_item_container
         new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.id("view_hotels_item_container")));
         logger.info("---" + datadriven.get("id") + "==>PASS---");
-        
+
     }
 
 
