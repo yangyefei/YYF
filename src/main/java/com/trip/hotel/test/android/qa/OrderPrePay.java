@@ -50,7 +50,7 @@ public class OrderPrePay extends BaseTest {
      * @throws MalformedURLException
      * @throws Exception
      */
-    @Test(description = "yefei.yang", dataProvider = "testData", groups = {"orderpay"}, invocationCount = 10)
+    @Test(description = "yefei.yang", dataProvider = "testData", groups = {"orderpay"})
     public void prePay(Map<String, String> datadriven) throws InterruptedException, MalformedURLException {
         driver = initial.createAndroidDebugDriver();
         logger.info("---Version:" + datadriven.get("version") + "---" + datadriven.get("money") + "Start Test---");
@@ -367,11 +367,12 @@ public class OrderPrePay extends BaseTest {
         ceibDate.click();
         do {
             ceibDate.clear();
-            driver.pressKeyCode(8);
-            Thread.sleep(1000);
-            driver.pressKeyCode(8);
-            driver.pressKeyCode(9);
-            driver.pressKeyCode(9);
+//            driver.pressKeyCode(8);
+//            driver.pressKeyCode(8);
+//            Thread.sleep(1000);
+//            driver.pressKeyCode(9);
+//            driver.pressKeyCode(9);
+            ceibDate.sendKeys("1122");
             String ceibDatetext = ceibDate.getText();
             logger.info(ceibDatetext + "------------------");
             flag = ceibDatetext.equals("11/22");
@@ -382,6 +383,7 @@ public class OrderPrePay extends BaseTest {
         } while (!flag);
 
         driver.pressKeyCode(8);
+        Thread.sleep(1000);
         driver.pressKeyCode(8);
         Thread.sleep(1000);
         driver.pressKeyCode(9);

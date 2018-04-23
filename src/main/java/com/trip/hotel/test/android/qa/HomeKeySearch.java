@@ -26,8 +26,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.AssertJUnit.assertEquals;
 
 
-public class HomeKeySearch extends BaseTest {
-    int timeOutInSeconds = 60;
+public class HomeKeySearch extends BaseTest { int timeOutInSeconds = 60;
     private InitialService initial = new InitialServiceImpl();
     private AppCommonService appCommonService = new AppCommonServiceImpl();
     @SuppressWarnings("rawtypes")

@@ -44,7 +44,6 @@ public class DriverUtils {
      */
     public static WebElement scrollFind(AndroidDriver<WebElement> driver, By.ById targetViewId) {
         String scrollViewContainerSelector = "new UiSelector().scrollable(true)";
-
         String strTargetViewId = Utils.getIdString(targetViewId);
         String elementSelector = "new UiSelector().resourceIdMatches(\".*id/" + strTargetViewId + "\")";
         String uiAutomator = String.format("new UiScrollable(%1$s).scrollIntoView(%2$s)", scrollViewContainerSelector, elementSelector);

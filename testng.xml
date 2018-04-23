@@ -37,7 +37,6 @@
 	<test name="HotelDetailPage">
 		<classes>
 			<class name="com.trip.hotel.test.android.qa.RoomDisplay"></class>
-			<class name="com.trip.hotel.test.android.qa.DetailPageInfo"></class>
 		</classes>
 	</test>
 

@@ -22,7 +22,7 @@ public class TouchUtils {
         if (duration >= 0) {
             action.waitAction(Duration.ofMillis(duration));
         }
-        action.press(startX, startY)
+        action.press(startX, startY).waitAction(Duration.ofMillis(1000))
                 .moveTo(endX, endY)
                 .cancel();
     }

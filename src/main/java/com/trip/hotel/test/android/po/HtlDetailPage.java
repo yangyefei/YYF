@@ -20,6 +20,9 @@ public class HtlDetailPage extends PoBase {
 	public final static By Favorite = By.id("ivFavorite");
 	private final static By.ById Share = new By.ById("ivShare");
 	private final static By reviewcount = By.id("view_hotel_detail_review_reviews_count");
+	private final static By filter_quick = By.id("hrv_filter_quick");
+	private final static By filter_quickcontent = By.className("android.widget.CheckedTextView");
+	private final static By filtercontent = By.id("fbl_filter_content");
 	
 	public static WebElement findFavorite(AndroidDriver<WebElement> driver)
 	{
@@ -30,6 +33,15 @@ public class HtlDetailPage extends PoBase {
 	{
 		return PoBase.waitFind(driver, HtlDetailPage.Share);
 	}
+	
+	public static ArrayList<WebElement> findfilter_quick(AndroidDriver<WebElement> driver){
+		return (ArrayList<WebElement>) PoBase.waitFind(driver, filter_quick).findElements(filter_quickcontent);
+	}
+	
+	public static ArrayList<WebElement> findfiltercontent(AndroidDriver<WebElement> driver){
+		return (ArrayList<WebElement>) PoBase.waitFind(driver, filtercontent).findElements(filter_quickcontent);
+	}
+	
 	public static void toReviews(AndroidDriver<WebElement> driver)
 	{
 		try {
