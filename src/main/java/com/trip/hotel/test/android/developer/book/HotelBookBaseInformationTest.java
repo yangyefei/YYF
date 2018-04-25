@@ -169,7 +169,9 @@ public class HotelBookBaseInformationTest extends BaseTest {
         phoneNumber.clear();
 
         Page.HotelBook.findBookButton(driver).click();
-
+        Page.HotelBook.findBookButton(driver).click();
+        Page.HotelBook.findBookButton(driver).click();
+        Page.HotelBook.findBookButton(driver).click();
         DriverUtils.assertToast(driver, expectedToast);
     }
 }

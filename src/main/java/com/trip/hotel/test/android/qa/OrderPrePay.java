@@ -34,13 +34,13 @@ public class OrderPrePay extends BaseTest {
     @SuppressWarnings("rawtypes")
     private AndroidDriver driver;
     int timeOutInSeconds = 60;
-    String total_amount_detail;
-    String total_amount_pay;
-    String hote_name_detail;
-    String room_name_detail;
-    String mycardnumber;
-    int i;//
-    WebElement hotelName;
+    private String total_amount_detail;
+    private String total_amount_pay;
+    private  String hote_name_detail;
+    private  String room_name_detail;
+    private  String mycardnumber;
+    private  int i;//
+    private WebElement hotelName;
 
     /**
      * C1320608 CNY支付全流程 C1320610 HKD支付全流程 C1320612 KRW支付全流程 C1320613 USD支付全流程
