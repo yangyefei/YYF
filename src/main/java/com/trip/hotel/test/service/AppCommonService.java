@@ -34,16 +34,6 @@ public interface AppCommonService {
      * @param comment
      * @return
      */
-    public AppiumDriver commentSubmit(AppiumDriver driver, String comment);
-
-    /**
-     * 向下滑动
-     *
-     * @param driver
-     * @return
-     */
-    public AppiumDriver swipeToDown(AppiumDriver driver);
-
 
     /**
      * 滚动并查找要找的内容
@@ -62,13 +52,6 @@ public interface AppCommonService {
      * */
     public AppiumDriver homeSearchHotel(AppiumDriver driver, String keyword) throws InterruptedException;
 
-    public AppiumDriver swipeToDown(AppiumDriver driver, int during, int num);
-
-    /*
-     * 列表页到详情页
-     * @param driver
-     * */
-    public AppiumDriver listToDetail(AppiumDriver driver) throws InterruptedException;
 
     void changeLanguageTo(AndroidDriver<WebElement> driver, String targetLanguage);
 

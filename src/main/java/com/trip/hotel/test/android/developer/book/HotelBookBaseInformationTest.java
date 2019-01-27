@@ -1,5 +1,6 @@
 package com.trip.hotel.test.android.developer.book;
 
+
 import com.trip.hotel.test.android.developer.DriverUtils;
 import com.trip.hotel.test.android.developer.Page;
 import com.trip.hotel.test.common.BaseTest;
@@ -52,7 +53,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
     /**
      * C1309755	中文站点填写英文；C1309754	非中文站点填写中文。
      */
-    @Test(dataProvider = "getLanguageTestData", description = "非中文站点输入中文的联系人信息")
+//    @Test(dataProvider = "getLanguageTestData", description = "非中文站点输入中文的联系人信息")
     public void testEnglishInChineseSite(Map<String, String> data) throws InterruptedException {
         logger.info("testEnglishInChineseSite()...");
         String targetLanguage = data.get("targetLanguage");

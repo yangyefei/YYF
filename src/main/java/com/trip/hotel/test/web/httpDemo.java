@@ -1,16 +1,23 @@
 package com.trip.hotel.test.web;
 
 
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import okhttp3.Headers;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
-
+@Component
 public class httpDemo {
 	public static void main(String[] args) throws IOException {
-
 		OkHttpClient client = new OkHttpClient();
 		String url="http://baidu.com";
 		/**
@@ -30,28 +37,27 @@ public class httpDemo {
 		/**
 		 * get & post方法
 		 */
-//		Request request = new Request.Builder().url("http://www.trip.com").build();
-//		Response response = client.newCall(request).execute();
-		Document doc = (Document) Jsoup.connect(url).get(); 
-		//		Headers responseHeaders = response.headers();
-//		for (int i = 0; i < responseHeaders.size(); i++) {
-//			System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
-//		}
-//		String Str = response.body().string();
-		System.out.println(doc);
-		// String[] str2=Str.split(",");
-		// List<String> list=Arrays.asList(str2);
+		Request request = new Request.Builder().url("http://www.trip.com").build();
+		Response response = client.newCall(request).execute();
+		Document doc = (Document) Jsoup.connect(url).get();
+				Headers responseHeaders = response.headers();
+		for (int i = 0; i < responseHeaders.size(); i++) {
+			System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
+		}
+		String Str = response.body().string();
+//		System.out.println(doc);
+		 String[] str2=Str.split(",");
+		 List<String> list=Arrays.asList(str2);
        /*
         * 创建jason字符串，String;list;object转json
         */
-//		JSONObject jsonObject = JSONObject.fromObject(Str);
+		JSONObject jsonObject = JSONObject.fromObject(Str);
 
-		// JSONArray jsonArray = JSONArray.fromObject(list);
-		// JSONArray jsonArray = JSONArray.fromObject(object);
-//		System.out.println(jsonObject.toString());
-	
-		// String id = (String) jsonObject.get("code");
-		// System.out.println(id);
+		 JSONArray jsonArray = JSONArray.fromObject(list);
+		System.out.println(jsonObject.toString());
+
+		 String id = (String) jsonObject.get("code");
+		 System.out.println(id);
 	}
 
 }

@@ -39,6 +39,10 @@ public class HomeKeySearch extends BaseTest { int timeOutInSeconds = 60;
 
 
     }
+    @DataProvider(name = "testData")
+    public Iterator<Object[]> data1test() throws IOException {
+        return ExcelProviderByEnv(this, "testData");
+    }
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod() {
@@ -53,7 +57,7 @@ public class HomeKeySearch extends BaseTest { int timeOutInSeconds = 60;
      * C1309615 当前城市搜索酒店
      */
     // 测试用例 执行 ，数据提供testData
-    @Test(dataProvider = "testData", description = "yefei.yang", groups = {"yyf"})
+    @Test(dataProvider = "testData")
     public void hotelSearch(Map<String, String> datadriven) throws Exception {
         driver = initial.createAndroidReleaseDriver();
         // TestLinster.webDriver = driver; // androiddriver 传递给testlinster
@@ -118,10 +122,7 @@ public class HomeKeySearch extends BaseTest { int timeOutInSeconds = 60;
         logger.info("---C1309622  最近搜索酒店再次点击搜索功能---==>PASS");
     }
 
-    @DataProvider(name = "testData")
-    public Iterator<Object[]> data1test() throws IOException {
-        return ExcelProviderByEnv(this, "testData");
-    }
+
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {

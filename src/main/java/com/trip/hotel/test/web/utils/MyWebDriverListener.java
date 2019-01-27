@@ -64,6 +64,16 @@ public class MyWebDriverListener implements WebDriverEventListener {
 	}
 
 	@Override
+	public void beforeSwitchToWindow(String s, WebDriver webDriver) {
+
+	}
+
+	@Override
+	public void afterSwitchToWindow(String s, WebDriver webDriver) {
+
+	}
+
+	@Override
 	public void beforeClickOn(WebElement arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
 
@@ -136,6 +146,26 @@ public class MyWebDriverListener implements WebDriverEventListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public <X> void beforeGetScreenshotAs(OutputType<X> outputType) {
+
+	}
+
+	@Override
+	public <X> void afterGetScreenshotAs(OutputType<X> outputType, X x) {
+
+	}
+
+	@Override
+	public void beforeGetText(WebElement webElement, WebDriver webDriver) {
+
+	}
+
+	@Override
+	public void afterGetText(WebElement webElement, WebDriver webDriver, String s) {
+
 	}
 
 }

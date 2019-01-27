@@ -24,8 +24,8 @@ public class MySqlDao extends SpringBase{
 	private JdbcTemplate JdbcTemplate;
 
 	@Test
-	public void find() {
-		String sql = "SELECT project_name FROM interview WHERE project_name LIKE 'Ricardo%' ORDER BY id DESC LIMIT 1";
+	public void find(String name) {
+		String sql = String.format("SELECT project_name FROM interview WHERE project_name LIKE '%1$s' ORDER BY id DESC LIMIT 1",name);
 		String result = (String) JdbcTemplate.queryForObject(sql, String.class);
 		System.out.println(result);
 

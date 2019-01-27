@@ -148,45 +148,7 @@ public class HtlListPage extends PoBase {
 	    		 }
 	    	 }
 		}	
-		
-		public static void SetChildAge(AndroidDriver driver, int i, int index )
-		{
-			List<WebElement> children = driver.findElements(By.id("view_child_item"));
-			children.get(i-1).click();
-			
-			List<WebElement> childAges = null;
-			
 
-			if(index>7)
-			{
-		   	     AppCommonServiceImpl acs = new AppCommonServiceImpl();
-		         acs.swipeToDown(driver);//滚屏
-		         
-		         if(index>14)
-		        	 acs.swipeToDown(driver);//再滚次屏
-		         
-		         childAges = driver.findElements(By.id("tv_age_index"));
-		 		 for (WebElement childAge : childAges) 
-		 		 {
-					if (childAge.getText().contains(index+"")) 
-					{
-						childAge.click();
-						break;
-					}
-				 }
-		         //System.out.println("当前最小年龄" + childAges.get(0).getText());
-		         //System.out.println("当前最大年龄" + childAges.get(childAges.size()-1).getText());
-			}
-			else
-			{
-				childAges = driver.findElements(By.id("tv_age_index"));
-				WebElement ChildAge = childAges.get(index);
-				ChildAge.click();
-		         //System.out.println("当前最小年龄" + childAges.get(0).getText());
-		         //System.out.println("当前最大年龄" + childAges.get(childAges.size()-1).getText());
-			}
-
-		}
 		
 		public static void Confirm(AndroidDriver driver)
 		{

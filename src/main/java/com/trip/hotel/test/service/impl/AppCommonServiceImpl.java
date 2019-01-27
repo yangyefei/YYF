@@ -2,7 +2,6 @@ package com.trip.hotel.test.service.impl;
 
 import com.trip.hotel.test.android.developer.DriverUtils;
 import com.trip.hotel.test.android.developer.Page;
-import com.trip.hotel.test.android.developer.TouchUtils;
 import com.trip.hotel.test.service.AppCommonService;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -68,7 +67,7 @@ public class AppCommonServiceImpl implements AppCommonService {
         return driver;
     }
 
-    @Override
+//    @Override
     public AppiumDriver commentSubmit(AppiumDriver driver, String comment) {
         // TODO Auto-generated method stub
 
@@ -84,15 +83,15 @@ public class AppCommonServiceImpl implements AppCommonService {
     }
 
     @Override
-    public AppiumDriver swipeToDown(AppiumDriver driver) {
-        // TODO Auto-generated method stub
-
-        int width = driver.manage().window().getSize().width;
-        int height = driver.manage().window().getSize().height;
-        TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, 1000);// 向下滑动，间隔1s
-
-        return driver;
-    }
+//    public AppiumDriver swipeToDown(AppiumDriver driver) {
+//        // TODO Auto-generated method stub
+//
+//        int width = driver.manage().window().getSize().width;
+//        int height = driver.manage().window().getSize().height;
+//        TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, 1000);// 向下滑动，间隔1s
+//
+//        return driver;
+//    }
 
     /**
      * 下拉
@@ -101,49 +100,20 @@ public class AppCommonServiceImpl implements AppCommonService {
      * @param during
      * @param num
      */
-    @Override
-    public AppiumDriver swipeToDown(AppiumDriver driver, int during, int num) {
-        int width = driver.manage().window().getSize().width;
-        int height = driver.manage().window().getSize().height;
-        for (int i = 0; i < num; i++) {
-            TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, during);
-        }
-        return driver;
-    }
+//    @Override
+//    public AppiumDriver swipeToDown(AppiumDriver driver, int during, int num) {
+//        int width = driver.manage().window().getSize().width;
+//        int height = driver.manage().window().getSize().height;
+//        for (int i = 0; i < num; i++) {
+//            TouchUtils.swipe(driver, width / 2, height * 3 / 4, width / 2, height / 4, during);
+//        }
+//        return driver;
+//    }
 
-    /**
-     * 向左滑动
-     *
-     * @param driver
-     * @param during
-     * @param num
-     */
-    public AppiumDriver swipeToLeft(AppiumDriver driver, int during, int num) {
-        int width = driver.manage().window().getSize().width;
-        int height = driver.manage().window().getSize().height;
-        for (int i = 0; i < num; i++) {
-            TouchUtils.swipe(driver, width * 3 / 4, height / 2, width / 4, height / 2, during);
-        }
-        return driver;
-    }
 
-    /**
-     * 向右滑动
-     *
-     * @param driver
-     * @param during
-     * @param num
-     */
-    public AppiumDriver swipeToRight(AppiumDriver driver, int during, int num) {
-        int width = driver.manage().window().getSize().width;
-        int height = driver.manage().window().getSize().height;
-        for (int i = 0; i < num; i++) {
-            TouchUtils.swipe(driver, width / 4, height / 2, width * 3 / 4, height / 2, during);
-        }
-        return driver;
-    }
 
-    @Override
+
+//    @Override
     public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNum) {
         // TODO Auto-generated method stub
 
@@ -193,7 +163,7 @@ public class AppCommonServiceImpl implements AppCommonService {
             // 滑动屏幕
             int width = driver.manage().window().getSize().width;
             int height = driver.manage().window().getSize().height;
-            TouchUtils.swipe(driver, width / 2, height * 7 / 8, width / 2, height * 1 / 8, 1000);
+//            TouchUtils.swipe(driver, width / 2, height * 7 / 8, width / 2, height * 1 / 8, 1000);
 
         } while (!isfound && allNum < realTotalNum);// 如果没有找到内容并且查找的项目数已经超过项目总数，跳出循环
 
@@ -226,7 +196,7 @@ public class AppCommonServiceImpl implements AppCommonService {
     }
 
 
-    @Override
+//    @Override
     public AppiumDriver listToDetail(AppiumDriver driver) throws InterruptedException {
         //列表页点击首个酒店进入到详情页
         new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("view_hotels_item_container"))).click();
@@ -281,7 +251,7 @@ public class AppCommonServiceImpl implements AppCommonService {
         WebElement buttonBook = DriverUtils.scrollFind(driver, Page.HotelDetails.RoomsList.BOOK_BUTTON);
         Assert.assertNotNull(buttonBook);
         Assert.assertTrue(buttonBook.isDisplayed());
-        TouchUtils.swipeToCenterY(driver, buttonBook);
+//        TouchUtils.swipeToCenterY(driver, buttonBook);
         logger.info("点击Book按钮");
         // 等Toast消失，防止被Toast View 盖住
         Thread.sleep(4000);

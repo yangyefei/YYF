@@ -10,6 +10,8 @@ import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -96,6 +98,7 @@ public class OrderPrePay extends BaseTest {
     public void fromHomeToList() {
         new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_home")))
                 .click();
+
         try {
             new WebDriverWait(driver, 5)
                     .until(ExpectedConditions.elementToBeClickable(By.id("upgrade_dialog_fragment_close_icon")))
@@ -147,7 +150,7 @@ public class OrderPrePay extends BaseTest {
             e.printStackTrace();
         }
         TouchAction action = new TouchAction(driver);
-        action.press(379, 333).waitAction(Duration.ofMillis(1000)).moveTo(379, 139).release().perform();
+        action.press(PointOption.point(123,456)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))).moveTo(PointOption.point(123,456)).release().perform();
 
         try {
             Thread.sleep(1000);
@@ -404,7 +407,7 @@ public class OrderPrePay extends BaseTest {
         }
 
         TouchAction action = new TouchAction(driver);
-        action.press(379, 333).waitAction(Duration.ofMillis(1000)).moveTo(379, 139).release().perform();
+        action.press(PointOption.point(123,789)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1000))).moveTo(PointOption.point(123,678)).release().perform();
         // ctvSubmit
         driver.findElementById("ctvSubmit").click();
         try {
