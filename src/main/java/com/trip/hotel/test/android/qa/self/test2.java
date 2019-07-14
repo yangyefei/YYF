@@ -1,11 +1,16 @@
 package com.trip.hotel.test.android.qa.self;
 
 import com.trip.hotel.test.common.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 import static java.lang.System.*;
@@ -113,6 +118,17 @@ public class test2 extends BaseTest {
         MyPrintln(num2);
 
     }
+
+
+    @Test
+    public void testList() {
+        String a = "[640608,3460049,932270,823812,1378669,429152,7344835,29574502,374924,426973]";
+     String b=a.substring(1,a.length()-1);
+        List apple = Arrays.asList(b);
+        System.out.println(apple);
+
+    }
+
 
     public static String test() {
 //        vars.put("jmeter","1111");

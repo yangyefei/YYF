@@ -68,8 +68,9 @@ public class HomeKeySearch extends BaseTest { int timeOutInSeconds = 60;
         logger.info("---" + datadriven.get("id") + "---==>StartTest");
         // 进入酒店首页
         driver.findElement(By.id("myctrip_hotel_icon")).click();
-        new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_stay_in")))
-                .click();
+        new WebDriverWait(driver, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(By.id("rl_stay_in"))).click();
+
+
         WebElement e = new WebDriverWait(driver, timeOutInSeconds)
                 .until(ExpectedConditions.elementToBeClickable(By.id("hotel_destination_search_keyword_import")));
         e.clear();

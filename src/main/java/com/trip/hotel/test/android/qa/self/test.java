@@ -7,6 +7,7 @@ import com.trip.hotel.test.service.impl.AppCommonServiceImpl;
 import com.trip.hotel.test.service.impl.InitialServiceImpl;
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -47,6 +48,8 @@ public class test extends BaseTest {
     @Test
     public void softAssert() {
         assertion.assertEquals(1, 0, "2个不相等");
+        assertion.assertEquals(1, 0, "2个不相等");
+        Reporter.log("yangydefei"); //测试报告中加入log
         logger.info("woowowoowo测试失败");
         assertion.assertAll();  //词句后面语句不执行
         logger.info("woowowoowo测试ok-----------------------------------------------");

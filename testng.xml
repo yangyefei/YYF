@@ -1,59 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="HotelApp">
-	<!-- 1. Hotel_App_AutoTestCase 酒店首页 -->
-	<test name="HotelHomePage">
 
-		<classes>
-			<class name="com.trip.hotel.test.android.qa.HomeKeySearch"></class>  <!-- 20180213 yyf -->
-			<class name="com.trip.hotel.test.android.qa.FullRoomRate"></class>
-			<class name="com.trip.hotel.test.android.qa.SearchForDomesticAttractions"></class>
-			<class name="com.trip.hotel.test.android.qa.SearchHotelInOverseasTrain"></class>
-			<class name="com.trip.hotel.test.android.qa.StarSearch"></class>
-			<class name="com.trip.hotel.test.android.qa.HtlHomeSearch"></class>
-			<!-- <class name="test.apptest.qaultChildrenSearch"></class> -->
-
-			<!-- 20180213 chr -->
-			<class name="com.trip.hotel.test.android.qa.SearchDomesticHotelName"></class>
-			<class name="com.trip.hotel.test.android.qa.SearchOverseasHotelName"></class>
-			<class name="com.trip.hotel.test.android.qa.SearchHotelOverseasProvince"></class>
-
-
-		</classes>
-	</test>
-
-	<!-- 2. Hotel_App_AutoTestCase 酒店列表页 -->
-	<test name="HotelListPage">
-		<classes>
-			<class name="com.trip.hotel.test.android.qa.ListSearch"></class>
-			<class name="com.trip.hotel.test.android.qa.ListFilter"></class>
-			<class name="com.trip.hotel.test.android.qa.ListKeywordsSearch"></class>
-			<class name="com.trip.hotel.test.android.qa.ListChangeCurrency"></class>
-			<class name="com.trip.hotel.test.android.qa.ListWithOtherPage"></class>
-		</classes>
-	</test>
-
-	<!-- 3. Hotel_App_AutoTestCase 酒店详情页 -->
 	<test name="HotelDetailPage">
 		<classes>
-			<class name="com.trip.hotel.test.android.qa.RoomDisplay"></class>
+			<class name="com.trip.hotel.test.android.qa.self.test">
+				<methods>
+					<include name="softAssert"></include>
+				</methods>
+
+
+			</class>
 		</classes>
 	</test>
 
-	<!-- 4. Hotel_App_AutoTestCase 酒店订单填写页 -->
-	<test name="HotelOrderPage">
-		<classes>
-			<class name="com.trip.hotel.test.android.qa.MyHotelOrder"></class>
-
-		</classes>
-	</test>
-
-	<!-- 5. Hotel_App_AutoTestCase 收藏酒店 -->
-	<test name="FavoriteHotelsPage">
-		<classes>
-			<class name="com.trip.hotel.test.android.qa.FavoriteHotels"></class>
-		</classes>
-	</test>
 
 
 
