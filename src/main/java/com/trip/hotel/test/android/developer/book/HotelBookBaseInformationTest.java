@@ -34,7 +34,7 @@ public class HotelBookBaseInformationTest extends BaseTest {
         logger.info("beforeClass()...");
         AndroidDriver<WebElement> driver = initialService.createAndroidReleaseDriver();
         logger.info("初始化成功，准备登陆");
-        appCommonService.loginForApp(driver, "wwwwww", "good08"); // 登陆
+        appCommonService.loginForApp(driver, w", "08"); // 登陆
         driver.quit();
     }
 
