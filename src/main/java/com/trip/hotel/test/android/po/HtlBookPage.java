@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class HtlBookPage extends PoBase {
-	public static By surname = By.id("ctrip.english:id/view_edit_text");
-	public static By givename = By.id("ctrip.english:id/view_edit_text");
+	public static By surname = By.id("english:id/view_edit_text");
+	public static By givename = By.id("english:id/view_edit_text");
 	private final static By btnBook = By.id("tv_bottom_select");
 	
 	public static void InputSurName(AndroidDriver<WebElement> driver, String surname)
