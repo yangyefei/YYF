@@ -13,11 +13,11 @@ import java.net.URL;
 
 public class InitialServiceImpl implements InitialService {
 
-    private static final String ANDROID_PACKAGE_RELEASE = "ctrip.english";
-    private static final String ANDROID_PACKAGE_DEBUG = "ctrip.english.debug";
-    private String AppPackage = "ctrip.english";
+    private static final String ANDROID_PACKAGE_RELEASE = "";
+    private static final String ANDROID_PACKAGE_DEBUG = "english.debug";
+    private String AppPackage = "english";
 
-    private String AppActivity = "com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity";
+    private String AppActivity = "main.module.home.HomeActivity";
 
     private String platformVersion;
 
