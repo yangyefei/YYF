@@ -102,8 +102,8 @@ public class EmailReport {
         }
 
         // 组装发邮件请求数据
-        String from = "IBU-Hotel-Android-UI-Test-Report-no-reply@ctrip.com";
-        String[] to = {"fbyan@ctrip.com", "yefeiyang@Ctrip.com","hrchen@Ctrip.com","nnlu@Ctrip.com","xmsu@Ctrip.com","yulf@Ctrip.com","fbyan@Ctrip.com"};
+        String from = "";
+        String[] to = {".com", "com","com",om","xmscom","ycom","fb.com"};
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String subject = "Android Hotel TestReport - " + format.format(new Date());
         String text = doc.html();
@@ -118,7 +118,7 @@ public class EmailReport {
         json.put("mimeSubType", type);
 
         // 调发邮件的接口
-        URL object = new URL("http://andromeda.ibu.ctripcorp.com/api/mail/send");
+        URL object = new URL("http://andromeda.ibu.rp.com/api/mail/send");
         HttpURLConnection con = (HttpURLConnection) object.openConnection();
         con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
         con.setRequestMethod("POST");
